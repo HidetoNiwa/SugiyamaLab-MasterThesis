@@ -1,0 +1,48 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "platex1",
+            "type": "shell",
+            "command": "platex ./main.tex",
+        },
+        {
+            "label": "platex2",
+            "type": "shell",
+            "command": "platex ./main.tex",
+            "dependsOn": [
+                "platex1"
+            ]
+        },
+        {
+            "label": "platex3",
+            "type": "shell",
+            "command": "platex ./main.tex",
+            "dependsOn": [
+                "platex2"
+            ]
+        },
+        {
+            "label": "makePDF",
+            "type": "shell",
+            "command": "dvipdfmx -f ptex-ipa.map main",
+            "dependsOn": [
+                "platex3"
+            ],
+        },        
+        {
+            "label": "del others",
+            "type": "shell",
+            "command": "Remove-Item *.aux, *.dvi, *.log",
+            "dependsOn": [
+                "makePDF"
+            ],            
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
