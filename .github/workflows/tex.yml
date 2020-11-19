@@ -11,6 +11,6 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Build docker image
-        uses: HidetoNiwa/SugiyamaLab-Report-2/.github/actions/latex@release/master
+        uses: HidetoNiwa/SugiyamaLab-Report-2/.github/actions/latex@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
