@@ -6,12 +6,12 @@
         {
             "label": "platex1",
             "type": "shell",
-            "command": "platex ./main.tex",
+            "command": "platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex",
         },
         {
             "label": "platex2",
             "type": "shell",
-            "command": "platex ./main.tex",
+            "command": "platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex",
             "dependsOn": [
                 "platex1"
             ]
@@ -19,7 +19,7 @@
         {
             "label": "platex3",
             "type": "shell",
-            "command": "platex ./main.tex",
+            "command": "platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex",
             "dependsOn": [
                 "platex2"
             ]
@@ -27,7 +27,7 @@
         {
             "label": "makePDF",
             "type": "shell",
-            "command": "dvipdfmx -f ptex-ipa.map main",
+            "command": "dvipdfmx -f ptex-ipa.map main.dvi",
             "dependsOn": [
                 "platex3"
             ],
