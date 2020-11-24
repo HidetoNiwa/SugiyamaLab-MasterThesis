@@ -2,4 +2,6 @@
 *.div
 *.aux
 *.log
+*.dvi
+*.gz
 main.pdf

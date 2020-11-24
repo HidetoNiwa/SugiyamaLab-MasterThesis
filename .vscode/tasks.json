@@ -31,14 +31,6 @@
             "dependsOn": [
                 "platex3"
             ],
-        },        
-        {
-            "label": "del others",
-            "type": "shell",
-            "command": "Remove-Item *.aux, *.dvi, *.log",
-            "dependsOn": [
-                "makePDF"
-            ],            
             "group": {
                 "kind": "build",
                 "isDefault": true
