@@ -3,10 +3,24 @@
 本実験では，0.5,1wt.\% ポリアクリルアミド（PAA）溶液（三菱ケミカル，AP805C）を擬塑性流体としてそれぞれ用いた．また，対照実験として水道水も用いた．作製したPAA溶液が適切なものであるか評価を行うため，非ニュートン流体における指標の一つとなる粘度の計測を行った．続いて，擬塑性流体に対する超音波照射による影響の密度依存性を調べるため，様々な落下球を用いて球落下実験行った．
 
 \section{粘度計測}
-粘度計測における計測機器の模式図を\ref{fig:viscosity}に示す．ステージと回転する円錐回転子の間に存在する試料によって付加されるトルクを計測することで粘度の計測を行う．粘度のせん断速度依存性を確認することで生成した溶液の性質の確認を行った．なお、計測範囲の都合上、水道水では
+粘度計測における計測機器の模式図をFig.\ref{fig:viscosity}に示す．ステージと回転する円錐回転子の間に存在する試料によって付加されるトルクを計測することで粘度の計測を行う．粘度のせん断速度依存性を確認することで生成した溶液の性質の確認を行った．なお、計測範囲の都合上、水道水では1°34′×R24のコーンロータを，PAA溶液では1°34′×R12のコーンロータをそれぞれ用いた．
 
+\begin{table}[h]
+    \centering
+    \caption{Specifications of viscometer（東機産業,TVE-25L）}
+    \label{table:viscometer}
+    \begin{tabular}{c|c}\hline
+        測定方式    & 円錐平板方式                    \\ \hline
+        回転速度    & 0,0.1～100.0rpm；0.1rpmステップ \\ \hline
+        精度/再現性 & \begin{tabular}{c}
+            フルスケールの±1.0\%以内/ \\
+            フルスケールの±0.2\%以内
+        \end{tabular}       \\ \hline
+    \end{tabular}
+\end{table}
 \begin{center}
-    \begin{figure}[h]
+    \begin{figure}[H]
+        \centering
         \includegraphics[clip,width=8.0cm]{2-Methods/Viscosity-Measurement.png}
         \caption{Viscosity measurement method.}
         \label{fig:viscosity}
@@ -15,12 +29,45 @@
 
 \section{球落下実験}
 
-使用した実験装置の概略図を\ref{device}に示す．外寸において高さ255mm，幅50mm，奥行き50mm，厚さ5mmの矩形アクリル水槽に試験溶液を満たした．その上に落下球把持用のピックアップツールをマグネットベースによって固定した．
-% TODO:水槽外寸計測
+使用した実験装置の概略図をFig.\ref{fig:device}に示す．外寸において高さ255mm，幅50mm，奥行き50mm，厚さ5mmの矩形アクリル水槽に試験溶液を満たした．その上に落下球把持用のピックアップツールをマグネットベースによって固定した．そのピックアップツールを用いて落下球の保持した．ピックアップツールによる把持を解除することにより，球の保持を解除した．落下球の直径はD=10mmのものを用いた．落下球が試験液体中を落下する様子をハイスピードカメラ（BASLER, acA1920-150um）で撮影し，記録用コンピュータに連続画像（bmp形式）として保存した．ハイスピードカメラにはレンズ（BASLER, TS5014-MP）をつけ，絞り，焦点の調整を行い，明瞭に鋼球を撮影できるようにした．実験装置後方にスクリーン，赤外線ライトを設置し，装置を後方より照射することにより，落下の様子をより分かりやすくした．さらに，超音波振動による影響を調査するためにアクリル水槽の下に超音波振動子を設置した．
+
+\begin{table}[h]
+    \centering
+    \caption{Specifications of high-speed camera (BASLER, acA1920-150um)}
+    \label{table:camera}
+    \begin{tabular}{c|c}\hline
+        センサ種別      & CMOS          \\ \hline
+        水平/垂直解像度 & 320px x1264px \\ \hline
+        解像度          & 0.4MP         \\ \hline
+        フレームレート  & 210fps        \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \caption{Specifications of lens (BASLER, TS5014-MP)}
+    \label{table:lens}
+    \begin{tabular}{c|c}\hline
+        焦点距離[mm]     & 50.0     \\ \hline
+        F値              & 1.4-16.0 \\ \hline
+        最短撮影距離[mm] & 500      \\ \hline
+    \end{tabular}
+\end{table}
+
 \begin{center}
-    \begin{figure}[H]
+    \begin{figure}[h]
+        \centering
         \includegraphics[clip,width=15.0cm]{2-Methods/device.png}
         \caption{Schematic view of the experimental apparatus.}
         \label{fig:device}
     \end{figure}
 \end{center}
+
+超音波振動子の発振には，ファンクションジェネレータ（NF，WF1974），オシロスコープ（IWATSU，DIGITAL OSCILLOSCOPE DS-5614A），パワーアンプ（NF，HSA4101）を用いた．これらの接続をFig.\ref{fig:connect-with-signal}に示す．ファンクションジェネレータによって，周波数，電圧の制御を行い，超音波出力の出力元となる正弦波信号を生成した．続いて，ファンクションジェネレータによって生成された正弦波信号をパワーアンプによって，20倍のゲインをかけ増幅した．これら，オシロスコープによってファンクションジェネレータによって生成された信号，パワーアンプによって増幅された信号の両方をモニタリングし正常に出力されているか確認を行った．また，パワーアンプによって増幅された信号を，ランジュバン型振動子（富士セラミックス，FBL28502HA）上に円形のSUS304製プレートを接着したものを振動子とした．超音波振動子の共振周波数は28kHzである．
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[clip,width=15.0cm]{2-Methods/connect-with-signal.png}
+    \caption{How to connect with signal generator and ultrasonic transducers.}
+    \label{fig:connect-with-signal}
+\end{figure}

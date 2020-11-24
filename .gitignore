@@ -4,4 +4,5 @@
 *.log
 *.dvi
 *.gz
+*.toc
 main.pdf
