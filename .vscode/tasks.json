@@ -30,6 +30,14 @@
             "command": "dvipdfmx -f ptex-ipa.map main.dvi",
             "dependsOn": [
                 "platex3"
+            ]
+        },
+        {
+            "label": "openPDF",
+            "type": "shell",
+            "command":"code main.pdf",
+            "dependsOn":[
+                "makePDF"
             ],
             "group": {
                 "kind": "build",
