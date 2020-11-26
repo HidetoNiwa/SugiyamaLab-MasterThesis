@@ -34,8 +34,7 @@
         },
         {
             "label": "openPDF",
-            "type": "shell",
-            "command":"code main.pdf",
+            "command":"${command:latex-workshop.refresh-viewer}",
             "dependsOn":[
                 "makePDF"
             ],
