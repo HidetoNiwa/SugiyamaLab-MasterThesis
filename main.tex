@@ -1,20 +1,34 @@
-\documentclass[10pt,a4j]{jreport}
+\RequirePackage{plautopatch}
+\documentclass[platex,dvipdfmx,10pt,a4j]{jarticle}
 \usepackage{setspace}
 \usepackage{url}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{float}
+\usepackage{fancyhdr}
 
 \renewcommand{\figurename}{Fig}
 \renewcommand{\tablename}{Table}
-\renewcommand{\bibname}{参考文献}
+\renewcommand{\refname}{参考文献}
+
+\pagestyle{fancy}
+\rhead{\leftmark}
+\lhead{\rightmark}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\footrulewidth}{0.4pt}
 
 \begin{document}
 \input{0-Cover/cover.tex}
 \newpage
 \tableofcontents
+\newpage
 \input{1-Background/background.tex}
+\newpage
 \input{2-Methods/methods.tex}
+\newpage
 \input{3-Analysis/analysis.tex}
+\newpage
 \input{4-Results/results.tex}
+\newpage
 \input{9-Reference/references.tex}
 \end{document}

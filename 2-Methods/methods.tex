@@ -1,8 +1,15 @@
-\chapter{実験方法}
-\section{概要}
+\section{実験方法}
+\label{sec:methods}
+\subsection{概要}
 本実験では，0.5,1wt.\% ポリアクリルアミド（PAA）溶液（三菱ケミカル，AP805C）を擬塑性流体としてそれぞれ用いた．また，対照実験として水道水も用いた．作製したPAA溶液が適切なものであるか評価を行うため，非ニュートン流体における指標の一つとなる粘度の計測を行った．続いて，擬塑性流体に対する超音波照射による影響の密度依存性を調べるため，様々な落下球を用いて球落下実験行った．
 
-\section{粘度計測}
+\subsection{溶液作製}
+
+PAA粉末と水道水を混合することで，0.5,1wt.\%PAA溶液をそれぞれ作製した．以下にその作製方法を示す．
+
+はじめに，1Lポリビーカー空容器質量をデジタルスケールを用いて計測を行う．そこに約1Lの水道水を入れ再度質量の計測をデジタルスケールで行い，水道水の質量の算出を行う．続いて，必要濃度になるPAA粉末の質量を算出し，デジタルスケールで計測した．マグネットスチーラー，プラスチック製攪拌棒を用いて水道水の攪拌を行いながら少量ずつPAA粉末を混合させた．これは溶液全体で均一性を持たせるためである．これらを2回行うことで1度に約2LのPAA溶液の作製を行った．また作製約1週後，作製した溶液に気泡が見られなくなったら，ペットボトル容器に移し密封保管を行った．これは，水の蒸発を防ぎ濃度が大きく変化することを防ぐためである．
+
+\subsection{粘度計測}
 粘度計測における計測機器の模式図をFig.\ref{fig:viscosity}に示す．ステージと回転する円錐回転子の間に存在する試料によって付加されるトルクを計測することで粘度の計測を行う．粘度のせん断速度依存性を確認することで生成した溶液の性質の確認を行った．なお、計測範囲の都合上、水道水では1°34′×R24のコーンロータを，PAA溶液では1°34′×R12のコーンロータをそれぞれ用いた．
 
 \begin{table}[h]
@@ -27,9 +34,9 @@
     \end{figure}
 \end{center}
 
-\section{圧力場の測定}
+\subsection{圧力場計測}
 
-圧力場測定の概略図を\ref{fig:microphone}に示す．圧力測定にはハイドロフォン（Br\"{u}el \& Kj\ae r，Hydrophone Type8103）を用いた．ハイドロフォンの出力電圧をコンディショニングアンプ（Br\"{u}el \& Kj\ae r，NEXUS Change Amplifier Type 2692-A-0S1）を用いて増幅し，オシロスコープを用いて電圧を記録した．記録した電圧より，コンディショニングアンプの設定を電圧を圧力場に変換した．
+圧力場測定の概略図を\ref{fig:microphone}に示す．圧力測定にはハイドロフォン（Br\"{u}el \& Kj\ae r，Hydrophone Type8103）を用いた．ハイドロフォンの出力電圧をコンディショニングアンプ（Br\"{u}el \& Kj\ae r，NEXUS Change Amplifier Type 2692-A-0S1）を用いて増幅し，オシロスコープを用いて電圧を記録した．記録した電圧より，コンディショニングアンプの設定を元に電圧を圧力場へ変換した．
 
 \begin{table}[ht]
     \centering
@@ -57,12 +64,14 @@
     \begin{figure}[ht]
         \centering
         \label{fig:microphone}
-        \includegraphics[clip,width=8.0cm]{2-Methods/microphone.png}
+        \includegraphics[clip,width=9.0cm]{2-Methods/microphone.png}
         \caption{Schematic outline for pressure measurement.}
     \end{figure}
 \end{center}
 
-\section{球落下実験}
+\newpage
+
+\subsection{球落下実験}
 
 使用した実験装置の概略図をFig.\ref{fig:device}に示す．外寸において高さ255mm，幅50mm，奥行き50mm，厚さ5mmの矩形アクリル水槽に試験溶液を満たした．その上に落下球把持用のピックアップツールをマグネットベースによって固定した．そのピックアップツールを用いて落下球の保持した．ピックアップツールによる把持を解除することにより，球の保持を解除した．落下球の直径はD=10mmのものを用いた．落下球が試験液体中を落下する様子をハイスピードカメラ（BASLER, acA1920-150um）で撮影し，記録用コンピュータに連続画像（bmp形式）として保存した．ハイスピードカメラにはレンズ（BASLER, TS5014-MP）をつけ，絞り，焦点の調整を行い，明瞭に鋼球を撮影できるようにした．実験装置後方にスクリーン，赤外線ライトを設置し，装置を後方より照射することにより，落下の様子をより分かりやすくした．さらに，超音波振動による影響を調査するためにアクリル水槽の下に超音波振動子を設置した．
 
@@ -89,25 +98,29 @@
     \end{tabular}
 \end{table}
 
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
     \includegraphics[clip,width=15.0cm]{2-Methods/device.png}
     \caption{Schematic view of the experimental apparatus.}
     \label{fig:device}
 \end{figure}
 
+\newpage
+
 超音波振動子の発振には，ファンクションジェネレータ（NF，WF1974），オシロスコープ（IWATSU，DIGITAL OSCILLOSCOPE DS-5614A），パワーアンプ（NF，HSA4101）を用いた．これらの接続をFig.\ref{fig:connect-with-signal}に示す．ファンクションジェネレータによって，周波数，電圧の制御を行い，超音波出力の出力元となる正弦波信号を生成した．続いて，ファンクションジェネレータによって生成された正弦波信号をパワーアンプによって，20倍のゲインをかけ増幅した．これら，オシロスコープによってファンクションジェネレータによって生成された信号，パワーアンプによって増幅された信号の両方をモニタリングし正常に出力されているか確認を行った．また，パワーアンプによって増幅された信号を，ランジュバン型振動子（富士セラミックス，FBL28502HA）上に円形のSUS304製プレートを接着したものを振動子とした．超音波振動子の共振周波数は28kHzである．
 
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
     \includegraphics[clip,width=15.0cm]{2-Methods/connect-with-signal.png}
     \caption{How to connect with signal generator and ultrasonic transducers.}
     \label{fig:connect-with-signal}
 \end{figure}
 
-\section{実験手順}
+\newpage
 
-実験のフローチャートを示す．最初，溶液の作成を行う．続いて，圧力場の計測を行い，適切に圧力場が形成されているかの確認を行う．
+\subsection{実験手順}
+
+実験のフローチャートをFig.\ref{fig:exp-methods}に示す．最初にPAA溶液の作製を行う．続いて，粘度計測を行い作製したPAA溶液が適切であるかの確認を行い，粘度特性を計測する．その後，圧力場の計測を行い，適切に圧力場が形成されているかの確認を行う．そして，落下実験を行う．この際，
 
 \begin{figure}[ht]
     \centering

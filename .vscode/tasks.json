@@ -34,8 +34,8 @@
         },
         {
             "label": "openPDF",
-            "command":"${command:latex-workshop.refresh-viewer}",
-            "dependsOn":[
+            "command": "${command:latex-workshop.refresh-viewer}",
+            "dependsOn": [
                 "makePDF"
             ],
             "group": {
