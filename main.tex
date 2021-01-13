@@ -5,6 +5,7 @@
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{float}
 \usepackage{fancyhdr}
+\usepackage[title]{appendix}
 
 \renewcommand{\figurename}{Fig}
 \renewcommand{\tablename}{Table}
@@ -31,4 +32,8 @@
 \input{4-Results/results.tex}
 \newpage
 \input{9-Reference/references.tex}
+\newpage
+\begin{appendices}
+    \input{X-Appendix/A-Viscosity_change.tex}
+\end{appendices}
 \end{document}
