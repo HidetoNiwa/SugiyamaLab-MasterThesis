@@ -6,12 +6,12 @@
         {
             "label": "platex1",
             "type": "shell",
-            "command": "platex ./main.tex",
+            "command": "wsl platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex",
         },
         {
             "label": "platex2",
             "type": "shell",
-            "command": "platex ./main.tex",
+            "command": "wsl platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex",
             "dependsOn": [
                 "platex1"
             ]
@@ -19,7 +19,7 @@
         {
             "label": "platex3",
             "type": "shell",
-            "command": "platex ./main.tex",
+            "command": "wsl platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex",
             "dependsOn": [
                 "platex2"
             ]
@@ -27,18 +27,17 @@
         {
             "label": "makePDF",
             "type": "shell",
-            "command": "dvipdfmx -f ptex-ipa.map main",
+            "command": "wsl dvipdfmx -f ptex-ipa.map -I 24 main.dvi",
             "dependsOn": [
                 "platex3"
-            ],
-        },        
+            ]
+        },
         {
-            "label": "del others",
-            "type": "shell",
-            "command": "Remove-Item *.aux, *.dvi, *.log",
+            "label": "openPDF",
+            "command": "${command:latex-workshop.refresh-viewer}",
             "dependsOn": [
                 "makePDF"
-            ],            
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true

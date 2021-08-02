@@ -1,6 +1,50 @@
-\chapter{緒言}
+\section{緒言}
 
-\section{研究背景}
-近年、
+\subsection{研究背景}
 
-\section{目的}
+一般的に，流体はせん断応力がせん断速度に比例するNewton流体と，せん断応力がせん断速度が非線形となる非Newton流体に分類することができる．
+
+Fig.\ref{fig:1-fluid-curve}に示す通り，Newton流体はせん断速度とせん断応力が比例関係にある流体である．一方でそれ以外の流体は非Newton流体と呼ばれている．非Newton流体はDilatant fluid, Pseudoplastic, Bingham plastic, Viscoplastic が挙げられている．
+非Newton流体のうち，Bingham plastic 流体, Viscoplastic 流体はせん断応力がある一定になるまでせん断速度が発生しない流体である．一方で，Dilatant fluid 流体, Pseudoplastic 流体はせん断応力が少しでも加わると，せん断速度が発生し流体的挙動を示す．これら非Newton流体の粘度を示す理論として，Power-law model (Ostwald-De Waele model), Cross model，Carreau viscosity equationやHerschel-Bulkley modelなどを挙げることができる\cite{ref:1}．Power-law model はせん断速度の限られた範囲内にて適応することができる．理論式中の指数によってNewton流体，shear-thinning流体と，shear-thickening流体に分類することができる．これらのせん断速度と粘度の関係性はFig.\ref{fig:2-Newton-fluid}に示す通りである．これら2種類の流体のうち，本研究で扱うshear-thinning流体は，せん断速度$\dot{\gamma}$が高くなるほど粘度$\mu$が低くなる性質を有している．この流体は擬塑性流体とも呼ばれている．
+
+Cross modelはshear-thinning性が構造的に引き起こされるといった仮説において導き出された理論である．これは広いせん断速度において適用することができる．また，Carreau viscosity equationはCross modelをpower-law領域においてより適合するよう修正したものとなっている．Herschel-Bulkley modelはBingham plasticやViscoplasticといった静止状態の流体においてせん断応力が存在する流体を示す理論となっている\cite{ref:1}．
+
+擬塑性流体とは，液状で巨大な分子が存在する流体や固体粒子が懸濁状で液体に存在する流体のことである．擬塑性流体の一般的な例として，砂や砂利など粒状の物質と水が混合する，泥流や雪崩といった自然現象を挙げることができる．また，産業分野において，擬塑性流体を混合や輸送行うことがある．効率よく輸送や混合を行うためには，擬塑性流体中の分散体周囲の粘度分布，流動構造から擬塑性が分散体に及ぼす影響を明らかにする必要がある．
+
+例えばOhtae {\it et al.} \cite{ref:2}は非弾性擬塑性流体中において液滴の上昇運動に対し，数値計算，実験から液滴周りのせん断速度による粘度低下があたえる影響を明らかにした．また，液滴周りの粘度分布を数値計算で求め，局所的な粘度低下は液滴の形状に大きく依存することが報告されている\cite{ref:3}．また，Zhang {\it et al.} \cite{ref:4}は非弾性擬塑性流体中における単一気泡の上昇運動に対し，数値計算，実験から，気泡周囲のせん断速度，粘度，速度場を明らかにした．Iwata {\it et al.}\cite{ref:5}は擬塑性流体中における気泡の体積を周期的に増加・減少させ上昇速度を増加させた．さらに，Fig.\ref{fig:3-bubble}に示すように気泡が膨張時には球形であっても収縮時には気泡下部がとがったカスブ形状に変化されることも報告された．これらは気泡近傍の複雑流れと流体の弾性が影響していると考えられている．超音波振動の影響による擬塑性流体における抵抗低下に関してvan den Wildenberg {\it et al.}\cite{ref:6}による研究があげられる．本研究では，粒子の上部を水で満たし容器ごと振動させ，水と混合することで擬塑性流体を発生させた．その擬塑性流体中に球を落下させ，その落下球の速度や位置に関しての計測を行った．その結果をFig.\ref{fig:4-sinking}に示す．Fig.\ref{fig:4-sinking}(a1)において，$\Gamma$は振動強度である．振動によって落下球表面におけるせん断応力が減少したため振動強度を強くするとより深くまで沈降すると報告された．
+
+本研究では，擬塑性流体中を落下する鋼球へ超音波を照射し，落下球の近傍における流体の粘度を局所的に低下させることで，球の落下運動の高速化をはかった．鋼球の落下速度に対しての超音波照射による影響を調べた．
+
+\begin{center}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=8.0cm,clip]{1-Background/1-fluid-curve.jpg}
+        \caption{Qualitative flow curves for different types of non-Newtonian fluids\cite{ref:1}.}
+        \label{fig:1-fluid-curve}
+        \centering
+        \includegraphics[width=8.0cm,clip]{1-Background/2-Newton-fluid.png}
+        \caption{Classifications of non-Newtonian fluid.}
+        \label{fig:2-Newton-fluid}
+    \end{figure}
+
+    \newpage
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=12.0cm,clip]{1-Background/3-bubble.png}
+        \caption{Periodic change in shape of bubble under cyclic pressure change\cite{ref:5}.}
+        \label{fig:3-bubble}
+        \centering
+        \includegraphics[width=12.0cm,clip]{1-Background/4-sinking.png}
+        \caption{Sinking dynamics for different intruder-sizes and for different vibration intensities $\Gamma$. (a1) Depth versus time for an intruder with R=4mm and (a2) for an intruder with R=7mm. (b1) Instantaneous velocity versus sinking depth obtained from (a1) and (b2) from (a2). The black lines correspond to the solutions fitted in the quasi-steady regime\cite{ref:6}.}
+        \label{fig:4-sinking}
+    \end{figure}
+\end{center}
+
+\subsection{研究目的}
+
+擬塑性流体はせん断力が加わると粘度が低下する．このことより，境界層が物体周囲に形成された際に，物体の周囲流体の粘性応力が小さくなり，物体に働く粘性抵抗が低減する．このことにより物体の運動を促進することが可能となる．物体周囲に境界層が形成される要因の一つとして，音圧場により形成される音響境界層がある\cite{ref:7}．
+
+先行研究\cite{ref:8}において，擬塑性流体中を落下する球に超音波を照射することで，音響境界層内部の粘度を低下させ，球に作用する粘性抵抗を減少させ，落下速度が速くなることが示唆された．先行研究\cite{ref:8}において，落下球の把持を行うのに電磁石を用いていた．しかし，電磁石を用いた方法では強磁性体のみを把持することができ，それ以外の材質のものは把持することはできない．そこで，落下球を把持する方法を，真空ポンプを用いて吸引する手法に変化させ実験を行った．把持する手法の変化に伴い生じる，擬塑性流体中を落下する球への落下速度への影響について調査することを一つ目の目的とする．
+
+また従来，球を落下させる試行ごとの間隔を10分と統一して行っていた．これは，先行研究\cite{ref:8-5}にて，等間隔の時間で物体を落下させると，落下速度が一定になることが報告されているためである．落下球によって擬塑性流体の分子構造がせん断されたのちに回復するためである．一方で，試行ごとの落下間隔を変化させると，分子構造の回復割合が変化し，粘弾性特性が変化すると考えられる．このことによって発生する超音波照射による高速化への影響を調べることを二つ目の目的とする．

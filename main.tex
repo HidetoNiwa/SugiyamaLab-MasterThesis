@@ -1,12 +1,47 @@
-\documentclass[11pt,a4j]{jreport}
+\RequirePackage{plautopatch}
+\documentclass[platex,dvipdfmx,10pt,a4j]{jarticle}
 \usepackage{setspace}
 \usepackage{url}
 \usepackage[dvipdfmx]{graphicx}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage[title]{appendix}
+\usepackage{amsmath}
+\usepackage{multirow}
+
+\renewcommand{\figurename}{Fig}
+\renewcommand{\tablename}{Table}
+\renewcommand{\refname}{参考文献}
+
+\pagestyle{fancy}
+\rhead{\leftmark}
+\lhead{\rightmark}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\footrulewidth}{0.4pt}
 
 \begin{document}
 \input{0-Cover/cover.tex}
 \newpage
+\tableofcontents
+\newpage
 \input{1-Background/background.tex}
+\newpage
 \input{2-Methods/methods.tex}
+\newpage
 \input{3-Analysis/analysis.tex}
+\newpage
+\input{4-Results/results.tex}
+\newpage
+\input{5-Discussion/discussion.tex}
+\newpage
+\input{6-fin/fin.tex}
+\newpage
+\input{9-Reference/references.tex}
+\newpage
+\begin{appendices}
+    \input{X-Appendix/A-change_time.tex}
+%    \clearpage
+%    \input{X-Appendix/A-method_change.tex}
+\end{appendices}
 \end{document}

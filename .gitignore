@@ -2,3 +2,7 @@
 *.div
 *.aux
 *.log
+*.dvi
+*.gz
+*.toc
+main.pdf
