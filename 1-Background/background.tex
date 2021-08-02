@@ -1,9 +1,11 @@
 \section{緒言}
 
 \subsection{研究背景}
-一般的に，流体はせん断応力がひずみ速度に比例するニュートン流体と，せん断応力がひずみ速度が非線形となる非ニュートン流体に分類することができる．粘性応力とひずみ速度の比例係数として用いられる粘度について考えると，ニュートン流体ではせん断速度に関わらず一定となっている．一方で非ニュートン流体において，粘度はせん断速度によって変化する．
 
-Fig.\ref{fig:1-fluid-curve}に示す通り，非ニュートン流体はDilatant fluid, Pseudoplastic, Bingham plastic, Viscoplastic が挙げられている．これら非ニュートン流体の粘度を示す理論として，Power-law model (Ostwald-De Waele model), Cross model，Carreau viscosity equationやHerschel-Bulkley modelなどを挙げることができる\cite{ref:1}．Power-law model はせん断速度の限られた範囲内にて適応することができる．理論式中の指数によってニュートン流体，shear-thinning流体と，shear-thickening流体に分類することができる．これらのせん断速度と粘度の関係性はFig.\ref{fig:2-Newton-fluid}に示す通りである．これら2種類の流体のうち，shear-thinning流体は，せん断速度$\dot{\gamma}$が高くなるほど粘度$\mu$が低くなる性質を有している．この流体は擬塑性流体とも呼ばれている．
+一般的に，流体はせん断応力がせん断速度に比例するNewton流体と，せん断応力がせん断速度が非線形となる非Newton流体に分類することができる．
+
+Fig.\ref{fig:1-fluid-curve}に示す通り，Newton流体はせん断速度とせん断応力が比例関係にある流体である．一方でそれ以外の流体は非Newton流体と呼ばれている．非Newton流体はDilatant fluid, Pseudoplastic, Bingham plastic, Viscoplastic が挙げられている．
+非Newton流体のうち，Bingham plastic 流体, Viscoplastic 流体はせん断応力がある一定になるまでせん断速度が発生しない流体である．一方で，Dilatant fluid 流体, Pseudoplastic 流体はせん断応力が少しでも加わると，せん断速度が発生し流体的挙動を示す．これら非Newton流体の粘度を示す理論として，Power-law model (Ostwald-De Waele model), Cross model，Carreau viscosity equationやHerschel-Bulkley modelなどを挙げることができる\cite{ref:1}．Power-law model はせん断速度の限られた範囲内にて適応することができる．理論式中の指数によってNewton流体，shear-thinning流体と，shear-thickening流体に分類することができる．これらのせん断速度と粘度の関係性はFig.\ref{fig:2-Newton-fluid}に示す通りである．これら2種類の流体のうち，本研究で扱うshear-thinning流体は，せん断速度$\dot{\gamma}$が高くなるほど粘度$\mu$が低くなる性質を有している．この流体は擬塑性流体とも呼ばれている．
 
 Cross modelはshear-thinning性が構造的に引き起こされるといった仮説において導き出された理論である．これは広いせん断速度において適用することができる．また，Carreau viscosity equationはCross modelをpower-law領域においてより適合するよう修正したものとなっている．Herschel-Bulkley modelはBingham plasticやViscoplasticといった静止状態の流体においてせん断応力が存在する流体を示す理論となっている\cite{ref:1}．
 
@@ -16,11 +18,11 @@ Cross modelはshear-thinning性が構造的に引き起こされるといった�
 \begin{center}
     \begin{figure}[h]
         \centering
-        \includegraphics[width=7.0cm,clip]{1-Background/1-fluid-curve.jpg}
+        \includegraphics[width=8.0cm,clip]{1-Background/1-fluid-curve.jpg}
         \caption{Qualitative flow curves for different types of non-Newtonian fluids\cite{ref:1}.}
         \label{fig:1-fluid-curve}
         \centering
-        \includegraphics[width=7.0cm,clip]{1-Background/2-Newton-fluid.png}
+        \includegraphics[width=8.0cm,clip]{1-Background/2-Newton-fluid.png}
         \caption{Classifications of non-Newtonian fluid.}
         \label{fig:2-Newton-fluid}
     \end{figure}
@@ -29,11 +31,11 @@ Cross modelはshear-thinning性が構造的に引き起こされるといった�
 
     \begin{figure}[h]
         \centering
-        \includegraphics[width=10.0cm,clip]{1-Background/3-bubble.png}
+        \includegraphics[width=12.0cm,clip]{1-Background/3-bubble.png}
         \caption{Periodic change in shape of bubble under cyclic pressure change\cite{ref:5}.}
         \label{fig:3-bubble}
         \centering
-        \includegraphics[width=10.0cm,clip]{1-Background/4-sinking.png}
+        \includegraphics[width=12.0cm,clip]{1-Background/4-sinking.png}
         \caption{Sinking dynamics for different intruder-sizes and for different vibration intensities $\Gamma$. (a1) Depth versus time for an intruder with R=4mm and (a2) for an intruder with R=7mm. (b1) Instantaneous velocity versus sinking depth obtained from (a1) and (b2) from (a2). The black lines correspond to the solutions fitted in the quasi-steady regime\cite{ref:6}.}
         \label{fig:4-sinking}
     \end{figure}
@@ -41,6 +43,8 @@ Cross modelはshear-thinning性が構造的に引き起こされるといった�
 
 \subsection{研究目的}
 
-先行研究\cite{ref:8}において，落下球の把持を行うのに電磁石を用いていた．しかし，電磁石を用いた方法では強磁性体のみを把持することができ，それ以外の材質のものは把持することはできない．そこで，落下球を把持する方法を，真空ポンプを用いて吸引する手法に変化させた．把持する手法の変化に伴う擬塑性流体中を落下する球への影響について調査することを一つの目的とする．
+擬塑性流体はせん断力が加わると粘度が低下する．このことより，境界層が物体周囲に形成された際に，物体の周囲流体の粘性応力が小さくなり，物体に働く粘性抵抗が低減する．このことにより物体の運動を促進することが可能となる．物体周囲に境界層が形成される要因の一つとして，音圧場により形成される音響境界層がある\cite{ref:7}．
 
-また従来，落下球を落下させる試行ごとの間隔を10分と統一して行っていた．しかし，この試行ごとの間隔を変化させると，擬塑性流体の粘性特性が変化すると考えられる．このことによって発生する超音波照射による高速化への影響を調べることをもう一つの目的とする．
+先行研究\cite{ref:8}において，擬塑性流体中を落下する球に超音波を照射することで，音響境界層内部の粘度を低下させ，球に作用する粘性抵抗を減少させ，落下速度が速くなることが示唆された．先行研究\cite{ref:8}において，落下球の把持を行うのに電磁石を用いていた．しかし，電磁石を用いた方法では強磁性体のみを把持することができ，それ以外の材質のものは把持することはできない．そこで，落下球を把持する方法を，真空ポンプを用いて吸引する手法に変化させ実験を行った．把持する手法の変化に伴い生じる，擬塑性流体中を落下する球への落下速度への影響について調査することを一つ目の目的とする．
+
+また従来，球を落下させる試行ごとの間隔を10分と統一して行っていた．これは，先行研究\cite{ref:8-5}にて，等間隔の時間で物体を落下させると，落下速度が一定になることが報告されているためである．落下球によって擬塑性流体の分子構造がせん断されたのちに回復するためである．一方で，試行ごとの落下間隔を変化させると，分子構造の回復割合が変化し，粘弾性特性が変化すると考えられる．このことによって発生する超音波照射による高速化への影響を調べることを二つ目の目的とする．

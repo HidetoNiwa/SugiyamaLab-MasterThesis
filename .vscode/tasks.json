@@ -27,7 +27,7 @@
         {
             "label": "makePDF",
             "type": "shell",
-            "command": "dvipdfmx -f ptex-ipa.map main.dvi",
+            "command": "dvipdfmx -f ptex-ipa.map -I 24 main.dvi",
             "dependsOn": [
                 "platex3"
             ]
