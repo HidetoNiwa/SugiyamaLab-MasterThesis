@@ -51,7 +51,7 @@ $De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で�
     \tau \sim k \times \left(\frac{U}{a}\right)^n , 
     \label{eq:tau-cal}
 \end{equation}
-となる．
+と概算することができる．
 
 Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピーク速度$U_{peak}$[mm/s]と終端速度$U_{ave}$[mm/s]を算出した．続いて，式\ref{eq:tau-cal}を用いて，それぞれの速度における応力$\tau_{peak}$[Pa]，$\tau_{ave}$[Pa]の算出を行った．これら算出結果と先行研究の計測結果Fig.\ref{fig:iwamuro-G}より，貯蔵弾性率$G'$も求めた．これらの結果を，Table\ref{table:iwamuro}に示す．
 
@@ -59,10 +59,12 @@ Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピ
 
 Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と，終端速度より求めた$De_{ave}$において，それぞれに顕著な差異が見られないことが分かった．以降，$De_{peak}$に関してのみ議論を行う．$De_{peak}$に関して，球の半径との関係性をFig.\ref{fig:a-Degraph}に示す．横軸は半径$a$[mm]，縦軸は$De$数である．先行研究であるIwamuro \textit{et al.}\cite{ref:8}の結果に関して，球の半径が大きくなると，それに伴い$De$数も増加していることが分かった．式\ref{eq:De2}において，球の半径$a$が増加すると$De$数は減少すると考えられるが，落下速度$U$のが大きく変化したためと考えられる．
 
-電磁石を用いて球を把持した場合，電磁石へ落下方向に力を与えて落下を開始させている．この時，微小ではあるが落下開始時に初速が存在している．落下開始時に球にかかる力は，重力，浮力，粘性抵抗力となる．一方で真空ポンプを用いて球を把持した場合，吸引を止めると球は落下する．この場合，初速は存在していないと考えられる．ゆえに，
+電磁石を用いて球を把持した場合，電磁石へ落下方向に力を与えて落下を開始させている．この時，微小ではあるが落下開始時に初速が存在する．一方で真空ポンプを用いて球を把持した場合，吸着パッドを大気圧にすると球は落下する．この場合，球に力が加わらないため，初速は存在しない．このように初速の有無が落下速度の変化に大きく関与していると考えられる．
 
+初速の有無が与える影響に関して調査を行うため，真空ポンプを用いて球の把持を行い，球中心が液面より高さ5mmとなる地点から落下させた．その結果をFig.\ref{fig:h-5}に示す．縦軸は落下速度，横軸は初速ありの場合は液面に球中心が入ったときを0s，初速なしの場合は落下開始時刻を0sとした時刻である．この条件において，初速は313[mm/s]となる．一方でピーク速度は，初速を超えて，440[mm/s]まで加速した．これは弾性による減速が生じるよりも前に，初速，重力によって加速したためであると考えられる．
 
-落下開始時に球にかかる力は，
+Iwamuro\cite{ref:9}に関して，0.1sの時185[mm/s]であった．
+
 
 一方で，真空ポンプを用いた落下実験（niwa exp.）の$De$数は，先行研究の結果において球の半径$4<a<4.5$[mm]の間における$De$数に相当すると考えられる．真空ポンプを用いた落下実験の場合，$De$数が小さくなった原因であるが，ピーク速度$U_{peak}$が小さかったためと考えられる．電磁石を用いて把持した場合，落下開始時に初速を与える必要がある．一方で，真空ポンプを用いて把持した場合，初速を与えず落下を開始することができる．このように初速の有無が影響の一つとして考えられる．これを検証するため，球を液面上部の空中から落下させ，初速を与えた状態で溶液中へ落下させる実験を行う必要があると考えられる．
 
@@ -129,6 +131,14 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
         \includegraphics[width=15cm,clip]{5-Discussion/Deborah.png}
         \caption{Relationship between the radius $a$ and the number $De$ of falling spheres.}
         \label{fig:a-Degraph}
+    \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+    \begin{center}
+        \includegraphics[width=15cm,clip]{5-Discussion/h-5.png}
+        \caption{Falling velocity of a sphere in 1wt.\% PAA solution falling with initial velocity.}
+        \label{fig:h-5}
     \end{center}
 \end{figure}
 
