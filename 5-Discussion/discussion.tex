@@ -14,7 +14,7 @@ $De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で�
     T = \frac{a}{U} ,
     \label{eq:T}
 \end{equation}
-となる．ここで，球の落下速度$U$[mm/s]，球の半径$a$[mm]である．また，緩和時間$\lambda$[s]は，
+となる．ここで，球の落下速度$U$[m/s]，球の半径$a$[m]である．また，緩和時間$\lambda$[s]は，
 \begin{equation}
     \lambda \approx \frac{\mu}{G'} .
     \label{eq:lamda}
@@ -26,20 +26,20 @@ $De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で�
 \end{equation}
 となる．せん断速度$\dot{\gamma}$[1/s]に関して，球の落下による影響を考えるため，
 \begin{equation}
-    \dot{\gamma}=\frac{U}{a} ,
+    \dot{\gamma} \sim \frac{U}{a} ,
     \label{eq:gamma}
 \end{equation}
 となる．よって，式\ref{eq:power-law}，\ref{eq:gamma}より粘度$\mu$は
 \begin{equation}
-    \mu = k \times \left(\frac{U}{a}\right)^{n-1} ,
+    \mu \sim k \times \left(\frac{U}{a}\right)^{n-1} ,
     \label{eq:power-law2}
 \end{equation}
 と表される．これら式\ref{eq:De},\ref{eq:T},\ref{eq:lamda},\ref{eq:power-law2}より，$De$数は，
 \begin{equation}
-    De = \frac{k}{G'} {\left(\frac{U}{a}\right)}^n ,
+    De \sim \frac{k}{G'} {\left(\frac{U}{a}\right)}^n ,
     \label{eq:De2}
 \end{equation}
-となり，粘度定数$k$[Pa$\times$s${}^n$]，貯蔵弾性率$G'$[Pa]，落下速度$U$[mm/s]，球の半径$a$[mm]によって表される．
+となり，粘度定数$k$[Pa$\times$s${}^n$]，貯蔵弾性率$G'$[Pa]，落下速度$U$[m/s]，球の半径$a$[m]によって表される．
 
 貯蔵弾性率$G'$[Pa]に関して，先行研究において計測されたFig.\ref{fig:iwamuro-G}(b)の結果より考える．この図において，貯蔵弾性率$G'$[Pa]は応力$\tau$[Pa]との関係性が示されている．ここで応力$\tau$[Pa]は，
 \begin{equation}
@@ -48,14 +48,14 @@ $De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で�
 \end{equation}
 となる．ここに，式\ref{eq:power-law}，\ref{eq:gamma}を代入すると，
 \begin{equation}
-    \tau = k \times \left(\frac{U}{a}\right)^n , 
+    \tau \sim k \times \left(\frac{U}{a}\right)^n , 
     \label{eq:tau-cal}
 \end{equation}
 となる．
 
-Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピーク速度$U_{peak}$[mm/s]と終端速度$U_{ave}$[mm/s]を算出した．続いて，式\ref{eq:tau-cal}を用いて，それぞれの速度における応力$\tau_{peak}$[Pa]，$\tau_{ave}$[Pa]の算出を行った．これら算出結果と先行研究の計測結果Fig.\ref{fig:iwamuro-G}より，貯蔵弾性率$G'$も求めた．これらの結果を，Table　\ref{table:iwamuro}に示す．
+Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピーク速度$U_{peak}$[mm/s]と終端速度$U_{ave}$[mm/s]を算出した．続いて，式\ref{eq:tau-cal}を用いて，それぞれの速度における応力$\tau_{peak}$[Pa]，$\tau_{ave}$[Pa]の算出を行った．これら算出結果と先行研究の計測結果Fig.\ref{fig:iwamuro-G}より，貯蔵弾性率$G'$も求めた．これらの結果を，Table\ref{table:iwamuro}に示す．
 
-また，式\ref{eq:power-law2}を用いて，ピーク速度/終端速度それぞれの粘度$\mu_{peak}$[Pa$\cdot$s]，$\mu_{ave}$[Pa$\cdot$s]を算出した．これらの粘度を式\ref{eq:lamda}に代入し，それぞれの緩和時間$\lambda_{peak}$[s]，$\lambda_{ave}$[s]の算出を行った．そして，それらの緩和時間より，式\ref{eq:De}を用いて，それぞれの$De$数，$De_{peak}$，$De_{ave}$を求めた．これらの結果を，Table \ref{table:iwamuro2}に示す．
+また，式\ref{eq:power-law2}を用いて，ピーク速度/終端速度それぞれの粘度$\mu_{peak}$[Pa$\cdot$s]，$\mu_{ave}$[Pa$\cdot$s]を概算した．これらの粘度を式\ref{eq:lamda}に代入し，それぞれの緩和時間$\lambda_{peak}$[s]，$\lambda_{ave}$[s]の算出を行った．そして，それらの緩和時間より，式\ref{eq:De}を用いて，それぞれの$De$数，$De_{peak}$，$De_{ave}$を求めた．これらの結果を，Table \ref{table:iwamuro2}に示す．
 
 Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と，終端速度より求めた$De_{ave}$において，それぞれに顕著な差異が見られないことが分かった．以降，$De_{peak}$に関してのみ議論を行う．$De_{peak}$に関して，球の半径との関係性をFig.\ref{fig:a-Degraph}に示す．横軸は半径$a$[mm]，縦軸は$De$数である．先行研究であるIwamuro \textit{et al.}\cite{ref:8}の結果に関して，球の半径が大きくなると，それに伴い$De$数も増加していることが分かった．式\ref{eq:De2}において，球の半径$a$が増加すると$De$数は減少すると考えられるが，落下速度$U$のが大きく変化したためと考えられる．
 
@@ -79,7 +79,7 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
       & 9  & 193 & 133 & 22.3 & 20.5 & 4\\
       & 10 & 256 & 168 & 23.2 & 21.2 & 3.5\\
       \hline \hline
-      Niwa & 10 & 171 & 164 & 21.4 & 21.4 & 4.5 \\
+      Niwa & 10 & 148 & 144 & 18.9 & 18.7 & 6 \\
       \hline
     \end{tabular}
 \end{table}
@@ -101,7 +101,7 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
       & 9  & 0.52 & 0.69 & 0.13 & 0.17 & 5.58 & 5.12\\
       & 10 & 0.45 & 0.63 & 0.13 & 0.18 & 6.64 & 6.03\\
       \hline \hline
-      Niwa & 10 & 0.63 & 0.65 & 0.14 & 0.14 & 4.76 & 4.71 \\
+      Niwa & 10 & 0.64 & 0.65 & 0.11 & 0.11 & 3.15 & 3.12 \\
       \hline
     \end{tabular}
 \end{table}
@@ -142,7 +142,7 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
 
 続いて，超音波照射に伴う高速化における粘度の影響について考える．音響境界層厚さ$\delta$は，次のように表される．
 \begin{eqnarray}
-    \delta \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{1}{n-1}} .
+    \delta \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{1}{n+1}} .
     \label{eq:delta}
 \end{eqnarray}
 
@@ -158,7 +158,7 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
 \end{eqnarray}
 と表される．また，音響境界層粘度$\mu_{ABL}$は
 \begin{eqnarray}
-    \mu_{ABL}=k\left(\frac{u}{\delta}\right)^{n-1} ,
+    \mu_{ABL} \sim k\left(\frac{u}{\delta}\right)^{n-1} ,
     \label{eq:muABL}
 \end{eqnarray}
 と見積もられる．ここで，$u$は音波によって加振される流体粒子速度を表す．よって，式\ref{eq:Udiff}の右辺は，式\ref{eq:power-law2},\ref{eq:delta},\ref{eq:muABL}より，
@@ -168,10 +168,17 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
 \end{eqnarray}
 と表される．この式\ref{eq:Udiff2}において，音響境界層$\delta^n$に関して，式\ref{eq:delta}より
 \begin{eqnarray}
-    \delta^n \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{n}{n-1}} ,
+    \delta^n \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{n}{n+1}} ,
     \label{eq:ndelta}
 \end{eqnarray}
-と表される．今回，落下間隔を変化させたが，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$，周波数$f$はすべて同一であった．よって，$k,n$ の2つがパラメータとして考えられる．Iwamuro\cite{ref:9}における擬塑性流体の経時変化や濃度変化における粘性特性の変化\cite{ref:Rahimi2007},\cite{ref:Agi2018} より，$n$よりも$k$の方がパラメータとして大きく作用することが分かる．よって，$k$のみをパラメータとして扱うと，速度比$U_{ABL}/U_0$は，$k^\frac{n}{n-1}$によって変化することが分かる．ここで，$n=0.24$とすると，$\delta \propto k^{-0.32}$となり，単調減少である．よって，$k$ が増加すると高速化はあまり見られなくなることが分かる．
+と表される．今回，落下間隔を変化させたが，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$，周波数$f$はすべて同一であった．よって，$k,n$ の2つがパラメータとして考えられる．Iwamuro\cite{ref:9}における擬塑性流体の経時変化や濃度変化における粘性特性の変化\cite{ref:Rahimi2007},\cite{ref:Agi2018} より，$n$よりも$k$の方がパラメータとして大きく作用することが分かる．よって，$k$のみをパラメータとして扱うと，速度比$U_{ABL}/U_0$は，$k^\frac{n}{n+1}$によって変化することが分かる．ここで，$n=0.24$とすると，$\delta \propto k^{0.19}$となり，
+
+
+
+
+
+
+
 
 また，式\ref{eq:power-law}より，$k$が増加すると粘度$\mu$は大きくなり，式\ref{eq:UT}より落下速度は速くなることも分かる．ゆえに，落下速度が減少すると超音波照射による高速化があまり見られなくなることが分かる．
 
