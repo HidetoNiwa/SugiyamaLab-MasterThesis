@@ -1,4 +1,4 @@
-\section{実験結果}
+\section{溶液物性および圧力場の確認}
 \subsection{粘度計測}
 鋼球落下実験を行う試験溶液として，1wt.\%PAA溶液の製作を行った．この製作した溶液の粘度特性を確認し，先行研究\cite{ref:9}\cite{ref:10}における粘度特性と比較した．この比較を行うことで先行研究との粘度特性の違いを確認した．なお，この粘度計測を実施するためには，溶質が溶媒に十分に均一に溶解することならびに，混合時に混入した気泡がおおむね消失することが必要であるため，溶液製作1週間後に行った．それぞれの試料に対し，円錐回転子の回転数を変化させ，各5回計測を行いその平均を求めた．
 
@@ -9,7 +9,7 @@
     \label{eq:power-low}
     \mu=k\cdot\dot{\gamma}^{n-1}
 \end{eqnarray}
-といった式で与えられる\cite{ref:1}．式\ref{eq:power-low}を用いて近似線計算を行った結果，$k$=8.37[Pa$\cdot \text{s}^n]$,$n=0.24$であった．Iwamuro {\it et al.}\cite{ref:9}では，$k$=9.4[Pa$\cdot \text{s}^n]$,$n=0.23$と示されている．また，Shiratori {\it et al.}\cite{ref:10}を同様に解析すると，$k$=4.9[Pa$\cdot \text{s}^n$],$n=0.18$となっていた．今回作製したPAA溶液の粘度特性はIwamuro {\it et al.}とShiratori {\it et al.}の間に位置しており，適切に作製されたと判断できる．
+といった式で与えられる\cite{ref:1}．式\ref{eq:power-low}を用いて近似線計算を行った結果を，Table\ref{table:power-law}に示す．今回作製したPAA溶液の粘度特性はIwamuro {\it et al.}とShiratori {\it et al.}の間に位置しており，適切に作製されたと判断できる．
 
 \begin{figure}[ht]
     \centering
@@ -24,6 +24,18 @@
     \caption{Flow curve for 1wt.\%PAA solution.}
     \label{fig:PAA-vis}
 \end{figure}
+
+\begin{table}[h]
+    \centering
+    \caption{}
+    \label{table:power-law}
+    \begin{tabular}{c|c|c} \hline
+        & k & n \\ \hline \hline
+        Present Value & 8.37 & 0.24 \\
+        Iwamuro\cite{ref:8} & 9.4 & 0.23 \\
+        Shiratori \textit{et al}.(2016)\cite{ref:10} & 5.9 & 0.25 \\ \hline
+    \end{tabular}
+\end{table}
 
 \newpage
 
@@ -57,45 +69,3 @@
     \caption{Pressure field in PAA solution measurement results. (a)In tank A. (b)In tank B.}
     \label{fig:pressure}
 \end{figure}
-
-\newpage
-
-\subsection{装置改良における 実験結果}
-
-容器Aにおいて真空ポンプを用いて球を把持し，球を落下させ解析した結果をFig\ref{fig:falling-A}に示す．縦軸は落下速度，横軸は落下開始時からの経過時間である．先行研究であるIwamuro \textit{et al}.\cite{ref:8}や電磁石を用いて球を把持した場合と比較し，超音波照射による高速化が顕著に現れていないことが分かる．また，落下開始時に電磁石を用いた場合はオーバーシュートが見られるが，真空ポンプを用いた場合はオーバーシュートが見られなかった．これは，実験手法の変化により弾性による影響が減少したためと考えられる．このことに関して，後述の\ref{sec:dis-de}にて議論を行う．また，補足資料\ref{sec:reexp}に真空ポンプを用いた把持方法における再現性の確認結果を示す．
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=12cm,clip]{./4-Results/s1-A.png}
-    \caption{Falling velocity of a sphere in 1wt.\%PAA solution with and without ultrasound irradiation in tank A.}
-    \label{fig:falling-A}
-\end{figure}
-
-\newpage
-
-\subsection{インターバル変化 実験結果}
-
-容器Bにおいて落下間隔を5分，10分，20分と変化し，球を落下させた解析した結果をFig.\ref{fig:falling-5}，\ref{fig:falling-10}，\ref{fig:falling-20}，に示す．縦軸は落下速度，横軸は落下開始時からの経過時間である．なお，落下間隔10分の結果に関して，比較のため先行研究であるIwamuro\cite{ref:9}における実験結果もあわせて示す．それぞれの場合において，超音波照射による落下球の高速化は見られた．
-
-しかし，Iwamuro\cite{ref:9}と比較し，落下開始時の加速におけるオーバーシュートが今回は見られなかった．また，Iwamuro\cite{ref:9}においては落下速度は落下開始から0.8s以降，定常状態となっている．本実験において同条件である落下間隔10分において，超音波照射なしの場合，落下開始から0.2-0.7s間のみ，一定速度で落下し以降は加速した．オーバーシュートの有無は先述の装置改良における実験結果においても見られたため，実験手法の変化によるためだと考えられる．終端速度への到達の有無だが，擬塑性流体の粘弾性回復がIwamuro\cite{ref:9}と比較して十分に行われていないと考えられる．これは，落下間隔20分の条件において，Iwamuro\cite{ref:9}と同様の終端速度に達しているため，落下間隔10分では回復しきれなかった粘弾性が回復しきったためだと考えられる．粘弾性の回復時間が異なることに関しては，落下間隔をより細かく変化させ調査する必要があると考えられる．
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=11cm,clip]{./4-Results/s1-5.png}
-    \caption{Falling velocity of a sphere in 1wt.\%PAA solution with and without ultrasound irradiationin tank B. (Interval 5 min.)}
-    \label{fig:falling-5}
-\end{figure}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=11cm,clip]{./4-Results/s1-10.png}
-    \caption{Falling velocity of a sphere in 1wt.\%PAA solution with and without ultrasound irradiationin tank B. (Interval 10 min.)}
-    \label{fig:falling-10}
-\end{figure}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=11cm,clip]{./4-Results/s1-20.png}
-    \caption{Falling velocity of a sphere in 1wt.\%PAA solution with and without ultrasound irradiationin tank B. (Interval 20 min.)}
-    \label{fig:falling-20}
-\end{figure}
-
-\clearpage
