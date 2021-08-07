@@ -1,8 +1,8 @@
-\section{装置改良による変化}
+\section{実験装置改良により生じた変化}
 
 \subsection{落下実験結果}
 
-容器Aにおいて真空ポンプを用いて球を把持し，球を落下させ解析した結果をFig\ref{fig:falling-A}に示す．縦軸は落下速度，横軸は落下開始時からの経過時間である．先行研究であるIwamuro \textit{et al}.\cite{ref:8}や電磁石を用いて球を把持した場合と比較し，超音波照射による高速化が顕著に現れていないことが分かる．また，落下開始時に電磁石を用いた場合はオーバーシュートが見られるが，真空ポンプを用いた場合はオーバーシュートが見られなかった．これは，実験手法の変化により弾性による影響が減少したためと考えられる．このことに関して，後述の\ref{sec:dis-de}にて議論を行う．また，補足資料\ref{sec:reexp}に真空ポンプを用いた把持方法における再現性の確認結果を示す．
+容器Aにおいて真空ポンプを用いて球を把持し，球を落下させ解析した結果をFig\ref{fig:falling-A}に示す．縦軸は落下速度，横軸は落下開始時からの経過時間である．先行研究であるIwamuro \textit{et al}.\cite{ref:8}や電磁石を用いて球を把持した場合と比較し，超音波照射による高速化が顕著に現れていないことが分かる．また，落下開始時に電磁石を用いた場合はオーバーシュートが見られるが，真空ポンプを用いた場合はオーバーシュートが見られなかった．このことに関して，後述の\ref{sec:dis-de}にて議論を行う．また，補足資料\ref{sec:reexp}に真空ポンプを用いた把持方法における再現性の確認結果を示す．
 
 \begin{figure}[ht]
     \centering
@@ -11,10 +11,123 @@
     \label{fig:falling-A}
 \end{figure}
 
-\subsection{実験装置の改良に伴う擬塑性流体への落下への影響}
+\subsection{実験装置改良に伴う終端速度の変化}
+
+Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把持した場合，超音波照射のない状態において落下速度が大きかった．このことに関して，擬塑性流体中を落下する球の落下メカニズムより考える．
+
+擬塑性流体中を落下する球に伴う，慣性，粘性の影響に関して考えるため，レイノルズ数の計算を行う．式\ref{eq:power-low}のPower-law modelが適用できる流体中における粒子のレイノルズ数は，
+\begin{eqnarray}
+    Re = \frac{\rho_1 \left(2a\right)^n U_T^{2-n}}{k} ,
+\end{eqnarray}
+と表される\cite{ref:1,ref:8-5}．今回の実験結果より，$\rho \approx$1000[kg/m${}^3$]，$2a =$0.01[m]，$U_T \approx$0.2[m/s]，\\$k =$8.37[Pa$\cdot \text{s}^n]$，$n =$0.24であるので，$Re \approx$2.3と概算することができる．これより，粒子付近の流れはストークス流れに従い，粘性が支配的であると考えられる．
+
+本研究の系は，一様流れ中を半径$a$の球および，超音波の伝播が存在する系である．超音波の伝播に関して，音波の圧力変動の時間スケールは$O\left(10^{-5}\right)$sである．一方で，球の落下時間スケールは$O\left(10^{0}\right)$sとなるため，圧力変動の時間スケールは非常に短い．このことより，球の落下に関して平均的な挙動に着目することで音波の伝播に伴う圧力変動の非定常性を無視することができる．球周囲に存在する非圧縮性流体の単位体積の運動方程式について考える．球によって誘起される応力テンソルを$\bm{\sigma}$，流体の密度を$\rho$，速度ベクトルを$\bm{v}$，体積力を$\bm{X}$とすると，
+\begin{eqnarray}
+    \rho \frac{D\bm{v}}{Dt} = \bm{X} + \nabla \cdot \bm{\sigma} ,
+    \label{eq:undou}
+\end{eqnarray}
+となる．また，非圧縮性流体を仮定しているため連続の式が成り立つ．
+\begin{eqnarray}
+    \nabla \cdot \bm{v} = 0 .
+    \label{eq:renzoku}
+\end{eqnarray}
+式\ref{eq:renzoku}より，式\ref{eq:undou}の左辺は，
+\begin{eqnarray}
+    \rho \frac{D\bm{v}}{Dt} = \frac{\partial \bm{v}}{\partial t} + \left(\bm{v} \cdot \nabla \right) \bm{v} ,
+    \label{eq:nabie}
+\end{eqnarray}
+と展開できる．流れは十分に発達し，定常状態であると仮定することで，式\ref{eq:nabie}の右辺第1項の時間微分項は0となる．低レイノルズ数かつStokes近似を用いることにより，慣性項は粘性項より十分に小さいと仮定することができる．これにより，式\ref{eq:nabie}の右辺第2項の慣性項は無視することができる．加えて，周囲の流体において密度差が存在しないので，体積力$\bm{X}$は0となる．これらより，式\ref{eq:undou},\ref{eq:nabie}を用いると，
+\begin{eqnarray}
+    \nabla \cdot \sigma = 0 ,
+    \label{eq:sigma-}
+\end{eqnarray}
+といった関係が導かれる．
+
+ある球体領域において，ガウスの発散定理より，
+\begin{eqnarray}
+    \int_S{\bm{\sigma \cdot \bm{n}}}dS = \int_V{\nabla \cdot \bm{\sigma}}dV ,
+    \label{eq:gaussian}
+\end{eqnarray}
+といった関係が成り立つ．ここで，$\bm{n}$は球領域表面に対する法線ベクトル，$S$は球の表面積，$V$は球の体積を表す．式\ref{eq:sigma-}より，式\ref{eq:gaussian}は定数となることが分かる．式\ref{eq:sigma-},\ref{eq:gaussian}は任意の流体体積に関して成り立つため，球の表面（$r = a$）と球外部の任意の領域（$r > a$）において，以下の関係が成り立つ．
+\begin{eqnarray}
+    \int_{r=a}\bm{\sigma}\cdot\bm{e}_r dS=\int_r\bm{\sigma}\cdot\bm{e}_r dS .
+    \label{eq:inte}
+\end{eqnarray}
+ここで，$\bm{n} = \bm{e}_r$とする．この式は，任意の領域において，面積力が釣り合うことを示す．$r = a$における時間平均応力を$\langle\sigma\rangle_a$，$r$における時間平均応力を$\langle\sigma\rangle_r$とそれぞれする．球の表面積$S=4\pi r^2$であるので，式\ref{eq:inte}は，
+\begin{eqnarray}
+    4\pi a^2\langle\sigma\rangle_a = 4\pi r^2\langle\sigma\rangle_r ,
+    \label{eq:sigma1}
+\end{eqnarray}
+となる．球表面において，球の体積力と表面力は釣り合うので，
+\begin{eqnarray}
+    4\pi a^2\langle\sigma\rangle_a = \frac{4}{3} \pi a^3 \Delta \rho g ,
+    \label{eq:sigma2}
+\end{eqnarray}
+となる．ここで，球と流体の密度差$\Delta \rho$，重力加速度$g$である．式\ref{eq:sigma1},\ref{eq:sigma2}より，
+\begin{eqnarray}
+    \langle\sigma\rangle_r = \frac{a^3\Delta\rho g}{3r^2} ,
+\end{eqnarray}
+となる．低レイノルズ数で粘性項が支配的であるため，
+\begin{eqnarray}
+    \langle\sigma\rangle_r \sim \mu \dot{\gamma} ,
+    \label{eq:sigma3}
+\end{eqnarray}
+と概算することができる．Power-law modelが適用できる領域での議論を行っているため，式\ref{eq:power-low},\ref{eq:sigma3}より，
+\begin{eqnarray}
+    \dot{\gamma} \sim \left(\frac{a^3\Delta\rho g}{3r^2 k}\right)^{\frac{1}{n}} ,
+    \label{eq:gamma_abs}
+\end{eqnarray}
+と概算される．この系において，エネルギー散逸に関して考える．位置エネルギーと粘性によるエネルギー散逸が釣り合うため，単位時間あたりに系全体が失うエネルギーバランスより，以下の式が成立する．
+\begin{eqnarray}
+    \int_{r>a}\bar{\epsilon}dV = 4 \pi \int^\infty_a \bar{\epsilon}r^2 dr = \frac{4}{3}\pi a^3\Delta\rho g U_T ,
+    \label{eq:eg}
+\end{eqnarray}
+ここで，$U_T$は球の終端速度，$\bar{\epsilon}$は時間平均された単位体積当たりのエネルギー散逸である．また，粘性散逸$\bar{\epsilon}$は，以下の様に概算される．
+\begin{eqnarray}
+    \bar{\epsilon} \sim \langle\sigma\rangle_r\dot{\gamma} \sim \mu \dot{\gamma}^2 \sim \frac{\langle\sigma\rangle_r^2}{\mu} ,
+    \label{eq:eps}
+\end{eqnarray}
+式\ref{eq:sigma3},\ref{eq:eg},\ref{eq:eps}より，終端速度は
+\begin{eqnarray}
+    U_T \sim \frac{a^3\Delta\rho g}{3}\int_a^\infty\frac{dr}{\mu r^2} ,
+    \label{eq:UT0}
+\end{eqnarray}
+と見積もられる．式\ref{eq:power-low},\ref{eq:gamma_abs},\ref{eq:UT0}より，終端速度は下記の様に書き直される.
+\begin{eqnarray}
+    U_T \sim \frac{a^3\Delta\rho g}{3}  \int^{\infty}_{a} \frac{dr}{\mu r^2} \sim \left(\frac{\Delta \rho g}{3k}\right)^{\frac{1}{n}}\frac{n}{2-n}a^{\frac{n+1}{n}} .
+    \label{eq:UT}
+\end{eqnarray}
+
+上記の式\ref{eq:UT}より，Power-Law modelにおける，$k$,$n$のパラメータより終端速度を見積もることができる．ここで，溶液の作製誤差に関して考えるため，0.95wt.\%，1.05wt.\%のPAA溶液を同様の手順で作製した．粘度計測を行った結果をFig.\ref{fig:95-105}に示す．濃度が薄いと粘度は低く，濃度が高いと粘度は高くなった．
+
+Table\ref{table:power-law}の結果より，式\ref{eq:UT}を用いて直径10mmの球におけるIwamuro\cite{ref:8}の終端速度$U_I$を基準とした終端速度の比$U_T/U_{I}$を求めた．その結果を，Table\ref{table:UT}に示す．これより，今回の粘度特性において，Iwamuro\cite{ref:8}と比較して終端速度が1.09倍速くなることが分かった．Fig.\ref{fig:falling-A}において，Iwamuro\cite{ref:8}と比較して1.125倍，終端速度が速かった．一方で，0.95,1.05wt.\%それぞれのPAA溶液の粘度特性における終端速度比と比較しても実験結果と一番近いのは，1wt.\%の場合である．よって，溶液の濃度精度は1wt.\%±0.05wt.\%以内であり，溶液の作製誤差によって落下速度に差が生じたと考えられる．
+
+\begin{figure}[ht]
+    \includegraphics[width=15cm,clip]{5-Discussion/95-105.png}
+    \caption{Flow curve for 0.95~1.05wt.\%PAA solution.}
+    \label{fig:95-105}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \caption{Each parameter($k$,$n$) and terminal velocity ratio in the power-law model for each experimental result.}
+    \label{table:UT}
+    \begin{tabular}{c|c|c|c} \hline
+        & $k$ & $n$ & $U_T/U_{I}$ \\ \hline \hline
+        Present Value(1.05wt.\%) & 9.56 & 0.23 & 0.93\\
+        Present Value(1wt.\%) & 8.37 & 0.24 & 1.09\\
+        Present Value(0.95wt.\%) & 5.22 & 0.25 & 3.91\\
+        Iwamuro\cite{ref:8} & 9.4 & 0.23 & 1\\
+        Shiratori \textit{et al}.(2016)\cite{ref:10} & 5.9 & 0.25 & 2.99\\ \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+
+\subsection{落下開始時のオーバーシュートへの影響}
 \label{sec:dis-de}
 
-今回，球を把持する手法を，電磁石を用いて把持する方法から真空ポンプを用いて把持する方法に変化させた．すると，落下開始時0-0.3sにおける，落下速度のオーバーシュートが，先行研究より小さくなった．この落下速度のオーバーシュートは弾性による影響によって生じることが示されている\cite{ref:12}．以下で，オーバーシュートが顕著に見られなかった原因を，物質の流動性を表す$De$数より考える．$De$数が大きくなると，弾性的傾向が強くなり，$De$数が小さくなると，粘性的流動を表す．
+今回，球を把持する手法を，電磁石を用いて把持する方法から真空ポンプを用いて把持する方法に変化させた．この時，落下開始時0-0.3sにおける落下速度のオーバーシュートが，先行研究\cite{ref:8,ref:9}より小さくなった．落下開始時のオーバーシュートは弾性による影響によって生じる\cite{ref:12}．以下で，オーバーシュートが見られなくなった原因を，物質の流動性を表す$De$数より考える．$De$数が大きくなると，弾性的傾向が強くなり，$De$数が小さくなると，粘性的流動を表す．
 
 $De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で表される．
 \begin{equation}
@@ -69,19 +182,7 @@ Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピ
 
 また，式\ref{eq:power-law2}を用いて，ピーク速度/終端速度それぞれの粘度$\mu_{peak}$[Pa$\cdot$s]，$\mu_{ave}$[Pa$\cdot$s]を概算した．これらの粘度を式\ref{eq:lamda}に代入し，それぞれの緩和時間$\lambda_{peak}$[s]，$\lambda_{ave}$[s]の算出を行った．そして，それらの緩和時間より，式\ref{eq:De}を用いて，それぞれの$De$数，$De_{peak}$，$De_{ave}$を求めた．これらの結果を，Table\ref{table:iwamuro2}に示す．
 
-Table\ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と，終端速度より求めた$De_{ave}$において，大きな差異が見られないことが分かった．以降，$De_{peak}$に関してのみ議論を行う．$De_{peak}$に関して，落下速度のオーバーシュート$U_{peak}/U_{ave}$との関係をFig.\ref{fig:De-overshoot}に示す．横軸は$De$数，縦軸は落下速度のオーバーシュート$U_{peak}/U_{ave}$である．この図より，$De$数とオーバーシュートには正の相関があり，$De$数が増加するとオーバーシュートも大きくなることが分かる．
-
-%%% 以下，要書き直し！！！
-
-電磁石を用いて球を把持した場合，電磁石へ落下方向に力を与えて落下を開始させている．この時，微小ではあるが落下開始時に初速が存在する．一方で真空ポンプを用いて球を把持した場合，吸着パッドを大気圧にすると球は落下する．この場合，球に力が加わらないため，初速は存在しない．このように初速の有無が落下速度の変化に大きく関与していると考えられる．
-
-初速の有無が与える影響に関して調査を行うため，真空ポンプを用いて球の把持を行い，球中心が液面より高さ5mmとなる地点から落下させた．その結果をFig.\ref{fig:h-5}に示す．縦軸は落下速度，横軸は初速ありの場合は液面に球中心が入ったときを0s，初速なしの場合は落下開始時刻を0sとした時刻である．この条件において，初速は313[mm/s]となる．ピーク速度は440[mm/s]となり，初速を超えて加速した．これは初速や重力によって加速し，弾性が遅れて発生したためであると考えられる．
-
-Iwamuro\cite{ref:9}の$a =$5[mm]における初速を推定する．この結果において，0.1sの時185[mm/s]であった．球の初速を$U_0$とすると，$U_0$の取りうる値の範囲は，0$\leqq U_0 \leqq$185[mm/s]となる．一方で，ピーク速度は256[mm/s]となり，オーバーシュートが見られた．これは，先述の初速を与えた結果と同様に弾性による影響が生じる前に初速や重力によって加速したためだと考えられる．
-
-また，真空ポンプを用いた落下実験（niwa exp.）の$De$数は，先行研究の結果において球半径$3<a<3.5$[mm]の間における$De$数に相当した．電磁石を用いて把持した実験において，この球径においてオーバーシュートはあまり見られなかった．真空ポンプを用いた落下実験の場合，$De$数が小さくなった原因であるが，初速が存在しないため急激な速度変化とならず，ピーク速度$U_{peak}$が小さくなったためと考えられる．
-
-落下速度のオーバーシュートの有無は$De$数によって整理されることが分かった．また，電磁石を用いて把持した実験の場合，落下速度のオーバーシュート見られる原因であるが，初速により弾性が生じる前に終端速度以上に加速するためということが分かった．
+Table\ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と，終端速度より求めた$De_{ave}$において，大きな差異が見られないことが分かった．以降，$De_{peak}$に関してのみ議論を行う．$De_{peak}$に関して，落下速度のオーバーシュート$U_{peak}/U_{ave}$との関係をFig.\ref{fig:De-overshoot}に示す．横軸は$De$数，縦軸は落下速度のオーバーシュート$U_{peak}/U_{ave}$である．この図より，$De$数とオーバーシュートには正の相関があり，$De$数が増加するとオーバーシュートも大きくなることが分かった．
 
 \begin{table}[hbtp]
     \caption{Peak velocity $U_{peak}$/ end velocity $U_{ave}$, stress $\tau$, storage modulus $G'$ Calculation result.}
@@ -127,11 +228,6 @@ Iwamuro\cite{ref:9}の$a =$5[mm]における初速を推定する．この結果
       \hline
     \end{tabular}
 \end{table}
-\begin{figure}[ht]
-    \includegraphics[width=15cm,clip]{5-Discussion/iwamuro-G.PNG}
-    \caption{Frequency and stress dependence of storage and loss moduli for 1.0 wt.\% PAA.\cite{ref:8}}
-    \label{fig:iwamuro-G}
-\end{figure}
 
 \begin{figure}[ht]
     \begin{center}
@@ -142,12 +238,32 @@ Iwamuro\cite{ref:9}の$a =$5[mm]における初速を推定する．この結果
 \end{figure}
 
 \begin{figure}[ht]
+    \includegraphics[width=15cm,clip]{5-Discussion/iwamuro-G.PNG}
+    \caption{Frequency and stress dependence of storage and loss moduli for 1.0 wt.\% PAA.\cite{ref:8}}
+    \label{fig:iwamuro-G}
+\end{figure}
+
+\begin{figure}[ht]
     \begin{center}
         \includegraphics[width=15cm,clip]{5-Discussion/De-overshoot.png}
         \caption{Relationship between overshoot $U_{peak}/U_{ave}$ and Deborah number $De$ for falling spheres.}
         \label{fig:De-overshoot}
     \end{center}
 \end{figure}
+
+\clearpage
+
+\subsection{実験装置改良に伴う初速へ影響}
+
+前節にて，実験装置の改良によってピーク速度が減少し，$De$が小さくなったことによってオーバーシュートが小さくなったことを示した．本節において，電磁石を用いて把持した場合，ピーク速度が大きくなった理由に関して考察を行う．電磁石を用いて球を把持した場合，電磁石へ落下方向に力を与えて落下を開始させている．この時，微小ではあるが落下開始時に初速が存在する．一方で真空ポンプを用いて球を把持した場合，吸着パッドを大気圧にすると球は落下する．この場合，球に力が加わらないため，初速は存在しない．このように初速の有無がオーバーシュートの変化に大きく関与していると考えられる．
+
+初速の有無が与える影響に関して調査するため，真空ポンプを用いて球中心が液面より高さ$H=$5mmとなる地点で把持し，そこから球を落下させた．その結果をFig.\ref{fig:h-5}に示す．縦軸は落下速度，横軸は初速ありの場合は液面に球中心が入ったときを0s，初速なしの場合は落下開始時刻を0sとした時刻である．この条件において，初速は313[mm/s]となる．ピーク速度は440[mm/s]となり，初速を超えて加速した．これは初速と重力による加速が，粘性抵抗や浮力よりも大きく，弾性は遅れて発生するため，初速を超えて加速したと考えられる．
+
+Iwamuro\cite{ref:9}の$a =$5[mm]における初速を推定する．この結果において，0.1sの時185[mm/s]であった．球の初速を$U_0$とすると，$U_0$の取りうる値の範囲は，0$\leqq U_0 \leqq$185[mm/s]となる．一方で，ピーク速度は256[mm/s]となり，オーバーシュートが見られた．これは，先述の初速を与えた結果と同様に弾性による影響が生じる前に初速や重力によって加速したためだと考えられる．
+
+また，真空ポンプを用いた落下実験（niwa exp.）の$De$数は，先行研究の結果において球半径$3<a<3.5$[mm]の間における$De$数に相当した．電磁石を用いて把持した実験において，この球径においてオーバーシュートはあまり見られなかった．真空ポンプを用いた落下実験の場合，$De$数が小さくなった原因であるが，初速が存在しないため急激な速度変化とならず，ピーク速度$U_{peak}$が小さくなったためと考えられる．
+
+よって，電磁石を用いて球を把持した場合は初速による影響がオーバーシュートとして現れるが，真空ポンプを用いて球を把持した場合は初速が非常に小さいためその影響を受けないということが分かった．
 
 \begin{figure}[ht]
     \begin{center}
