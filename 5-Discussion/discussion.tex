@@ -36,12 +36,12 @@
     \label{eq:delta}
 \end{eqnarray}
 
-ここで，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$，周波数$f$である．音響境界層粘度$\mu_{ABL}$とすると超音波照射下における終端速度$U_{ABL}$は，式\ref{eq:UT}より，
+ここで，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$，周波数$f$である．音響境界層粘度$\mu_{ABL}$とすると超音波照射下における終端速度$U_{ABL}$は，式(\ref{eq:UT})より，
 \begin{eqnarray}
     U_{ABL} \sim \frac{a^3\Delta\rho g}{3}  \int^{\infty}_{a} \frac{dr}{\mu_{ABL} r^2} \sim \frac{a\Delta \rho \delta g}{3\mu_{ABL}} ,
     \label{eq:U_ABL}
 \end{eqnarray}
-と見積もられる．ある粘度$\mu_0$における終端速度を$U_0$とする．式\ref{eq:UT},\ref{eq:U_ABL}より，超音波照射の有無による終端速度比は，
+と見積もられる．ある粘度$\mu_0$における終端速度を$U_0$とする．式(\ref{eq:UT}),(\ref{eq:U_ABL})より，超音波照射の有無による終端速度比は，
 \begin{eqnarray}
     \frac{U_{ABL}}{U_0} \sim \frac{\mu_0}{\mu_{ABL}}\frac{\delta}{a} ,
     \label{eq:Udiff}
@@ -55,12 +55,12 @@
 
 流体粒子速度$u$に関して，球の落下方向を$z$とすると運動方程式は次式となる．
 \begin{eqnarray}
-    \frac{\partial u}{\partial z} + \frac{1}{\rho_1}\frac{\partial P}{\partial z} = 0 .
+    \frac{\partial u}{\partial t} + \frac{1}{\rho_1}\frac{\partial P}{\partial z} = 0 .
     \label{eq:newton-1}
 \end{eqnarray}
 ここで，$t$は時刻，$P$は圧力である．また，連続の式は圧縮性流体と仮定すると以下の式となる．
 \begin{eqnarray}
-    \frac{\partial u}{\partial t} + \frac{1}{\rho_1 c^2}\frac{\partial P}{\partial t} = 0 .
+    \frac{\partial u}{\partial z} + \frac{1}{\rho_1 c^2}\frac{\partial P}{\partial t} = 0 .
 \end{eqnarray}
 音波の周波数は一定であり，容器内の圧力変化は音波に依存するので，以下の式の近似を用いる．
 \begin{eqnarray}
@@ -68,31 +68,31 @@
     \partial P &\sim& \Delta P ,\label{eq:1-2}\\
     \partial z &\sim& \lambda .\label{eq:1-3}
 \end{eqnarray}
-ここで，$\lambda$は超音波の波長である．式\ref{eq:1-1},\ref{eq:1-2},\ref{eq:1-3}を用いて，式\ref{eq:newton-1}の近似を行うと次式のようになる．
+ここで，$\lambda$は超音波の波長である．式(\ref{eq:1-1}),(\ref{eq:1-2}),(\ref{eq:1-3})を用いて，式(\ref{eq:newton-1})の近似を行うと次式のようになる．
 \begin{eqnarray}
     uf \sim \frac{\Delta P}{\rho_1 \lambda} .
     \label{eq:u-1}
 \end{eqnarray}
-周波数$f$，波長$\lambda$，音速$c$の関係から式\ref{eq:u-1}を書き換えると次式となる．
+周波数$f$，波長$\lambda$，音速$c$の関係から式(\ref{eq:u-1})を書き換えると次式となる．
 \begin{eqnarray}
     u \sim \frac{\Delta P}{\rho_1 c}
 \end{eqnarray}
 
-これらを踏まえると，式\ref{eq:Udiff}の右辺は，式\ref{eq:power-law2},\ref{eq:delta},\ref{eq:muABL}より，
+これらを踏まえると，式(\ref{eq:Udiff})の右辺は，式(\ref{eq:power-law2}),(\ref{eq:delta}),(\ref{eq:muABL})より，
 \begin{eqnarray}
     \frac{U_{ABL}}{U_0} \sim \frac{U_0^{n-1}}{u^{n-1}}\frac{\delta^n}{a^n} ,
     \label{eq:Udiff2}
 \end{eqnarray}
-と表される．この式\ref{eq:Udiff2}において，音響境界層$\delta^n$に関して，式\ref{eq:delta}より
+と表される．この式(\ref{eq:Udiff2})において，音響境界層$\delta^n$に関して，式(\ref{eq:delta})より
 \begin{eqnarray}
     \delta^n \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{n}{n+1}} ,
     \label{eq:ndelta}
 \end{eqnarray}
-と表される．今回，落下間隔を変化させたが，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$，周波数$f$はすべて同一であった．よって，$k,n$ の2つがパラメータとして考えられる．Iwamuro\cite{ref:9}における擬塑性流体の経時変化や濃度変化における粘性特性の変化\cite{ref:Rahimi2007},\cite{ref:Agi2018} より，$n$よりも$k$の方がパラメータとして大きく作用することが分かる．よって，$k$のみをパラメータとして扱うと，速度比$U_{ABL}/U_0$は，$k^\frac{n}{n+1}$によって変化することが分かる．ここで，$n=0.24$とすると，$\delta \propto k^{0.19}$となり，境界層厚さは粘度定数に対して単調増加する．また，式\ref{eq:power-law}より，$k$が増加すると粘度$\mu$は大きくなり，式\ref{eq:UT}より落下速度は遅くなることも分かる．ゆえに，落下速度が減少すると超音波照射による高速化がより見られることが分かる．
+と表される．今回，落下間隔を変化させたが，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$，周波数$f$はすべて同一であった．よって，$k,n$ の2つがパラメータとして考えられる．Iwamuro\cite{ref:9}における擬塑性流体の経時変化や濃度変化における粘性特性の変化\cite{ref:Rahimi2007},\cite{ref:Agi2018} より，$n$よりも$k$の方がパラメータとして大きく作用することが分かる．よって，$k$のみをパラメータとして扱うと，速度比$U_{ABL}/U_0$は，$k^\frac{n}{n+1}$によって変化することが分かる．ここで，$n=0.24$とすると，$\delta \propto k^{0.19}$となり，境界層厚さは粘度定数に対して単調増加する．また，式(\ref{eq:power-law})より，$k$が増加すると粘度$\mu$は大きくなり，式(\ref{eq:UT})より落下速度は遅くなることも分かる．ゆえに，粘度が大きくなると落下速度が遅くなり，境界層厚さが厚くなる．
 
-今回，落下間隔を変化させた実験結果をFig.\ref{fig:interval-change}に示す．縦軸は落下速度，横軸は落下開始時刻からの経過時間である．この図に示される様に，超音波照射なしでの落下速度は落下間隔10分,5分,20分の順で速かった．これは，落下間隔の変化で流体の粘弾性特性が変化したためだと考えられる．式\ref{eq:UT}より，落下間隔10分よりも20分の方のが$k$が大きくなり，粘性が大きくなったと考えられる．超音波照射による落下速度を超音波照射なしにおける速度$U_{OFF}$で規格化した落下間隔ごとの結果をFig.\ref{fig:speed-diff}に示す．超音波照射による高速化も，超音波照射なしの落下速度と同様の順で大きくなった．このことは，先述の粘性が大きくなると高速化が大きくなるといったことに反している．
+今回，落下間隔を変化させた実験結果をFig.\ref{fig:interval-change}に示す．縦軸は落下速度，横軸は落下開始時刻からの経過時間である．この図に示される様に，超音波照射なしでの落下速度は落下間隔10分,5分,20分の順で速かった．これは，落下間隔の変化で流体の粘弾性特性が変化したためだと考えられる．式(\ref{eq:UT})より，落下間隔10分よりも20分の方のが$k$が大きくなり，粘性が大きくなったと考えられる．超音波照射による落下速度を超音波照射なしにおける速度$U_{OFF}$で規格化した落下間隔ごとの結果をFig.\ref{fig:speed-diff}に示す．超音波照射による高速化も，超音波照射なしの落下速度と同様の順で大きくなった．
 
-音響境界層内粘度および厚さの影響（式\ref{eq:Udiff}）をFig.\ref{fig:speed-diff-iwamuro}に示す．縦軸は超音波照射ありの場合の終端速度$U_{ON}$を，超音波照射なしの場合の終端速度$U_{OFF}$で規格化したものである．横軸は，$\mu_U$を音響境界層内の粘度$\mu_{ABL}$で規格化し，球半径$a$で規格化し音響境界層厚さ$\delta$を乗じたものである．この図に，本実験の結果だけではなくIwamuro\cite{ref:8}の結果も示す．図において，今回の落下間隔を変化させた実験結果は，単調減少となっている．一方でIwamuro\cite{ref:8}の結果と合わせると，誤差バーの範囲内に存在している．このことから，Iwamuro\cite{ref:8}にても指摘されていたが，音響境界層内の粘度とその厚さが落下間隔を変化させた場合においても超音波照射による高速化の要因となっていることが分かる．
+音響境界層内粘度および厚さの影響（式(\ref{eq:Udiff})）をFig.\ref{fig:speed-diff-iwamuro}に示す．縦軸は超音波照射ありの場合の終端速度$U_{ON}$を，超音波照射なしの場合の終端速度$U_{OFF}$で規格化したものである．横軸は，$\mu_U$を音響境界層内の粘度$\mu_{ABL}$で規格化し，球半径$a$で規格化し音響境界層厚さ$\delta$を乗じたものである．この図に，本実験の結果だけではなくIwamuro\cite{ref:8}の結果も示す．図において，今回の落下間隔を変化させた実験結果は，単調減少となっている．一方でIwamuro\cite{ref:8}の結果と合わせると，誤差バーの範囲内に存在している．このことから，Iwamuro\cite{ref:8}にても指摘されていたが，音響境界層内の粘度とその厚さが落下間隔を変化させた場合においても超音波照射による高速化の要因となっていることが分かる．
 
 今回は粘性による影響を考えた．一方，落下開始時のオーバーシュートが落下間隔20分の場合のみ見られ，落下間隔を長くすると弾性による影響を受けることも分かる．このため粘性だけではなく，弾性による影響を考慮する必要があるということが考えられる．これを解明するために，それぞれの落下間隔における貯蔵弾性率の計測等も行う必要があると考えられる．
 

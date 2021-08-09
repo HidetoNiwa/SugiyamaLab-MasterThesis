@@ -13,15 +13,13 @@
 
 \subsection{実験装置改良に伴う終端速度の変化}
 
-Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把持した場合，超音波照射のない状態において落下速度が大きかった．このことに関して，擬塑性流体中を落下する球の落下メカニズムより考える．
-
-擬塑性流体中を落下する球に伴う，慣性，粘性の影響に関して考えるため，レイノルズ数の計算を行う．式\ref{eq:power-low}のPower-law modelが適用できる流体中における粒子のレイノルズ数は，
+Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把持した場合，超音波照射のない状態において落下速度が大きかった．このことに関して，擬塑性流体中における球の落下メカニズムより考える．代表速度，代表長さとして，それぞれ，落下速度$U_T$，球直径$2a$を選ぶ．また，power-law (式(\ref{eq:power-low}))に従う流体の代表粘度を$k U_T/(2a)$とする．これらより，粒子レイノルズ数は次式で与えられる\cite{ref:1},\cite{ref:8-5}．式(\ref{eq:power-low})のPower-law modelが適用できる流体中における粒子のレイノルズ数は，
 \begin{eqnarray}
     Re = \frac{\rho_1 \left(2a\right)^n U_T^{2-n}}{k} ,
 \end{eqnarray}
-と表される\cite{ref:1,ref:8-5}．今回の実験結果より，$\rho \approx$1000[kg/m${}^3$]，$2a =$0.01[m]，$U_T \approx$0.2[m/s]，\\$k =$8.37[Pa$\cdot \text{s}^n]$，$n =$0.24であるので，$Re \approx$2.3と概算することができる．これより，粒子付近の流れはストークス流れに従い，粘性が支配的であると考えられる．
+と表される\cite{ref:1,ref:8-5}．今回の実験結果より，$\rho \approx$1000[kg/m${}^3$]，$2a =$0.01[m]，$U_T \approx$0.2[m/s]，\\$k =$8.37[Pa$\cdot \text{s}^n]$，$n =$0.24であるので，$Re \approx$2.3と概算することができる．これより，粒子付近ではストークス流れに近いとみなす．流れの決定因子としては，慣性に比べて粘性が支配的であると考える．
 
-本研究の系は，一様流れ中を半径$a$の球および，超音波の伝播が存在する系である．超音波の伝播に関して，音波の圧力変動の時間スケールは$O\left(10^{-5}\right)$sである．一方で，球の落下時間スケールは$O\left(10^{0}\right)$sとなるため，圧力変動の時間スケールは非常に短い．このことより，球の落下に関して平均的な挙動に着目することで音波の伝播に伴う圧力変動の非定常性を無視することができる．球周囲に存在する非圧縮性流体の単位体積の運動方程式について考える．球によって誘起される応力テンソルを$\bm{\sigma}$，流体の密度を$\rho$，速度ベクトルを$\bm{v}$，体積力を$\bm{X}$とすると，
+本研究の系は，一様流れ中を半径$a$の球および，超音波の伝播が存在する系である．超音波の伝播に関して，音波の圧力変動の時間スケールは$O\left(10^{-5}\right)$sである．一方で，球の落下時間スケールは$O\left(10^{0}\right)$sとなるため，圧力変動の時間スケールは非常に短い．球の落下に関しては，落下時間スケールで粗視化した平均的な挙動に着目する．球周囲に存在する非圧縮性流体の単位体積の運動方程式について考える．球によって誘起される応力テンソルを$\bm{\sigma}$，流体の密度を$\rho$，速度ベクトルを$\bm{v}$，体積力を$\bm{X}$とすると，
 \begin{eqnarray}
     \rho \frac{D\bm{v}}{Dt} = \bm{X} + \nabla \cdot \bm{\sigma} ,
     \label{eq:undou}
@@ -31,12 +29,12 @@ Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把�
     \nabla \cdot \bm{v} = 0 .
     \label{eq:renzoku}
 \end{eqnarray}
-式\ref{eq:renzoku}より，式\ref{eq:undou}の左辺は，
+式(\ref{eq:renzoku})より，式(\ref{eq:undou})の左辺は，
 \begin{eqnarray}
-    \rho \frac{D\bm{v}}{Dt} = \frac{\partial \bm{v}}{\partial t} + \left(\bm{v} \cdot \nabla \right) \bm{v} ,
+    \rho \frac{D\bm{v}}{Dt} = \frac{\partial \bm{v}}{\partial t} + \left(\bm{v} - \bm{U}_T \cdot \nabla \right) \bm{v} ,
     \label{eq:nabie}
 \end{eqnarray}
-と展開できる．流れは十分に発達し，定常状態であると仮定することで，式\ref{eq:nabie}の右辺第1項の時間微分項は0となる．低レイノルズ数かつStokes近似を用いることにより，慣性項は粘性項より十分に小さいと仮定することができる．これにより，式\ref{eq:nabie}の右辺第2項の慣性項は無視することができる．加えて，周囲の流体において密度差が存在しないので，体積力$\bm{X}$は0となる．これらより，式\ref{eq:undou},\ref{eq:nabie}を用いると，
+と展開できる．流れは十分に発達し，定常状態であると仮定することで，式(\ref{eq:nabie})の右辺第1項の時間微分項は0となる．低レイノルズ数かつStokes近似を用いることにより，慣性項は粘性項より十分に小さいと仮定することができる．これにより，式(\ref{eq:nabie})の右辺第2項の慣性項は無視することができる．加えて，粒子周囲流体には密度差がないため，静水圧分を除いた圧力を使って応力${\bm \sigma}$と書くと，体積力${\bm X}$は0となる．これらより，式(\ref{eq:undou}), (\ref{eq:nabie})を用いると，
 \begin{eqnarray}
     \nabla \cdot \sigma = 0 ,
     \label{eq:sigma-}
@@ -48,7 +46,7 @@ Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把�
     \int_S{\bm{\sigma \cdot \bm{n}}}dS = \int_V{\nabla \cdot \bm{\sigma}}dV ,
     \label{eq:gaussian}
 \end{eqnarray}
-といった関係が成り立つ．ここで，$\bm{n}$は球領域表面に対する法線ベクトル，$S$は球の表面積，$V$は球の体積を表す．式\ref{eq:sigma-}より，式\ref{eq:gaussian}は定数となることが分かる．式\ref{eq:sigma-},\ref{eq:gaussian}は任意の流体体積に関して成り立つため，球の表面（$r = a$）と球外部の任意の領域（$r > a$）において，以下の関係が成り立つ．
+といった関係が成り立つ．ここで，$\bm{n}$は球領域表面に対する法線ベクトル，$S$は球の表面積，$V$は球の体積を表す．式(\ref{eq:sigma-})より，式(\ref{eq:gaussian})の右辺は0である．式(\ref{eq:sigma-}),(\ref{eq:gaussian})は任意の流体体積に関して成り立つため，球の表面（$r = a$）と球外部の任意の領域（$r > a$）において，以下の関係が成り立つ．
 \begin{eqnarray}
     \int_{r=a}\bm{\sigma}\cdot\bm{e}_r dS=\int_r\bm{\sigma}\cdot\bm{e}_r dS .
     \label{eq:inte}
@@ -149,17 +147,17 @@ $De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で�
     \mu = k \times \dot{\gamma}^{n-1} ,
     \label{eq:power-law}
 \end{equation}
-となる．せん断速度$\dot{\gamma}$[1/s]に関して，球の落下による影響を考えるため，
+となる．落下球によるせん断領域において，せん断速度の代表値$\dot{\gamma}$[1/s]は，次のように概算される．
 \begin{equation}
-    \dot{\gamma} \sim \frac{U}{a} ,
+    \dot{\gamma} \sim \frac{U}{a} ．
     \label{eq:gamma}
 \end{equation}
-となる．よって，式\ref{eq:power-law}，\ref{eq:gamma}より粘度$\mu_U$は
+よって，式(\ref{eq:power-law})，(\ref{eq:gamma})よりせん断領域における粘度$\mu_U$は，次式で概算される．
 \begin{equation}
-    \mu_U \sim k \times \left(\frac{U}{a}\right)^{n-1} ,
+    \mu_U \sim k \times \left(\frac{U}{a}\right)^{n-1} ．
     \label{eq:power-law2}
 \end{equation}
-と表される．これら式\ref{eq:De},\ref{eq:T},\ref{eq:lamda},\ref{eq:power-law2}より，$De$数は，
+これら式(\ref{eq:De}),(\ref{eq:T}),(\ref{eq:lamda}),(\ref{eq:power-law2})より，$De$数は，
 \begin{equation}
     De \sim \frac{k}{G'} {\left(\frac{U}{a}\right)}^n ,
     \label{eq:De2}
@@ -171,18 +169,18 @@ $De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で�
     \tau = \mu \times \dot{\gamma} ,
     \label{eq:tau}
 \end{equation}
-となる．ここに，式\ref{eq:power-law}，\ref{eq:gamma}を代入すると，
+となる．ここに，式(\ref{eq:power-law})，(\ref{eq:gamma})を代入すると，
 \begin{equation}
     \tau \sim k \times \left(\frac{U}{a}\right)^n , 
     \label{eq:tau-cal}
 \end{equation}
 と概算することができる．
 
-Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピーク速度$U_{peak}$[mm/s]と終端速度$U_{ave}$[mm/s]を算出した．続いて，式\ref{eq:tau-cal}を用いて，それぞれの速度における応力$\tau_{peak}$[Pa]，$\tau_{ave}$[Pa]の算出を行った．これら算出結果と先行研究の計測結果Fig.\ref{fig:iwamuro-G}より，貯蔵弾性率$G'$も求めた．これらの結果を，Table\ref{table:iwamuro}に示す．
+Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピーク速度$U_{peak}$[mm/s]と終端速度$U_{ave}$[mm/s]を算出した．続いて，式(\ref{eq:tau-cal})を用いて，それぞれの速度における応力$\tau_{peak}$[Pa]，$\tau_{ave}$[Pa]の算出を行った．これら算出結果と先行研究の計測結果Fig.\ref{fig:iwamuro-G}より，貯蔵弾性率$G'$も求めた．これらの結果を，Table\ref{table:iwamuro}に示す．
 
-また，式\ref{eq:power-law2}を用いて，ピーク速度/終端速度それぞれの粘度$\mu_{peak}$[Pa$\cdot$s]，$\mu_{ave}$[Pa$\cdot$s]を概算した．これらの粘度を式\ref{eq:lamda}に代入し，それぞれの緩和時間$\lambda_{peak}$[s]，$\lambda_{ave}$[s]の算出を行った．そして，それらの緩和時間より，式\ref{eq:De}を用いて，それぞれの$De$数，$De_{peak}$，$De_{ave}$を求めた．これらの結果を，Table\ref{table:iwamuro2}に示す．
+また，式(\ref{eq:power-law2})を用いて，ピーク速度/終端速度それぞれの粘度$\mu_{peak}$[Pa$\cdot$s]，$\mu_{ave}$[Pa$\cdot$s]を概算した．これらの粘度を式(\ref{eq:lamda})に代入し，それぞれの緩和時間$\lambda_{peak}$[s]，$\lambda_{ave}$[s]の算出を行った．そして，それらの緩和時間より，式(\ref{eq:De})を用いて，それぞれの$De$数，$De_{peak}$，$De_{ave}$を求めた．これらの結果を，Table\ref{table:iwamuro2}に示す．
 
-Table\ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と，終端速度より求めた$De_{ave}$において，大きな差異が見られないことが分かった．以降，$De_{peak}$に関してのみ議論を行う．$De_{peak}$に関して，落下速度のオーバーシュート$U_{peak}/U_{ave}$との関係をFig.\ref{fig:De-overshoot}に示す．横軸は$De$数，縦軸は落下速度のオーバーシュート$U_{peak}/U_{ave}$である．この図より，$De$数とオーバーシュートには正の相関があり，$De$数が増加するとオーバーシュートも大きくなることが分かった．
+Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と，終端速度より求めた$De_{ave}$において，大きな差異が見られないことが分かった．以降，$De_{peak}$に関してのみ議論を行う．$De_{peak}$に関して，落下速度のオーバーシュート$U_{peak}/U_{ave}$との関係をFig.\ref{fig:De-overshoot}に示す．横軸は$De$数，縦軸は落下速度のオーバーシュート$U_{peak}/U_{ave}$である．この図より，$De$数とオーバーシュートには正の相関があり，$De$数が増加するとオーバーシュートも大きくなることが分かった．
 
 \begin{table}[hbtp]
     \caption{Peak velocity $U_{peak}$/ end velocity $U_{ave}$, stress $\tau$, storage modulus $G'$ Calculation result.}
