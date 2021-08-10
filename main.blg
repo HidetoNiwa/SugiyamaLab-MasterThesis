@@ -5,24 +5,24 @@ The style file: junsrt.bst
 Database file #1: ./9-Reference/ref.bib
 You've used 16 entries,
             2270 wiz_defined-function locations,
-            654 strings with 6743 characters,
-and the built_in function-call counts, 5938 in all, are:
-= -- 491
-> -- 154
-< -- 40
-+ -- 62
-- -- 46
-* -- 345
-:= -- 698
+            650 strings with 6532 characters,
+and the built_in function-call counts, 5784 in all, are:
+= -- 521
+> -- 112
+< -- 29
++ -- 48
+- -- 32
+* -- 286
+:= -- 678
 add.period$ -- 48
 call.type$ -- 16
 change.case$ -- 15
 chr.to.int$ -- 0
 cite$ -- 16
-duplicate$ -- 374
-empty$ -- 534
-format.name$ -- 92
-if$ -- 1469
+duplicate$ -- 370
+empty$ -- 542
+format.name$ -- 64
+if$ -- 1447
 int.to.chr$ -- 0
 int.to.str$ -- 16
 missing$ -- 16
@@ -32,16 +32,16 @@ pop$ -- 80
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 311
+skip$ -- 321
 stack$ -- 0
-substring$ -- 382
-swap$ -- 148
-text.length$ -- 40
+substring$ -- 431
+swap$ -- 143
+text.length$ -- 29
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 53
+while$ -- 57
 width$ -- 18
-write$ -- 177
-is.kanji.str$ -- 197
+write$ -- 178
+is.kanji.str$ -- 171
