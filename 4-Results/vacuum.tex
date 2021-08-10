@@ -2,24 +2,25 @@
 
 \subsection{落下実験結果}
 
-容器Aにおいて真空ポンプを用いて球を把持し，球を落下させ解析した結果をFig\ref{fig:falling-A}に示す．縦軸は落下速度，横軸は落下開始時からの経過時間である．先行研究であるIwamuro \textit{et al}.\cite{ref:8}や電磁石を用いて球を把持した場合と比較し，超音波照射による高速化が顕著に現れていないことが分かる．また，落下開始時に電磁石を用いた場合はオーバーシュートが見られるが，真空ポンプを用いた場合はオーバーシュートが見られなかった．このことに関して，後述の\ref{sec:dis-de}にて議論を行う．また，補足資料\ref{sec:reexp}に真空ポンプを用いた把持方法における再現性の確認結果を示す．
+容器Aにおいて，真空ポンプを用いて球を落下させた．解析した結果をFig\ref{fig:falling-A}に示す．縦軸は落下速度，横軸は落下開始時からの経過時間である．先行研究であるIwamuro \textit{et al}.\cite{ref:8}や電磁石を用いて球を把持した場合と比較し，超音波照射による高速化が顕著に現れていないことが分かる．また，落下開始時に電磁石を用いた場合はオーバーシュートが見られるが，真空ポンプを用いた場合はオーバーシュートが見られなかった．このことに関して，後述の第\ref{sec:dis-de}節にて議論を行う．また，補足資料\ref{sec:reexp}に真空ポンプを用いた把持方法における再現性の確認結果を示す．
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm,clip]{./4-Results/s1-A.png}
-    \caption{Falling velocity of a sphere in 1wt.\%PAA solution with and without ultrasound irradiation in tank A.}
+    \caption{Falling speed of a sphere in 1wt.\%PAA solution with and without ultrasound irradiation in tank A.}
     \label{fig:falling-A}
 \end{figure}
 
 \subsection{実験装置改良に伴う終端速度の変化}
 
-Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把持した場合，超音波照射のない状態において落下速度が大きかった．このことに関して，擬塑性流体中における球の落下メカニズムより考える．代表速度，代表長さとして，それぞれ，落下速度$U_T$，球直径$2a$を選ぶ．また，power-law (式(\ref{eq:power-low}))に従う流体の代表粘度を$k U_T/(2a)$とする．これらより，粒子レイノルズ数は次式で与えられる\cite{ref:1},\cite{ref:8-5}．式(\ref{eq:power-low})のPower-law modelが適用できる流体中における粒子のレイノルズ数は，
+Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把持した場合，超音波照射のない状態において落下速度が大きかった．このことに関して，擬塑性流体中における球の落下メカニズムより考える．代表速度，代表長さとして，それぞれ，落下速度$U_T$，球直径$2a$を選ぶ．また，power-law (式(\ref{eq:power-low}))に従う流体の代表粘度を$k U_T/(2a)$とする．これらより，粒子レイノルズ数は次式で与えられる\cite{ref:1},\cite{ref:8-5}．
 \begin{eqnarray}
     Re = \frac{\rho_1 \left(2a\right)^n U_T^{2-n}}{k} ,
 \end{eqnarray}
 と表される\cite{ref:1,ref:8-5}．今回の実験結果より，$\rho \approx$1000[kg/m${}^3$]，$2a =$0.01[m]，$U_T \approx$0.2[m/s]，\\$k =$8.37[Pa$\cdot \text{s}^n]$，$n =$0.24であるので，$Re \approx$2.3と概算することができる．これより，粒子付近ではストークス流れに近いとみなす．流れの決定因子としては，慣性に比べて粘性が支配的であると考える．
 
-本研究の系は，一様流れ中を半径$a$の球および，超音波の伝播が存在する系である．超音波の伝播に関して，音波の圧力変動の時間スケールは$O\left(10^{-5}\right)$sである．一方で，球の落下時間スケールは$O\left(10^{0}\right)$sとなるため，圧力変動の時間スケールは非常に短い．球の落下に関しては，落下時間スケールで粗視化した平均的な挙動に着目する．球周囲に存在する非圧縮性流体の単位体積の運動方程式について考える．球によって誘起される応力テンソルを$\bm{\sigma}$，流体の密度を$\rho$，速度ベクトルを$\bm{v}$，体積力を$\bm{X}$とすると，
+本研究の系は，一様流れ中を半径$a$の球および，超音波の伝播が存在する系である．超音波の伝播に関して，音波の圧力変動の時間スケールは$O\left(10^{-5}\right)$sである．
+一方で，球の落下現象は$O\left(10^{-2}\right)$m,$O\left(10^{0}\right)$sとなり，圧力変動の時間スケールは非常に短い．球の落下に関しては，落下時間スケールで粗視化した平均的な挙動に着目する．球周囲に存在する非圧縮性流体の単位体積の運動方程式について考える．球によって誘起される応力テンソルを$\bm{\sigma}$，流体の密度を$\rho$，速度ベクトルを$\bm{v}$，体積力を$\bm{X}$とすると，
 \begin{eqnarray}
     \rho \frac{D\bm{v}}{Dt} = \bm{X} + \nabla \cdot \bm{\sigma} ,
     \label{eq:undou}
@@ -29,7 +30,7 @@ Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把�
     \nabla \cdot \bm{v} = 0 .
     \label{eq:renzoku}
 \end{eqnarray}
-式(\ref{eq:renzoku})より，式(\ref{eq:undou})の左辺は，
+連続の式が成立するため，式(\ref{eq:undou})の左辺は，
 \begin{eqnarray}
     \rho \frac{D\bm{v}}{Dt} = \frac{\partial \bm{v}}{\partial t} + \left(\bm{v} - \bm{U}_T \cdot \nabla \right) \bm{v} ,
     \label{eq:nabie}
@@ -51,7 +52,7 @@ Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把�
     \int_{r=a}\bm{\sigma}\cdot\bm{e}_r dS=\int_r\bm{\sigma}\cdot\bm{e}_r dS .
     \label{eq:inte}
 \end{eqnarray}
-ここで，$\bm{n} = \bm{e}_r$とする．この式は，任意の領域において，面積力が釣り合うことを示す．$r = a$における時間平均応力を$\langle\sigma\rangle_a$，$r$における時間平均応力を$\langle\sigma\rangle_r$とそれぞれする．球の表面積$S=4\pi r^2$であるので，式\ref{eq:inte}は，
+ここで，$\bm{n} = \bm{e}_r$とする．この式は，任意の領域において，面積力が釣り合うことを示す．$r = a$における時間平均応力を$\langle\sigma\rangle_a$，$r$における時間平均応力を$\langle\sigma\rangle_r$とそれぞれする．球の表面積$S=4\pi r^2$であるので，式(\ref{eq:inte})は，
 \begin{eqnarray}
     4\pi a^2\langle\sigma\rangle_a = 4\pi r^2\langle\sigma\rangle_r ,
     \label{eq:sigma1}
@@ -61,7 +62,7 @@ Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把�
     4\pi a^2\langle\sigma\rangle_a = \frac{4}{3} \pi a^3 \Delta \rho g ,
     \label{eq:sigma2}
 \end{eqnarray}
-となる．ここで，球と流体の密度差$\Delta \rho$，重力加速度$g$である．式\ref{eq:sigma1},\ref{eq:sigma2}より，
+となる．ここで，球と流体の密度差$\Delta \rho$，重力加速度$g$である．式(\ref{eq:sigma1}),(\ref{eq:sigma2})より，
 \begin{eqnarray}
     \langle\sigma\rangle_r = \frac{a^3\Delta\rho g}{3r^2} ,
 \end{eqnarray}
@@ -70,7 +71,7 @@ Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把�
     \langle\sigma\rangle_r \sim \mu \dot{\gamma} ,
     \label{eq:sigma3}
 \end{eqnarray}
-と概算することができる．Power-law modelが適用できる領域での議論を行っているため，式\ref{eq:power-low},\ref{eq:sigma3}より，
+と概算することができる．Power-law modelが適用できる領域での議論を行っているため，式(\ref{eq:power-low}),(\ref{eq:sigma3})より，
 \begin{eqnarray}
     \dot{\gamma} \sim \left(\frac{a^3\Delta\rho g}{3r^2 k}\right)^{\frac{1}{n}} ,
     \label{eq:gamma_abs}
@@ -85,20 +86,20 @@ Iwamuro\cite{ref:8}と比較して，真空ポンプを用いて落下球を把�
     \bar{\epsilon} \sim \langle\sigma\rangle_r\dot{\gamma} \sim \mu \dot{\gamma}^2 \sim \frac{\langle\sigma\rangle_r^2}{\mu} ,
     \label{eq:eps}
 \end{eqnarray}
-式\ref{eq:sigma3},\ref{eq:eg},\ref{eq:eps}より，終端速度は
+式(\ref{eq:sigma3}),(\ref{eq:eg}),(\ref{eq:eps})より，終端速度は
 \begin{eqnarray}
     U_T \sim \frac{a^3\Delta\rho g}{3}\int_a^\infty\frac{dr}{\mu r^2} ,
     \label{eq:UT0}
 \end{eqnarray}
-と見積もられる．式\ref{eq:power-low},\ref{eq:gamma_abs},\ref{eq:UT0}より，終端速度は下記の様に書き直される.
+と見積もられる．式(\ref{eq:power-low}),(\ref{eq:gamma_abs}),(\ref{eq:UT0})より，終端速度は下記の様に書き直される.
 \begin{eqnarray}
     U_T \sim \frac{a^3\Delta\rho g}{3}  \int^{\infty}_{a} \frac{dr}{\mu r^2} \sim \left(\frac{\Delta \rho g}{3k}\right)^{\frac{1}{n}}\frac{n}{2-n}a^{\frac{n+1}{n}} .
     \label{eq:UT}
 \end{eqnarray}
 
-上記の式\ref{eq:UT}より，Power-Law modelにおける，$k$,$n$のパラメータより終端速度を見積もることができる．ここで，溶液の作製誤差に関して考えるため，0.95wt.\%，1.05wt.\%のPAA溶液を同様の手順で作製した．粘度計測を行った結果をFig.\ref{fig:95-105}に示す．濃度が薄いと粘度は低く，濃度が高いと粘度は高くなった．
+上記の式(\ref{eq:UT})より，Power-Law modelにおける，$k$,$n$のパラメータより終端速度を見積もることができる．ここで，溶液の作製誤差に関して考えるため，0.95wt.\%，1.05wt.\%のPAA溶液を同様の手順で作製した．粘度計測を行った結果をFig.\ref{fig:95-105}に示す．濃度が薄いと粘度は低く，濃度が高いと粘度は高くなった．
 
-Table\ref{table:power-law}の結果より，式\ref{eq:UT}を用いて直径10mmの球におけるIwamuro\cite{ref:8}の終端速度$U_I$を基準とした終端速度の比$U_T/U_{I}$を求めた．その結果を，Table\ref{table:UT}に示す．これより，今回の粘度特性において，Iwamuro\cite{ref:8}と比較して終端速度が1.09倍速くなることが分かった．Fig.\ref{fig:falling-A}において，Iwamuro\cite{ref:8}と比較して1.125倍，終端速度が速かった．一方で，0.95,1.05wt.\%それぞれのPAA溶液の粘度特性における終端速度比と比較しても実験結果と一番近いのは，1wt.\%の場合である．よって，溶液の濃度精度は1wt.\%±0.05wt.\%以内であり，溶液の作製誤差によって落下速度に差が生じたと考えられる．
+Table　\ref{table:power-law}の結果より，式(\ref{eq:UT})を用いて直径10mmの球におけるIwamuro\cite{ref:8}の終端速度$U_I$を基準とした終端速度の比$U_T/U_{I}$を求めた．その結果を，Table \ref{table:UT}に示す．これより，今回の粘度特性において，Iwamuro\cite{ref:8}と比較して終端速度が1.09倍速くなることが分かった．Fig.\ref{fig:falling-A}において，Iwamuro\cite{ref:8}と比較して1.125倍，終端速度が速かった．一方で，0.95,1.05wt.\%それぞれのPAA溶液の粘度特性における終端速度比と比較しても実験結果と一番近いのは，1wt.\%の場合である．よって，溶液の濃度精度は1wt.\%±0.05wt.\%以内であり，溶液の作製誤差によって落下速度に差が生じたと考えられる．
 
 \begin{figure}[ht]
     \includegraphics[width=15cm,clip]{5-Discussion/95-105.png}
@@ -108,7 +109,7 @@ Table\ref{table:power-law}の結果より，式\ref{eq:UT}を用いて直径10mm
 
 \begin{table}[h]
     \centering
-    \caption{Each parameter($k$,$n$) and terminal velocity ratio in the power-law model for each experimental result.}
+    \caption{Each parameter($k$,$n$) and terminal speed ratio in the power-law model for each experimental result.}
     \label{table:UT}
     \begin{tabular}{c|c|c|c} \hline
         & $k$ & $n$ & $U_T/U_{I}$ \\ \hline \hline
@@ -176,14 +177,14 @@ $De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で�
 \end{equation}
 と概算することができる．
 
-Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピーク速度$U_{peak}$[mm/s]と終端速度$U_{ave}$[mm/s]を算出した．続いて，式(\ref{eq:tau-cal})を用いて，それぞれの速度における応力$\tau_{peak}$[Pa]，$\tau_{ave}$[Pa]の算出を行った．これら算出結果と先行研究の計測結果Fig.\ref{fig:iwamuro-G}より，貯蔵弾性率$G'$も求めた．これらの結果を，Table\ref{table:iwamuro}に示す．
+Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピーク速度$U_{peak}$[mm/s]と終端速度$U_{ave}$[mm/s]を算出した．続いて，式(\ref{eq:tau-cal})を用いて，それぞれの速度における応力$\tau_{peak}$[Pa]，$\tau_{ave}$[Pa]の算出を行った．これら算出結果と先行研究の計測結果Fig.\ref{fig:iwamuro-G}より，貯蔵弾性率$G'$も求めた．これらの結果を，Table \ref{table:iwamuro}に示す．
 
-また，式(\ref{eq:power-law2})を用いて，ピーク速度/終端速度それぞれの粘度$\mu_{peak}$[Pa$\cdot$s]，$\mu_{ave}$[Pa$\cdot$s]を概算した．これらの粘度を式(\ref{eq:lamda})に代入し，それぞれの緩和時間$\lambda_{peak}$[s]，$\lambda_{ave}$[s]の算出を行った．そして，それらの緩和時間より，式(\ref{eq:De})を用いて，それぞれの$De$数，$De_{peak}$，$De_{ave}$を求めた．これらの結果を，Table\ref{table:iwamuro2}に示す．
+また，式(\ref{eq:power-law2})を用いて，ピーク速度/終端速度それぞれの粘度$\mu_{peak}$[Pa$\cdot$s]，$\mu_{ave}$[Pa$\cdot$s]を概算した．これらの粘度を式(\ref{eq:lamda})に代入し，それぞれの緩和時間$\lambda_{peak}$[s]，$\lambda_{ave}$[s]の算出を行った．そして，それらの緩和時間より，式(\ref{eq:De})を用いて，それぞれの$De$数，$De_{peak}$，$De_{ave}$を求めた．これらの結果を，Table \ref{table:iwamuro2}に示す．
 
 Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と，終端速度より求めた$De_{ave}$において，大きな差異が見られないことが分かった．以降，$De_{peak}$に関してのみ議論を行う．$De_{peak}$に関して，落下速度のオーバーシュート$U_{peak}/U_{ave}$との関係をFig.\ref{fig:De-overshoot}に示す．横軸は$De$数，縦軸は落下速度のオーバーシュート$U_{peak}/U_{ave}$である．この図より，$De$数とオーバーシュートには正の相関があり，$De$数が増加するとオーバーシュートも大きくなることが分かった．
 
 \begin{table}[hbtp]
-    \caption{Peak velocity $U_{peak}$/ end velocity $U_{ave}$, stress $\tau$, storage modulus $G'$ Calculation result.}
+    \caption{Peak speed $U_{peak}$/ terminal speed $U_{ave}$, stress $\tau$, storage modulus $G'$ Calculation result.}
     \label{table:iwamuro}
     \centering
     \begin{tabular}{ccccccc}
@@ -230,7 +231,7 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
 \begin{figure}[ht]
     \begin{center}
         \includegraphics[width=13cm,clip]{5-Discussion/iwamuro-fall.png}
-    \caption{Velocity of a falling sphere in diameter of (a) 3 mm, (b) 4 mm, (c) 5 mm, (d) 6 mm, (e) 7 mm, (f) 8 mm, (g) 9 mm, (h) 10 mm in 1.0 wt.\% PAA solution with ultrasound fixed frequency at 27.4 kHz and $\Delta \bar{P} \approx$ 180 kPa\cite{ref:8}.}
+    \caption{Speed of a falling sphere in diameter of (a) 3 mm, (b) 4 mm, (c) 5 mm, (d) 6 mm, (e) 7 mm, (f) 8 mm, (g) 9 mm, (h) 10 mm in 1.0 wt.\% PAA solution with ultrasound fixed frequency at 27.4 kHz and $\Delta \bar{P} \approx$ 180 kPa\cite{ref:8}.}
     \label{fig:iwamuro-fall}
     \end{center}
 \end{figure}
@@ -266,7 +267,7 @@ Iwamuro\cite{ref:9}の$a =$5[mm]における初速を推定する．この結果
 \begin{figure}[ht]
     \begin{center}
         \includegraphics[width=15cm,clip]{5-Discussion/h-5.png}
-        \caption{Falling velocity of a sphere in 1wt.\% PAA solution falling with initial velocity.}
+        \caption{Falling speed of a sphere in 1wt.\% PAA solution falling with initial speed.}
         \label{fig:h-5}
     \end{center}
 \end{figure}

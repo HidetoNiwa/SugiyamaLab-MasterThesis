@@ -2,7 +2,7 @@
 
 \bibitem{ref:1}
 Raj~P Chhabra.
-\newblock {\em Bubbles, drops, and particles in non-Newtonian fluids}.
+\newblock {\em Bubbles, Drops, and Particles in Non-Newtonian Fluids}.
 \newblock CRC press, 2006.
 
 \bibitem{ref:2}
@@ -29,7 +29,7 @@ Li~Zhang, Chao Yang, and Zai-Sha Mao.
 S~van~den Wildenberg, X~Jia, J~L{\'e}opold{\`e}s, and A~Tourin.
 \newblock Ultrasonic tracking of a sinking ball in a vibrated dense granular
   suspension.
-\newblock {\em Scientific reports}, Vol.~9, No.~1, pp. 1--8, 2019.
+\newblock {\em Scientific Reports}, Vol.~9, No.~1, pp. 1--8, 2019.
 
 \bibitem{ref:5}
 岩田修一, 内田信悟, 石田和人, 森秀樹.
@@ -45,7 +45,7 @@ S~van~den Wildenberg, X~Jia, J~L{\'e}opold{\`e}s, and A~Tourin.
 AMV Putz, TI~Burghelea, IA~Frigaard, and DM~Martinez.
 \newblock Settling of an isolated spherical particle in a yield stress shear
   thinning fluid.
-\newblock {\em Physics of Fluids}, Vol.~20, No.~3, p. 033102, 2008.
+\newblock {\em Physics of Fluids}, Vol.~20, No. 3,033102, 2008.
 
 \bibitem{ref:9}
 岩室秀, 渡村友昭, 杉山和靖.
@@ -69,6 +69,18 @@ Mark~T Arigo and Gareth~H McKinley.
 坂西明郎.
 \newblock 〈緩和時間〉.
 \newblock 日本バイオレオロジー学会誌, Vol.~3, No.~2, pp. 50--50, 1989.
+
+\bibitem{deshpande2001vibrational}
+NS~Deshpande and Mostafa Barigou.
+\newblock Vibrational flow of non-newtonian fluids.
+\newblock {\em Chemical Engineering Science}, Vol.~56, No.~12, pp. 3845--3853,
+  2001.
+
+\bibitem{wiklund2012acoustofluidics}
+Martin Wiklund, Roy Green, and Mathias Ohlin.
+\newblock Acoustofluidics 14: Applications of acoustic streaming in
+  microfluidic devices.
+\newblock {\em Lab on a Chip}, Vol.~12, No.~14, pp. 2438--2451, 2012.
 
 \bibitem{ref:Rahimi2007}
 Shai Rahimi, Arie Peretz, and Benveniste Natan.
