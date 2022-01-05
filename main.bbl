@@ -1,0 +1,99 @@
+\begin{thebibliography}{10}
+
+\bibitem{ref:1}
+R.P.Chhabra.
+\newblock {\em Bubbles, Drops, and Particles in Non-Newtonian Fluids}, pp.
+  14--22, 61--72.
+\newblock CRC press, 2006.
+
+\bibitem{ref:2}
+E.Obata M.Ohta, E.Iwasaki and Y.Yoshida.
+\newblock A numerical study of the motion of a spherical drop rising in
+  shear-thinning fluid systems.
+\newblock {\em Journal of Non-Newtonian Fluid Mechanics}, Vol. 116, pp.
+  95--111, 2003.
+
+\bibitem{ref:3}
+E.Obata M.Ohta, E.Iwasaki and Y.Yoshida.
+\newblock Dynamic processes in a deformed drop rising through shear-thinning
+  fluids.
+\newblock {\em Journal of Non-Newtonian Fluid Mechanics}, Vol. 132, pp.
+  100--107, 2005.
+
+\bibitem{ref:4}
+C.Yang L.Zhang and Z.S.Mao.
+\newblock Numerical simulation of a bubble rising in shear-thinning fluids.
+\newblock {\em Journal of Non-Newtonian Fluid Mechanics}, Vol. 165, pp.
+  555--567, 2010.
+
+\bibitem{ref:6}
+J.L{\'e}opold{\`e}s S.van~den Wildenberg, X.Jia and A.Tourin.
+\newblock Ultrasonic tracking of a sinking ball in a vibrated dense granular
+  suspension.
+\newblock {\em Scientific Reports}, Vol.~9, pp. 1--8, 2019.
+
+\bibitem{ref:5}
+岩田修一, 内田信悟, 石田和人, 森秀樹.
+\newblock 圧力振動を用いた shear-thinning 性流体からの脱泡.
+\newblock 化学工学論文集, Vol.~33, pp. 294--299, 2007.
+
+\bibitem{ref:8}
+岩室秀.
+\newblock 超音波照射された擬塑性流体中における物体の高速化.
+\newblock Master's thesis, 大阪大学, 2020.
+
+\bibitem{ref:8-5}
+I.A.Frigaard A.M.V.Putz, T.I.Burghelea and D.M.Martinez.
+\newblock Settling of an isolated spherical particle in a yield stress shear
+  thinning fluid.
+\newblock {\em Physics of Fluids}, Vol.~20, No. 033102, 2008.
+
+\bibitem{ref:9}
+岩室秀, 渡村友昭, 杉山和靖.
+\newblock 擬塑性流体中の落下球に及ぼす超音波照射の影響.
+\newblock 混相流, Vol.~33, pp. 87--95, 2019.
+
+\bibitem{ref:10}
+Y.Tasaka T.Shiratori and Y.Murai.
+\newblock Rapid rheological characterization of a viscoelastic fluid based on
+  spatiotemporal flow velocimetry.
+\newblock {\em Experimental Thermal and Fluid Science}, Vol.~71, pp. 1--13,
+  2016.
+
+\bibitem{ref:12}
+M.T.Arigo and G.H.McKinley.
+\newblock The effects of viscoelasticity on the transient motion of a sphere in
+  a shear-thinning fluid.
+\newblock {\em Journal of Rheology}, Vol.~41, pp. 103--128, 1997.
+
+\bibitem{ref:sakanishi}
+坂西明郎.
+\newblock 〈緩和時間〉.
+\newblock 日本バイオレオロジー学会誌, Vol.~3, pp. 50--50, 1989.
+
+\bibitem{deshpande2001vibrational}
+N.S.Deshpande and M.Barigou.
+\newblock Vibrational flow of non-newtonian fluids.
+\newblock {\em Chemical Engineering Science}, Vol.~56, pp. 3845--3853, 2001.
+
+\bibitem{wiklund2012acoustofluidics}
+R.Green M.Wiklund and M.Ohlin.
+\newblock Acoustofluidics 14: Applications of acoustic streaming in
+  microfluidic devices.
+\newblock {\em Lab on a Chip}, Vol.~12, pp. 2438--2451, 2012.
+
+\bibitem{ref:Rahimi2007}
+A.Peretz S.Rahimi and B.Natan.
+\newblock On shear rheology of gel propellants.
+\newblock {\em Propellants, Explosives, Pyrotechnics: An International Journal
+  Dealing with Scientific and Technological Aspects of Energetic Materials},
+  Vol.~32, pp. 165--174, 2007.
+
+\bibitem{ref:Agi2018}
+J.Gbonhinbor A.Agi, R.Junin and M.Onyekonwu.
+\newblock Natural polymer flow behaviour in porous media for enhanced oil
+  recovery applications: a review.
+\newblock {\em Journal of Petroleum Exploration and Production Technology},
+  Vol.~8, pp. 1349--1362, 2018.
+
+\end{thebibliography}

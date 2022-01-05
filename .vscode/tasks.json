@@ -4,9 +4,25 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "platex0",
+            "type": "shell",
+            "command": "wsl platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex",
+        },
+        {
+            "label": "pblatex1",
+            "type": "shell",
+            "command": "wsl pbibtex ./main",
+            "dependsOn": [
+                "platex0"
+            ]
+        },
+        {
             "label": "platex1",
             "type": "shell",
             "command": "wsl platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex",
+            "dependsOn": [
+                "pblatex1"
+            ]
         },
         {
             "label": "platex2",

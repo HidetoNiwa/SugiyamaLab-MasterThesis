@@ -8,13 +8,15 @@
 \usepackage[title]{appendix}
 \usepackage{amsmath}
 \usepackage{multirow}
+\usepackage{bm}
+\usepackage{amssymb}
 
 \renewcommand{\figurename}{Fig}
 \renewcommand{\tablename}{Table}
 \renewcommand{\refname}{参考文献}
 
 \pagestyle{fancy}
-\rhead{\leftmark}
+\rhead{}
 \lhead{\rightmark}
 \cfoot{\thepage}
 \rfoot{}
@@ -32,7 +34,9 @@
 \input{3-Analysis/analysis.tex}
 \newpage
 \input{4-Results/results.tex}
-\newpage
+\clearpage
+\input{4-Results/vacuum.tex}
+\clearpage
 \input{5-Discussion/discussion.tex}
 \newpage
 \input{6-fin/fin.tex}
@@ -40,7 +44,8 @@
 \input{9-Reference/references.tex}
 \newpage
 \begin{appendices}
-    \input{X-Appendix/A-change_time.tex}
+    \input{X-Appendix/A-reexp-vaccum.tex}
+    \input{X-Appendix/B-change_time.tex}
 %    \clearpage
 %    \input{X-Appendix/A-method_change.tex}
 \end{appendices}
