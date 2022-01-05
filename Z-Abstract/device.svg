@@ -439,8 +439,8 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="2396.4845"
-     inkscape:cx="1479.022"
+     inkscape:cy="1976.6468"
+     inkscape:cx="1434.2677"
      inkscape:zoom="0.469229"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -467,9 +467,9 @@
     <path
        sodipodi:nodetypes="cccc"
        id="path1889"
-       d="m 415.90231,481.46205 c 0,-8.81901 0,-17.6382 3.68565,-22.82041 3.68565,-5.18221 11.05658,-6.72715 16.04844,-7.56281 4.99185,-0.83567 7.70282,-0.9668 10.36446,-1.09554"
+       d="m 415.90231,481.46205 c 0,-8.81901 0,-17.6382 3.23925,-22.84391 3.23924,-5.20571 9.7174,-6.79763 15.05112,-7.57574 5.33372,-0.77811 9.5224,-0.7424 13.71124,-0.70669"
        style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:original-d="m 415.90231,481.46205 c 1.3e-4,-8.81901 1.3e-4,-17.6382 0,-26.45761 7.37135,-1.54478 14.74228,-3.08973 22.11322,-4.6349 2.61273,-0.12616 5.3237,-0.2573 7.98533,-0.38625"
+       inkscape:original-d="m 415.90231,481.46205 c 1.3e-4,-8.81901 1.3e-4,-17.6382 0,-26.45761 6.47857,-1.5917 12.95673,-3.18362 19.43485,-4.77587 4.18924,0.036 8.37792,0.0717 12.56676,0.10714"
        inkscape:path-effect="#path-effect1891" />
     <rect
        y="517.77112"
@@ -580,12 +580,12 @@
          sodipodi:role="line">transducer</tspan></text>
     <text
        id="text1717"
-       y="494.69522"
+       y="495.68417"
        x="467.25406"
        style="font-size:19.05px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;stroke-width:0.264583"
        xml:space="preserve"><tspan
          style="font-size:19.05px;stroke-width:0.264583"
-         y="494.69522"
+         y="495.68417"
          x="467.25406"
          id="tspan1715"
          sodipodi:role="line">screen</tspan></text>
@@ -711,6 +711,17 @@
          y="456.65384"
          x="377.85907"
          sodipodi:role="line">hose</tspan></text>
+    <text
+       id="text1707-0-4-5"
+       y="478.68826"
+       x="449.98849"
+       style="font-size:19.05px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan2053-3"
+         style="font-size:19.05px;stroke-width:0.264583"
+         y="478.68826"
+         x="449.98849"
+         sodipodi:role="line">vacuum pump</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#TriangleOutM)"
        d="m 376.44564,572.83661 c 0,38.70997 0,38.70997 0,38.70997"
@@ -726,5 +737,12 @@
          style="font-size:19.05px;stroke-width:0.264583"
          x="362.61646"
          y="593.42041">g</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.75;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1260"
+       width="107.69884"
+       height="31.576622"
+       x="449.40298"
+       y="435.87015" />
   </g>
 </svg>
