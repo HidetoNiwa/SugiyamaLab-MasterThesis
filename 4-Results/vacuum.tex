@@ -1,5 +1,3 @@
-\section{実験装置改良により生じた変化}
-
 \subsection{落下実験結果}
 
 容器Aにおいて，真空ポンプを用いて球を落下させた．解析した結果をFig\ref{fig:falling-A}に示す．縦軸は落下速度，横軸は落下開始時からの経過時間である．先行研究であるIwamuro \textit{et al}.\cite{ref:8}や電磁石を用いて球を把持した場合と比較し，超音波照射による高速化が顕著に現れていないことが分かる．また，落下開始時に電磁石を用いた場合はオーバーシュートが見られるが，真空ポンプを用いた場合はオーバーシュートが見られなかった．このことに関して，後述の第\ref{sec:dis-de}節にて議論を行う．また，補足資料\ref{sec:reexp}に真空ポンプを用いた把持方法における再現性の確認結果を示す．
@@ -112,12 +110,12 @@ Table \ref{table:power-law}の結果より，式(\ref{eq:UT})を用いて直径1
     \caption{Each parameter($k$,$n$) and terminal speed ratio in the power-law model for each experimental result.}
     \label{table:UT}
     \begin{tabular}{c|c|c|c} \hline
-        & $k$ & $n$ & $U_T/U_{I}$ \\ \hline \hline
-        Present Value(1.05wt.\%) & 9.56 & 0.23 & 0.93\\
-        Present Value(1wt.\%) & 8.37 & 0.24 & 1.09\\
-        Present Value(0.95wt.\%) & 5.22 & 0.25 & 3.91\\
-        Iwamuro\cite{ref:8} & 9.4 & 0.23 & 1\\
-        Shiratori \textit{et al}.(2016)\cite{ref:10} & 5.9 & 0.25 & 2.99\\ \hline
+                                                     & $k$  & $n$  & $U_T/U_{I}$ \\ \hline \hline
+        Present Value(1.05wt.\%)                     & 9.56 & 0.23 & 0.93        \\
+        Present Value(1wt.\%)                        & 8.37 & 0.24 & 1.09        \\
+        Present Value(0.95wt.\%)                     & 5.22 & 0.25 & 3.91        \\
+        Iwamuro\cite{ref:8}                          & 9.4  & 0.23 & 1           \\
+        Shiratori \textit{et al}.(2016)\cite{ref:10} & 5.9  & 0.25 & 2.99        \\ \hline
     \end{tabular}
 \end{table}
 
@@ -172,7 +170,7 @@ $De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で�
 \end{equation}
 となる．ここに，式(\ref{eq:power-law})，(\ref{eq:gamma})を代入すると，
 \begin{equation}
-    \tau \sim k \times \left(\frac{U}{a}\right)^n , 
+    \tau \sim k \times \left(\frac{U}{a}\right)^n ,
     \label{eq:tau-cal}
 \end{equation}
 と概算することができる．
@@ -188,21 +186,21 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
     \label{table:iwamuro}
     \centering
     \begin{tabular}{ccccccc}
-      \hline
-      \multirow{2}{*}{実験者} & 球直径[mm] & ピーク速度[mm/s] & 終端速度[mm/s] &\multicolumn{2}{c}{応力[Pa]} & 貯蔵弾性率[Pa] \\
-       & $D=2a$ & $U_{peak}$ & $U_{ave}$ &  $\tau_{peak}$ & $\tau_{ave}$ & $G'$\\
-      \hline \hline
-      \multirow{8}{*}{Iwamuro} & 3  & 10.08 & 9.05 & 14.6 & 14.2 & 8\\
-      & 4  & 23.2 & 19.4 & 16.5 & 15.9 & 7\\
-      & 5  & 34.8 & 32.6 & 17.2 & 17.0 & 6.7 \\
-      & 6  & 46.3 & 54.8 & 17.6 & 18.3 & 6.5\\
-      & 7  & 79.8 & 82 & 19.3 & 19.4 & 5.5\\
-      & 8  & 130 & 113 & 20.9 & 20.3 & 5 \\
-      & 9  & 193 & 133 & 22.3 & 20.5 & 4\\
-      & 10 & 256 & 168 & 23.2 & 21.2 & 3.5\\
-      \hline \hline
-      Niwa & 10 & 148 & 144 & 18.9 & 18.7 & 6 \\
-      \hline
+        \hline
+        \multirow{2}{*}{実験者}  & 球直径[mm] & ピーク速度[mm/s] & 終端速度[mm/s] & \multicolumn{2}{c}{応力[Pa]} & 貯蔵弾性率[Pa]        \\
+                                 & $D=2a$     & $U_{peak}$       & $U_{ave}$      & $\tau_{peak}$                & $\tau_{ave}$   & $G'$ \\
+        \hline \hline
+        \multirow{8}{*}{Iwamuro} & 3          & 10.08            & 9.05           & 14.6                         & 14.2           & 8    \\
+                                 & 4          & 23.2             & 19.4           & 16.5                         & 15.9           & 7    \\
+                                 & 5          & 34.8             & 32.6           & 17.2                         & 17.0           & 6.7  \\
+                                 & 6          & 46.3             & 54.8           & 17.6                         & 18.3           & 6.5  \\
+                                 & 7          & 79.8             & 82             & 19.3                         & 19.4           & 5.5  \\
+                                 & 8          & 130              & 113            & 20.9                         & 20.3           & 5    \\
+                                 & 9          & 193              & 133            & 22.3                         & 20.5           & 4    \\
+                                 & 10         & 256              & 168            & 23.2                         & 21.2           & 3.5  \\
+        \hline \hline
+        Niwa                     & 10         & 148              & 144            & 18.9                         & 18.7           & 6    \\
+        \hline
     \end{tabular}
 \end{table}
 \begin{table}[hbtp]
@@ -210,29 +208,29 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
     \label{table:iwamuro2}
     \centering
     \begin{tabular}{ccccccccc}
-      \hline
-      \multirow{2}{*}{実験者} & 球直径 &\multicolumn{2}{c}{粘度[Pa$\cdot$s]} &\multicolumn{2}{c}{緩和時間[s]}  &\multicolumn{2}{c}{$De$数[-]} \\
-       & $D=2a$[mm] & $\mu_{peak}$ & $\mu_{ave}$  &  $\lambda_{peak}$ & $\lambda_{ave}$ & $De_{peak}$ & $De_{ave}$ \\
-      \hline \hline
-      \multirow{8}{*}{Iwamuro} & 3  & 2.17 & 2.36 & 0.27 & 0.29 & 1.82 & 1.78\\
-      & 4  & 1.42 & 1.63 & 0.20 & 0.23 & 2.36 & 2.26\\
-      & 5  & 1.24 & 1.30 & 0.18 & 0.19 & 2.57 & 2.53 \\
-      & 6  & 1.14 & 1.00 & 0.18 & 0.15 & 2.71 & 2.82\\
-      & 7  & 0.85 & 0.83 & 0.15 & 0.15 & 3.51 & 3.53\\
-      & 8  & 0.64 & 0.72 & 0.13 & 0.14 & 4.19 & 4.05 \\
-      & 9  & 0.52 & 0.69 & 0.13 & 0.17 & 5.58 & 5.12\\
-      & 10 & 0.45 & 0.63 & 0.13 & 0.18 & 6.64 & 6.03\\
-      \hline \hline
-      Niwa & 10 & 0.64 & 0.65 & 0.11 & 0.11 & 3.15 & 3.12 \\
-      \hline
+        \hline
+        \multirow{2}{*}{実験者}  & 球直径     & \multicolumn{2}{c}{粘度[Pa$\cdot$s]} & \multicolumn{2}{c}{緩和時間[s]} & \multicolumn{2}{c}{$De$数[-]}                                              \\
+                                 & $D=2a$[mm] & $\mu_{peak}$                         & $\mu_{ave}$                     & $\lambda_{peak}$              & $\lambda_{ave}$ & $De_{peak}$ & $De_{ave}$ \\
+        \hline \hline
+        \multirow{8}{*}{Iwamuro} & 3          & 2.17                                 & 2.36                            & 0.27                          & 0.29            & 1.82        & 1.78       \\
+                                 & 4          & 1.42                                 & 1.63                            & 0.20                          & 0.23            & 2.36        & 2.26       \\
+                                 & 5          & 1.24                                 & 1.30                            & 0.18                          & 0.19            & 2.57        & 2.53       \\
+                                 & 6          & 1.14                                 & 1.00                            & 0.18                          & 0.15            & 2.71        & 2.82       \\
+                                 & 7          & 0.85                                 & 0.83                            & 0.15                          & 0.15            & 3.51        & 3.53       \\
+                                 & 8          & 0.64                                 & 0.72                            & 0.13                          & 0.14            & 4.19        & 4.05       \\
+                                 & 9          & 0.52                                 & 0.69                            & 0.13                          & 0.17            & 5.58        & 5.12       \\
+                                 & 10         & 0.45                                 & 0.63                            & 0.13                          & 0.18            & 6.64        & 6.03       \\
+        \hline \hline
+        Niwa                     & 10         & 0.64                                 & 0.65                            & 0.11                          & 0.11            & 3.15        & 3.12       \\
+        \hline
     \end{tabular}
 \end{table}
 
 \begin{figure}[ht]
     \begin{center}
         \includegraphics[width=13cm,clip]{5-Discussion/iwamuro-fall.png}
-    \caption{Speed of a falling sphere in diameter of (a) 3 mm, (b) 4 mm, (c) 5 mm, (d) 6 mm, (e) 7 mm, (f) 8 mm, (g) 9 mm, (h) 10 mm in 1.0 wt.\% PAA solution with ultrasound fixed frequency at 27.4 kHz and $\Delta \bar{P} \approx$ 180 kPa\cite{ref:8}.}
-    \label{fig:iwamuro-fall}
+        \caption{Speed of a falling sphere in diameter of (a) 3 mm, (b) 4 mm, (c) 5 mm, (d) 6 mm, (e) 7 mm, (f) 8 mm, (g) 9 mm, (h) 10 mm in 1.0 wt.\% PAA solution with ultrasound fixed frequency at 27.4 kHz and $\Delta \bar{P} \approx$ 180 kPa\cite{ref:8}.}
+        \label{fig:iwamuro-fall}
     \end{center}
 \end{figure}
 
