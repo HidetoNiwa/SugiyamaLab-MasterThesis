@@ -139,28 +139,21 @@
     U_{ABL} \sim \frac{a^3\Delta\rho g}{3}  \int^{\infty}_{a} \frac{dr}{\mu_{ABL} r^2} \sim \frac{a\Delta \rho \delta g}{3\mu_{ABL}} ,
     \label{eq:U_ABL}
 \end{eqnarray}
-と見積もられる．ある粘度$\mu_0$における終端速度を$U_0$とする．式(\ref{eq:UT}),(\ref{eq:U_ABL})より，超音波照射の有無による終端速度比は，
+と見積もられる．終端速度$U_T$における，粘度$\mu_U$とする．式(\ref{eq:UT}),(\ref{eq:U_ABL})より，超音波照射の有無による終端速度比は，
 \begin{eqnarray}
-    \frac{U_{ABL}}{U_0} \sim \frac{\mu_0}{\mu_{ABL}}\frac{\delta}{a} ,
+    \frac{U_{ABL}}{U_T} \sim \frac{\mu_U}{\mu_{ABL}}\frac{\delta}{a} ,
     \label{eq:Udiff}
 \end{eqnarray}
+と表される．式(\ref{eq:Udiff})に式(\ref{eq:UT})を代入すると，
+\begin{eqnarray}
+    \frac{U_{ABL}}{U_T} \sim \left(\frac{\Delta\rho{}g}{3}\right)^{\frac{n-1}{n}}\cdot\frac{2-n}{n}\cdot\frac{\delta}{\mu_{ABL}}\cdot\left(\frac{k}{a}\right)^{\frac{1}{n}} ,
+    \label{eq:UdiffRho}
+\end{eqnarray}
+となる．
+
+本研究において，落下球の密度，直径，擬塑性流体の濃度をパラメータとして実験を行った．密度変化に関して，球径はほぼ同一の者を用いたので無視する．また，同一の擬塑性流体を用いた場合，$k$,$n$のパラメータも同一と見れるので，超音波照射に伴う高速化は式(\ref{eq:UdiffRho})より，
+\begin{eqnarray}
+    \frac{U_{ABL}}{U_T} \sim \left(\Delta\rho{}\right)^{\frac{n-1}{n}} ,
+    \label{eq:UdiffRho2}
+\end{eqnarray}
 と表される．
-
-これらを踏まえると，式(\ref{eq:Udiff})の右辺は，式(\ref{eq:power-law2}),(\ref{eq:delta}),(\ref{eq:muABL})より，
-\begin{eqnarray}
-    \frac{U_{ABL}}{U_0} \sim \frac{U_0^{n-1}}{u^{n-1}}\frac{\delta^n}{a^n} ,
-    \label{eq:Udiff2}
-\end{eqnarray}
-と表される．この式(\ref{eq:Udiff2})において，音響境界層$\delta^n$に関して，式(\ref{eq:delta})より
-\begin{eqnarray}
-    \delta^n \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{n}{n+1}} ,
-    \label{eq:ndelta}
-\end{eqnarray}
-と表される．
-
-
-落下球によって，誘起される
-\begin{eqnarray}
-    \tau_U \sim k \times \frac{U_T}{a}^{n}
-    \label{eq:tauU}
-\end{eqnarray}
