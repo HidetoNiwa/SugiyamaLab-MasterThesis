@@ -11,19 +11,19 @@
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=14cm,clip]{./4-Results/s1-5.png}
+    \includegraphics[width=14cm,clip]{./5-Results/s1-5.png}
     \caption{Falling speed of a sphere in 1wt.\%PAA solution with and without ultrasound irradiationin tank B. (Interval 5 min.)}
     \label{fig:falling-5}
 \end{figure}
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=14cm,clip]{./4-Results/s1-10.png}
+    \includegraphics[width=14cm,clip]{./5-Results/s1-10.png}
     \caption{Falling speed of a sphere in 1wt.\%PAA solution with and without ultrasound irradiationin tank B. (Interval 10 min.)}
     \label{fig:falling-10}
 \end{figure}
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=14cm,clip]{./4-Results/s1-20.png}
+    \includegraphics[width=14cm,clip]{./5-Results/s1-20.png}
     \caption{Falling speed of a sphere in 1wt.\%PAA solution with and without ultrasound irradiationin tank B. (Interval 20 min.)}
     \label{fig:falling-20}
 \end{figure}
@@ -34,76 +34,7 @@
 
 球の落下間隔を5分，10分，20分と変化させた．その結果をFig.\ref{fig:interval-change}に示す．なお，縦軸は落下速度[mm/s]，横軸は落下開始時からの経過時間[s]である．全ての条件において超音波照射に伴う高速化は見られた．また落下速度は，落下間隔10分，5分，20分の順で速かった．この結果を元に，超音波照射時の球の落下速度$U_{on}$と超音波照射なしの球の落下速度$U_{off}$として，速度比$U_{on}/U_{off}$を求めた．その結果をFig.\ref{fig:speed-diff}に示す．ここで縦軸は速度比[-]，横軸は落下間隔時間[min]である．この結果より，落下速度と同様に，落下間隔10分，5分，20分の順で超音波照射による高速化が見られた．これに関して，超音波照射による高速化のメカニズムより考える．
 
-音響境界層における，せん断速度の代表値は次のように概算される．
-\begin{eqnarray}
-    \dot{\gamma} \sim \frac{u}{\delta} .
-    \label{eq:abl-delta}
-\end{eqnarray}
-ここで，$u$は音波によって加振される流体粒子速度，$\delta$は音響境界層厚さを表す．
-
-流体粒子速度$u$に関して，球の落下方向を$z$とすると運動方程式は次式となる．
-\begin{eqnarray}
-    \frac{\partial u}{\partial t} + \frac{1}{\rho_1}\frac{\partial P}{\partial z} = 0 .
-    \label{eq:newton-1}
-\end{eqnarray}
-ここで，$t$は時刻，$P$は圧力である．また，連続の式は圧縮性流体と仮定すると以下の式となる．
-\begin{eqnarray}
-    \frac{\partial u}{\partial z} + \frac{1}{\rho_1 c^2}\frac{\partial P}{\partial t} = 0 .
-\end{eqnarray}
-音波の周波数は一定であり，容器内の圧力変化は音波に依存するので，以下の式の近似を用いる．
-\begin{eqnarray}
-    \frac{\partial u}{\partial t} &\sim& uf ,\label{eq:1-1}\\
-    \partial P &\sim& \Delta P ,\label{eq:1-2}\\
-    \partial z &\sim& \lambda .\label{eq:1-3}
-\end{eqnarray}
-ここで，$\lambda$は超音波の波長である．式(\ref{eq:1-1}),(\ref{eq:1-2}),(\ref{eq:1-3})を用いて，式(\ref{eq:newton-1})の近似を行うと次式のようになる．
-\begin{eqnarray}
-    uf \sim \frac{\Delta P}{\rho_1 \lambda} .
-    \label{eq:u-1}
-\end{eqnarray}
-周波数$f$，波長$\lambda$，音速$c$の関係から式(\ref{eq:u-1})を書き換えると次式となる．
-\begin{eqnarray}
-    u \sim \frac{\Delta P}{\rho_1 c} .
-\end{eqnarray}
-
-式(\ref{eq:abl-delta})より，Power-law model(式(\ref{eq:power-low}))を適用すると，音響境界層粘度$\mu_{ABL}$は次式の様に見積もられる．
-\begin{eqnarray}
-    \mu_{ABL} \sim k\left(\frac{u}{\delta}\right)^{n-1} ,
-    \label{eq:muABL}
-\end{eqnarray}
-よって，音響境界層厚さ$\delta$は，
-\begin{eqnarray}
-    \delta \sim \sqrt{\frac{\mu_{ABL}}{\pi \rho_h f}} ,
-    \label{eq:delta2}
-\end{eqnarray}
-と見積もられる\cite{deshpande2001vibrational,wiklund2012acoustofluidics}．ここで，周波数$f$である．よって，式(\ref{eq:delta2})を式(\ref{eq:muABL})に代入すると，次のように表される．
-\begin{eqnarray}
-    \delta \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{1}{n+1}} .
-    \label{eq:delta}
-\end{eqnarray}
-ここで，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$である．音響境界層粘度$\mu_{ABL}$とすると超音波照射下における終端速度$U_{ABL}$は，式(\ref{eq:UT})より，
-\begin{eqnarray}
-    U_{ABL} \sim \frac{a^3\Delta\rho g}{3}  \int^{\infty}_{a} \frac{dr}{\mu_{ABL} r^2} \sim \frac{a\Delta \rho \delta g}{3\mu_{ABL}} ,
-    \label{eq:U_ABL}
-\end{eqnarray}
-と見積もられる．ある粘度$\mu_0$における終端速度を$U_0$とする．式(\ref{eq:UT}),(\ref{eq:U_ABL})より，超音波照射の有無による終端速度比は，
-\begin{eqnarray}
-    \frac{U_{ABL}}{U_0} \sim \frac{\mu_0}{\mu_{ABL}}\frac{\delta}{a} ,
-    \label{eq:Udiff}
-\end{eqnarray}
-と表される．
-
-これらを踏まえると，式(\ref{eq:Udiff})の右辺は，式(\ref{eq:power-law2}),(\ref{eq:delta}),(\ref{eq:muABL})より，
-\begin{eqnarray}
-    \frac{U_{ABL}}{U_0} \sim \frac{U_0^{n-1}}{u^{n-1}}\frac{\delta^n}{a^n} ,
-    \label{eq:Udiff2}
-\end{eqnarray}
-と表される．この式(\ref{eq:Udiff2})において，音響境界層$\delta^n$に関して，式(\ref{eq:delta})より
-\begin{eqnarray}
-    \delta^n \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{n}{n+1}} ,
-    \label{eq:ndelta}
-\end{eqnarray}
-と表される．今回，落下間隔を変化させたが，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$，周波数$f$はすべて同一であった．よって，$k,n$ の2つがパラメータとして考えられる．Iwamuro\cite{ref:9}における擬塑性流体の経時変化や濃度変化における粘性特性の変化\cite{ref:Rahimi2007},\cite{ref:Agi2018} より，$n$よりも$k$の方がパラメータとして大きく作用することが分かる．よって，$k$のみをパラメータとして扱うと，速度比$U_{ABL}/U_0$は，$k^\frac{n}{n+1}$によって変化することが分かる．ここで，$n=0.24$とすると，$\delta \propto k^{0.19}$となり，境界層厚さは粘度定数に対して単調増加する．また，式(\ref{eq:power-law})より，$k$が増加すると粘度$\mu$は大きくなり，式(\ref{eq:UT})より落下速度は遅くなることも分かる．ゆえに，粘度が大きくなると落下速度が遅くなり，境界層厚さが厚くなる．
+今回，落下間隔を変化させたが，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$，周波数$f$はすべて同一であった．よって，$k,n$ の2つがパラメータとして考えられる．Iwamuro\cite{ref:9}における擬塑性流体の経時変化や濃度変化における粘性特性の変化\cite{ref:Rahimi2007},\cite{ref:Agi2018} より，$n$よりも$k$の方がパラメータとして大きく作用することが分かる．よって，$k$のみをパラメータとして扱うと，速度比$U_{ABL}/U_0$は，$k^\frac{n}{n+1}$によって変化することが分かる．ここで，$n=0.24$とすると，$\delta \propto k^{0.19}$となり，境界層厚さは粘度定数に対して単調増加する．また，式(\ref{eq:power-law})より，$k$が増加すると粘度$\mu$は大きくなり，式(\ref{eq:UT})より落下速度は遅くなることも分かる．ゆえに，粘度が大きくなると落下速度が遅くなり，境界層厚さが厚くなる．
 
 今回，落下間隔を変化させた実験結果をFig.\ref{fig:interval-change}に示す．縦軸は落下速度，横軸は落下開始時刻からの経過時間である．この図に示される様に，超音波照射なしでの落下速度は落下間隔10分,5分,20分の順で速かった．これは，落下間隔の変化で流体の粘弾性特性が変化したためだと考えられる．式(\ref{eq:UT})より，落下間隔10分よりも20分の方のが$k$が大きくなり，粘性が大きくなったと考えられる．超音波照射による落下速度を超音波照射なしにおける速度$U_{OFF}$で規格化した落下間隔ごとの結果をFig.\ref{fig:speed-diff}に示す．超音波照射による高速化も，超音波照射なしの落下速度と同様の順で大きくなった．
 
@@ -113,7 +44,7 @@ Iwamuro\cite{ref:8}において，音響境界層内の粘度とその厚さが�
 
 \begin{figure}[ht]
     \begin{center}
-        \includegraphics[width=13cm,clip]{5-Discussion/interval.png}
+        \includegraphics[width=13cm,clip]{5-Results/interval.png}
         \caption{Drop interval change Experimental results.}
         \label{fig:interval-change}
     \end{center}
@@ -121,7 +52,7 @@ Iwamuro\cite{ref:8}において，音響境界層内の粘度とその厚さが�
 
 \begin{figure}[ht]
     \begin{center}
-        \includegraphics[width=13cm,clip]{5-Discussion/diff.png}
+        \includegraphics[width=13cm,clip]{5-Results/diff.png}
         \caption{Falling speed ratio due to ultrasound irradiation with change in fall interval.}
         \label{fig:speed-diff}
     \end{center}
@@ -129,7 +60,7 @@ Iwamuro\cite{ref:8}において，音響境界層内の粘度とその厚さが�
 
 \begin{figure}[ht]
     \begin{center}
-        \includegraphics[width=13cm,clip]{5-Discussion/diff-iwamuro.png}
+        \includegraphics[width=13cm,clip]{5-Results/diff-iwamuro.png}
         \caption{Relationship between viscosity and its thickness in the acoustic boundary layer and speed-up by ultrasound irradiation.}
         \label{fig:speed-diff-iwamuro}
     \end{center}

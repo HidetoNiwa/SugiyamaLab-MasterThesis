@@ -48,29 +48,6 @@ I.A.Frigaard A.M.V.Putz, T.I.Burghelea and D.M.Martinez.
   thinning fluid.
 \newblock {\em Physics of Fluids}, Vol.~20, No. 033102, 2008.
 
-\bibitem{ref:10}
-Y.Tasaka T.Shiratori and Y.Murai.
-\newblock Rapid rheological characterization of a viscoelastic fluid based on
-  spatiotemporal flow velocimetry.
-\newblock {\em Experimental Thermal and Fluid Science}, Vol.~71, pp. 1--13,
-  2016.
-
-\bibitem{ref:9}
-岩室秀, 渡村友昭, 杉山和靖.
-\newblock 擬塑性流体中の落下球に及ぼす超音波照射の影響.
-\newblock 混相流, Vol.~33, pp. 87--95, 2019.
-
-\bibitem{ref:12}
-M.T.Arigo and G.H.McKinley.
-\newblock The effects of viscoelasticity on the transient motion of a sphere in
-  a shear-thinning fluid.
-\newblock {\em Journal of Rheology}, Vol.~41, pp. 103--128, 1997.
-
-\bibitem{ref:sakanishi}
-坂西明郎.
-\newblock 〈緩和時間〉.
-\newblock 日本バイオレオロジー学会誌, Vol.~3, pp. 50--50, 1989.
-
 \bibitem{deshpande2001vibrational}
 N.S.Deshpande and M.Barigou.
 \newblock Vibrational flow of non-newtonian fluids.
@@ -81,6 +58,11 @@ R.Green M.Wiklund and M.Ohlin.
 \newblock Acoustofluidics 14: Applications of acoustic streaming in
   microfluidic devices.
 \newblock {\em Lab on a Chip}, Vol.~12, pp. 2438--2451, 2012.
+
+\bibitem{ref:9}
+岩室秀, 渡村友昭, 杉山和靖.
+\newblock 擬塑性流体中の落下球に及ぼす超音波照射の影響.
+\newblock 混相流, Vol.~33, pp. 87--95, 2019.
 
 \bibitem{ref:Rahimi2007}
 A.Peretz S.Rahimi and B.Natan.
@@ -95,5 +77,23 @@ J.Gbonhinbor A.Agi, R.Junin and M.Onyekonwu.
   recovery applications: a review.
 \newblock {\em Journal of Petroleum Exploration and Production Technology},
   Vol.~8, pp. 1349--1362, 2018.
+
+\bibitem{ref:10}
+Y.Tasaka T.Shiratori and Y.Murai.
+\newblock Rapid rheological characterization of a viscoelastic fluid based on
+  spatiotemporal flow velocimetry.
+\newblock {\em Experimental Thermal and Fluid Science}, Vol.~71, pp. 1--13,
+  2016.
+
+\bibitem{ref:12}
+M.T.Arigo and G.H.McKinley.
+\newblock The effects of viscoelasticity on the transient motion of a sphere in
+  a shear-thinning fluid.
+\newblock {\em Journal of Rheology}, Vol.~41, pp. 103--128, 1997.
+
+\bibitem{ref:sakanishi}
+坂西明郎.
+\newblock 〈緩和時間〉.
+\newblock 日本バイオレオロジー学会誌, Vol.~3, pp. 50--50, 1989.
 
 \end{thebibliography}
