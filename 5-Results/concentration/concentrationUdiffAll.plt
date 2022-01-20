@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 4.5, 3 standalone color solid 9
+set terminal epslatex size 4.5, 2 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -53,16 +53,16 @@ ly = 200.0
 set multiplot
  
  
-set style line 101 lt 1 lw 4 ps 2 lc rgb '#d62728' # red
-set style line 102 lt 1 lw 4 ps 2 lc rgb '#1f77b4' # blue
-set style line 103 lt 1 lw 4 ps 2 lc rgb '#2ca02c' # green
-set style line 104 lt 1 lw 4 ps 2 lc rgb '#ff7f0e' # orange
-set style line 105 lt 1 lw 4 ps 2 lc rgb '#17becf' # light-blue
-set style line 106 lt 1 lw 4 ps 2 lc rgb '#9467bd' # purple
-set style line 107 lt 1 lw 4 ps 2 lc rgb '#bcbd22' # yellow
-set style line 108 lt 1 lw 4 ps 2 lc rgb '#e377c2' # orchid
-set style line 109 lt 1 lw 4 ps 2 lc rgb '#7f7f7f' # gray
-set style line 110 lt 1 lw 4 ps 2 lc rgb '#8c564b' # brown
+set style line 101 lt 1 lw 3 ps 2 lc rgb '#d62728' # red
+set style line 102 lt 1 lw 3 ps 2 lc rgb '#1f77b4' # blue
+set style line 103 lt 1 lw 3 ps 2 lc rgb '#2ca02c' # green
+set style line 104 lt 1 lw 3 ps 2 lc rgb '#ff7f0e' # orange
+set style line 105 lt 1 lw 3 ps 2 lc rgb '#17becf' # light-blue
+set style line 106 lt 1 lw 3 ps 2 lc rgb '#9467bd' # purple
+set style line 107 lt 1 lw 3 ps 2 lc rgb '#bcbd22' # yellow
+set style line 108 lt 1 lw 3 ps 2 lc rgb '#e377c2' # orchid
+set style line 109 lt 1 lw 3 ps 2 lc rgb '#7f7f7f' # gray
+set style line 110 lt 1 lw 3 ps 2 lc rgb '#8c564b' # brown
  
 set style line 111 lt 1 lw 4 ps 2 lc rgb '#ff9896' # red
 set style line 112 lt 1 lw 4 ps 2 lc rgb '#aec7e8' # blue
@@ -85,13 +85,67 @@ set palette defined (0 '#999999',\
  
 set format '$%g$'
 
-set size ratio 0.75
+set size ratio 0.9
 set style fill solid 10
+
+set label 12 center at screen 0.56,0.30 '\footnotesize{0.2 wt.\%}'
+set label 13 center at screen 0.56,0.24 '\footnotesize{0.5 wt.\%}'
+set label 14 center at screen 0.56,0.18 '\footnotesize{0.7 wt.\%}'
+set label 15 center at screen 0.56,0.12 '\footnotesize{1.0 wt.\%}'
+set label 16 center at screen 0.56,0.06 '\footnotesize{1.3 wt.\%}'
+set label 17 center at screen 0.56,0 '\footnotesize{1.5 wt.\%}'
+
+set label 22 center at screen 0.67,0.42 '\footnotesize{Aluminum}'
+set label 26 center at screen 0.78,0.42 '\footnotesize{Alumina}'
+set label 23 center at screen 0.89,0.48 '\footnotesize{Steel/}'
+set label 24 center at screen 0.89,0.42 '\footnotesize{Stainless}'
+set label 25 center at screen 1,0.42 '\footnotesize{Brass}'
+
+set label 32 center at screen 0.67,0.36 '\footnotesize{2700}'
+set label 36 center at screen 0.78,0.36 '\footnotesize{3800}'
+set label 33 center at screen 0.89,0.36 '\footnotesize{7900}'
+set label 34 center at screen 1,0.36 '\footnotesize{8700}'
+
+set label 39 center at screen 0.56,0.36 '\footnotesize{$\rho$[kg/m$^3$]}'
+
+#0.2
+set label 52 center at screen 0.67,0.30 point ls 101 pt 2 ps 1.5
+set label 53 center at screen 0.89,0.30 point ls 103 pt 2 ps 1.5
+set label 54 center at screen 1,0.30 point ls 104 pt 2 ps 1.5
+set label 55 center at screen 0.78,0.30 point ls 102 pt 2 ps 1.5
+
+#0.5
+set label 62 center at screen 0.67,0.24 point ls 101 pt 6 ps 1.5
+set label 63 center at screen 0.89,0.24 point ls 103 pt 6 ps 1.5
+set label 64 center at screen 1,0.24 point ls 104 pt 6 ps 1.5
+set label 65 center at screen 0.78,0.24 point ls 102 pt 6 ps 1.5
+
+#0.7
+set label 72 center at screen 0.67,0.18 point ls 101 pt 4 ps 1.5
+set label 73 center at screen 0.89,0.18 point ls 103 pt 4 ps 1.5
+set label 74 center at screen 1,0.18 point ls 104 pt 4 ps 1.5
+set label 75 center at screen 0.78,0.18 point ls 102 pt 4 ps 1.5
+
+#1.0
+set label 82 center at screen 0.67,0.12 point ls 101 pt 8 ps 1.5
+set label 83 center at screen 0.89,0.12 point ls 103 pt 8 ps 1.5
+set label 84 center at screen 1,0.12 point ls 104 pt 8 ps 1.5
+set label 85 center at screen 0.78,0.12 point ls 102 pt 8 ps 1.5
+
+#1.3
+set label 102 center at screen 0.67,0.06 point ls 101 pt 10 ps 1.5
+set label 103 center at screen 0.89,0.06 point ls 103 pt 10 ps 1.5
+set label 104 center at screen 1,0.06 point ls 104 pt 10 ps 1.5
+set label 105 center at screen 0.78,0.06 point ls 102 pt 10 ps 1.5
+
+set label 113 center at screen 0.89,0 point ls 103 pt 12 ps 1.5
+set label 114 center at screen 1,0 point ls 104 pt 12 ps 1.5
+set label 115 center at screen 0.78,0 point ls 102 pt 12 ps 1.5
  
 ####################################################################################################
 
 set lmargin screen 0
-set rmargin screen 1
+set rmargin screen 0.75
 
 set tmargin screen 1
 set bmargin screen 0
@@ -100,50 +154,48 @@ set bmargin screen 0
  
 set key width 0.5 box opaque spacing 1.1 samplen 1 Left reverse
 set key right top
+unset key
  
 ####################################################################################################
 
-set logscale y
+set logscale x
 
 set format x '$%g$'
-set xlabel '{\Large PAA concentration$[$wt.\%\SI{}{}$]$}' offset 0,0.4
-set xrange [0:1.6]
-set xtics 0.8
-set mxtics 2
+set xlabel '{\Large $\left(\frac{\Delta\rho{}g}{3}\right)^{\frac{n-1}{n}}\cdot\frac{2-n}{n}\cdot\frac{\delta}{\mu_{ABL}}\cdot\left(\frac{k}{a}\right)^{\frac{1}{n}}$ $[$\SI{}{-}$]$}' offset 0,-0.5
+set xrange [0.0005:1]
+set xtics 10
+set mxtics 10
  
-set ylabel '{\Large $ U_\text{T} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
-set yrange [1:1500]
-set ytics 10 offset 0.5,0
-set mytics 10
+set yrange [0.9:1.6]
+set ytics 1.0,0.2,1.4
+set mytics 2
  
 plot \
-al_02 using 8:($4)*1000:($5)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'Aluminum',\
-al_05 using 8:($4)*1000:($5)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
-al_07 using 8:($4)*1000:($5)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
-al_10 using 8:($4)*1000:($5)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
-al_13 using 8:($4)*1000:($5)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
-alumina_02 using 8:($4)*1000:($5)*1000 with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'Alumina',\
-alumina_05 using 8:($4)*1000:($5)*1000 with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
-alumina_07 using 8:($4)*1000:($5)*1000 with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
-alumina_07 using 8:($4)*1000:($5)*1000 with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
-alumina_10 using 8:($4)*1000:($5)*1000 with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
-alumina_13 using 8:($4)*1000:($5)*1000 with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
-alumina_15 using 8:($4)*1000:($5)*1000 with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
-stainless_02 using 8:($4)*1000:($5)*1000 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'Stainless',\
-stainless_05 using 8:($4)*1000:($5)*1000 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title '',\
-stainless_07 using 8:($4)*1000:($5)*1000 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title '',\
-stainless_07 using 8:($4)*1000:($5)*1000 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title '',\
-stainless_10 using 8:($4)*1000:($5)*1000 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title '',\
-stainless_13 using 8:($4)*1000:($5)*1000 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title '',\
-stainless_15 using 8:($4)*1000:($5)*1000 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title '',\
-brass_02 using 8:($4)*1000:($5)*1000 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'Brass',\
-brass_05 using 8:($4)*1000:($5)*1000 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title '',\
-brass_07 using 8:($4)*1000:($5)*1000 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title '',\
-brass_07 using 8:($4)*1000:($5)*1000 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title '',\
-brass_10 using 8:($4)*1000:($5)*1000 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title '',\
-brass_13 using 8:($4)*1000:($5)*1000 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title '',\
-brass_15 using 8:($4)*1000:($5)*1000 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title ''
+al_02 using 2:6:7 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'Aluminum',\
+al_05 using 2:6:7 with yerrorlines ls 101 pt 6 ps 1.5 lw 3 title '',\
+al_07 using 2:6:7 with yerrorlines ls 101 pt 4 ps 1.5 lw 3 title '',\
+al_10 using 2:6:7 with yerrorlines ls 101 pt 8 ps 1.5 lw 3 title '',\
+al_13 using 2:6:7 with yerrorlines ls 101 pt 10 ps 1.5 lw 3 title '',\
+alumina_02 using 2:6:7 with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'Alumina',\
+alumina_05 using 2:6:7 with yerrorlines ls 102 pt 6 ps 1.5 lw 3 title '',\
+alumina_07 using 2:6:7 with yerrorlines ls 102 pt 4 ps 1.5 lw 3 title '',\
+alumina_10 using 2:6:7 with yerrorlines ls 102 pt 8 ps 1.5 lw 3 title '',\
+alumina_13 using 2:6:7 with yerrorlines ls 102 pt 10 ps 1.5 lw 3 title '',\
+alumina_15 using 2:6:7 with yerrorlines ls 102 pt 12 ps 1.5 lw 3 title '',\
+stainless_02 using 2:6:7 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'Stainless',\
+stainless_05 using 2:6:7 with yerrorlines ls 103 pt 6 ps 1.5 lw 3 title '',\
+stainless_07 using 2:6:7 with yerrorlines ls 103 pt 4 ps 1.5 lw 3 title '',\
+stainless_10 using 2:6:7 with yerrorlines ls 103 pt 8 ps 1.5 lw 3 title '',\
+stainless_13 using 2:6:7 with yerrorlines ls 103 pt 10 ps 1.5 lw 3 title '',\
+stainless_15 using 2:6:7 with yerrorlines ls 103 pt 12 ps 1.5 lw 3 title '',\
+brass_02 using 2:6:7 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'Brass',\
+brass_05 using 2:6:7 with yerrorlines ls 104 pt 6 ps 1.5 lw 3 title '',\
+brass_07 using 2:6:7 with yerrorlines ls 104 pt 4 ps 1.5 lw 3 title '',\
+brass_10 using 2:6:7 with yerrorlines ls 104 pt 8 ps 1.5 lw 3 title '',\
+brass_13 using 2:6:7 with yerrorlines ls 104 pt 10 ps 1.5 lw 3 title '',\
+brass_15 using 2:6:7 with yerrorlines ls 104 pt 12 ps 1.5 lw 3 title ''
 
 unset multiplot
 reset
