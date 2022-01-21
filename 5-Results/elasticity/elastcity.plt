@@ -18,23 +18,6 @@ if (!exists("fname")) fname='test'
 oname = sprintf("%s.tex", fname)
 set output oname
 
-file1= sprintf('./iwamuro/PAA0.5wt_VelocityVSViscosityperthickness_39kHz.csv')
-file2= sprintf('./iwamuro/PAA0.5wt_VelocityVSViscosityperthickness_72kHz.csv')
-file3= sprintf('./iwamuro/PAA0.5wt_VelocityVSViscosityperthickness_147kHz.csv')
-file4= sprintf('./iwamuro/PAA0.5wt_VelocityVSViscosityperthickness_23kHz.csv')
-
-file5= sprintf('./iwamuro/CMC1.0wt_VelocityVSViscosityperthickness_39kHz.csv')
-file6= sprintf('./iwamuro/CMC1.0wt_VelocityVSViscosityperthickness_72kHz.csv')
-file7= sprintf('./iwamuro/CMC1.0wt_VelocityVSViscosityperthickness_147kHz.csv')
-file8= sprintf('./iwamuro/CMC1.0wt_VelocityVSViscosityperthickness_23kHz.csv')
-
-file9= sprintf('./iwamuro/VelocityVSViscosityperthickness_39kHz.csv')
-file10= sprintf('./iwamuro/VelocityVSViscosityperthickness_72kHz.csv')
-file11= sprintf('./iwamuro/VelocityVSViscosityperthickness_147kHz.csv')
-
-file12= sprintf('./iwamuro/iwamuro_PAA1_100.csv')
-file13= sprintf('./iwamuro/iwamuro_PAA1_180.csv')
-
 d8 = sprintf('../diameter/data/8.csv')
 d10 = sprintf('../diameter/data/10.csv')
 d11 = sprintf('../diameter/data/11.csv')
@@ -44,32 +27,34 @@ d14 = sprintf('../diameter/data/14.csv')
 d15 = sprintf('../diameter/data/15.csv')
 d20 = sprintf('../diameter/data/20.csv')
 
-al_02 = sprintf('./data/al/0.2.csv')
-al_05 = sprintf('./data/al/0.5.csv')
-al_07 = sprintf('./data/al/0.7.csv')
-al_10 = sprintf('./data/al/1.0.csv')
-al_13 = sprintf('./data/al/1.3.csv')
+al_02 = sprintf('../viscosity/data/al/0.2.csv')
+al_05 = sprintf('../viscosity/data/al/0.5.csv')
+al_07 = sprintf('../viscosity/data/al/0.7.csv')
+al_10 = sprintf('../viscosity/data/al/1.0.csv')
+al_13 = sprintf('../viscosity/data/al/1.3.csv')
 
-alumina_02 = sprintf('./data/alumina/0.2.csv')
-alumina_05 = sprintf('./data/alumina/0.5.csv')
-alumina_07 = sprintf('./data/alumina/0.7.csv')
-alumina_10 = sprintf('./data/alumina/1.0.csv')
-alumina_13 = sprintf('./data/alumina/1.3.csv')
-alumina_15 = sprintf('./data/alumina/1.5.csv')
+alumina_02 = sprintf('../viscosity/data/alumina/0.2.csv')
+alumina_05 = sprintf('../viscosity/data/alumina/0.5.csv')
+alumina_07 = sprintf('../viscosity/data/alumina/0.7.csv')
+alumina_10 = sprintf('../viscosity/data/alumina/1.0.csv')
+alumina_13 = sprintf('../viscosity/data/alumina/1.3.csv')
+alumina_15 = sprintf('../viscosity/data/alumina/1.5.csv')
 
-stainless_02 = sprintf('./data/stainless/0.2.csv')
-stainless_05 = sprintf('./data/stainless/0.5.csv')
-stainless_07 = sprintf('./data/stainless/0.7.csv')
-stainless_10 = sprintf('./data/stainless/1.0.csv')
-stainless_13 = sprintf('./data/stainless/1.3.csv')
-stainless_15 = sprintf('./data/stainless/1.5.csv')
+stainless_02 = sprintf('../viscosity/data/stainless/0.2.csv')
+stainless_05 = sprintf('../viscosity/data/stainless/0.5.csv')
+stainless_07 = sprintf('../viscosity/data/stainless/0.7.csv')
+stainless_10 = sprintf('../viscosity/data/stainless/1.0.csv')
+stainless_13 = sprintf('../viscosity/data/stainless/1.3.csv')
+stainless_15 = sprintf('../viscosity/data/stainless/1.5.csv')
 
-brass_02 = sprintf('./data/brass/0.2.csv')
-brass_05 = sprintf('./data/brass/0.5.csv')
-brass_07 = sprintf('./data/brass/0.7.csv')
-brass_10 = sprintf('./data/brass/1.0.csv')
-brass_13 = sprintf('./data/brass/1.3.csv')
-brass_15 = sprintf('./data/brass/1.5.csv')
+brass_02 = sprintf('../viscosity/data/brass/0.2.csv')
+brass_05 = sprintf('../viscosity/data/brass/0.5.csv')
+brass_07 = sprintf('../viscosity/data/brass/0.7.csv')
+brass_10 = sprintf('../viscosity/data/brass/1.0.csv')
+brass_13 = sprintf('../viscosity/data/brass/1.3.csv')
+brass_15 = sprintf('../viscosity/data/brass/1.5.csv')
+
+iwamuro = sprintf('./iwamuro/iwamuro.csv')
 
 lx = 40.0
 ly = 200.0
@@ -218,9 +203,9 @@ set logscale x
 
 set format x '$%g$'
 set xlabel '{\Large $\displaystyle \frac{\mu_{U}}{\mu_{ABL}}\cdot \frac{\delta}{a}$ [$\SI{}{-}$]}' offset 0,-0.5
-set xrange [0.005:10]
+set xrange [0.1:100]
 set xtics 10
-set mxtics 5
+set mxtics 10
  
 set ylabel '{\Large $\displaystyle U_\text{on}/U_\text{off}[$\SI{}{-}$]$}' offset 0,0
 set format y '$%g$'
@@ -229,72 +214,38 @@ set ytics 0.2 offset 0,0
 set mytics 2
  
 plot \
-file1 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title 'Iwamuro(2020)',\
-file1 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file1 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file2 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file2 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file2 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file3 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file3 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file3 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file4 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file4 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file4 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file5 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file5 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file5 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file6 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file6 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file6 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file7 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file7 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file7 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file8 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file8 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file8 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file9 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file9 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file9 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file10 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file10 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file10 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file11 using 1:3:2:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file11 using 5:7:6:8 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file11 using 9:11:10:12 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file12 using 1:2:6:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-file13 using 1:2:6:4 with xyerrorbars ls 111 pt  6 ps 1.6 lw 4 title '',\
-al_02 using 3:5:4:6 with xyerrorbars ls 101 pt 2 ps 1.6 lw 4 title '',\
-al_05 using 3:5:4:6 with xyerrorbars ls 101 pt 6 ps 1.6 lw 4 title '',\
-al_07 using 3:5:4:6 with xyerrorbars ls 101 pt 4 ps 1.6 lw 4 title '',\
-al_10 using 3:5:4:6 with xyerrorbars ls 101 pt 8 ps 1.6 lw 4 title '',\
-al_13 using 3:5:4:6 with xyerrorbars ls 101 pt 10 ps 1.6 lw 4 title '',\
-alumina_02 using 3:5:4:6 with xyerrorbars ls 102 pt 2 ps 1.6 lw 4 title '',\
-alumina_05 using 3:5:4:6 with xyerrorbars ls 102 pt 6 ps 1.6 lw 4 title '',\
-alumina_07 using 3:5:4:6 with xyerrorbars ls 102 pt 4 ps 1.6 lw 4 title '',\
-alumina_10 using 3:5:4:6 with xyerrorbars ls 102 pt 8 ps 1.6 lw 4 title '',\
-alumina_13 using 3:5:4:6 with xyerrorbars ls 102 pt 10 ps 1.6 lw 4 title '',\
-alumina_15 using 3:5:4:6 with xyerrorbars ls 102 pt 12 ps 1.6 lw 4 title '',\
-stainless_02 using 3:5:4:6 with xyerrorbars ls 103 pt 2 ps 1.6 lw 4 title '',\
-stainless_05 using 3:5:4:6 with xyerrorbars ls 103 pt 6 ps 1.6 lw 4 title '',\
-stainless_07 using 3:5:4:6 with xyerrorbars ls 103 pt 4 ps 1.6 lw 4 title '',\
-stainless_10 using 3:5:4:6 with xyerrorbars ls 103 pt 8 ps 1.6 lw 4 title '',\
-stainless_13 using 3:5:4:6 with xyerrorbars ls 103 pt 10 ps 1.6 lw 4 title '',\
-stainless_15 using 3:5:4:6 with xyerrorbars ls 103 pt 12 ps 1.6 lw 4 title '',\
-brass_02 using 3:5:4:6 with xyerrorbars ls 104 pt 2 ps 1.6 lw 4 title '',\
-brass_05 using 3:5:4:6 with xyerrorbars ls 104 pt 6 ps 1.6 lw 4 title '',\
-brass_07 using 3:5:4:6 with xyerrorbars ls 104 pt 4 ps 1.6 lw 4 title '',\
-brass_10 using 3:5:4:6 with xyerrorbars ls 104 pt 8 ps 1.6 lw 4 title '',\
-brass_13 using 3:5:4:6 with xyerrorbars ls 104 pt 10 ps 1.6 lw 4 title '',\
-brass_15 using 3:5:4:6 with xyerrorbars ls 104 pt 12 ps 1.6 lw 4 title '',\
-d8 using 3:5:4:6 with xyerrorbars ls 301 pt 14 ps 1.6 lw 4 title '',\
-d10 using 3:5:4:6 with xyerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
-d11 using 3:5:4:6 with xyerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
-d12 using 3:5:4:6 with xyerrorbars ls 304 pt  14 ps 1.6 lw 4 title '',\
-d13 using 3:5:4:6 with xyerrorbars ls 305 pt 14 ps 1.6 lw 4 title '',\
-d14 using 3:5:4:6 with xyerrorbars ls 306 pt 14 ps 1.6 lw 4 title '',\
-d15 using 3:5:4:6 with xyerrorbars ls 307 pt 14 ps 1.6 lw 4 title '',\
-d20 using 3:5:4:6 with xyerrorbars ls 308 pt 14 ps 1.6 lw 4 title '',\
+iwamuro using 1:4:5 with yerrorbars  ls 111 pt  6 ps 1.6 lw 4 title 'iwamuro',\
+al_02 using 2:5:6 with yerrorbars ls 101 pt 2 ps 1.6 lw 4 title '',\
+al_05 using 2:5:6 with yerrorbars ls 101 pt 6 ps 1.6 lw 4 title '',\
+al_07 using 2:5:6 with yerrorbars ls 101 pt 4 ps 1.6 lw 4 title '',\
+al_10 using 2:5:6 with yerrorbars ls 101 pt 8 ps 1.6 lw 4 title '',\
+al_13 using 2:5:6 with yerrorbars ls 101 pt 10 ps 1.6 lw 4 title '',\
+alumina_02 using 2:5:6 with yerrorbars ls 102 pt 2 ps 1.6 lw 4 title '',\
+alumina_05 using 2:5:6 with yerrorbars ls 102 pt 6 ps 1.6 lw 4 title '',\
+alumina_07 using 2:5:6 with yerrorbars ls 102 pt 4 ps 1.6 lw 4 title '',\
+alumina_10 using 2:5:6 with yerrorbars ls 102 pt 8 ps 1.6 lw 4 title '',\
+alumina_13 using 2:5:6 with yerrorbars ls 102 pt 10 ps 1.6 lw 4 title '',\
+alumina_15 using 2:5:6 with yerrorbars ls 102 pt 12 ps 1.6 lw 4 title '',\
+stainless_02 using 2:5:6 with yerrorbars ls 103 pt 2 ps 1.6 lw 4 title '',\
+stainless_05 using 2:5:6 with yerrorbars ls 103 pt 6 ps 1.6 lw 4 title '',\
+stainless_07 using 2:5:6 with yerrorbars ls 103 pt 4 ps 1.6 lw 4 title '',\
+stainless_10 using 2:5:6 with yerrorbars ls 103 pt 8 ps 1.6 lw 4 title '',\
+stainless_13 using 2:5:6 with yerrorbars ls 103 pt 10 ps 1.6 lw 4 title '',\
+stainless_15 using 2:5:6 with yerrorbars ls 103 pt 12 ps 1.6 lw 4 title '',\
+brass_02 using 2:5:6 with yerrorbars ls 104 pt 2 ps 1.6 lw 4 title '',\
+brass_05 using 2:5:6 with yerrorbars ls 104 pt 6 ps 1.6 lw 4 title '',\
+brass_07 using 2:5:6 with yerrorbars ls 104 pt 4 ps 1.6 lw 4 title '',\
+brass_10 using 2:5:6 with yerrorbars ls 104 pt 8 ps 1.6 lw 4 title '',\
+brass_13 using 2:5:6 with yerrorbars ls 104 pt 10 ps 1.6 lw 4 title '',\
+brass_15 using 2:5:6 with yerrorbars ls 104 pt 12 ps 1.6 lw 4 title '',\
+d8 using 2:5:6 with yerrorbars ls 301 pt 14 ps 1.6 lw 4 title '',\
+d10 using 2:5:6 with yerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
+d11 using 2:5:6 with yerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
+d12 using 2:5:6 with yerrorbars ls 304 pt  14 ps 1.6 lw 4 title '',\
+d13 using 2:5:6 with yerrorbars ls 305 pt 14 ps 1.6 lw 4 title '',\
+d14 using 2:5:6 with yerrorbars ls 306 pt 14 ps 1.6 lw 4 title '',\
+d15 using 2:5:6 with yerrorbars ls 307 pt 14 ps 1.6 lw 4 title '',\
+d20 using 2:5:6 with yerrorbars ls 308 pt 14 ps 1.6 lw 4 title '',\
 
 unset multiplot
 reset
