@@ -61,7 +61,6 @@ ly = 200.0
  
 set multiplot
  
- 
 set style line 101 lt 1 lw 4 ps 2 lc rgb '#d62728' # red
 set style line 102 lt 1 lw 4 ps 2 lc rgb '#1f77b4' # blue
 set style line 103 lt 1 lw 4 ps 2 lc rgb '#2ca02c' # green
