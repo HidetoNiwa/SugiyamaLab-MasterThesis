@@ -86,6 +86,24 @@
     \label{eq:UT}
 \end{eqnarray}
 
+\subsection{擬塑性流体中における球の落下による応力}
+擬塑性流体中を落下する球の終端速度を$U_\text{T}$とする．球の落下によるせん断速度$\dot{\gamma}$は，球の終端速度$U_\text{T}$と半径$a$を用いて，
+\begin{eqnarray}
+    \dot{\gamma} \sim \frac{U_\text{T}}{a},
+    \label{eq:UTgamma}
+\end{eqnarray}
+と見積もられる．球の落下による粘度$\mu_\text{U}$は，式(\ref{eq:power-low})のPower-law modelより，
+\begin{eqnarray}
+    \mu_\text{U} \sim k \left(\frac{U_\text{T}}{a}\right)^{n-1} ,
+    \label{eq:muU}
+\end{eqnarray}
+と見積もることができる．これより，式(\ref{eq:sigma3})より球の落下による応力$\tau_\text{U}$は，
+\begin{eqnarray}
+    \tau_\text{U} \sim k \left(\frac{U_\text{T}}{a}\right)^n ,
+    \label{eq:tauU}
+\end{eqnarray}
+と見積もられる．
+
 \subsection{超音波照射に伴う球の高速化}
 \label{sec:UTdiff}
 超音波照射された本研究の系における，落下球の高速化に関して考える．音響境界層における，せん断速度の代表値は次のように概算される．

@@ -59,13 +59,6 @@ R.Green M.Wiklund and M.Ohlin.
   microfluidic devices.
 \newblock {\em Lab on a Chip}, Vol.~12, pp. 2438--2451, 2012.
 
-\bibitem{ref:10}
-Y.Tasaka T.Shiratori and Y.Murai.
-\newblock Rapid rheological characterization of a viscoelastic fluid based on
-  spatiotemporal flow velocimetry.
-\newblock {\em Experimental Thermal and Fluid Science}, Vol.~71, pp. 1--13,
-  2016.
-
 \bibitem{ref:9}
 岩室秀, 渡村友昭, 杉山和靖.
 \newblock 擬塑性流体中の落下球に及ぼす超音波照射の影響.
@@ -81,6 +74,13 @@ M.T.Arigo and G.H.McKinley.
 坂西明郎.
 \newblock 〈緩和時間〉.
 \newblock 日本バイオレオロジー学会誌, Vol.~3, pp. 50--50, 1989.
+
+\bibitem{ref:10}
+Y.Tasaka T.Shiratori and Y.Murai.
+\newblock Rapid rheological characterization of a viscoelastic fluid based on
+  spatiotemporal flow velocimetry.
+\newblock {\em Experimental Thermal and Fluid Science}, Vol.~71, pp. 1--13,
+  2016.
 
 \bibitem{ref:Rahimi2007}
 A.Peretz S.Rahimi and B.Natan.

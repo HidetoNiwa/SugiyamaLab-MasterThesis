@@ -6,7 +6,7 @@
 
 \subsection{実験装置}
 
-電磁石を用いた実験装置をFig.\ref{fig:magnet_device}に示す．電磁石の磁力によって落下球の把持を行った．
+電磁石を用いた実験装置をFig.\ref{fig:magnet_device}に示す．電磁石の磁力によって落下球の把持を行った．球を落下させるとき，電磁石への通電を切り，落下方向に力を加えて球を落下させた．また，本実験は先行研究と同様の条件で行うため，外寸において高さ248.5mm，幅47mm，奥行き47mm，厚さ3.5mmの矩形ガラス水槽で実験を行った．また，照射する超音波の周波数は39kHzとした．
 
 \begin{figure}[ht]
     \centering
@@ -26,94 +26,53 @@
 
 \subsection{落下実験結果}
 
-容器Aにおいて，真空ポンプを用いて球を落下させた．解析した結果をFig\ref{fig:falling-A}に示す．縦軸は落下速度，横軸は落下開始時からの経過時間である．先行研究であるIwamuro \textit{et al}.\cite{ref:8}や電磁石を用いて球を把持した場合と比較し，超音波照射による高速化が顕著に現れていないことが分かる．また，落下開始時に電磁石を用いた場合はオーバーシュートが見られるが，真空ポンプを用いた場合はオーバーシュートが見られなかった．このことに関して，後述の第\ref{sec:dis-de}節にて議論を行う．また，補足資料\ref{sec:reexp}に真空ポンプを用いた把持方法における再現性の確認結果を示す．
+真空ポンプを用いて球を把持した場合と電磁石を用いて球を把持した場合の結果をFig\ref{fig:falling-A}に示す．縦軸は落下速度，横軸は落下開始時からの経過時間である．先行研究であるIwamuro \textit{et al}.\cite{ref:8}や電磁石を用いて球を把持した場合と比較し，超音波照射による高速化が顕著に現れなかった．また，落下開始時に電磁石を用いた場合はオーバーシュートが見られるが，真空ポンプを用いた場合はオーバーシュートが見られなかった．
 
+% //TODO:下記記述の適当さを確認する
+%また，補足資料\ref{sec:reexp}に真空ポンプを用いた把持方法における再現性の確認結果を示す．
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=12cm,clip]{./5-Results/s1-A.png}
-    \caption{Falling speed of a sphere in 1wt.\%PAA solution with and without ultrasound irradiation in tank A.}
+    \includegraphics[width=1\textwidth]{./X-Appendix/magnet_vacuum/magnet_vacuum.eps}
+    \caption{Falling speed of a sphere in 1wt.\%PAA solution with and without ultrasound irradiation.}
     \label{fig:falling-A}
 \end{figure}
 
-\subsection{実験装置改良に伴う終端速度の変化}
-
-上記の式(\ref{eq:UT})より，Power-Law modelにおける，$k$,$n$のパラメータより終端速度を見積もることができる．
-
-Table \ref{table:power-law}の結果より，式(\ref{eq:UT})を用いて直径10mmの球におけるIwamuro\cite{ref:8}の終端速度$U_I$を基準とした終端速度の比$U_T/U_{I}$を求めた．その結果を，Table \ref{table:UT}に示す．これより，今回の粘度特性において，Iwamuro\cite{ref:8}と比較して終端速度が1.09倍速くなることが分かった．Fig.\ref{fig:falling-A}において，Iwamuro\cite{ref:8}と比較して1.125倍，終端速度が速かった．一方で，0.95,1.05wt.\%それぞれのPAA溶液の粘度特性における終端速度比と比較しても実験結果と一番近いのは，1wt.\%の場合である．よって，溶液の濃度精度は1wt.\%±0.05wt.\%以内であり，溶液の作製誤差によって落下速度に差が生じたと考えられる．
-
-\begin{table}[h]
-    \centering
-    \caption{Each parameter($k$,$n$) and terminal speed ratio in the power-law model for each experimental result.}
-    \label{table:UT}
-    \begin{tabular}{c|c|c|c} \hline
-                                                     & $k$  & $n$  & $U_T/U_{I}$ \\ \hline \hline
-        Present Value(1.05wt.\%)                     & 9.56 & 0.23 & 0.93        \\
-        Present Value(1wt.\%)                        & 8.37 & 0.24 & 1.09        \\
-        Present Value(0.95wt.\%)                     & 5.22 & 0.25 & 3.91        \\
-        Iwamuro\cite{ref:8}                          & 9.4  & 0.23 & 1           \\
-        Shiratori \textit{et al}.(2016)\cite{ref:10} & 5.9  & 0.25 & 2.99        \\ \hline
-    \end{tabular}
-\end{table}
-
-\newpage
+\clearpage
 
 \subsection{落下開始時のオーバーシュートへの影響}
 \label{sec:dis-de}
 
 今回，球を把持する手法を，電磁石を用いて把持する方法から真空ポンプを用いて把持する方法に変化させた．この時，落下開始時0-0.3sにおける落下速度のオーバーシュートが，先行研究\cite{ref:8,ref:9}より小さくなった．落下開始時のオーバーシュートは弾性による影響によって生じる\cite{ref:12}．以下で，オーバーシュートが見られなくなった原因を，物質の流動性を表す$De$数より考える．$De$数が大きくなると，弾性的傾向が強くなり，$De$数が小さくなると，粘性的流動を表す．
 
-$De$数は下記の様に緩和時間$\lambda$[s]，代表時間$T$[s]の比で表される．
+$De$数は下記の様に緩和時間$\lambda$，代表時間$T$の比で表される．
 \begin{equation}
     De = \frac{\lambda}{T} .
     \label{eq:De}
 \end{equation}
-代表時間$T$[s]に関して，超音波照射を行っていない場合の球の落下条件においても考えるため，
+代表時間$T$に関して，超音波照射を行っていない場合の球の落下条件においても考えるため，
 \begin{equation}
     T = \frac{a}{U} ,
     \label{eq:T}
 \end{equation}
-となる．ここで，球の落下速度$U$[m/s]，球の半径$a$[m]である．また，緩和時間$\lambda$[s]は，
+となる．ここで，球の落下速度$U$，球の半径$a$である．また，緩和時間$\lambda$は，粘度$\mu$，貯蔵弾性率$G'$を用いて，
 \begin{equation}
-    \lambda \approx \frac{\mu}{G'} .
+    \lambda \approx \frac{\mu}{G'} ,
     \label{eq:lamda}
 \end{equation}
-ここで粘度$\mu$[Pa$\times$s]，貯蔵弾性率$G'$[Pa]である．緩和時間は変形の経過時間において，粘弾性流体が流体的挙動を示すか，固体的挙動を示すかの指標である\cite{ref:sakanishi}．粘度$\mu$[Pa$\times$s]に関して，せん断速度$\dot{\gamma}$[1/s]および粘度定数$k$[Pa$\times$s${}^n$]，指数$n$を用いてPower-law modelに従うとすると，
-\begin{equation}
-    \mu = k \times \dot{\gamma}^{n-1} ,
-    \label{eq:power-law}
-\end{equation}
-となる．落下球によるせん断領域において，せん断速度の代表値$\dot{\gamma}$[1/s]は，次のように概算される．
-\begin{equation}
-    \dot{\gamma} \sim \frac{U}{a} ．
-    \label{eq:gamma}
-\end{equation}
-よって，式(\ref{eq:power-law})，(\ref{eq:gamma})よりせん断領域における粘度$\mu_U$は，次式で概算される．
-\begin{equation}
-    \mu_U \sim k \times \left(\frac{U}{a}\right)^{n-1} ．
-    \label{eq:power-law2}
-\end{equation}
-これら式(\ref{eq:De}),(\ref{eq:T}),(\ref{eq:lamda}),(\ref{eq:power-law2})より，$De$数は，
+と見積もられる．緩和時間は変形の経過時間において，粘弾性流体が流体的挙動を示すか，固体的挙動を示すかの指標である\cite{ref:sakanishi}．粘度$\mu$に関して，落下球によるせん断領域における粘度となるため，式(\ref{eq:muU})の$\mu_\text{U}$を用いる．
+
+これら式(\ref{eq:De}),(\ref{eq:T}),(\ref{eq:lamda}),(\ref{eq:muU})より，$De$数は，
 \begin{equation}
     De \sim \frac{k}{G'} {\left(\frac{U}{a}\right)}^n ,
     \label{eq:De2}
 \end{equation}
-となり，粘度定数$k$[Pa$\times$s${}^n$]，貯蔵弾性率$G'$[Pa]，落下速度$U$[m/s]，球の半径$a$[m]によって表される．
+となり，粘度定数$k$，貯蔵弾性率$G'$，落下速度$U$，球の半径$a$によって見積もられる．
 
-貯蔵弾性率$G'$[Pa]に関して，先行研究において計測されたFig.\ref{fig:iwamuro-G}(b)の結果より考える．この図において，貯蔵弾性率$G'$[Pa]は応力$\tau$[Pa]との関係性が示されている．ここで応力$\tau$[Pa]は，
-\begin{equation}
-    \tau = \mu \times \dot{\gamma} ,
-    \label{eq:tau}
-\end{equation}
-となる．ここに，式(\ref{eq:power-law})，(\ref{eq:gamma})を代入すると，
-\begin{equation}
-    \tau \sim k \times \left(\frac{U}{a}\right)^n ,
-    \label{eq:tau-cal}
-\end{equation}
-と概算することができる．
+貯蔵弾性率$G'$[Pa]に関して，Fig.\ref{fig:PAA-elast}にて示した応力との関係性の結果を用いる．ここで応力$\tau$は，落下球によって生じた応力$\tau_\text{U}$を用いる．
 
-Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピーク速度$U_{peak}$[mm/s]と終端速度$U_{ave}$[mm/s]を算出した．続いて，式(\ref{eq:tau-cal})を用いて，それぞれの速度における応力$\tau_{peak}$[Pa]，$\tau_{ave}$[Pa]の算出を行った．これら算出結果と先行研究の計測結果Fig.\ref{fig:iwamuro-G}より，貯蔵弾性率$G'$も求めた．これらの結果を，Table \ref{table:iwamuro}に示す．
+Fig. \ref{fig:iwamuro-fall}に先行研究であるIwamuro \it{et al}.\cite{ref:8}の球径ごとの実験結果を示す．Fig.\ref{fig:falling-A}, \ref{fig:iwamuro-fall}それぞれの結果より，ピーク速度$U_{peak}$と終端速度$U_{ave}$を算出した．続いて，式(\ref{eq:tau-cal})を用いて，それぞれの速度における応力$\tau_{peak}$，$\tau_{ave}$の算出を行った．これら算出結果と先行研究の計測結果Fig.\ref{fig:iwamuro-G}より，貯蔵弾性率$G'$も求めた．これらの結果を，Table \ref{table:iwamuro}に示す．
 
-また，式(\ref{eq:power-law2})を用いて，ピーク速度/終端速度それぞれの粘度$\mu_{peak}$[Pa$\cdot$s]，$\mu_{ave}$[Pa$\cdot$s]を概算した．これらの粘度を式(\ref{eq:lamda})に代入し，それぞれの緩和時間$\lambda_{peak}$[s]，$\lambda_{ave}$[s]の算出を行った．そして，それらの緩和時間より，式(\ref{eq:De})を用いて，それぞれの$De$数，$De_{peak}$，$De_{ave}$を求めた．これらの結果を，Table \ref{table:iwamuro2}に示す．
+また，式(\ref{eq:muU})を用いて，ピーク速度/終端速度それぞれの粘度$\mu_{peak}$，$\mu_\text{U}$を概算した．これらの粘度を式(\ref{eq:lamda})に代入し，それぞれの緩和時間$\lambda_{peak}$，$\lambda_{ave}$の算出を行った．そして，それらの緩和時間より，式(\ref{eq:De})を用いて，それぞれの$De$数，$De_{peak}$，$De_{ave}$を求めた．これらの結果を，Table \ref{table:iwamuro2}に示す．
 
 Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と，終端速度より求めた$De_{ave}$において，大きな差異が見られないことが分かった．以降，$De_{peak}$に関してのみ議論を行う．$De_{peak}$に関して，落下速度のオーバーシュート$U_{peak}/U_{ave}$との関係をFig.\ref{fig:De-overshoot}に示す．横軸は$De$数，縦軸は落下速度のオーバーシュート$U_{peak}/U_{ave}$である．この図より，$De$数とオーバーシュートには正の相関があり，$De$数が増加するとオーバーシュートも大きくなることが分かった．
 
@@ -164,7 +123,7 @@ Table \ref{table:iwamuro2}より，ピーク速度より求めた$De_{peak}$と�
 
 \begin{figure}[ht]
     \begin{center}
-        \includegraphics[width=13cm,clip]{5-Results/iwamuro-fall.png}
+        \includegraphics[width=13cm,clip]{X-Appendix/over_shoot/iwamuro-fall.png}
         \caption{Speed of a falling sphere in diameter of (a) 3 mm, (b) 4 mm, (c) 5 mm, (d) 6 mm, (e) 7 mm, (f) 8 mm, (g) 9 mm, (h) 10 mm in 1.0 wt.\% PAA solution with ultrasound fixed frequency at 27.4 kHz and $\Delta \bar{P} \approx$ 180 kPa\cite{ref:8}.}
         \label{fig:iwamuro-fall}
     \end{center}
