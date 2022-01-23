@@ -9,6 +9,7 @@
 \usepackage{multirow}
 \usepackage{bm}
 \usepackage{amssymb}
+\usepackage{tocloft}
 
 \makeatletter
 	\renewcommand{\theequation}{% 式番号の付け方
@@ -24,29 +25,51 @@
 	\@addtoreset{table}{section}
 \makeatother
 
+% Abstractの書式設定
+% 参考：https://tex.stackexchange.com/questions/366169/how-to-change-font-size-for-abstract-title
+\makeatletter
+\renewenvironment{abstract}{%
+    \if@twocolumn
+      \section*{\abstractname}%
+    \else
+      \begin{flushleft}%
+        {\bfseries \LARGE\abstractname\vspace{\z@}}
+      \end{flushleft}%
+      \quotation
+    \fi}
+    {\if@twocolumn\else\endquotation\fi}
+\makeatother
+
+\renewcommand{\cfttoctitlefont}{\LARGE}
+
 \renewcommand{\figurename}{Fig}
 \renewcommand{\tablename}{Table}
 \renewcommand{\refname}{参考文献}
+\renewcommand{\abstractname}{Abstract}
 
-\pagestyle{fancy}
-\rhead{}
-\lhead{\rightmark}
-\cfoot{\thepage}
-\rfoot{}
-\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{empty}
 
 \begin{document}
 \input{0-Cover/cover.tex}
 \newpage
+\input{1-Background/abstract.tex}
+\newpage
 \setcounter{tocdepth}{2}
 \tableofcontents
 \newpage
+\pagestyle{fancy}
+\rhead{\leftmark}
+\lhead{\rightmark}
+\cfoot{\thepage}
+\rfoot{}
+\setcounter{page}{1}
+\renewcommand{\footrulewidth}{0.4pt}
 \input{1-Background/background.tex}
 \newpage
 \input{2-Methods/methods.tex}
 \newpage
 \input{2-Methods/analysis.tex}
-\newpage
+\clearpage
 \input{3-Physical_Property/physical.tex}
 \newpage
 \input{4-Theory/theory.tex}

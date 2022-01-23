@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 5.4, 4 standalone color solid 9
+set terminal epslatex size 5.2, 3.2 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -85,7 +85,7 @@ set palette defined (0 '#999999',\
  
 set format '$%g$'
 
-set size ratio 1.6
+set size ratio 1.3
 set style fill solid 10
  
 ####################################################################################################
@@ -94,18 +94,18 @@ set lmargin screen 0.02
 set rmargin screen 0.276667
 
 set tmargin screen 1
-set bmargin screen 0.53
+set bmargin screen 0.52
  
 ####################################################################################################
  
 set key width 0.5 box opaque spacing 1.1 samplen 1 Left reverse
-set key at screen 1,0.13
+set key at screen 1,0.20
  
 ####################################################################################################
 
 set label 31 at graph 0.02,0.93 '(a)' front
 
-set format x '$%g$'
+set format x ''
 set xlabel '' offset 0,0.4
 set xrange [0:9000]
 set xtics 4500
@@ -132,7 +132,7 @@ set rmargin screen 0.553333
 
 set label 31 at graph 0.02,0.93 '(b)' front
 
-set format x '$%g$'
+set format x ''
 set xlabel '' offset 0,0.4
 set xrange [0:9000]
 set xtics 4500
@@ -160,7 +160,7 @@ set rmargin screen 0.83
 
 set label 31 at graph 0.02,0.93 '(c)' front
 
-set format x '$%g$'
+set format x ''
 set xlabel '' offset 0,0.4
 set xrange [0:9000]
 set xtics 4500
@@ -183,7 +183,7 @@ brass_07 using ($1-1)*1000:($4)*1000:($5)*1000 with yerrorlines ls 104 pt 2 ps 1
 set lmargin screen 0.02
 set rmargin screen 0.276667
 
-set tmargin screen 0.47
+set tmargin screen 0.48
 set bmargin screen 0
 
 ####################################################################################################

@@ -1,6 +1,6 @@
 \section{実験方法}
 \label{sec:methods}
-本実験では，ポリアクリルアミド（PAA）溶液（三菱ケミカル，AP805C）を擬塑性流体として用いた．初めに，試験溶液であるPAA溶液を作製し，非ニュートン流体における指標の一つとなる粘度の計測を行うことで粘度特性を計測した．続いて，超音波振動子によって圧力場が適切に生成されているか確認した．そして，擬塑性流体中を落下する球に対する超音波照射による影響を調べるため，球落下実験を行った．
+本実験では，ポリアクリルアミド（PAA）溶液（三菱ケミカル，AP805C）を擬塑性流体として用いた．初めに，試験溶液であるPAA溶液を作製し，非ニュートン流体における指標の一つとなる粘度の計測を行うことで粘度特性を計測した．また，応力と貯蔵弾性率，損失弾性率の計測を行うことで，応力に対する弾性特性を計測した．続いて，超音波振動子によって圧力場が適切に生成されているか確認した．そして，擬塑性流体中を落下する球に対する超音波照射による影響を調べるため，球落下実験を行った．
 
 \subsection{溶液作製}
 
@@ -33,10 +33,22 @@ PAA粉末と水道水を混合することで，各種濃度（0.05,0.2,0.5,0.7,
     \end{figure}
 \end{center}
 
-% //TODO:弾性率の計測方法を記述する，計測範囲，計測間隔を書く
 \subsection{弾性率計測}
 
-作製したPAA溶液の弾性特性を調べるため，貯蔵弾性率$G'$と損失弾性率$G''$の応力依存性を計測した．計測には，レオメータ(Thermo Fisher Scientific,HAAKE MARS)を用いた．
+作製したPAA溶液の応力に対する弾性特性を調べるため，貯蔵弾性率$G'$と損失弾性率$G''$の応力依存性を計測した．計測には，回転式レオメータ(Thermo Fisher Scientific,HAAKE MARS$\rm I\hspace{-.15em}I\hspace{-.15em}I$)を用いた．回転子の周期を一定にし，振幅を変化させることで溶液に印可する応力を変化させた．計測条件をTable\ref{table:elastic}に示す．
+
+\begin{table}[ht]
+    \centering
+    \caption{Elastic modulus measurement conditions.}
+    \label{table:elastic}
+    \begin{tabular}{c|c}\hline
+        計測範囲     & $10^{-3} \sim 10^3$[Pa] \\ \hline
+        計測分割数   & 70                      \\ \hline
+        計測分割形式 & 対数                    \\ \hline
+        計測温度     & 20[$^\circ$C]（固定）   \\ \hline
+        回転子周期   & 1[Hz]（固定））         \\ \hline
+    \end{tabular}
+\end{table}
 
 \subsection{圧力場計測}
 
@@ -68,7 +80,7 @@ PAA粉末と水道水を混合することで，各種濃度（0.05,0.2,0.5,0.7,
     \begin{figure}[ht]
         \centering
         \label{fig:microphone}
-        \includegraphics[clip,width=9.0cm]{2-Methods/microphone.png}
+        \includegraphics[width=0.65\textwidth]{2-Methods/microphone.eps}
         \caption{Schematic outline for pressure measurement.}
     \end{figure}
 \end{center}
@@ -77,27 +89,36 @@ PAA粉末と水道水を混合することで，各種濃度（0.05,0.2,0.5,0.7,
 
 \subsection{球落下実験}
 
-使用した実験装置の概略図をFig.\ref{fig:device}に示す．高さ400mm，幅58mm，奥行き58mm，厚さ3mmの矩形アクリル水槽を用いた．この水槽に試験溶液を満たした．その上に，真空ポンプと接続した真空パッドを設置し，球の保持をした．三方弁を用いて真空パッドを大気圧にすることで落下球の把持を解除し，球を落下させた．落下させた球の材質，密度，直径をTable.\ref{table:ball}に示す．
-鋼球はネオジム磁石を用いて，試行ごとに回収を行った．一方で，他の種類の球は回収せずに落下実験を継続した．この際，落下球の体積によって液面が上昇するので液面の高さが一定になるよう，シリンジを用いて溶液を回収した．
+使用した実験装置の概略図をFig.\ref{fig:device}に示す．高さ400mm，幅58mm，奥行き58mm，厚さ3mmの矩形アクリル水槽を用いた．この水槽に試験溶液を満たした．その上に，真空ポンプと接続した真空パッドを設置し，球の保持をした．三方弁を用いて真空パッドを大気圧にすることで落下球の把持を解除し，球を落下させた．落下させた球，溶液の条件をTable.\ref{table:exp-conditions}に示す．落下させた球が鋼球の場合は，ネオジム磁石を用いて試行ごとに回収を行った．一方で，他の種類の球は回収せずに落下実験を継続した．この際，落下球の体積によって液面が上昇するので液面の高さが一定になるよう，シリンジを用いて溶液を回収した．
 
 落下球が試験液体中を落下する様子をハイスピードカメラ（BASLER, acA1920-150um）で撮影し，記録用コンピュータに連続画像（bmp形式）として保存した．ハイスピードカメラにはレンズ（BASLER, TS5014-MP）をつけ，絞り，焦点の調整を行い，明瞭に落下球を撮影できるようにした．実験装置後方にスクリーン，赤外線ライトを設置し，装置を後方より照射することにより，落下の様子をより分かりやすくした．さらに，超音波振動による影響を調査するためにアクリル水槽の下に超音波振動子を設置した．
 
-\begin{table}[ht]
+\begin{figure}[h]
     \centering
-    \caption{Type, density, and size of falling balls.}
-    \label{table:ball}
-    \begin{tabular}{c|c|c}\hline
-        球材質       & 密度 $\rho$[g/cm$^3$] & 直径 $D$[mm] \\ \hline
-        ナイロン     & 1.13                  & 9.5          \\ \hline
-        アルミニウム & 2.7                   & 10           \\ \hline
-        アルミナ     & 3.8                   & 10           \\ \hline
-        鋼           & 7.9                   & 10           \\ \hline
-        ステンレス   & 7.9                   & 9.525        \\ \hline
-        真鍮         & 8.6                   & 9.52         \\ \hline
+    \includegraphics[width=0.9\textwidth]{2-Methods/device-vacuum.eps}
+    \caption{Schematic view of the experimental apparatus.}
+    \label{fig:device}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \caption{Experimental conditions of falling sphere and solution concentration.}
+    \label{table:exp-conditions}
+    \begin{tabular}{c|c|c|c|c|c|c}\hline
+        球材質                & nylon   & アルミニウム & アルミナ & 鋼      & ステンレス & 真鍮    \\ \hline
+        密度 $\rho$[kg/m$^3$] & 1130    & 2700         & 3800     & 7900    & 7900       & 8700    \\ \hline
+        直径 $D$[mm]          & 9.5     & 10           & 10       & 10      & 9.525      & 9.52    \\ \hline \hline
+        PAA 0.05wt.\%         & $\circ$ &              & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+        PAA 0.2wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+        PAA 0.5wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+        PAA 0.7wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+        PAA 1.0wt.\%          &         & $\circ$      & $\circ$  & $\circ$ &            & $\circ$ \\ \hline
+        PAA 1.3wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+        PAA 1.5wt.\%          &         &              & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
     \end{tabular}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[h]
     \centering
     \caption{Specifications of high-speed camera (BASLER, acA1920-150um)}
     \label{table:camera}
@@ -108,6 +129,7 @@ PAA粉末と水道水を混合することで，各種濃度（0.05,0.2,0.5,0.7,
         フレームレート  & 100fps                \\ \hline
     \end{tabular}
 \end{table}
+\clearpage
 
 \begin{table}[ht]
     \centering
@@ -120,25 +142,14 @@ PAA粉末と水道水を混合することで，各種濃度（0.05,0.2,0.5,0.7,
     \end{tabular}
 \end{table}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[clip,width=15.0cm]{2-Methods/device.png}
-    \caption{Schematic view of the experimental apparatus.}
-    \label{fig:device}
-\end{figure}
-
-\newpage
-
-超音波振動子の発振には，ファンクションジェネレータ（NF，WF1974），オシロスコープ（IWATSU，DIGITAL OSCILLOSCOPE DS-5614A），パワーアンプ（NF，HSA4101）を用いた．これらの接続をFig.\ref{fig:connect-with-signal}に示す．ファンクションジェネレータによって，周波数，電圧の制御を行い，超音波出力の出力元となる正弦波信号を生成した．続いて，ファンクションジェネレータによって生成された正弦波信号をパワーアンプによって，20倍のゲインをかけ増幅した．これら，オシロスコープによってファンクションジェネレータによって生成された信号，パワーアンプによって増幅された信号の両方をモニタリングし正常に出力されているか確認を行った．また，パワーアンプによって増幅された信号を，ランジュバン型振動子（富士セラミックス，FBL28502HA）上に円形のアクリル製プレートを接着したものを振動子とした．超音波振動子の共振周波数は28kHzである．
+超音波振動子の発振には，ファンクションジェネレータ（NF，WF1974），オシロスコープ（IWATSU，DIGITAL OSCILLOSCOPE DS-5614A），パワーアンプ（NF，HSA4101）を用いた．これらの接続をFig.\ref{fig:connect-with-signal}に示す．ファンクションジェネレータによって，周波数，電圧の制御を行い，超音波出力の出力元となる正弦波信号を生成した．続いて，ファンクションジェネレータによって生成された正弦波信号をパワーアンプによって，20倍のゲインをかけ増幅した．これら，オシロスコープによってファンクションジェネレータによって生成された信号，パワーアンプによって増幅された信号の両方をモニタリングし正常に出力されているか確認を行った．また，パワーアンプによって増幅された信号を，ランジュバン型振動子（富士セラミックス，FBL28502HA）上に円形のSUS製プレートを接着したものを振動子とした．超音波振動子の共振周波数は28kHzである．今回の実験において，照射する超音波周波数は27.4kHzに固定した．
 
 \begin{figure}[h]
     \centering
-    \includegraphics[clip,width=15.0cm]{2-Methods/connect-with-signal.png}
+    \includegraphics[clip,width=13.0cm]{2-Methods/connect-with-signal.png}
     \caption{Schematic outline for ultrasonic control system.}
     \label{fig:connect-with-signal}
 \end{figure}
-
-\newpage
 
 \subsection{実験手順}
 
@@ -148,7 +159,7 @@ PAA粉末と水道水を混合することで，各種濃度（0.05,0.2,0.5,0.7,
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[clip,width=9.0cm]{2-Methods/exp-methods.png}
+    \includegraphics[width=0.9\textwidth]{2-Methods/exp-methods.eps}
     \caption{Flowchart of the experimental procedure.}
     \label{fig:exp-methods}
 \end{figure}
