@@ -26,6 +26,11 @@ d14 = sprintf('../diameter/data/14.csv')
 d15 = sprintf('../diameter/data/15.csv')
 d20 = sprintf('../diameter/data/20.csv')
 
+d5_05 = sprintf('../diameter-0.5/data/5.csv')
+d10_05 = sprintf('../diameter-0.5/data/10.csv')
+d15_05 = sprintf('../diameter-0.5/data/15.csv')
+d20_05 = sprintf('../diameter-0.5/data/20.csv')
+
 al_02 = sprintf('../viscosity/data/al/0.2.csv')
 al_05 = sprintf('../viscosity/data/al/0.5.csv')
 al_07 = sprintf('../viscosity/data/al/0.7.csv')
@@ -174,6 +179,10 @@ d13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d14 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d15 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d20 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
+d5_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
+d10_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
+d15_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
+d20_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
 
 unset multiplot
 reset

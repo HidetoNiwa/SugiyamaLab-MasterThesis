@@ -47,23 +47,23 @@
 \renewcommand{\refname}{参考文献}
 \renewcommand{\abstractname}{Abstract}
 
-\pagestyle{empty}
-
 \begin{document}
 \input{0-Cover/cover.tex}
 \newpage
 \input{1-Background/abstract.tex}
 \newpage
+\setcounter{page}{1}
 \setcounter{tocdepth}{2}
 \tableofcontents
 \newpage
 \pagestyle{fancy}
-\rhead{\leftmark}
+\rhead{}
 \lhead{\rightmark}
 \cfoot{\thepage}
 \rfoot{}
-\setcounter{page}{1}
 \renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.4pt}
+
 \input{1-Background/background.tex}
 \newpage
 \input{2-Methods/methods.tex}

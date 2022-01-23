@@ -44,6 +44,11 @@ d14 = sprintf('../diameter/data/14.csv')
 d15 = sprintf('../diameter/data/15.csv')
 d20 = sprintf('../diameter/data/20.csv')
 
+d5_05 = sprintf('../diameter-0.5/data/5.csv')
+d10_05 = sprintf('../diameter-0.5/data/10.csv')
+d15_05 = sprintf('../diameter-0.5/data/15.csv')
+d20_05 = sprintf('../diameter-0.5/data/20.csv')
+
 al_02 = sprintf('./data/al/0.2.csv')
 al_05 = sprintf('./data/al/0.5.csv')
 al_07 = sprintf('./data/al/0.7.csv')
@@ -176,27 +181,33 @@ set label 114 center at screen 1,0 point ls 104 pt 12 ps 1.5
 set label 115 center at screen 0.78,0 point ls 102 pt 12 ps 1.5
 
 set label 110 center at screen 0.56,0.64 '\footnotesize{Steel}'
-set label 111 center at screen 0.56,0.6 '\footnotesize{1.0 wt.\%}'
+set label 111 center at screen 0.56,0.6 '\footnotesize{0.5 wt.\%}'
+set label 999 center at screen 0.56,0.55 '\footnotesize{1.0 wt.\%}'
 set label 112 center at screen 0.56,0.68 '\footnotesize{$D$[mm]}'
 
-set label 121 center at screen 0.65,0.665 '\small{8}'
-set label 122 center at screen 0.696,0.665 '\small{10}'
-set label 123 center at screen 0.742,0.665 '\small{11}'
-set label 124 center at screen 0.788,0.665 '\small{12}'
-set label 125 center at screen 0.834,0.665 '\small{13}'
-set label 126 center at screen 0.88,0.665 '\small{14}'
-set label 127 center at screen 0.926,0.665 '\small{15}'
-set label 128 center at screen 0.972,0.665 '\small{20}'
+set label 121 center at screen 0.65,0.665 '\small{5}'
+set label 122 center at screen 0.696,0.665 '\small{8}'
+set label 123 center at screen 0.742,0.665 '\small{10}'
+set label 124 center at screen 0.788,0.665 '\small{11}'
+set label 125 center at screen 0.834,0.665 '\small{12}'
+set label 126 center at screen 0.88,0.665 '\small{13}'
+set label 127 center at screen 0.926,0.665 '\small{14}'
+set label 128 center at screen 0.972,0.665 '\small{15}'
+set label 129 center at screen 1.018,0.665 '\small{20}'
 
-set label 131 center at screen 0.65,0.6 point ls 301 pt 14 ps 1.5
-set label 132 center at screen 0.696,0.6 point ls 302 pt 14 ps 1.5
-set label 133 center at screen 0.742,0.6 point ls 303 pt 14 ps 1.5
-set label 134 center at screen 0.788,0.6 point ls 304 pt 14 ps 1.5
-set label 135 center at screen 0.834,0.6 point ls 305 pt 14 ps 1.5
-set label 136 center at screen 0.88,0.6 point ls 306 pt 14 ps 1.5
-set label 137 center at screen 0.926,0.6 point ls 307 pt 14 ps 1.5
-set label 138 center at screen 0.972,0.6 point ls 308 pt 14 ps 1.5
+set label 132 center at screen 0.696,0.55 point ls 301 pt 14 ps 1.5
+set label 133 center at screen 0.742,0.55 point ls 302 pt 14 ps 1.5
+set label 134 center at screen 0.788,0.55 point ls 303 pt 14 ps 1.5
+set label 135 center at screen 0.834,0.55 point ls 304 pt 14 ps 1.5
+set label 136 center at screen 0.88,0.55 point ls 305 pt 14 ps 1.5
+set label 137 center at screen 0.926,0.55 point ls 306 pt 14 ps 1.5
+set label 138 center at screen 0.972,0.55 point ls 307 pt 14 ps 1.5
+set label 131 center at screen 1.018,0.55 point ls 308 pt 14 ps 1.5
 
+set label 142 center at screen 0.65,0.6 point ls 301 pt 6 ps 1.5
+set label 143 center at screen 0.742,0.6 point ls 302 pt 6 ps 1.5
+set label 148 center at screen 0.972,0.6 point ls 307 pt 6 ps 1.5
+set label 141 center at screen 1.018,0.6 point ls 308 pt 6 ps 1.5
  
 ####################################################################################################
  
@@ -295,6 +306,10 @@ d13 using 3:5:4:6 with xyerrorbars ls 305 pt 14 ps 1.6 lw 4 title '',\
 d14 using 3:5:4:6 with xyerrorbars ls 306 pt 14 ps 1.6 lw 4 title '',\
 d15 using 3:5:4:6 with xyerrorbars ls 307 pt 14 ps 1.6 lw 4 title '',\
 d20 using 3:5:4:6 with xyerrorbars ls 308 pt 14 ps 1.6 lw 4 title '',\
+d5_05 using 3:7:4:8 with xyerrorbars ls 301 pt 6 ps 1.6 lw 4 title '',\
+d10_05 using 3:7:4:8 with xyerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
+d15_05 using 3:7:4:8 with xyerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
+d20_05 using 3:7:4:8 with xyerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 
 unset multiplot
 reset
