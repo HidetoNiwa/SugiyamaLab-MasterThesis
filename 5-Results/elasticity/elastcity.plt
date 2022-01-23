@@ -32,6 +32,13 @@ d10_05 = sprintf('../diameter-0.5/data/10.csv')
 d15_05 = sprintf('../diameter-0.5/data/15.csv')
 d20_05 = sprintf('../diameter-0.5/data/20.csv')
 
+d05_02 = sprintf('../diameter-0.2-1.3/data/0.2-5.csv')
+d10_02 = sprintf('../diameter-0.2-1.3/data/0.2-10.csv')
+
+d10_13 = sprintf('../diameter-0.2-1.3/data/1.3-10.csv')
+d15_13 = sprintf('../diameter-0.2-1.3/data/1.3-15.csv')
+d20_13 = sprintf('../diameter-0.2-1.3/data/1.3-20.csv')
+
 al_02 = sprintf('../viscosity/data/al/0.2.csv')
 al_05 = sprintf('../viscosity/data/al/0.5.csv')
 al_07 = sprintf('../viscosity/data/al/0.7.csv')
@@ -110,6 +117,9 @@ set format '$%g$'
 set size ratio 0.9
 set style fill solid 10
 
+set label 991 center at screen 0.65,0.04 point ls 111 pt 6 ps 1.5
+set label 902 center at screen 0.74,0.04 '\footnotesize{Iwamuro(2020)}'
+
 set label 12 center at screen 0,0.20 '\footnotesize{0.2 wt.\%}'
 set label 13 center at screen 0,0.16 '\footnotesize{0.5 wt.\%}'
 set label 14 center at screen 0,0.12 '\footnotesize{0.7 wt.\%}'
@@ -165,8 +175,10 @@ set label 114 center at screen 0.44,0 point ls 104 pt 12 ps 1.5
 set label 115 center at screen 0.22,0 point ls 102 pt 12 ps 1.5
 
 set label 110 center at screen 0.56,0.25 '\footnotesize{Steel}'
-set label 111 center at screen 0.56,0.18 '\footnotesize{1.0 wt.\%}'
-set label 999 center at screen 0.56,0.22 '\footnotesize{0.5 wt.\%}'
+set label 111 center at screen 0.56,0.14 '\footnotesize{1.0 wt.\%}'
+set label 999 center at screen 0.56,0.18 '\footnotesize{0.5 wt.\%}'
+set label 998 center at screen 0.56,0.22 '\footnotesize{0.2 wt.\%}'
+set label 997 center at screen 0.56,0.10 '\footnotesize{1.3 wt.\%}'
 set label 112 center at screen 0.56,0.28 '\footnotesize{$D$[mm]}'
 
 set label 121 center at screen 0.65,0.265 '\small{5}'
@@ -179,19 +191,26 @@ set label 127 center at screen 0.926,0.265 '\small{14}'
 set label 128 center at screen 0.972,0.265 '\small{15}'
 set label 129 center at screen 1.018,0.265 '\small{20}'
 
-set label 132 center at screen 0.696,0.18 point ls 301 pt 14 ps 1.5
-set label 133 center at screen 0.742,0.18 point ls 302 pt 14 ps 1.5
-set label 134 center at screen 0.788,0.18 point ls 303 pt 14 ps 1.5
-set label 135 center at screen 0.834,0.18 point ls 304 pt 14 ps 1.5
-set label 136 center at screen 0.88,0.18 point ls 305 pt 14 ps 1.5
-set label 137 center at screen 0.926,0.18 point ls 306 pt 14 ps 1.5
-set label 138 center at screen 0.972,0.18 point ls 307 pt 14 ps 1.5
-set label 131 center at screen 1.018,0.18 point ls 308 pt 14 ps 1.5
+set label 132 center at screen 0.696,0.14 point ls 301 pt 14 ps 1.5
+set label 133 center at screen 0.742,0.14 point ls 302 pt 14 ps 1.5
+set label 134 center at screen 0.788,0.14 point ls 303 pt 14 ps 1.5
+set label 135 center at screen 0.834,0.14 point ls 304 pt 14 ps 1.5
+set label 136 center at screen 0.88,0.14 point ls 305 pt 14 ps 1.5
+set label 137 center at screen 0.926,0.14 point ls 306 pt 14 ps 1.5
+set label 138 center at screen 0.972,0.14 point ls 307 pt 14 ps 1.5
+set label 131 center at screen 1.018,0.14 point ls 308 pt 14 ps 1.5
  
-set label 151 center at screen 1.018,0.22 point ls 308 pt 6 ps 1.5
-set label 152 center at screen 0.972,0.22 point ls 307 pt 6 ps 1.5
-set label 153 center at screen 0.742,0.22 point ls 302 pt 6 ps 1.5
-set label 154 center at screen 0.65,0.22 point ls 301 pt 6 ps 1.5
+set label 181 center at screen 1.018,0.18 point ls 308 pt 6 ps 1.5
+set label 182 center at screen 0.972,0.18 point ls 307 pt 6 ps 1.5
+set label 183 center at screen 0.742,0.18 point ls 302 pt 6 ps 1.5
+set label 184 center at screen 0.65,0.18 point ls 301 pt 6 ps 1.5
+
+set label 152 center at screen 0.65,0.22 point ls 301 pt 2 ps 1.5
+set label 153 center at screen 0.742,0.22 point ls 302 pt 2 ps 1.5
+
+set label 161 center at screen 0.742,0.10 point ls 302 pt 10 ps 1.5
+set label 162 center at screen 0.972,0.10 point ls 307 pt 10 ps 1.5
+set label 163 center at screen 1.018,0.10 point ls 308 pt 10 ps 1.5
 
 ####################################################################################################
  
@@ -214,7 +233,7 @@ set logscale x
 
 set format x '$%g$'
 set xlabel '{\Large $\displaystyle \frac{\tau_{U}}{\tau_{0}} $ [$\SI{}{-}$]}' offset 0,-0.5
-set xrange [0.1:50]
+set xrange [0.1:70]
 set xtics 10
 set mxtics 10
  
@@ -261,6 +280,11 @@ d05_05 using 2:7:8 with yerrorbars ls 301 pt 6 ps 1.6 lw 4 title '',\
 d10_05 using 2:7:8 with yerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
 d15_05 using 2:7:8 with yerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
 d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
+d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
+d10_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
+d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
+d20_13 using 2:5:6 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
 
 set lmargin screen 0.5
 set rmargin screen 1.0
@@ -311,6 +335,11 @@ d05_05 using 2:7:8 with yerrorbars ls 301 pt 6 ps 1.6 lw 4 title '',\
 d10_05 using 2:7:8 with yerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
 d15_05 using 2:7:8 with yerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
 d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
+d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
+d10_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
+d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
+d20_13 using 2:5:6 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
 
 unset multiplot
 reset

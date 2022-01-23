@@ -49,6 +49,13 @@ d10_05 = sprintf('../diameter-0.5/data/10.csv')
 d15_05 = sprintf('../diameter-0.5/data/15.csv')
 d20_05 = sprintf('../diameter-0.5/data/20.csv')
 
+d5_02 = sprintf('../diameter-0.2-1.3/data/0.2-5.csv')
+d10_02 = sprintf('../diameter-0.2-1.3/data/0.2-10.csv')
+
+d10_13 = sprintf('../diameter-0.2-1.3/data/1.3-10.csv')
+d15_13 = sprintf('../diameter-0.2-1.3/data/1.3-15.csv')
+d20_13 = sprintf('../diameter-0.2-1.3/data/1.3-20.csv')
+
 al_02 = sprintf('./data/al/0.2.csv')
 al_05 = sprintf('./data/al/0.5.csv')
 al_07 = sprintf('./data/al/0.7.csv')
@@ -80,7 +87,6 @@ lx = 40.0
 ly = 200.0
  
 set multiplot
- 
  
 set style line 101 lt 1 lw 4 ps 2 lc rgb '#d62728' # red
 set style line 102 lt 1 lw 4 ps 2 lc rgb '#1f77b4' # blue
@@ -180,9 +186,14 @@ set label 113 center at screen 0.89,0 point ls 103 pt 12 ps 1.5
 set label 114 center at screen 1,0 point ls 104 pt 12 ps 1.5
 set label 115 center at screen 0.78,0 point ls 102 pt 12 ps 1.5
 
+set label 991 center at screen 0.65,0.74 point ls 111 pt 6 ps 1.5
+set label 902 center at screen 0.74,0.74 '\footnotesize{Iwamuro(2020)}'
+
 set label 110 center at screen 0.56,0.64 '\footnotesize{Steel}'
-set label 111 center at screen 0.56,0.6 '\footnotesize{0.5 wt.\%}'
-set label 999 center at screen 0.56,0.55 '\footnotesize{1.0 wt.\%}'
+set label 998 center at screen 0.56,0.6 '\footnotesize{0.2 wt.\%}'
+set label 111 center at screen 0.56,0.55 '\footnotesize{0.5 wt.\%}'
+set label 999 center at screen 0.56,0.5 '\footnotesize{1.0 wt.\%}'
+set label 997 center at screen 0.56,0.45 '\footnotesize{1.3 wt.\%}'
 set label 112 center at screen 0.56,0.68 '\footnotesize{$D$[mm]}'
 
 set label 121 center at screen 0.65,0.665 '\small{5}'
@@ -195,19 +206,26 @@ set label 127 center at screen 0.926,0.665 '\small{14}'
 set label 128 center at screen 0.972,0.665 '\small{15}'
 set label 129 center at screen 1.018,0.665 '\small{20}'
 
-set label 132 center at screen 0.696,0.55 point ls 301 pt 14 ps 1.5
-set label 133 center at screen 0.742,0.55 point ls 302 pt 14 ps 1.5
-set label 134 center at screen 0.788,0.55 point ls 303 pt 14 ps 1.5
-set label 135 center at screen 0.834,0.55 point ls 304 pt 14 ps 1.5
-set label 136 center at screen 0.88,0.55 point ls 305 pt 14 ps 1.5
-set label 137 center at screen 0.926,0.55 point ls 306 pt 14 ps 1.5
-set label 138 center at screen 0.972,0.55 point ls 307 pt 14 ps 1.5
-set label 131 center at screen 1.018,0.55 point ls 308 pt 14 ps 1.5
+set label 132 center at screen 0.696,0.5 point ls 301 pt 14 ps 1.5
+set label 133 center at screen 0.742,0.5 point ls 302 pt 14 ps 1.5
+set label 134 center at screen 0.788,0.5 point ls 303 pt 14 ps 1.5
+set label 135 center at screen 0.834,0.5 point ls 304 pt 14 ps 1.5
+set label 136 center at screen 0.88,0.5 point ls 305 pt 14 ps 1.5
+set label 137 center at screen 0.926,0.5 point ls 306 pt 14 ps 1.5
+set label 138 center at screen 0.972,0.5 point ls 307 pt 14 ps 1.5
+set label 131 center at screen 1.018,0.5 point ls 308 pt 14 ps 1.5
 
-set label 142 center at screen 0.65,0.6 point ls 301 pt 6 ps 1.5
-set label 143 center at screen 0.742,0.6 point ls 302 pt 6 ps 1.5
-set label 148 center at screen 0.972,0.6 point ls 307 pt 6 ps 1.5
-set label 141 center at screen 1.018,0.6 point ls 308 pt 6 ps 1.5
+set label 142 center at screen 0.65,0.55 point ls 301 pt 6 ps 1.5
+set label 143 center at screen 0.742,0.55 point ls 302 pt 6 ps 1.5
+set label 148 center at screen 0.972,0.55 point ls 307 pt 6 ps 1.5
+set label 141 center at screen 1.018,0.55 point ls 308 pt 6 ps 1.5
+
+set label 152 center at screen 0.65,0.60 point ls 301 pt 2 ps 1.5
+set label 153 center at screen 0.742,0.60 point ls 302 pt 2 ps 1.5
+
+set label 161 center at screen 0.742,0.45 point ls 302 pt 10 ps 1.5
+set label 162 center at screen 0.972,0.45 point ls 307 pt 10 ps 1.5
+set label 163 center at screen 1.018,0.45 point ls 308 pt 10 ps 1.5
  
 ####################################################################################################
  
@@ -310,6 +328,11 @@ d5_05 using 3:7:4:8 with xyerrorbars ls 301 pt 6 ps 1.6 lw 4 title '',\
 d10_05 using 3:7:4:8 with xyerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
 d15_05 using 3:7:4:8 with xyerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
 d20_05 using 3:7:4:8 with xyerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
+d5_02 using 3:5:4:6 with xyerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
+d10_02 using 3:5:4:6 with xyerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d10_13 using 3:5:4:6 with xyerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
+d15_13 using 3:5:4:6 with xyerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
+d20_13 using 3:5:4:6 with xyerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
 
 unset multiplot
 reset
