@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="320"
    inkscape:export-xdpi="320"
    inkscape:export-filename="Z:\M1\NIWA\Report\Report\2\2-Methods\microphone.png"
-   width="841mm"
-   height="1189mm"
-   viewBox="0 0 841 1189"
+   width="867.19464"
+   height="731.36072"
+   viewBox="0 0 229.44524 193.50585"
    version="1.1"
    id="svg8"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="microphone.svg">
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="microphone.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2">
     <marker
        inkscape:stockid="DotL"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="DotL"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path910"
-         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
-         transform="scale(0.8) translate(7.4, 1)" />
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Mend"
@@ -111,19 +111,26 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="556.80868"
-     inkscape:cy="2114.8906"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="494.97475"
+     inkscape:cy="417.90011"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      showguides="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     inkscape:window-x="-8"
+     inkscape:window-height="1147"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0"
+     lock-margins="true"
+     units="px"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -132,35 +139,35 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="レイヤー 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-231.52433,-522.73034)">
     <rect
-       style="fill:#c4c4c4;fill-opacity:1;stroke:#000000;stroke-width:0.636529;stroke-opacity:1"
+       style="fill:#c4c4c4;fill-opacity:1;stroke:#000000;stroke-width:0.581996;stroke-opacity:1"
        id="rect837"
-       width="63.613468"
-       height="40.556919"
-       x="382.9075"
-       y="679.45038" />
+       width="63.668003"
+       height="33.876263"
+       x="382.88022"
+       y="679.4231" />
     <text
        xml:space="preserve"
        style="font-size:10.5833px;line-height:1;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;stroke-width:0.264583"
-       x="334.58453"
-       y="697.51721"
+       x="335.64288"
+       y="696.45886"
        id="text1711"><tspan
          sodipodi:role="line"
          id="tspan1709"
-         x="334.58453"
-         y="697.51721"
+         x="335.64288"
+         y="696.45886"
          style="stroke-width:0.264583">ultrasonic</tspan><tspan
          sodipodi:role="line"
-         x="334.58453"
-         y="708.10052"
+         x="335.64288"
+         y="707.04218"
          style="stroke-width:0.264583"
          id="tspan1713">transducer</tspan></text>
     <rect
@@ -169,39 +176,32 @@
        width="3.8575637"
        height="13.279834"
        x="413.60239"
-       y="600.86475"
+       y="640.90173"
        ry="0.17442857" />
     <rect
        ry="1.41741"
-       y="494.58182"
+       y="534.61877"
        x="411.99408"
        height="107.9122"
        width="6.9925594"
        id="rect920"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.794;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke" />
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.794;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke" />
     <rect
-       style="fill:#ffffff;fill-opacity:0.27611941;stroke:#000000;stroke-width:0.796059;stroke-opacity:1"
-       id="rect835"
-       width="41.730907"
-       height="161.77382"
-       x="394.11218"
-       y="517.77112" />
-    <rect
-       y="619.73444"
-       x="241.53119"
+       y="660.51971"
+       x="235.17018"
        height="46.406094"
        width="85.337639"
        id="rect937"
        style="fill:#ffffff;fill-opacity:0.276119;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
     <text
        id="text941"
-       y="645.50775"
-       x="258.53549"
+       y="687.04138"
+       x="251.80031"
        style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;stroke-width:0.264583"
        xml:space="preserve"><tspan
          style="stroke-width:0.264583"
-         y="645.50775"
-         x="258.53549"
+         y="687.04138"
+         x="251.80031"
          id="tspan939"
          sodipodi:role="line">oscilloscope</tspan></text>
     <rect
@@ -209,42 +209,60 @@
        id="rect937-6"
        width="85.337639"
        height="46.406094"
-       x="241.53117"
-       y="526.23181" />
+       x="235.17017"
+       y="567.01709" />
     <text
        xml:space="preserve"
        style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;stroke-width:0.264583"
-       x="284.45483"
-       y="546.4502"
+       x="276.59711"
+       y="586.48712"
        id="text941-1"><tspan
          sodipodi:role="line"
          id="tspan939-5"
-         x="284.45483"
-         y="546.4502"
+         x="276.59711"
+         y="586.48712"
          style="text-align:center;text-anchor:middle;stroke-width:0.264583">conditioning</tspan><tspan
          id="tspan988"
          sodipodi:role="line"
-         x="284.45483"
-         y="559.67932"
+         x="276.59711"
+         y="599.71625"
          style="text-align:center;text-anchor:middle;stroke-width:0.264583">amplifier</tspan></text>
     <path
        id="path990"
-       d="m 282.49954,573.0119 c 0.37797,48.00296 0.37797,48.00296 0.37797,48.00296"
+       d="m 276.13853,613.79723 c 0.37797,48.00296 0.37797,48.00296 0.37797,48.00296"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        id="path992"
-       d="m 283.22473,525.72708 c 0,-40.21667 0,-40.21667 0,-40.21667 h 132.1711 v 8.73125 0"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       d="m 277.5714,566.10419 c 0,-40.21667 0,-40.21667 0,-40.21667 h 138.24021 v 8.73125 0"
+       style="fill:none;stroke:#000000;stroke-width:1.0227;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text1711-6"
-       y="611.21265"
-       x="338.63861"
+       y="650.50122"
+       x="340.50949"
        style="font-size:10.5833px;line-height:1;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;stroke-width:0.264583"
        xml:space="preserve"><tspan
          id="tspan1713-6"
          style="stroke-width:0.264583"
-         y="611.21265"
-         x="338.63861"
+         y="650.50122"
+         x="340.50949"
          sodipodi:role="line">microphone</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0.276119;stroke:#000000;stroke-width:0.728522;stroke-opacity:1"
+       id="rect835"
+       width="41.730907"
+       height="135.48878"
+       x="394.11218"
+       y="544.05615" />
+    <text
+       id="text2024"
+       y="561.44708"
+       x="440.04068"
+       style="font-size:10.5833px;line-height:1;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan2022"
+         style="stroke-width:0.264583"
+         y="561.44708"
+         x="440.04068"
+         sodipodi:role="line">tank</tspan></text>
   </g>
 </svg>

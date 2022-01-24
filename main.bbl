@@ -6,6 +6,12 @@ R.P.Chhabra.
   14--22, 61--72.
 \newblock CRC press, 2006.
 
+\bibitem{viscoelasticity}
+David Roylance.
+\newblock Engineering viscoelasticity.
+\newblock {\em Department of Materials Science and Engineering--Massachusetts
+  Institute of Technology, Cambridge MA}, Vol. 2139, pp. 1--37, 2001.
+
 \bibitem{ref:2}
 E.Obata M.Ohta, E.Iwasaki and Y.Yoshida.
 \newblock A numerical study of the motion of a spherical drop rising in
@@ -48,17 +54,21 @@ I.A.Frigaard A.M.V.Putz, T.I.Burghelea and D.M.Martinez.
   thinning fluid.
 \newblock {\em Physics of Fluids}, Vol.~20, No. 033102, 2008.
 
+\bibitem{deshpande2001vibrational}
+N.S.Deshpande and M.Barigou.
+\newblock Vibrational flow of non-newtonian fluids.
+\newblock {\em Chemical Engineering Science}, Vol.~56, pp. 3845--3853, 2001.
+
+\bibitem{wiklund2012acoustofluidics}
+R.Green M.Wiklund and M.Ohlin.
+\newblock Acoustofluidics 14: Applications of acoustic streaming in
+  microfluidic devices.
+\newblock {\em Lab on a Chip}, Vol.~12, pp. 2438--2451, 2012.
+
 \bibitem{ref:9}
 岩室秀, 渡村友昭, 杉山和靖.
 \newblock 擬塑性流体中の落下球に及ぼす超音波照射の影響.
 \newblock 混相流, Vol.~33, pp. 87--95, 2019.
-
-\bibitem{ref:10}
-Y.Tasaka T.Shiratori and Y.Murai.
-\newblock Rapid rheological characterization of a viscoelastic fluid based on
-  spatiotemporal flow velocimetry.
-\newblock {\em Experimental Thermal and Fluid Science}, Vol.~71, pp. 1--13,
-  2016.
 
 \bibitem{ref:12}
 M.T.Arigo and G.H.McKinley.
@@ -71,16 +81,12 @@ M.T.Arigo and G.H.McKinley.
 \newblock 〈緩和時間〉.
 \newblock 日本バイオレオロジー学会誌, Vol.~3, pp. 50--50, 1989.
 
-\bibitem{deshpande2001vibrational}
-N.S.Deshpande and M.Barigou.
-\newblock Vibrational flow of non-newtonian fluids.
-\newblock {\em Chemical Engineering Science}, Vol.~56, pp. 3845--3853, 2001.
-
-\bibitem{wiklund2012acoustofluidics}
-R.Green M.Wiklund and M.Ohlin.
-\newblock Acoustofluidics 14: Applications of acoustic streaming in
-  microfluidic devices.
-\newblock {\em Lab on a Chip}, Vol.~12, pp. 2438--2451, 2012.
+\bibitem{ref:10}
+Y.Tasaka T.Shiratori and Y.Murai.
+\newblock Rapid rheological characterization of a viscoelastic fluid based on
+  spatiotemporal flow velocimetry.
+\newblock {\em Experimental Thermal and Fluid Science}, Vol.~71, pp. 1--13,
+  2016.
 
 \bibitem{ref:Rahimi2007}
 A.Peretz S.Rahimi and B.Natan.
