@@ -157,8 +157,8 @@ set xtics 0.7
 
 set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
-set yrange [0:600]
-set ytics 200 offset 0,0
+set yrange [0:330]
+set ytics 110 offset 0,0
 
 plot \
 D11_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\
