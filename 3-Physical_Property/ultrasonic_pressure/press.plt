@@ -124,7 +124,7 @@ set bmargin screen 0
 set label 1 at graph 0.03,0.93 '(c)'
 set key at screen 0.485,0.47
 
-set xlabel '{\Large Pressure $\Delta\overline{P}$ [$\SI{}{kPa}$]}' offset 0,0.4
+set xlabel '{\Large Pressure $\Delta{}P$ [$\SI{}{kPa}$]}' offset 0,0.4
 set ylabel '{\Large Height $\displaystyle H [$\SI{}{mm}$]$}' offset 1.0,0
 
 plot \
