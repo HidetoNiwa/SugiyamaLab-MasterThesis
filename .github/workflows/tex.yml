@@ -18,13 +18,4 @@ jobs:
       - name: compile latex document
         uses: ./.github/actions/latex
         env:
-          GITHUB_TOKEN: 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
-      - name: Create Release & upload asset
-        id: create_release-upload_assets
-        uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: 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
-        with:
-          files: ./main.pdf
-          draft: false
-          prerelease: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
