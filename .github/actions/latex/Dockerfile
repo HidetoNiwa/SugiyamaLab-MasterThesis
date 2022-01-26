@@ -1,10 +1,8 @@
 FROM ubuntu:latest
 
-# 参考：https://sleepless-se.net/2018/07/31/docker-build-tzdata-ubuntu/
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y tzdata
-# timezone setting
-ENV TZ=Asia/Tokyo 
+# 参考：https://northshorequantum.com/archives/dockerbuild_tz_hang.html
+ENV TZ=Asia/Tokyo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
