@@ -6,14 +6,20 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+      - name: compile latex document
+        uses: ./.github/actions
         env:
-          TZ: 'Asia/Tokyo'
-      - name: Build docker image
-        uses: HidetoNiwa/SugiyamaLab-MasterThesis/.github/actions/latex@develop/#5-github-actions
-        env:
-          TZ: 'Asia/Tokyo'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Release & upload asset
+        id: create_release-upload_assets
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: ./main.pdf
+          draft: false
+          prerelease: false
