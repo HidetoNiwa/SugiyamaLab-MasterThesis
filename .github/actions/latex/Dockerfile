@@ -9,6 +9,12 @@ RUN apt-get install -y --no-install-recommends \
     texlive \
     texlive-latex-extra \
     texlive-lang-japanese \
+    texlive-lang-cjk \
+    xdvik-ja \
+    evince \
+    texlive-fonts-recommended \
+    texlive-fonts-extra \
+    ghostscript \
   && rm -rf /var/lib/apt/lists/*
 
 RUN mktexlsr && mkdir -p /app
