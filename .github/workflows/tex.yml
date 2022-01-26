@@ -14,3 +14,4 @@ jobs:
         uses: HidetoNiwa/SugiyamaLab-MasterThesis/.github/actions/latex@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TZ: 'Asia/Tokyo'

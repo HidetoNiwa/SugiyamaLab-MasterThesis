@@ -1,12 +1,5 @@
 FROM ubuntu:latest
 
-# 参考：https://northshorequantum.com/archives/dockerbuild_tz_hang.html
-ENV TZ=Asia/Tokyo
-RUN apt-get update \
-    && apt-get install -y tzdata
-    
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     curl \
