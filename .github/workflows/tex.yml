@@ -3,11 +3,14 @@ on:
     push:
         branches:
         - develop/#5-github-actions
+
 jobs:
   build:
     name: Build
     runs-on: ubuntu-20.04
     steps:
+      # make pdf
+      # LATEX_FILE_NAME -> main.pdf generated
       - name: Set up Git repository
         uses: actions/checkout@v2
       - name: compile latex document

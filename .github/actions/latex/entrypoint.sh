@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# . = /github/workspace if actions/checkout
 set -eux
 
 # build pdf (change if necessary)
