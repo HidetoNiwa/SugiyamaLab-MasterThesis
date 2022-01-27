@@ -76,7 +76,7 @@ set bmargin screen 0
 ####################################################################################################
  
 set key width 0.5 spacing 1.1 samplen 1 Left reverse
-set key at screen 0.42,0.65
+set key at graph 1,0.95
  
 ####################################################################################################
 
@@ -113,16 +113,15 @@ set bmargin screen 0
 ####################################################################################################
  
 set key width 0.5 spacing 1.1 samplen 1 Left reverse
-set key at screen 0.84,0.94
- 
+
 ####################################################################################################
 
 set label 31 at graph 0.02,0.95 '(b)' front
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 1,0
 set format y '$%g$'
-set yrange [0.9:1.4]
-set ytics 1,0.2,1.6
+set yrange [0.9:1.3]
+set ytics 0.1
 set mytics 2
  
 plot \

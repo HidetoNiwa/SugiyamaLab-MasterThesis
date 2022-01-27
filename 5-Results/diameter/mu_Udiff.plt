@@ -87,7 +87,7 @@ unset key
 set label 31 at graph 0.02,0.95 '(a)' front
 
 set format x '$%g$'
-set xlabel '{\Large $\frac{\mu_\text{U}}{\mu_\text{ABL}}\frac{\delta}{a} \displaystyle [$\SI{}{-}$]$}' offset 0,0
+set xlabel '{\Large $\dfrac{\mu_\text{U}}{\mu_\text{ABL}}\dfrac{\delta}{a} \displaystyle [$\SI{}{-}$]$}' offset 0,-0.5
 set xrange [0:1.5]
 set xtics 0.5
 set mxtics 2
@@ -99,14 +99,14 @@ set ytics 0.2
 set mytics 2
  
 plot \
-D8 using 3:5:4:6 with xyerrorlines ls 101 pt 2 ps 1.5 lw 3 title '$D=8$[mm]',\
-D10 using 3:5:4:6 with xyerrorlines ls 102 pt 2 ps 1.5 lw 3 title '$D=10$[mm]',\
-D11 using 3:5:4:6 with xyerrorlines ls 103 pt 2 ps 1.5 lw 3 title '$D=11$[mm]',\
-D12 using 3:5:4:6 with xyerrorlines ls 104 pt 2 ps 1.5 lw 3 title '$D=12$[mm]',\
-D13 using 3:5:4:6 with xyerrorlines ls 105 pt 2 ps 1.5 lw 3 title '$D=13$[mm]',\
-D14 using 3:5:4:6 with xyerrorlines ls 106 pt 2 ps 1.5 lw 3 title '$D=14$[mm]',\
-D15 using 3:5:4:6 with xyerrorlines ls 107 pt 2 ps 1.5 lw 3 title '$D=15$[mm]',\
-D20 using 3:5:4:6 with xyerrorlines ls 108 pt 2 ps 1.5 lw 3 title '$D=20$[mm]',\
+D8 using 3:5:4:6 with xyerrorlines ls 101 pt 2 ps 1.5 lw 3 title '$D=8\SI{}{mm}$',\
+D10 using 3:5:4:6 with xyerrorlines ls 102 pt 2 ps 1.5 lw 3 title '$D=10\SI{}{mm}$',\
+D11 using 3:5:4:6 with xyerrorlines ls 103 pt 2 ps 1.5 lw 3 title '$D=11\SI{}{mm}$',\
+D12 using 3:5:4:6 with xyerrorlines ls 104 pt 2 ps 1.5 lw 3 title '$D=12\SI{}{mm}$',\
+D13 using 3:5:4:6 with xyerrorlines ls 105 pt 2 ps 1.5 lw 3 title '$D=13\SI{}{mm}$',\
+D14 using 3:5:4:6 with xyerrorlines ls 106 pt 2 ps 1.5 lw 3 title '$D=14\SI{}{mm}$',\
+D15 using 3:5:4:6 with xyerrorlines ls 107 pt 2 ps 1.5 lw 3 title '$D=15\SI{}{mm}$',\
+D20 using 3:5:4:6 with xyerrorlines ls 108 pt 2 ps 1.5 lw 3 title '$D=20\SI{}{mm}$',\
 iwamuro using 5:4 with points ls 111 pt 2 ps 1.5 lw 3 title 'iwamuro(2020)'
  
 ####################################################################################################
@@ -120,29 +120,28 @@ set bmargin screen 0
 ####################################################################################################
  
 set key width 0.5 spacing 1.1 samplen 1 Left reverse
-set key at screen 0.48,0.9
+set key at screen 0.445,0.9
  
 ####################################################################################################
 
 set label 31 at graph 0.02,0.95 '(b)' front
 
-set xrange [0:0.5]
-set xtics 0.25
+set xrange [0:0.3]
+set xtics 0.1
 set mxtics 2
 
 set format y ''
 set ylabel '' offset 0.5,0
  
 plot \
-D8 using 3:5:4:6 with xyerrorlines ls 101 pt 2 ps 1.5 lw 3 title '$D=8$[mm]',\
-D10 using 3:5:4:6 with xyerrorlines ls 102 pt 2 ps 1.5 lw 3 title '$D=10$[mm]',\
-D11 using 3:5:4:6 with xyerrorlines ls 103 pt 2 ps 1.5 lw 3 title '$D=11$[mm]',\
-D12 using 3:5:4:6 with xyerrorlines ls 104 pt 2 ps 1.5 lw 3 title '$D=12$[mm]',\
-D13 using 3:5:4:6 with xyerrorlines ls 105 pt 2 ps 1.5 lw 3 title '$D=13$[mm]',\
-D14 using 3:5:4:6 with xyerrorlines ls 106 pt 2 ps 1.5 lw 3 title '$D=14$[mm]',\
-D15 using 3:5:4:6 with xyerrorlines ls 107 pt 2 ps 1.5 lw 3 title '$D=15$[mm]',\
-D20 using 3:5:4:6 with xyerrorlines ls 108 pt 2 ps 1.5 lw 3 title '$D=20$[mm]',\
-iwamuro using 5:4 with points ls 111 pt 2 ps 1.5 lw 3 title 'iwamuro(2020)'
+D8 using 3:5:4:6 with xyerrorlines ls 101 pt 2 ps 1.5 lw 3 title '$D=8\SI{}{mm}$',\
+D10 using 3:5:4:6 with xyerrorlines ls 102 pt 2 ps 1.5 lw 3 title '$D=10\SI{}{mm}$',\
+D11 using 3:5:4:6 with xyerrorlines ls 103 pt 2 ps 1.5 lw 3 title '$D=11\SI{}{mm}$',\
+D12 using 3:5:4:6 with xyerrorlines ls 104 pt 2 ps 1.5 lw 3 title '$D=12\SI{}{mm}$',\
+D13 using 3:5:4:6 with xyerrorlines ls 105 pt 2 ps 1.5 lw 3 title '$D=13\SI{}{mm}$',\
+D14 using 3:5:4:6 with xyerrorlines ls 106 pt 2 ps 1.5 lw 3 title '$D=14\SI{}{mm}$',\
+D15 using 3:5:4:6 with xyerrorlines ls 107 pt 2 ps 1.5 lw 3 title '$D=15\SI{}{mm}$',\
+D20 using 3:5:4:6 with xyerrorlines ls 108 pt 2 ps 1.5 lw 3 title '$D=20\SI{}{mm}$'
 
 unset multiplot
 reset
