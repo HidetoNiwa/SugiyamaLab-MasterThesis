@@ -23,10 +23,9 @@ res=`curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://api.github.com
   \"prerelease\": false
 }"`
 
-# extract release id
-rel_id=`echo ${res} | python3 -c 'import json,sys;print(json.load(sys.stdin)["id"])'`
+release_id=`echo ${res} | python3 -c 'import json,sys;print(json.load(sys.stdin)["id"])'`
+file_path="./main.pdf"
 
-# upload built pdf
-curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://uploads.github.com/repos/$GITHUB_REPOSITORY/releases/${rel_id}/assets?name=main.pdf\
---header 'Content-Type: application/pdf'\
---upload-file main.pdf
+response=$(curl -X POST -H "Content-Type: application/pdf"\
+    -H "Authorization: token $GITHUB_TOKEN" --data-binary @$file_path \
+"https://uploads.github.com/repos/$GITHUB_REPOSITORY/releases/$release_id/assets?name=$(basename $file_path)")
