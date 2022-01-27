@@ -19,6 +19,7 @@ oname = sprintf("%s.tex", fname)
 set output oname
 
 D5 = sprintf('./data/0.2-5.csv')
+D8_02 = sprintf('./data/0.2-8.csv')
 D10_02 = sprintf('./data/0.2-10.csv')
 D10_13 = sprintf('./data/1.3-10.csv')
 D15 = sprintf('./data/1.3-15.csv')
@@ -75,7 +76,7 @@ set bmargin screen 0
 ####################################################################################################
  
 set key width 0.5 spacing 1.1 samplen 1 Left reverse
-set key at screen 0.42,0.94
+set key at graph 1,0.95
  
 ####################################################################################################
 
@@ -95,6 +96,7 @@ set mytics 2
  
 plot \
 D5 using ($1)*2000:($7):($8) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'PAA 0.2wt.\%',\
+D8_02 using ($1)*2000:($7):($8) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
 D10_02 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
 D10_13 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'PAA 1.3wt.\%',\
 D15 using ($1)*2000:($7):($8) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title '',\
@@ -111,20 +113,20 @@ set bmargin screen 0
 ####################################################################################################
  
 set key width 0.5 spacing 1.1 samplen 1 Left reverse
-set key at screen 0.84,0.94
- 
+
 ####################################################################################################
 
 set label 31 at graph 0.02,0.95 '(b)' front
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 1,0
 set format y '$%g$'
-set yrange [0.9:1.4]
-set ytics 1,0.2,1.6
+set yrange [0.9:1.3]
+set ytics 0.1
 set mytics 2
  
 plot \
 D5 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'PAA 0.2wt.\%',\
+D8_02 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
 D10_02 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
 D10_13 using ($1)*2000:($5):($6) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'PAA 1.3wt.\%',\
 D15 using ($1)*2000:($5):($6) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title '',\

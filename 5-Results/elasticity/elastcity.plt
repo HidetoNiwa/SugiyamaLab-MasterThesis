@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 5, 3.9 standalone color solid 9
+set terminal epslatex size 5, 3.4 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -33,6 +33,7 @@ d15_05 = sprintf('../diameter-0.5/data/15.csv')
 d20_05 = sprintf('../diameter-0.5/data/20.csv')
 
 d05_02 = sprintf('../diameter-0.2-1.3/data/0.2-5.csv')
+d08_02 = sprintf('../diameter-0.2-1.3/data/0.2-8.csv')
 d10_02 = sprintf('../diameter-0.2-1.3/data/0.2-10.csv')
 
 d10_13 = sprintf('../diameter-0.2-1.3/data/1.3-10.csv')
@@ -114,11 +115,11 @@ set palette defined (0 '#999999',\
  
 set format '$%g$'
 
-set size ratio 0.9
+set size ratio 1
 set style fill solid 10
 
 set label 991 center at screen 0.65,0.04 point ls 111 pt 6 ps 1.5
-set label 902 center at screen 0.74,0.04 '\footnotesize{Iwamuro(2020)}'
+set label 902 center at screen 0.75,0.04 '\footnotesize{Iwamuro(2020)[8]}'
 
 set label 12 center at screen 0,0.20 '\footnotesize{0.2 wt.\%}'
 set label 13 center at screen 0,0.16 '\footnotesize{0.5 wt.\%}'
@@ -206,7 +207,8 @@ set label 183 center at screen 0.742,0.18 point ls 302 pt 6 ps 1.5
 set label 184 center at screen 0.65,0.18 point ls 301 pt 6 ps 1.5
 
 set label 152 center at screen 0.65,0.22 point ls 301 pt 2 ps 1.5
-set label 153 center at screen 0.742,0.22 point ls 302 pt 2 ps 1.5
+set label 153 center at screen 0.696,0.22 point ls 302 pt 2 ps 1.5
+set label 154 center at screen 0.742,0.22 point ls 303 pt 2 ps 1.5
 
 set label 161 center at screen 0.742,0.10 point ls 302 pt 10 ps 1.5
 set label 162 center at screen 0.972,0.10 point ls 307 pt 10 ps 1.5
@@ -214,11 +216,11 @@ set label 163 center at screen 1.018,0.10 point ls 308 pt 10 ps 1.5
 
 ####################################################################################################
  
-set lmargin screen 0
-set rmargin screen 0.5
+set lmargin screen 0.26
+set rmargin screen 0.62
 
 set tmargin screen 1
-set bmargin screen 0.45
+set bmargin screen 0.5
  
 ####################################################################################################
  
@@ -227,7 +229,7 @@ set key at screen 1,0.13
 unset key
  
 ####################################################################################################
-set label 31 at graph 0.02,0.95 '(a)' front
+set label 31 at graph 0.02,0.95 '(b)' front
 
 set logscale x
 
@@ -237,7 +239,7 @@ set xrange [0.1:70]
 set xtics 10
 set mxtics 10
  
-set ylabel '{\Large $\displaystyle U_\text{on}/U_\text{off}[$\SI{}{-}$]$}' offset 0,0
+set ylabel '{\Large $\displaystyle U_\text{on}/U_\text{off}[$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0.8:1.6]
 set ytics 0.2 offset 0,0
@@ -281,15 +283,16 @@ d10_05 using 2:7:8 with yerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
 d15_05 using 2:7:8 with yerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
 d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
-d10_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d08_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d10_02 using 2:5:6 with yerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
 d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
 d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
 d20_13 using 2:5:6 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
 
-set lmargin screen 0.5
+set lmargin screen 0.62
 set rmargin screen 1.0
 
-set label 31 at graph 0.02,0.95 '(b)' front
+set label 31 at graph 0.02,0.95 '(c)' front
 
 set xrange [0.1:3]
 
@@ -336,10 +339,72 @@ d10_05 using 2:7:8 with yerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
 d15_05 using 2:7:8 with yerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
 d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
+d08_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
 d10_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
 d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
 d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
 d20_13 using 2:5:6 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
+
+set lmargin screen 0
+set rmargin screen 0.18
+
+set label 31 at graph 0.02,0.95 '(a)' front
+
+set xrange [0.1:100]
+
+set logscale y
+
+set size ratio 2.25
+
+set ylabel '{\Large $\displaystyle U_\text{T}[$\SI{}{mm/s}$]$}' offset 1,0
+set format y '$%g$'
+set yrange [1:2000]
+set ytics 10 offset 0,0
+set mytics 10
+
+plot \
+iwamuro using 1:($6)*1000 with points  ls 111 pt  6 ps 1.6 lw 4 title 'iwamuro',\
+al_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 2 ps 1.6 lw 4 title '',\
+al_05 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 6 ps 1.6 lw 4 title '',\
+al_07 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 4 ps 1.6 lw 4 title '',\
+al_10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 8 ps 1.6 lw 4 title '',\
+al_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 10 ps 1.6 lw 4 title '',\
+alumina_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 2 ps 1.6 lw 4 title '',\
+alumina_05 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 6 ps 1.6 lw 4 title '',\
+alumina_07 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 4 ps 1.6 lw 4 title '',\
+alumina_10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 8 ps 1.6 lw 4 title '',\
+alumina_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 10 ps 1.6 lw 4 title '',\
+alumina_15 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 12 ps 1.6 lw 4 title '',\
+stainless_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 2 ps 1.6 lw 4 title '',\
+stainless_05 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 6 ps 1.6 lw 4 title '',\
+stainless_07 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 4 ps 1.6 lw 4 title '',\
+stainless_10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 8 ps 1.6 lw 4 title '',\
+stainless_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 10 ps 1.6 lw 4 title '',\
+stainless_15 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 12 ps 1.6 lw 4 title '',\
+brass_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 2 ps 1.6 lw 4 title '',\
+brass_05 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 6 ps 1.6 lw 4 title '',\
+brass_07 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 4 ps 1.6 lw 4 title '',\
+brass_10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 8 ps 1.6 lw 4 title '',\
+brass_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 10 ps 1.6 lw 4 title '',\
+brass_15 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 12 ps 1.6 lw 4 title '',\
+d8 using 2:($7)*1000:($8)*1000 with yerrorbars ls 301 pt 14 ps 1.6 lw 4 title '',\
+d10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
+d11 using 2:($7)*1000:($8)*1000 with yerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
+d12 using 2:($7)*1000:($8)*1000 with yerrorbars ls 304 pt  14 ps 1.6 lw 4 title '',\
+d13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 305 pt 14 ps 1.6 lw 4 title '',\
+d14 using 2:($7)*1000:($8)*1000 with yerrorbars ls 306 pt 14 ps 1.6 lw 4 title '',\
+d15 using 2:($7)*1000:($8)*1000 with yerrorbars ls 307 pt 14 ps 1.6 lw 4 title '',\
+d20 using 2:($7)*1000:($8)*1000 with yerrorbars ls 308 pt 14 ps 1.6 lw 4 title '',\
+d05_05 using 2:5:6 with yerrorbars ls 301 pt 6 ps 1.6 lw 4 title '',\
+d10_05 using 2:5:6 with yerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
+d15_05 using 2:5:6 with yerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
+d20_05 using 2:5:6 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
+d05_02 using 2:($7):($8) with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
+d08_02 using 2:($7):($8) with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d10_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
+d10_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
+d15_13 using 2:($7):($8) with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
+d20_13 using 2:($7):($8) with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
 
 unset multiplot
 reset

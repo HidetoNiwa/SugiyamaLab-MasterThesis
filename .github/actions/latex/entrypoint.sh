@@ -1,14 +1,16 @@
 #!/bin/bash
+
+# . = /github/workspace if actions/checkout
 set -eux
 
 # build pdf (change if necessary)
-platex ./main.tex
+platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex
+pbibtex ./main
+platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex
+platex -kanji=utf8 -synctex=1 -interaction=nonstopmode ./main.tex
+dvipdfmx -f ptex-ipa.map -I 24 main.dvi
 
-platex ./main.tex
-
-platex ./main.tex
-
-dvipdfmx -f ptex-ipa.map main
+# 参考：https://qiita.com/denkiuo604/items/137a1b3fc1955cfb9c58
 today=`date "+%Y%m%d%H%M%S"`
 # create release
 res=`curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://api.github.com/repos/$GITHUB_REPOSITORY/releases \
@@ -21,10 +23,9 @@ res=`curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://api.github.com
   \"prerelease\": false
 }"`
 
-# extract release id
-rel_id=`echo ${res} | python3 -c 'import json,sys;print(json.load(sys.stdin)["id"])'`
+release_id=`echo ${res} | python3 -c 'import json,sys;print(json.load(sys.stdin)["id"])'`
+file_path="./main.pdf"
 
-# upload built pdf
-curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://uploads.github.com/repos/$GITHUB_REPOSITORY/releases/${rel_id}/assets?name=main.pdf\
---header 'Content-Type: application/pdf'\
---upload-file main.pdf
+response=$(curl -X POST -H "Content-Type: application/pdf"\
+    -H "Authorization: token $GITHUB_TOKEN" --data-binary @$file_path \
+"https://uploads.github.com/repos/$GITHUB_REPOSITORY/releases/$release_id/assets?name=$(basename $file_path)")

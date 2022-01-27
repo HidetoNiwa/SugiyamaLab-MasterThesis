@@ -7,9 +7,9 @@
 \begin{eqnarray}
     Re = \frac{\rho_1 \left(2a\right)^n U_T^{2-n}}{k} ,
 \end{eqnarray}
-と表される\cite{ref:1,ref:8-5}．今回の実験結果の代表例（鋼球，直径10mm，PAA1wt.\%）において，$\rho \approx$1000[kg/m${}^3$]，$2a =$0.01[m]，$U_T \approx$0.2[m/s]，$k =$8.8[Pa$\cdot \text{s}^n]$，$n =$0.23であるので，$Re \approx$2.3と概算することができる．これより，粒子付近ではストークス流れに近いとみなす．流れの決定因子としては，慣性に比べて粘性が支配的であると考える．
+と表される\cite{ref:1,ref:8-5}．今回の実験結果の代表例（鋼球，直径10mm，PAA1.0wt.\%）において，溶液の密度$\rho_1\approx$1000kg/m$^3$，$2a=$0.01m，$U_T \approx$0.2m/s，$k=$8.8Pa$\cdot \text{s}^n$，$n=$0.23であるので，$Re\approx$2.3と概算することができる．これより，粒子付近ではストークス流れに近いとみなす．つまり，慣性に比べて粘性が支配的であると考える．
 
-本研究の系は，一様流れ中を半径$a$の球および，超音波の伝播が存在する系である．超音波の伝播に関して，音波の圧力変動の時間スケールは$O\left(10^{-5}\right)$sである．一方で，球の落下現象は$O\left(10^{-2}\right)$m,$O\left(10^{0}\right)$sとなり，圧力変動の時間スケールは非常に短い．球の落下に関しては，落下時間スケールで粗視化した平均的な挙動に着目する．球周囲に存在する非圧縮性流体の単位体積の運動方程式について考える．球によって誘起される応力テンソルを$\bm{\sigma}$，流体の密度を$\rho$，速度ベクトルを$\bm{v}$，体積力を$\bm{X}$とすると，
+本研究の系は，一様流れ中を半径$a$の球および，超音波の伝播が存在する系である．超音波の伝播に関して，音波の圧力変動の時間スケールは$O\left(10^{-5}\right)$sである．一方で，球の落下現象は$O\left(10^{-2}\right)$m,$O\left(10^{0}\right)$sとなり，圧力変動の時間スケールは非常に短い．球の落下に関しては，落下時間スケールで粗視化した平均的な挙動に着目する．球周囲に存在する非圧縮性流体の単位体積の運動方程式について考える．球によって誘起される応力テンソルを$\bm{\sigma}$，流体の密度を$\rho$，s周囲流体の速度ベクトルを$\bm{v}$，体積力を$\bm{X}$とすると，
 \begin{eqnarray}
     \rho \frac{D\bm{v}}{Dt} = \bm{X} + \nabla \cdot \bm{\sigma} ,
     \label{eq:undou}
@@ -21,12 +21,12 @@
 \end{eqnarray}
 粒子重心位置から見た移動座標系では，式(\ref{eq:undou})の左辺が，
 \begin{eqnarray}
-    \rho \frac{D\bm{v}}{Dt} = \frac{\partial \bm{v}}{\partial t} + \left(\bm{v} - \bm{U}_T \cdot \nabla \right) \bm{v} ,
+    \frac{D\bm{v}}{Dt} = \frac{\partial \bm{v}}{\partial t} + \left(\bm{v} - \bm{U}_T \cdot \nabla \right) \bm{v} ,
     \label{eq:nabie}
 \end{eqnarray}
 と展開できる．流れは十分に発達し，定常状態であると仮定することで，式(\ref{eq:nabie})の右辺第1項の時間微分項は0となる．低レイノルズ数かつStokes近似を用いることにより，慣性項は粘性項より十分に小さいと仮定することができる．これにより，式(\ref{eq:nabie})の右辺第2項の慣性項は無視することができる．加えて，粒子周囲流体には密度差がないため，静水圧分を除いた圧力を使って応力${\bm \sigma}$と書くと，体積力${\bm X}$は0となる．これらより，式(\ref{eq:undou}), (\ref{eq:nabie})を用いると，
 \begin{eqnarray}
-    \nabla \cdot \sigma = 0 ,
+    \nabla \cdot \bm{\sigma} = 0 ,
     \label{eq:sigma-}
 \end{eqnarray}
 といった関係が導かれる．
@@ -153,14 +153,14 @@
     \delta \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{1}{n+1}} .
     \label{eq:delta}
 \end{eqnarray}
-ここで，音響圧$\Delta P$，水溶液密度$\rho_1$，音速$c$である．音響境界層粘度$\mu_{ABL}$とすると超音波照射下における終端速度$U_{ABL}$は，式(\ref{eq:UT})より，
+ここで，音響圧$\Delta P$，溶液密度$\rho_1$，音速$c$である．音響境界層粘度$\mu_{ABL}$とすると超音波照射下における終端速度$U_\text{ON}$は，式(\ref{eq:UT})より，
 \begin{eqnarray}
-    U_{ABL} \sim \frac{a^3\Delta\rho g}{3}  \int^{\infty}_{a} \frac{dr}{\mu_{ABL} r^2} \sim \frac{a\Delta \rho \delta g}{3\mu_{ABL}} ,
+    U_\text{ON} \sim \frac{a^3\Delta\rho g}{3}  \int^{\infty}_{a} \frac{dr}{\mu_{ABL} r^2} \sim \frac{a\Delta \rho \delta g}{3\mu_{ABL}} ,
     \label{eq:U_ABL}
 \end{eqnarray}
 と見積もられる．終端速度$U_T$における，粘度$\mu_U$とする．式(\ref{eq:UT}),(\ref{eq:U_ABL})より，超音波照射の有無による終端速度比は，
 \begin{eqnarray}
-    \frac{U_{ABL}}{U_T} \sim \frac{\mu_U}{\mu_{ABL}}\frac{\delta}{a} ,
+    \frac{U_\text{ON}}{U_T} \sim \frac{\mu_U}{\mu_{ABL}}\frac{\delta}{a} ,
     \label{eq:Udiff}
 \end{eqnarray}
 と表される．

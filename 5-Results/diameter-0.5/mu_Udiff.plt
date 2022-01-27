@@ -74,13 +74,13 @@ set bmargin screen 0
 ####################################################################################################
  
 set key width 0.5 spacing 1.1 samplen 1 Left reverse
-set key at graph 0.8,0.9
+set key at graph 0.93,0.94
  
 ####################################################################################################
 
 set format x '$%g$'
-set xlabel '{\Large $\frac{\mu_\text{U}}{\mu_\text{ABL}}\frac{\delta}{a} \displaystyle [$\SI{}{-}$]$}' offset 0,0
-set xrange [0:0.3]
+set xlabel '{\Large $\dfrac{\mu_\text{U}}{\mu_\text{ABL}}\dfrac{\delta}{a} \displaystyle [$\SI{}{-}$]$}' offset 0,-0.5
+set xrange [0:0.22]
 set xtics 0.1
 set mxtics 2
  
@@ -91,10 +91,10 @@ set ytics 0.1
 set mytics 2
  
 plot \
-D5 using 3:7:4:8 with xyerrorlines ls 101 pt 2 ps 1.5 lw 3 title '$D=5$[mm]',\
-D10 using 3:7:4:8 with xyerrorlines ls 102 pt 2 ps 1.5 lw 3 title '$D=10$[mm]',\
-D15 using 3:7:4:8 with xyerrorlines ls 107 pt 2 ps 1.5 lw 3 title '$D=15$[mm]',\
-D20 using 3:7:4:8 with xyerrorlines ls 108 pt 2 ps 1.5 lw 3 title '$D=20$[mm]'
+D5 using 3:7:4:8 with xyerrorlines ls 101 pt 2 ps 1.5 lw 3 title '$D=5\SI{}{mm}$',\
+D10 using 3:7:4:8 with xyerrorlines ls 102 pt 2 ps 1.5 lw 3 title '$D=10\SI{}{mm}$',\
+D15 using 3:7:4:8 with xyerrorlines ls 107 pt 2 ps 1.5 lw 3 title '$D=15\SI{}{mm}$',\
+D20 using 3:7:4:8 with xyerrorlines ls 108 pt 2 ps 1.5 lw 3 title '$D=20\SI{}{mm}$'
 
 unset multiplot
 reset
