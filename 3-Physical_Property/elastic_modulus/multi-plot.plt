@@ -406,8 +406,8 @@ set style fill solid 0.5
 	set logscale xy
 
 	plot \
-	file_015 using 11:5 axis x1y1 ls 101 pt 6 ps 1.25 lw 2 title 'G$^{\prime}$',\
-	file_015 using 11:6 axis x1y1 ls 102 pt 10 ps 1.25 lw 2 title 'G$^{\prime\prime}$',\
+	file_015 using 11:5 axis x1y1 ls 101 pt 6 ps 1.25 lw 2 title '$G^{\prime}$',\
+	file_015 using 11:6 axis x1y1 ls 102 pt 10 ps 1.25 lw 2 title '$G^{\prime\prime}$',\
 	file_015 using 11:8 axis x1y2 ls 103 pt 4 ps 1.25 lw 2 title 'tan$\left(\eta\right)$',\
 	f(x) axis x1y2 lc black lw 2 title ''
 
