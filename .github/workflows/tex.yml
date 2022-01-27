@@ -2,15 +2,20 @@ name: CI
 on:
     push:
         branches:
-        - master
+        - develop/#5-github-actions
+
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
+      # make pdf
+      # LATEX_FILE_NAME -> main.pdf generated
       - name: Set up Git repository
-        uses: actions/checkout@v1
-      - name: Build docker image
-        uses: HidetoNiwa/SugiyamaLab-Report-2/.github/actions/latex@master
+        uses: actions/checkout@v2
+        with:
+          ref: develop/#5-github-actions
+      - name: compile latex document
+        uses: ./.github/actions/latex
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

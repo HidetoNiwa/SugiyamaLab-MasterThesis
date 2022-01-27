@@ -32,6 +32,7 @@ d15_05 = sprintf('../diameter-0.5/data/15.csv')
 d20_05 = sprintf('../diameter-0.5/data/20.csv')
 
 d5_02 = sprintf('../diameter-0.2-1.3/data/0.2-5.csv')
+d8_02 = sprintf('../diameter-0.2-1.3/data/0.2-8.csv')
 d10_02 = sprintf('../diameter-0.2-1.3/data/0.2-10.csv')
 
 d10_13 = sprintf('../diameter-0.2-1.3/data/1.3-10.csv')
@@ -194,6 +195,7 @@ d10_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d15_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d20_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d5_02 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
+d8_02 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d10_02 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 
 unset multiplot

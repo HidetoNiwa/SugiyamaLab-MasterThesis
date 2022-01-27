@@ -33,6 +33,7 @@ d15_05 = sprintf('../diameter-0.5/data/15.csv')
 d20_05 = sprintf('../diameter-0.5/data/20.csv')
 
 d05_02 = sprintf('../diameter-0.2-1.3/data/0.2-5.csv')
+d08_02 = sprintf('../diameter-0.2-1.3/data/0.2-8.csv')
 d10_02 = sprintf('../diameter-0.2-1.3/data/0.2-10.csv')
 
 d10_13 = sprintf('../diameter-0.2-1.3/data/1.3-10.csv')
@@ -206,7 +207,8 @@ set label 183 center at screen 0.742,0.18 point ls 302 pt 6 ps 1.5
 set label 184 center at screen 0.65,0.18 point ls 301 pt 6 ps 1.5
 
 set label 152 center at screen 0.65,0.22 point ls 301 pt 2 ps 1.5
-set label 153 center at screen 0.742,0.22 point ls 302 pt 2 ps 1.5
+set label 153 center at screen 0.696,0.22 point ls 302 pt 2 ps 1.5
+set label 154 center at screen 0.742,0.22 point ls 303 pt 2 ps 1.5
 
 set label 161 center at screen 0.742,0.10 point ls 302 pt 10 ps 1.5
 set label 162 center at screen 0.972,0.10 point ls 307 pt 10 ps 1.5
@@ -281,7 +283,8 @@ d10_05 using 2:7:8 with yerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
 d15_05 using 2:7:8 with yerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
 d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
-d10_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d08_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d10_02 using 2:5:6 with yerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
 d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
 d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
 d20_13 using 2:5:6 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
@@ -336,6 +339,7 @@ d10_05 using 2:7:8 with yerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
 d15_05 using 2:7:8 with yerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
 d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
+d08_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
 d10_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
 d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
 d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
@@ -346,7 +350,7 @@ set rmargin screen 0.18
 
 set label 31 at graph 0.02,0.95 '(a)' front
 
-set xrange [0.1:70]
+set xrange [0.1:100]
 
 set logscale y
 
@@ -355,7 +359,7 @@ set size ratio 2.25
 set ylabel '{\Large $\displaystyle U_\text{T}[$\SI{}{mm/s}$]$}' offset 1,0
 set format y '$%g$'
 set yrange [1:2000]
-set ytics 100 offset 0,0
+set ytics 10 offset 0,0
 set mytics 10
 
 plot \
@@ -395,11 +399,12 @@ d05_05 using 2:5:6 with yerrorbars ls 301 pt 6 ps 1.6 lw 4 title '',\
 d10_05 using 2:5:6 with yerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
 d15_05 using 2:5:6 with yerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
 d20_05 using 2:5:6 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
-d05_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
-d10_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d05_02 using 2:($7):($8) with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
+d08_02 using 2:($7):($8) with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d10_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
 d10_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
-d15_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
-d20_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
+d15_13 using 2:($7):($8) with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
+d20_13 using 2:($7):($8) with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
 
 unset multiplot
 reset

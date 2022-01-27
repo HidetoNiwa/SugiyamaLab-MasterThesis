@@ -19,6 +19,7 @@ oname = sprintf("%s.tex", fname)
 set output oname
 
 D5 = sprintf('./data/0.2-5.csv')
+D8_02 = sprintf('./data/0.2-8.csv')
 D10_02 = sprintf('./data/0.2-10.csv')
 D10_13 = sprintf('./data/1.3-10.csv')
 D15 = sprintf('./data/1.3-15.csv')
@@ -93,8 +94,9 @@ set mytics 2
  
 plot \
 D5 using 3:5:4:6 with xyerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'PAA 0.2wt.\% $D=5$[mm]',\
-D10_02 using 3:5:4:6 with xyerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'PAA 0.2wt.\% $D=10$[mm]',\
-D10_13 using 3:5:4:6 with xyerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'PAA 1.3wt.\% $D=10$[mm]',\
+D8_02 using 3:5:4:6 with xyerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'PAA 0.2wt.\% $D=8$[mm]',\
+D10_02 using 3:5:4:6 with xyerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'PAA 0.2wt.\% $D=10$[mm]',\
+D10_13 using 3:5:4:6 with xyerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'PAA 1.3wt.\% $D=10$[mm]',\
 D15 using 3:5:4:6 with xyerrorlines ls 107 pt 2 ps 1.5 lw 3 title 'PAA 1.3wt.\% $D=15$[mm]',\
 D20 using 3:5:4:6 with xyerrorlines ls 108 pt 2 ps 1.5 lw 3 title 'PAA 1.3wt.\% $D=20$[mm]'
 
