@@ -2,7 +2,7 @@ name: CI
 on:
     push:
         branches:
-        - develop/#5-github-actions
+        - master
 
 jobs:
   build:
@@ -13,8 +13,6 @@ jobs:
       # LATEX_FILE_NAME -> main.pdf generated
       - name: Set up Git repository
         uses: actions/checkout@v2
-        with:
-          ref: develop/#5-github-actions
       - name: compile latex document
         uses: ./.github/actions/latex
         env:
