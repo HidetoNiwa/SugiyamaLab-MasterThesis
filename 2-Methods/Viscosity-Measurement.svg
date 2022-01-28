@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="112.44302mm"
+   height="37.313049mm"
+   viewBox="0 0 112.44302 37.313049"
    version="1.1"
    id="svg8"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="粘度計計測方法.svg">
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="Viscosity-Measurement.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2">
     <marker
        inkscape:stockid="Arrow1Mstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mstart"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path851"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.4) translate(10,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path854"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.4) rotate(180) translate(10,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Send"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path860"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Lend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path848"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
   </defs>
   <sodipodi:namedview
@@ -80,9 +80,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.9825758"
-     inkscape:cx="439.1092"
-     inkscape:cy="273.54305"
+     inkscape:zoom="2.1089996"
+     inkscape:cx="140.82506"
+     inkscape:cy="85.111443"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -91,7 +91,13 @@
      inkscape:window-height="1027"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0"
+     fit-margin-top="2"
+     lock-margins="true"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="2" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -100,14 +106,14 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="レイヤー 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-58.985226,-40.202582)">
     <ellipse
        ry="3.5242472"
        rx="32.555542"
@@ -123,14 +129,14 @@
        x="84.288696"
        y="61.988094" />
     <rect
-       style="fill:#b6b6b6;fill-opacity:1;stroke:none;stroke-width:0.750001;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="fill:#b6b6b6;fill-opacity:1;stroke:none;stroke-width:0.61702;stroke-linejoin:round;paint-order:markers fill stroke"
        id="rect835"
        width="18.520834"
-       height="14.363094"
+       height="9.7212801"
        x="105.83333"
-       y="39.6875" />
+       y="44.329315" />
     <path
-       style="fill:none;stroke:#c7c7c7;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;fill-opacity:1;stroke:#c7c7c7;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 84.288695,61.988093 21.544635,-7.9375 m 18.52083,10e-7 c 22.67858,7.937501 22.86758,7.9375 22.86758,7.9375"
        id="path837" />
     <path
@@ -148,7 +154,7 @@
     <path
        id="path1134"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.799004;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart);paint-order:markers fill stroke"
-       d="m 132.31648,43.566024 c -3.41636,1.548892 -10.54475,2.529205 -18.35841,2.524693 -11.27253,-0.0066 -20.159024,-1.744262 -20.157904,-4.231922 0.0011,-2.48766 8.889434,-4.783202 20.161964,-4.776692 0.67579,3.89e-4 1.35114,0.0082 2.0236,0.02335"
+       d="m 134.95102,49.086019 c -3.41636,1.548892 -10.54475,2.529205 -18.35841,2.524693 -11.27253,-0.0066 -20.159021,-1.744262 -20.157901,-4.231922 0.0011,-2.48766 8.889431,-4.783202 20.161961,-4.776692 0.67579,3.89e-4 1.35114,0.0082 2.0236,0.02335"
        sodipodi:nodetypes="csssc" />
     <path
        style="fill:none;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -195,13 +201,13 @@
     <text
        xml:space="preserve"
        style="font-size:7.05556px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;stroke-width:0.264583"
-       x="75.820702"
-       y="79.136528"
+       x="60.640717"
+       y="73.992897"
        id="text1329"><tspan
          sodipodi:role="line"
          id="tspan1327"
-         x="75.820702"
-         y="79.136528"
+         x="60.640717"
+         y="73.992897"
          style="font-size:7.05556px;stroke-width:0.264583">stage</tspan></text>
     <text
        id="text1329-6"
@@ -221,18 +227,18 @@
     <text
        xml:space="preserve"
        style="font-size:7.05556px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;stroke-width:0.264583"
-       x="83.564514"
-       y="56.153225"
+       x="72.022705"
+       y="55.525951"
        id="text1353"><tspan
          sodipodi:role="line"
          id="tspan1351"
-         x="83.564514"
-         y="56.153225"
-         style="font-size:7.05556px;stroke-width:0.264583">rotor</tspan></text>
+         x="72.022705"
+         y="55.525951"
+         style="font-size:7.05556px;stroke-width:0.264583">cone rotor</tspan></text>
     <path
        id="path893"
        d="m 84.288695,67.657736 31.122595,3.043875 31.81045,-3.043875 H 84.288695"
-       style="fill:#737373;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
+       style="fill:#737373;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        transform="scale(0.26458333)"
        id="path919"

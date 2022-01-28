@@ -10,6 +10,7 @@
 \usepackage{bm}
 \usepackage{amssymb}
 \usepackage{tocloft}
+\usepackage{tikz} % 参考：https://molina.jp/blog/tikz%E3%81%A6%E3%83%95%E3%83%AD%E3%83%BC%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88%E3%82%92%E6%9B%B8%E3%81%8F/
 
 \makeatletter
 	\renewcommand{\theequation}{% 式番号の付け方
@@ -47,7 +48,12 @@
 \renewcommand{\refname}{参考文献}
 \renewcommand{\abstractname}{Abstract}
 
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary {shapes.misc}
+\usetikzlibrary{positioning}
+
 \begin{document}
+\tikzset{auto}
 \input{0-Cover/cover.tex}
 \newpage
 \input{1-Background/abstract.tex}

@@ -36,7 +36,7 @@ PAA粉末と水道水を混合することで，全7種類の濃度（0.05,0.2,0
 \begin{center}
     \begin{figure}[H]
         \centering
-        \includegraphics[clip,width=8.0cm]{2-Methods/Viscosity-Measurement.png}
+        \includegraphics[width=0.5\textwidth]{2-Methods/Viscosity-Measurement.eps}
         \caption{Viscosity measurement method.}
         \label{fig:viscosity}
     \end{figure}
@@ -44,24 +44,72 @@ PAA粉末と水道水を混合することで，全7種類の濃度（0.05,0.2,0
 
 \subsection{弾性率計測}
 
-作製したPAA溶液の応力に対する弾性特性を調べるため，貯蔵弾性率$G'$と損失弾性率$G''$の応力依存性を計測した．計測には，回転式レオメータ(Thermo Fisher Scientific,HAAKE MARS$\rm I\hspace{-.15em}I\hspace{-.15em}I$)を用いた．回転子の振動回転周期を一定にし，振幅を変化させることで溶液に印可する応力を変化させた．計測条件をTable\ref{table:elastic}に示す．
+作製したPAA溶液の応力に対する弾性特性を調べるため，貯蔵弾性率$G'$と損失弾性率$G''$の応力依存性を計測した．以下に，その計測理論と計測手法を示す．
 
-応力が，
+\subsubsection{弾性率 計測理論}
+周期的なひずみを試験溶液に印可し，そのときの応力を計測することで貯蔵弾性率$G'$と損失弾性率$G''$の計測を行う．試験溶液にひずみが，
 \begin{eqnarray}
-    \tau=\tau_1\sin\left(\omega{}t\right)
+    \gamma=\gamma_1e^{i\omega{}t} ,
 \end{eqnarray}
-で与えられたとする．粘弾性体では，ひずみは応力に対して位相遅れを示すので，
+で与えられたとする．粘弾性体では，ひずみは応力に対して位相が遅れるので，応力はひずみより位相が進む．印可されたひずみと応力の関係をFig.\ref{fig:elastcity}に示す．位相差を$\eta$とすると，
 \begin{eqnarray}
-    \tau=\tau_1\sin\left(\omega{}t-\eta\right)
+    \tau=\tau_1e^{i\left(\omega{}t+\eta\right)} ,
+    \label{eq:tau_gamma}
 \end{eqnarray}
-となる．ここで，$\eta$は位相の遅れである．
+となる．ここで，
+\begin{eqnarray}
+    |G| &=& \frac{\tau_1}{\gamma_1} ,
+\end{eqnarray}
+とおくと，式(\ref{eq:tau_gamma})は，
+\begin{eqnarray}
+    \tau=\gamma_1|G|e^{\left(\omega{}t+\eta\right)}=|G|\gamma{}e^{i\eta} ,
+    \label{eq:tau_G}
+\end{eqnarray}
+と表される．ここで，
+\begin{eqnarray}
+    G^* &=& \frac{\tau}{\gamma}\\
+    G' &=& |G|\cos\eta ,\label{eq:G_prime}\\
+    G'' &=& |G|\sin\eta ,\label{eq:G_doubleprime}
+\end{eqnarray}
+とおくと，式(\ref{eq:tau_G})は，
+\begin{eqnarray}
+    G^* = |G|e^{i\eta} ,
+    \label{eq:G_star}
+\end{eqnarray}
+となる．ここで，式(\ref{eq:G_prime})，(\ref{eq:G_doubleprime})より，
+\begin{eqnarray}
+    G^* = G'+iG'' ,
+\end{eqnarray}
+となる．ここで，$G^*$は複素弾性率，$G'$は貯蔵弾性率，$G''$は損失弾性率と呼ばれる\cite{生物レオロジー}\cite{化学者のためのレオロジー}．貯蔵弾性率と損失弾性率に関して，位相差$\eta$を用いて，
+\begin{alignat}{3}
+    G' & = 0 ,           & \quad G'' & = |G| ,         & \quad & \left(\text{at } \eta=0\right)               \label{eq:G_case1} \\
+    G' & = |G|\cos\eta , & G''       & = |G|\sin\eta , &       & \left(\text{at } 0<\eta<\frac{\pi}{2}\right) \label{eq:G_case2} \\
+    G' & = |G| ,         & G''       & = 0 ,           &       & \left(\text{at } \eta=\frac{\pi}{2}\right)   \label{eq:G_case3}
+\end{alignat}
+とそれぞれの条件で場合分けできる．式(\ref{eq:G_case1})の場合は，応力とひずみの位相差が存在せず，粘性による影響がなく，弾性による影響のみが存在する．式(\ref{eq:G_case3})の場合は，応力とひずみの位相差が$\pi/2$で直交し，弾性による影響がなく，粘性による影響のみが存在する．式(\ref{eq:G_case2})の場合は，応力とひずみの位相差が$\pi/2$より小さいが存在し，弾性，粘性それぞれの影響を受けることを示している．以上より，損失弾性率$G'$は粘性影響を,貯蔵弾性率$G''$は弾性影響を表すことが分かる．式(\ref{eq:G_prime}),(\ref{eq:G_doubleprime})より，損失弾性率と貯蔵弾性率の比を
+\begin{eqnarray}
+    \frac{G''}{G'} &=& \tan\eta ,
+    \label{eq:loss_factor}
+\end{eqnarray}
+と定義できる．ここで，$\tan\eta$は損失正接と呼ばれる\cite{生物レオロジー}\cite{化学者のためのレオロジー}．この損失正接に関して，
+\begin{alignat}{2}
+    \tan\eta & < 1, & \quad \left(\text{at } 0<\eta<\frac{\pi}{4}\right)     \label{eq:tan_eta_case1}         \\
+    \tan\eta & > 1, & \quad \left(\text{at } \frac{\pi}{4}<\eta<\frac{\pi}{2}\right) \label{eq:tan_eta_case2}
+\end{alignat}
+と，場合分けできる．式(\ref{eq:tan_eta_case1})の場合は，貯蔵弾性率よりも損失弾性率の方が大きく，粘性による影響を強く受ける．一方で，式(\ref{eq:tan_eta_case2})の場合は，損失弾性率より貯蔵弾性率の方が大きく，弾性による影響を強く受ける．本研究において，損失正接を用いた場合分けによって粘性影響，弾性影響を考えた．
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{2-Methods/elasticity.eps}
+    \includegraphics[width=0.75\textwidth]{2-Methods/elasticity.eps}
     \caption{Relationship between shear rate and stress in viscoelastic materials.}
     \label{fig:elastic}
 \end{figure}
+
+\newpage
+
+\subsubsection{弾性率 計測手法}
+
+弾性率計測の概略図をFig.\ref{fig:elastic-measure}に示す．計測には，回転式レオメータ(Thermo Fisher Scientific,HAAKE MARS$\rm I\hspace{-.15em}I\hspace{-.15em}I$)を用いた．回転子の振動回転周期を一定にし，振幅を変化させることで溶液に印可する応力を変化させた．回転子には1°×R30のコーンロータを用いた．計測条件をTable\ref{table:elastic}に示す．
 
 \begin{table}[ht]
     \centering
@@ -76,9 +124,16 @@ PAA粉末と水道水を混合することで，全7種類の濃度（0.05,0.2,0
     \end{tabular}
 \end{table}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{2-Methods/rheometer.eps}
+    \caption{Elastic modulus measurement conditions.}
+    \label{fig:elastic-measure}
+\end{figure}
+
 \subsection{圧力場計測}
 
-圧力場測定の概略図を\ref{fig:microphone}に示す．圧力測定にはハイドロフォン（Br\"{u}el \& Kj\ae r，Hydrophone Type8103）を用いた．ハイドロフォンの出力電圧をコンディショニングアンプ（Br\"{u}el \& Kj\ae r，NEXUS Change Amplifier Type 2692-A-0S1）を用いて増幅し，オシロスコープを用いて電圧を記録した．コンディショニングアンプの設定を元に記録した電圧を圧力場へ変換した．
+圧力場計測の概略図を\ref{fig:microphone}に示す．圧力測定にはハイドロフォン（Br\"{u}el \& Kj\ae r，Hydrophone Type8103）を用いた．ハイドロフォンの出力電圧をコンディショニングアンプ（Br\"{u}el \& Kj\ae r，NEXUS Change Amplifier Type 2692-A-0S1）を用いて増幅し，オシロスコープを用いて電圧を記録した．コンディショニングアンプの設定を元に記録した電圧を圧力場へ変換した．
 
 \begin{table}[ht]
     \centering
@@ -102,16 +157,12 @@ PAA粉末と水道水を混合することで，全7種類の濃度（0.05,0.2,0
     \end{tabular}
 \end{table}
 
-\begin{center}
-    \begin{figure}[ht]
-        \centering
-        \label{fig:microphone}
-        \includegraphics[width=0.65\textwidth]{2-Methods/microphone.eps}
-        \caption{Schematic outline for pressure measurement.}
-    \end{figure}
-\end{center}
-
-\newpage
+\begin{figure}[H]
+    \centering
+    \label{fig:microphone}
+    \includegraphics[width=0.6\textwidth]{2-Methods/microphone.eps}
+    \caption{Schematic outline for pressure measurement.}
+\end{figure}
 
 \subsection{球落下実験}
 
@@ -125,38 +176,6 @@ PAA粉末と水道水を混合することで，全7種類の濃度（0.05,0.2,0
     \caption{Schematic view of the experimental apparatus.}
     \label{fig:device}
 \end{figure}
-
-\begin{table}[h]
-    \centering
-    \caption{Experimental conditions of falling sphere and solution concentration.}
-    \label{table:exp-conditions}
-    \begin{tabular}{c|c|c|c|c|c|c}\hline
-        球材質                & nylon   & アルミニウム & アルミナ & 鋼      & ステンレス & 真鍮    \\ \hline
-        密度 $\rho$[kg/m$^3$] & 1130    & 2700         & 3800     & 7900    & 7900       & 8700    \\ \hline
-        直径 $D$[mm]          & 9.5     & 10           & 10       & 10      & 9.525      & 9.52    \\ \hline \hline
-        PAA 0.05wt.\%         & $\circ$ &              &          &         &            &         \\ \hline
-        PAA 0.2wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
-        PAA 0.5wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
-        PAA 0.7wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
-        PAA 1.0wt.\%          &         & $\circ$      & $\circ$  & $\circ$ &            & $\circ$ \\ \hline
-        PAA 1.3wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
-        PAA 1.5wt.\%          &         &              & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
-    \end{tabular}
-\end{table}
-
-\begin{table}[h]
-    \centering
-    \caption{Experimental conditions on steel sphere with varying sphere diameters.}
-    \label{table:exp-conditions-dia}
-    \begin{tabular}{c|c|c|c|c|c|c|c|c|c}\hline
-        球材質       & \multicolumn{9}{|c}{鋼 $\rho$=7900kg/$^3$}                                                                                 \\ \hline
-        直径 $D$[mm] & 5                                          & 8       & 10      & 11      & 12      & 13      & 14      & 15      & 20      \\ \hline \hline
-        PAA 0.2wt.\% & $\circ$                                    & $\circ$ & $\circ$ &         &         &         &         &         &         \\ \hline
-        PAA 0.5wt.\% & $\circ$                                    &         & $\circ$ &         &         &         &         & $\circ$ & $\circ$ \\ \hline
-        PAA 1.0wt.\% &                                            & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ \\ \hline
-        PAA 1.3wt.\% &                                            & $\circ$ & $\circ$ &         &         &         &         & $\circ$ & $\circ$ \\ \hline
-    \end{tabular}
-\end{table}
 
 \begin{table}[h]
     \centering
@@ -181,11 +200,55 @@ PAA粉末と水道水を混合することで，全7種類の濃度（0.05,0.2,0
     \end{tabular}
 \end{table}
 
+\begin{table}[h]
+    \centering
+    \caption{Experimental conditions of falling sphere and solution concentration.}
+    \label{table:exp-conditions}
+    \begin{tabular}{c|c|c|c|c|c|c}\hline
+        球材質                & nylon   & アルミニウム & アルミナ & 鋼      & ステンレス & 真鍮    \\ \hline
+        密度 $\rho$[kg/m$^3$] & 1130    & 2700         & 3800     & 7900    & 7900       & 8700    \\ \hline
+        直径 $D$[mm]          & 9.5     & 10           & 10       & 10      & 9.525      & 9.52    \\ \hline \hline
+        PAA 0.05wt.\%         & $\circ$ &              &          &         &            &         \\ \hline
+        PAA 0.2wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+        PAA 0.5wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+        PAA 0.7wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+        PAA 1.0wt.\%          &         & $\circ$      & $\circ$  & $\circ$ &            & $\circ$ \\ \hline
+        PAA 1.3wt.\%          &         & $\circ$      & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+        PAA 1.5wt.\%          &         &              & $\circ$  &         & $\circ$    & $\circ$ \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \caption{Experimental conditions on steel sphere with varying sphere diameters.}
+    \label{table:exp-conditions-dia}
+    \begin{tabular}{c|c|c|c|c|c|c|c|c|c}\hline
+        球材質       & \multicolumn{9}{|c}{鋼 $\rho$ =7900kg/m$^3$}                                                                                 \\ \hline
+        直径 $D$[mm] & 5                                            & 8       & 10      & 11      & 12      & 13      & 14      & 15      & 20      \\ \hline \hline
+        PAA 0.2wt.\% & $\circ$                                      & $\circ$ & $\circ$ &         &         &         &         &         &         \\ \hline
+        PAA 0.5wt.\% & $\circ$                                      &         & $\circ$ &         &         &         &         & $\circ$ & $\circ$ \\ \hline
+        PAA 1.0wt.\% &                                              & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ \\ \hline
+        PAA 1.3wt.\% &                                              & $\circ$ & $\circ$ &         &         &         &         & $\circ$ & $\circ$ \\ \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+
 超音波振動子の発振には，ファンクションジェネレータ（NF，WF1974），オシロスコープ（IWATSU，DIGITAL OSCILLOSCOPE DS-5614A），パワーアンプ（NF，HSA4101）を用いた．これらの接続をFig.\ref{fig:connect-with-signal}に示す．ファンクションジェネレータによって，周波数，電圧の制御を行い，超音波出力の出力元となる正弦波信号を生成した．続いて，ファンクションジェネレータによって生成された正弦波信号をパワーアンプによって，20倍のゲインをかけ増幅した．これら，オシロスコープによってファンクションジェネレータによって生成された信号，パワーアンプによって増幅された信号の両方をモニタリングし正常に出力されているか確認を行った．また，パワーアンプによって増幅された信号を，ランジュバン型振動子（富士セラミックス，FBL28502HA）上に円形のSUS製プレートを接着したものを振動子とした．超音波振動子の共振周波数は28kHzである．今回の実験において，照射する超音波周波数は27.4kHzに固定した．
 
 \begin{figure}[h]
     \centering
-    \includegraphics[clip,width=10.0cm]{2-Methods/connect-with-signal.png}
+    \begin{tikzpicture}[samples=100, very thick]
+        \tikzset{rect/.style={rectangle,  draw,  text centered, text width=2.7cm, minimum height=1.5cm}};
+        \node[rect](a) at(0,3){function \\ generator};
+        \node[rect](b) at(5.5,3){power \\ amplifier};
+        \node[rect](c) at(5.5,0){oscilloscope};
+        \node[rect](d) at(11,3){ultrasonic \\ transducer};
+        \draw[->] (a) -- (b);
+        \draw[->] (3,3)--(3,0)--(c);
+        \draw[->] (b) -- (c)node[pos=0.5,right]{monitoring signal};
+        \draw[->] (b) --(d)node[pos=0.5,above]{output signal};
+    \end{tikzpicture}
     \caption{Schematic outline for ultrasonic control system.}
     \label{fig:connect-with-signal}
 \end{figure}
