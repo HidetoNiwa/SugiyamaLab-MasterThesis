@@ -66,7 +66,14 @@ set style line 207 lt 1 lw 2 ps 2 lc rgb '#808017' #yellow
 set style line 208 lt 1 lw 2 ps 2 lc rgb '#995083' #orchid
 set style line 209 lt 1 lw 2 ps 2 lc rgb '#4d4d4d' #gray
 set style line 210 lt 1 lw 2 ps 2 lc rgb '#4d2f29' #brown
- 
+
+set style arrow 1 size graph 0.02,20 filled linewidth 3 linecolor rgb '#d62728'
+set style arrow 2 size graph 0.02,20 nohead linewidth 3 linecolor rgb '#d62728'
+set style arrow 3 size graph 0.02,20 filled linewidth 3 linecolor rgb '#1f77b4'
+set style arrow 4 size graph 0.02,20 nohead linewidth 3 linecolor rgb '#1f77b4'
+set style arrow 5 size graph 0.02,20 filled linewidth 3 linecolor rgb '#2ca02c'
+set style arrow 6 size graph 0.02,20 nohead linewidth 3 linecolor rgb '#2ca02c'
+
 set palette defined (0 '#999999',\
                      1 '#00008b',\
 					 2 '#2ca9e1',\
@@ -98,6 +105,12 @@ set style fill solid 0.5
 	####################################################################################################
 	
 	set label 1 at screen -0.04,0.955 '(a)'
+
+	set arrow  1 as  1 from 0.5,0.015 to 0.15,0.015 #Red_arrow
+	set arrow  2 as  2 from 0.5,0.025 to 0.5,0.015 #Red_line
+	set arrow  3 as  3 from 0.5,0.03 to 0.15,0.03 #Blue_arrow
+	set arrow  4 as  4 from 0.5,0.05 to 0.5,0.03 #Blue_line
+	set arrow  5 as  5 from 5,20 to 15,20
 
 	set format x '$10^{%T}$'
 	set xlabel '' offset 0,0.4
@@ -145,6 +158,13 @@ set style fill solid 0.5
 	####################################################################################################
 	
 	set label 2 at screen 0.46,0.955 '(b)'
+
+	set arrow  1 as  1 from 8,0.02 to 3,0.02 #Red_arrow
+	set arrow  2 as  2 from 8,0.03 to 8,0.02 #Red_line
+	set arrow  3 as  3 from 8,0.45 to 3,0.45 #Blue_arrow
+	set arrow  4 as  4 from 8,0.45 to 8,0.25 #Blue_line
+	set arrow  6 as  6 from 20,15 to 20,20
+	set arrow  5 as  5 from 20,20 to 50,20
 
 	set format x '$10^{%T}$'
 	set xlabel '' offset 0,0.4
@@ -194,6 +214,13 @@ set style fill solid 0.5
 	
 	set label 3 at screen -0.04,0.7175 '(c)'
 
+	set arrow  1 as  1 from 0.5,11 to 0.15,11 #Red_arrow
+	set arrow  2 as  2 from 0.5,7 to 0.5,11 #Red_line
+	set arrow  3 as  3 from 0.5,0.6 to 0.15,0.6 #Blue_arrow
+	set arrow  4 as  4 from 0.5,0.6 to 0.5,1 #Blue_line
+	set arrow  6 as  6 from 0.15,0.035 to 0.15,0.055
+	set arrow  5 as  5 from 0.15,0.055 to 0.5,0.055
+
 	set format x '$10^{%T}$'
 	set xlabel '' offset 0,0.4
 	set xrange [0.01:1000]
@@ -240,6 +267,13 @@ set style fill solid 0.5
 	####################################################################################################
 	
 	set label 4 at screen 0.46,0.7175 '(d)'
+
+	set arrow  1 as  1 from 0.5,15 to 0.15,15 #Red_arrow
+	set arrow  2 as  2 from 0.5,15 to 0.5,10 #Red_line
+	set arrow  3 as  3 from 0.5,1 to 0.15,1 #Blue_arrow
+	set arrow  4 as  4 from 0.5,1 to 0.5,1.5 #Blue_line
+	set arrow  6 as  6 from 0.15,0.03 to 0.15,0.05
+	set arrow  5 as  5 from 0.15,0.05 to 0.5,0.05
 
 	set format x '$10^{%T}$'
 	set xlabel '' offset 0,0.4
@@ -289,6 +323,13 @@ set style fill solid 0.5
 	
 	set label 5 at screen -0.04,0.48 '(e)'
 
+	set arrow  1 as  1 from 0.5,22 to 0.15,22 #Red_arrow
+	set arrow  2 as  2 from 0.5,22 to 0.5,15 #Red_line
+	set arrow  3 as  3 from 0.5,1.5 to 0.15,1.5 #Blue_arrow
+	set arrow  4 as  4 from 0.5,1.5 to 0.5,2.5 #Blue_line
+	set arrow  6 as  6 from 0.15,0.03 to 0.15,0.05
+	set arrow  5 as  5 from 0.15,0.05 to 0.5,0.05
+
 	set format x '$10^{%T}$'
 	set xlabel '' offset 0,0.4
 	set xrange [0.01:1000]
@@ -336,6 +377,11 @@ set style fill solid 0.5
 	
 	set label 6 at screen 0.46,0.48 '(f)'
 
+	set arrow  1 as  1 from 0.5,40 to 0.15,40 #Red_arrow
+	set arrow  2 as  2 from 0.5,40 to 0.5,26 #Red_line
+	set arrow  3 as  3 from 0.5,2 to 0.15,2 #Blue_arrow
+	set arrow  4 as  4 from 0.5,2 to 0.5,3.5 #Blue_line
+
 	set format x '$10^{%T}$'
 	set xlabel '{\Large $\tau$ [$\SI{}{Pa}$]}' offset 0,0.4
 	set xrange [0.01:1000]
@@ -382,6 +428,11 @@ set style fill solid 0.5
 	####################################################################################################
 	
 	set label 7 at screen -0.04,0.2425 '(g)'
+
+	set arrow  1 as  1 from 0.5,50 to 0.15,50 #Red_arrow
+	set arrow  2 as  2 from 0.5,50 to 0.5,33 #Red_line
+	set arrow  3 as  3 from 0.5,2.5 to 0.15,2.5 #Blue_arrow
+	set arrow  4 as  4 from 0.5,2.5 to 0.5,4 #Blue_line
 
 	set format x '$10^{%T}$'
 	set xlabel '{\Large $\tau$ [$\SI{}{Pa}$]}' offset 0,0.4

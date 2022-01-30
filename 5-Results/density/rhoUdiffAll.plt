@@ -237,5 +237,51 @@ alumina_15 using 3:($6):($7) with yerrorlines ls 106 pt 4 ps 1.5 lw 3 title 'alu
 stainless_15 using 3:($6):($7) with yerrorlines ls 106 pt 6 ps 1.5 lw 3 title 'stainless',\
 brass_15 using 3:($6):($7) with yerrorlines ls 106 pt 8 ps 1.5 lw 3 title 'brass'
 
+set tmargin 0
+set bmargin 0
+set lmargin 0
+set rmargin 0
+set size 0.25,0.25
+set origin 0.55,0.73
+
+set label 11 center at graph 0.04,0.95 ''
+
+unset logscale xy
+
+set xlabel ''
+set format x '{\footnotesize $%.1l\times10^{%L}$}'
+set xrange [0:3E-5]
+set xtics 1.5E-5 offset 0,0.75
+set mxtics 2
+
+set ylabel '' offset 0.5,0
+set ytics 1,0.2,1.6 offset -0.5,0
+set format y '{\footnotesize $%2.1f$}'
+
+plot \
+al_02 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_02 using 3:($6):($7) with yerrorlines ls 101 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_02 using 3:($6):($7) with yerrorlines ls 101 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_02 using 3:($6):($7) with yerrorlines ls 101 pt 8 ps 1.5 lw 3 title 'brass',\
+al_05 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_05 using 3:($6):($7) with yerrorlines ls 102 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_05 using 3:($6):($7) with yerrorlines ls 102 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_05 using 3:($6):($7) with yerrorlines ls 102 pt 8 ps 1.5 lw 3 title 'brass',\
+al_07 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_07 using 3:($6):($7) with yerrorlines ls 103 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_07 using 3:($6):($7) with yerrorlines ls 103 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_07 using 3:($6):($7) with yerrorlines ls 103 pt 8 ps 1.5 lw 3 title 'brass',\
+al_10 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_10 using 3:($6):($7) with yerrorlines ls 104 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_10 using 3:($6):($7) with yerrorlines ls 104 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_10 using 3:($6):($7) with yerrorlines ls 104 pt 8 ps 1.5 lw 3 title 'brass',\
+al_13 using 3:($6):($7) with yerrorlines ls 105 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_13 using 3:($6):($7) with yerrorlines ls 105 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_13 using 3:($6):($7) with yerrorlines ls 105 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_13 using 3:($6):($7) with yerrorlines ls 105 pt 8 ps 1.5 lw 3 title 'brass',\
+alumina_15 using 3:($6):($7) with yerrorlines ls 106 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_15 using 3:($6):($7) with yerrorlines ls 106 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_15 using 3:($6):($7) with yerrorlines ls 106 pt 8 ps 1.5 lw 3 title 'brass'
+
 unset multiplot
 reset

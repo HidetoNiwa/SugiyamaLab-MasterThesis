@@ -1,13 +1,15 @@
 \section{球密度による影響}
+\label{sec:density}
+超音波照射された擬塑性流体中を落下する球における高速化に関して，球密度による影響を考えるため密度を変化させて実験を行った．実験条件をTable\ref{table:exp-conditions}に示す．落下球の高速化に関して，式(\ref{eq:Udiff})に示すよう球径による影響を受けるが，今回の実験条件において密度変化による影響よりも十分に小さいものとして球径は同一であったとして考える．
 
-超音波照射された擬塑性流体中に球を落下させた結果をFig.\ref{fig:0.05-0.2}-\ref{fig:1.5}に示す．この結果より，濃度ごとに終端速度を求めた結果をFig.\ref{fig:rhoUT}に示す．縦軸は終端速度$U_\text{T}$，横軸は密度差$\Delta\rho$である．密度差が大きくなると，終端速度が大きくなることが分かった．また，濃度ごとに高速化度合を求めた結果をFig.\ref{fig:rhoUdiff}に示す．縦軸は高速化度合$U_\text{on}/U_\text{off}$，横軸は密度差である．PAA濃度0.2,1.5wt.\%においてはあまり高速化が見られなかった．一方で，0.5,1.0wt.\%において，密度差が小さくなると高速化が顕著にみられた．
+超音波照射された擬塑性流体中に，密度を変化させ球を落下させた結果をFig.\ref{fig:0.05-0.2}-\ref{fig:1.5}に示す．この結果より，濃度ごとに終端速度を求めた結果をFig.\ref{fig:rhoUT}に示す．縦軸は終端速度$U_\text{T}$，横軸は密度差$\Delta\rho$である．密度差が大きくなると，終端速度が大きくなることが分かった．また，濃度ごとに高速化度合を求めた結果をFig.\ref{fig:rhoUdiff}に示す．縦軸は高速化度合$U_\text{on}/U_\text{off}$，横軸は密度差である．PAA濃度0.2,1.5wt.\%においてはあまり高速化が見られなかった．一方で，0.5,1.0wt.\%において，密度差が小さくなると高速化が顕著にみられた．
 
 超音波照射された擬塑性流体中を落下する球の高速化に対する，落下球の密度による影響を考える．\ref{sec:UTdiff}節にて示した，落下球の高速化度合の理論式(\ref{eq:Udiff})に終端速度の理論式(\ref{eq:UT})を代入すると，
 \begin{eqnarray}
     \frac{U_{ABL}}{U_T} \sim \left(\frac{\Delta\rho{}g}{3}\right)^{\frac{n-1}{n}}\cdot\frac{2-n}{n}\cdot\frac{\delta}{\mu_{ABL}}\cdot\left(\frac{k}{a}\right)^{\frac{1}{n}} ,
     \label{eq:UdiffRho}
 \end{eqnarray}
-となる．本実験において，落下球の密度をパラメータとして考える．他の条件に関して同一であると考えると，超音波照射に伴う高速化は式(\ref{eq:UdiffRho})より，
+となる．本実験において，落下球の密度をパラメータとして考えると，超音波照射に伴う高速化は式(\ref{eq:UdiffRho})より，
 \begin{eqnarray}
     \frac{U_{ABL}}{U_T} \sim \left(\Delta\rho{}\right)^{\frac{n-1}{n}} ,
     \label{eq:UdiffRho2}
@@ -26,7 +28,7 @@
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1.0\textwidth]{./5-Results/rhoUdiff.eps}
-    \caption{Velocity ratio by density difference in PAA solution (a)0.2wt.\%, (b)0.5wt.\%, (c)0.7wt.\%, (d)1.0wt.\%, (e)1.3wt.\%, (f)1.5wt.\%.}
+    \caption{Velocity ratio versus density difference in PAA solution (a)0.2wt.\%, (b)0.5wt.\%, (c)0.7wt.\%, (d)1.0wt.\%, (e)1.3wt.\%, (f)1.5wt.\%.}
     \label{fig:rhoUdiff}
 \end{figure}
 

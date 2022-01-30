@@ -107,8 +107,8 @@ set label 31 at graph 0.02,0.93 '(a)' front
 
 set format x ''
 set xlabel '' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '{\Large $ U_\text{T} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
@@ -134,8 +134,8 @@ set label 31 at graph 0.02,0.93 '(b)' front
 
 set format x ''
 set xlabel '' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '' offset 0.5,0
@@ -162,8 +162,8 @@ set label 31 at graph 0.02,0.93 '(c)' front
 
 set format x ''
 set xlabel '' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '' offset 0.5,0
@@ -192,8 +192,8 @@ set label 31 at graph 0.02,0.93 '(d)' front
 
 set format x '$%g$'
 set xlabel '{\Large $\Delta\rho$ [$\SI{}{kg/m^3}$]}' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '{\Large $ U_\text{T} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
@@ -219,8 +219,8 @@ set label 31 at graph 0.02,0.93 '(e)' front
 
 set format x '$%g$'
 set xlabel '{\Large $\Delta\rho$ [$\SI{}{kg/m^3}$]}' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '' offset 0.5,0
@@ -252,8 +252,8 @@ set label 31 at graph 0.02,0.93 '(f)' front
 
 set format x '$%g$'
 set xlabel '{\Large $\Delta\rho$ [$\SI{}{kg/m^3}$]}' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '' offset 0.5,0

@@ -169,7 +169,7 @@ set mxtics 10
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0.9:1.6]
-set ytics 1.0,0.2,1.4
+set ytics 1.0,0.2,1.6
 set mytics 2
  
 plot \
