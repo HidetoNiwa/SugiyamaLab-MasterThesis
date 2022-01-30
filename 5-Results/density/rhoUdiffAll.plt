@@ -164,8 +164,8 @@ set logscale x
 set label 11 center at graph 0.04,0.95 '(a)'
 
 set format x '$10^{%L}$'
-set xlabel '{\Large $ \Delta\rho{}^\frac{n-1}{n} \times 10^{3}\displaystyle [$\SI{}{(kg/m^3)^{(n-1/n)}}$]$}' offset 0,0.4
-set xrange [10E-9:1]
+set xlabel '{\Large $ \Delta\rho{}^\frac{n-1}{n}\displaystyle [$\SI{}{(kg/m^3)^{(n-1/n)}}$]$}' offset 0,0.4
+set xrange [1E-11:1E-3]
 set xtics 100
 set mxtics 10
  
@@ -205,8 +205,8 @@ set rmargin screen 1
 
 set label 11 center at graph 0.04,0.95 '(b)'
 
-set xrange [10E-9:0.00005]
-set xtics 1E-7,10,1E-5
+set xrange [1.001E-11:1.3E-8]
+set xtics 1E-11,10,1E-8
 set mxtics 10 
 
 set ylabel '' offset 0.5,0
@@ -241,22 +241,22 @@ set tmargin 0
 set bmargin 0
 set lmargin 0
 set rmargin 0
-set size 0.25,0.25
-set origin 0.55,0.73
+set size 0.25,0.22
+set origin 0.55,0.77
 
 set label 11 center at graph 0.04,0.95 ''
 
 unset logscale xy
 
-set xlabel ''
-set format x '{\footnotesize $%.1l\times10^{%L}$}'
-set xrange [0:3E-5]
-set xtics 1.5E-5 offset 0,0.75
+set xlabel '{\scriptsize $\Delta\rho{}^\frac{n-1}{n}$}' offset 0,1.32
+set format x '{\scriptsize $%2.0l\times10^{%L}$}'
+set xrange [0:1E-8]
+set xtics 5E-9 offset 0,0.6
 set mxtics 2
 
-set ylabel '' offset 0.5,0
+set ylabel '{\scriptsize $U_\text{on}/U_\text{off}$}' offset 4.3,0
 set ytics 1,0.2,1.6 offset -0.5,0
-set format y '{\footnotesize $%2.1f$}'
+set format y '{\scriptsize $%2.1f$}'
 
 plot \
 al_02 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
