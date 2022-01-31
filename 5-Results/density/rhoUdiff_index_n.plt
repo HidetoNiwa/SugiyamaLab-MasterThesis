@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 5.2, 3.2 standalone color solid 9
+set terminal epslatex size 5.5, 3.8 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -87,14 +87,18 @@ set format '$%g$'
 
 set size ratio 1.3
 set style fill solid 10
- 
+
+set logscale x
+
+f(x)=a*x**(n)
+
 ####################################################################################################
  
 set lmargin screen 0.02
 set rmargin screen 0.276667
 
 set tmargin screen 1
-set bmargin screen 0.52
+set bmargin screen 0.54
  
 ####################################################################################################
  
@@ -105,11 +109,11 @@ set key at screen 1,0.20
 
 set label 31 at graph 0.02,0.93 '(a)' front
 
-set format x ''
+set format x '$10^{%L}$'
 set xlabel '' offset 0,0.4
-set xrange [0:8000]
-set xtics 4000
-set mxtics 2
+set xrange [1E-4:1E-3]
+set xtics 10
+set mxtics 10
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
@@ -118,15 +122,13 @@ set ytics 1,0.3,1.6
 set mytics 2
  
 plot \
-al_02 using ($1-1)*1000:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
-alumina_02 using ($1-1)*1000:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
-stainless_02 using ($1-1)*1000:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
-brass_02 using ($1-1)*1000:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
+al_02 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_02 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
+stainless_02 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
+brass_02 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
 
 ####################################################################################################
 
-set tmargin screen 1
-set bmargin screen 0.52
 set lmargin screen 0.296667
 set rmargin screen 0.553333
  
@@ -134,29 +136,22 @@ set rmargin screen 0.553333
 
 set label 31 at graph 0.02,0.93 '(b)' front
 
-unset logscale xy
-
-set format x ''
 set xlabel '' offset 0,0.4
-set xrange [0:8000]
-set xtics 4000
-set mxtics 2
+set xrange [6E-10:4E-8]
  
 set ylabel '' offset 0.5,0
-set format y '$%g$'
+set format y ''
 set ytics 1,0.3,1.6
 set mytics 2
 
 plot \
-al_05 using ($1-1)*1000:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
-alumina_05 using ($1-1)*1000:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
-stainless_05 using ($1-1)*1000:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
-brass_05 using ($1-1)*1000:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
+al_05 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_05 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
+stainless_05 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
+brass_05 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
 
 ####################################################################################################
 
-set tmargin screen 1
-set bmargin screen 0.52
 set lmargin screen 0.573333
 set rmargin screen 0.83
  
@@ -164,45 +159,33 @@ set rmargin screen 0.83
 
 set label 31 at graph 0.02,0.93 '(c)' front
 
-unset logscale xy
-
-set format x ''
 set xlabel '' offset 0,0.4
-set xrange [0:8000]
-set xtics 4000
-set mxtics 2
- 
-set ylabel '' offset 0.5,0
+set xrange [1E-10:1.5E-8]
 
-set format y '$%g$'
+set ylabel '' offset 0.5,0
 set ytics 1,0.3,1.6
 set mytics 2
 
 plot \
-al_07 using ($1-1)*1000:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
-alumina_07 using ($1-1)*1000:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
-stainless_07 using ($1-1)*1000:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
-brass_07 using ($1-1)*1000:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
+al_07 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_07 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
+stainless_07 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
+brass_07 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
 
 ####################################################################################################
  
 set lmargin screen 0.02
 set rmargin screen 0.276667
 
-set tmargin screen 0.48
+set tmargin screen 0.46
 set bmargin screen 0
 
 ####################################################################################################
 
 set label 31 at graph 0.02,0.93 '(d)' front
 
-unset logscale xy
-
-set format x '$%g$'
-set xlabel '{\Large $\Delta\rho$ [$\SI{}{kg/m^3}$]}' offset 0,0.4
-set xrange [0:8000]
-set xtics 4000
-set mxtics 2
+set xlabel '{\Large $\left(\Delta\rho\right)^{\frac{n-1}{n}}$ [$($kg/m$^3)^{\frac{n-1}{n}}$]}' offset 0,0.4
+set xrange [8E-11:1E-8]
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
@@ -210,40 +193,32 @@ set ytics 1,0.3,1.6
 set mytics 2
  
 plot \
-al_10 using ($1-1)*1000:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
-alumina_10 using ($1-1)*1000:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
-stainless_10 using ($1-1)*1000:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
-brass_10 using ($1-1)*1000:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
+al_10 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_10 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
+stainless_10 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
+brass_10 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
 
 ####################################################################################################
  
 set lmargin screen 0.296667
 set rmargin screen 0.553333
-set tmargin screen 0.48
-set bmargin screen 0
  
 ####################################################################################################
 
 set label 31 at graph 0.02,0.93 '(e)' front
 
-unset logscale xy
+set xrange [1.5E-11:1E-8]
 
-set format x '$%g$'
-set xlabel '{\Large $\Delta\rho$ [$\SI{}{kg/m^3}$]}' offset 0,0.4
-set xrange [0:8000]
-set xtics 4000
-set mxtics 2
- 
 set ylabel '' offset 0.5,0
-set format y '$%g$'
+set format y ''
 set ytics 1,0.3,1.6
 set mytics 2
  
 plot \
-al_13 using ($1-1)*1000:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
-alumina_13 using ($1-1)*1000:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
-stainless_13 using ($1-1)*1000:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
-brass_13 using ($1-1)*1000:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
+al_13 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_13 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
+stainless_13 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
+brass_13 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
 
 ####################################################################################################
  
@@ -260,18 +235,14 @@ unset key
 
 set label 31 at graph 0.02,0.93 '(f)' front
 
-set format x '$%g$'
-set xlabel '{\Large $\Delta\rho$ [$\SI{}{kg/m^3}$]}' offset 0,0.4
-set xrange [0:8000]
-set xtics 4000
-set mxtics 2
+set xrange [1.5E-11:1E-9]
  
 set ylabel '' offset 0.5,0
  
 plot \
-alumina_15 using ($1-1)*1000:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
-stainless_15 using ($1-1)*1000:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
-brass_15 using ($1-1)*1000:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
+alumina_15 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
+stainless_15 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
+brass_15 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
 
 unset multiplot
 reset

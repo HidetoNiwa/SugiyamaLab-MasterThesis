@@ -98,7 +98,7 @@ set xrange [0:60]
 set xtics 20
 set mxtics 2
 
-set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
+set ylabel '{\Large $U\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
 set format y '$%g$'
 set yrange [0:12]
 set ytics 4 offset 0,0
@@ -144,7 +144,7 @@ set xlabel '{\Large Time $t$ [$\SI{}{s}$]}' offset 0,0.4
 set xrange [0:6]
 set xtics 2
 
-set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $U\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0:120]
 set ytics 40 offset 0,0
