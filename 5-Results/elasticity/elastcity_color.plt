@@ -35,6 +35,7 @@ d5_02 = sprintf('../diameter-0.2-1.3/data/0.2-5.csv')
 d8_02 = sprintf('../diameter-0.2-1.3/data/0.2-8.csv')
 d10_02 = sprintf('../diameter-0.2-1.3/data/0.2-10.csv')
 
+d8_13 = sprintf('../diameter-0.2-1.3/data/1.3-8.csv')
 d10_13 = sprintf('../diameter-0.2-1.3/data/1.3-10.csv')
 d15_13 = sprintf('../diameter-0.2-1.3/data/1.3-15.csv')
 d20_13 = sprintf('../diameter-0.2-1.3/data/1.3-20.csv')
@@ -151,7 +152,7 @@ set mytics 10
 set pm3d interpolate 100,100
 set cbrange[1:1.2]
 set cbtics 0.1
-set cblabel '$U_{on}/U_{off}$'
+set cblabel '$U_\text{on}/U_\text{off}$'
 
 set arrow 1 as 1 from 8,2 to 8,0.2
 set arrow 2 as 1 from 8,5 to 8,50
@@ -197,6 +198,7 @@ d5_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
 d10_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
 d15_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
 d20_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
+d8_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d10_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d15_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d20_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\

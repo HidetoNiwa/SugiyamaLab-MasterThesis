@@ -36,6 +36,7 @@ d05_02 = sprintf('../diameter-0.2-1.3/data/0.2-5.csv')
 d08_02 = sprintf('../diameter-0.2-1.3/data/0.2-8.csv')
 d10_02 = sprintf('../diameter-0.2-1.3/data/0.2-10.csv')
 
+d8_13 = sprintf('../diameter-0.2-1.3/data/1.3-8.csv')
 d10_13 = sprintf('../diameter-0.2-1.3/data/1.3-10.csv')
 d15_13 = sprintf('../diameter-0.2-1.3/data/1.3-15.csv')
 d20_13 = sprintf('../diameter-0.2-1.3/data/1.3-20.csv')
@@ -210,9 +211,10 @@ set label 152 center at screen 0.65,0.22 point ls 301 pt 2 ps 1.5
 set label 153 center at screen 0.696,0.22 point ls 302 pt 2 ps 1.5
 set label 154 center at screen 0.742,0.22 point ls 303 pt 2 ps 1.5
 
-set label 161 center at screen 0.742,0.10 point ls 302 pt 10 ps 1.5
-set label 162 center at screen 0.972,0.10 point ls 307 pt 10 ps 1.5
-set label 163 center at screen 1.018,0.10 point ls 308 pt 10 ps 1.5
+set label 161 center at screen 0.696,0.10 point ls 301 pt 10 ps 1.5
+set label 162 center at screen 0.742,0.10 point ls 302 pt 10 ps 1.5
+set label 163 center at screen 0.972,0.10 point ls 307 pt 10 ps 1.5
+set label 164 center at screen 1.018,0.10 point ls 308 pt 10 ps 1.5
 
 ####################################################################################################
  
@@ -285,6 +287,7 @@ d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
 d08_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
 d10_02 using 2:5:6 with yerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
+d8_13 using 2:5:6 with yerrorbars ls 301 pt 10 ps 1.6 lw 4 title '',\
 d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
 d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
 d20_13 using 2:5:6 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
@@ -341,6 +344,7 @@ d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
 d08_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
 d10_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d8_13 using 2:5:6 with yerrorbars ls 301 pt 10 ps 1.6 lw 4 title '',\
 d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
 d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
 d20_13 using 2:5:6 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
@@ -402,6 +406,7 @@ d20_05 using 2:5:6 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 d05_02 using 2:($7):($8) with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
 d08_02 using 2:($7):($8) with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
 d10_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
+d8_13 using 2:($7):($8) with yerrorbars ls 301 pt 10 ps 1.6 lw 4 title '',\
 d10_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
 d15_13 using 2:($7):($8) with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
 d20_13 using 2:($7):($8) with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
