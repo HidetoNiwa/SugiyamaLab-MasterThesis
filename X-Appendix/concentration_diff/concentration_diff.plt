@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 5, 4.5 standalone color solid 9
+set terminal epslatex size 5.4, 3.15 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -18,16 +18,12 @@ if (!exists("fname")) fname='test'
 oname = sprintf("%s.tex", fname)
 set output oname
 
-D05_00 = sprintf('./data/0.2-5-0.csv')
-D05_27 = sprintf('./data/0.2-5-27.csv')
-D08_02_00 = sprintf('./data/0.2-8-0.csv')
-D08_02_27 = sprintf('./data/0.2-8-27.csv')
-D08_13_00 = sprintf('./data/1.3-8-0.csv')
-D08_13_27 = sprintf('./data/1.3-8-27.csv')
-D15_00 = sprintf('./data/1.3-15-0.csv')
-D15_27 = sprintf('./data/1.3-15-27.csv')
-D20_00 = sprintf('./data/1.3-20-0.csv')
-D20_27 = sprintf('./data/1.3-20-27.csv')
+con95_00 = sprintf('./data/0.95-0.csv')
+con95_27 = sprintf('./data/0.95-27.csv')
+con100_00 = sprintf('./data/1-0.csv')
+con100_27 = sprintf('./data/1-27.csv')
+con105_00 = sprintf('./data/1.05-0.csv')
+con105_27 = sprintf('./data/1.05-27.csv')
 
 lx = 40.0
 ly = 200.0
@@ -83,8 +79,8 @@ set style fill solid 10
 set lmargin screen 0.05
 set rmargin screen 0.45
  
-set tmargin screen 1
-set bmargin screen 0.68
+set tmargin screen 0.97
+set bmargin screen 0.53
  
 ####################################################################################################
  
@@ -96,104 +92,52 @@ unset key
 
 set label 31 at graph 0.01,0.93 '(a)' front
 
-set format x '$%g$'
 set xlabel '' offset 0,0.4
-set xrange [0:0.8]
-set xtics 0.4
+set format x '$%g$'
+set xrange [0:2.1]
+set xtics 0.7
 set mxtics 2
- 
-set ylabel '{\Large $U$ $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+
+set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
 set format y '$%g$'
-set yrange [0:800]
-set ytics 400 offset 0,0
+set yrange [0:300]
+set ytics 100 offset 0,0
 set mytics 2
  
 plot \
-D05_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\
-D05_27 using 1:2:3 with yerrorlines ls 102 pt  3 ps 1.5 lw 3 title ''
+con95_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\
+con95_27 using 1:2:3 with yerrorlines ls 102 pt  3 ps 1.5 lw 3 title ''
 
 set label 31 at graph 0.01,0.93 '(b)' front
 
 set lmargin screen 0.58
 set rmargin screen 0.98
  
-set format x '$%g$'
-set xlabel '' offset 0,0.4
-set xrange [0:0.6]
-set xtics 0.2
-set mxtics 2
+set tmargin screen 0.97
+set bmargin screen 0.53
+
+set xlabel '{\Large Time $t$ [$\SI{}{s}$]}' offset 0,0.4
 
 set ylabel '' offset -1.0,0
-set format y '$%g$'
-set yrange [0:1400]
-set ytics 700 offset 0,0
-set mytics 2
- 
+
 plot \
-D08_02_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\
-D08_02_27 using 1:2:3 with yerrorlines ls 102 pt  3 ps 1.5 lw 3 title ''
+con100_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\
+con100_27 using 1:2:3 with yerrorlines ls 102 pt  3 ps 1.5 lw 3 title ''
 
 set label 31 at graph 0.01,0.93 '(c)' front
 
-set lmargin screen 0.05
-set rmargin screen 0.45
- 
-set tmargin screen 0.66
-set bmargin screen 0.34
-
-set format x '$%g$'
-set xrange [0:8]
-set xtics 4
-
-set ylabel '{\Large $U$ $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
-set format y '$%g$'
-set yrange [0:90]
-set ytics 30 offset 0,0
-
-plot \
-D08_13_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\
-D08_13_27 using 1:2:3 with yerrorlines ls 102 pt  3 ps 1.5 lw 3 title ''
-
-set label 31 at graph 0.01,0.93 '(d)' front
-
-set lmargin screen 0.58
-set rmargin screen 0.98
-
-set xlabel '{\Large Time $t$ [$\SI{}{s}$]}' offset 0,0.4
-set format x '$%g$'
-set xrange [0:1.8]
-set xtics 0.6
-
-set ylabel '' offset 1,0
-set format y '$%g$'
-set yrange [0:300]
-set ytics 100 offset 0,0
-
-plot \
-D15_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\
-D15_27 using 1:2:3 with yerrorlines ls 102 pt  3 ps 1.5 lw 3 title ''
-
-
-set label 31 at graph 0.01,0.93 '(e)' front
 
 set lmargin screen 0.05
 set rmargin screen 0.45
  
-set tmargin screen 0.32
-set bmargin screen 0.0
+set tmargin screen 0.48
+set bmargin screen 0.03
+set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
 
-set format x '$%g$'
-set xrange [0:1]
-set xtics 0.5
-
-set ylabel '{\Large $U$ $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
-set format y '$%g$'
-set yrange [0:600]
-set ytics 200 offset 0,0
 
 plot \
-D20_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\
-D20_27 using 1:2:3 with yerrorlines ls 102 pt  3 ps 1.5 lw 3 title ''
+con105_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\
+con105_27 using 1:2:3 with yerrorlines ls 102 pt  3 ps 1.5 lw 3 title ''
 
 unset multiplot
 reset
