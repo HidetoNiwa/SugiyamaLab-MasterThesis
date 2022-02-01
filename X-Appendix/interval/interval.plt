@@ -98,7 +98,7 @@ set xrange [0:2.1]
 set xtics 0.7
 set mxtics 2
 
-set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
+set ylabel '{\Large $U$ $\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
 set format y '$%g$'
 set yrange [0:300]
 set ytics 100 offset 0,0
@@ -132,6 +132,8 @@ set rmargin screen 0.45
  
 set tmargin screen 0.48
 set bmargin screen 0.03
+
+set ylabel '{\Large $U$ $\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
 
 plot \
 T20_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\

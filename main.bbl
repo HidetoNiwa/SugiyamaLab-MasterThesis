@@ -85,36 +85,11 @@ R.Green M.Wiklund and M.Ohlin.
 \newblock 擬塑性流体中の落下球に及ぼす超音波照射の影響.
 \newblock 混相流, Vol.~33, pp. 87--95, 2019.
 
-\bibitem{ref:12}
-M.T.Arigo and G.H.McKinley.
-\newblock The effects of viscoelasticity on the transient motion of a sphere in
-  a shear-thinning fluid.
-\newblock {\em Journal of Rheology}, Vol.~41, pp. 103--128, 1997.
-
-\bibitem{ref:sakanishi}
-坂西明郎.
-\newblock 〈緩和時間〉.
-\newblock 日本バイオレオロジー学会誌, Vol.~3, pp. 50--50, 1989.
-
 \bibitem{ref:10}
 Y.Tasaka T.Shiratori and Y.Murai.
 \newblock Rapid rheological characterization of a viscoelastic fluid based on
   spatiotemporal flow velocimetry.
 \newblock {\em Experimental Thermal and Fluid Science}, Vol.~71, pp. 1--13,
   2016.
-
-\bibitem{ref:Rahimi2007}
-A.Peretz S.Rahimi and B.Natan.
-\newblock On shear rheology of gel propellants.
-\newblock {\em Propellants, Explosives, Pyrotechnics: An International Journal
-  Dealing with Scientific and Technological Aspects of Energetic Materials},
-  Vol.~32, pp. 165--174, 2007.
-
-\bibitem{ref:Agi2018}
-J.Gbonhinbor A.Agi, R.Junin and M.Onyekonwu.
-\newblock Natural polymer flow behaviour in porous media for enhanced oil
-  recovery applications: a review.
-\newblock {\em Journal of Petroleum Exploration and Production Technology},
-  Vol.~8, pp. 1349--1362, 2018.
 
 \end{thebibliography}
