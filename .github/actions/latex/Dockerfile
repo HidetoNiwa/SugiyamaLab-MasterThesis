@@ -15,6 +15,7 @@ RUN apt-get update \
     evince \
     texlive-fonts-recommended \
     texlive-fonts-extra \
+    texlive-science \
     ghostscript \
   && rm -rf /var/lib/apt/lists/*
 
