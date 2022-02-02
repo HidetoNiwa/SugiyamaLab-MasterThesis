@@ -115,7 +115,7 @@ set xrange [1E6:1E8]
 set xtics 10
 set mxtics 10
  
-set ylabel '{\Large $ U_\text{T} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $ U_\text{off} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [400:1300]
 set ytics 400 offset 0.5,0
@@ -189,7 +189,7 @@ set xlabel '{\Large $\left(\Delta\rho\right)^{\frac{1}{n}}$ [$($kg/m$^3)^{\frac{
 set xrange [2E11:1E14]
 set xtics 1E10,10,1E14
  
-set ylabel '{\Large $ U_\text{T} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $ U_\text{off} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0:150]
 set ytics 50 offset 0.5,0

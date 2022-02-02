@@ -111,7 +111,7 @@ set xrange [0:8000]
 set xtics 4000
 set mxtics 2
  
-set ylabel '{\Large $ U_\text{T} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $ U_\text{off} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [300:1500]
 set ytics 600 offset 0.5,0
@@ -196,7 +196,7 @@ set xrange [0:8000]
 set xtics 4000
 set mxtics 2
  
-set ylabel '{\Large $ U_\text{T} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $ U_\text{off} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0:150]
 set ytics 50 offset 0.5,0

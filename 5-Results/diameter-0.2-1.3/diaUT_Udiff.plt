@@ -89,7 +89,7 @@ set xrange [4:22]
 set xtics 4
 set mxtics 2
  
-set ylabel '{\Large $ U_\text{T} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $ U_\text{off} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0:1400]
 set ytics 700

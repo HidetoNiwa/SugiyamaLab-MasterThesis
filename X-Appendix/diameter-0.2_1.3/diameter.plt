@@ -145,7 +145,7 @@ set format x '$%g$'
 set xrange [0:8]
 set xtics 4
 
-set ylabel '{\Large $U$ $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $U$ $\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
 set format y '$%g$'
 set yrange [0:90]
 set ytics 30 offset 0,0

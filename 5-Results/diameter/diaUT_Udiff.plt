@@ -91,14 +91,14 @@ set xrange [2:22]
 set xtics 4
 set mxtics 2
  
-set ylabel '{\Large $ U_\text{T} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $ U_\text{off} \displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0:600]
 set ytics 200
 set mytics 2
  
 plot \
-D8 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '$ U_\text{T}$',\
+D8 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '$ U_\text{off}$',\
 D10 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
 D11 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
 D12 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
