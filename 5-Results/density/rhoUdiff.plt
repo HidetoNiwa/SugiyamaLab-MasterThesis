@@ -98,7 +98,7 @@ set bmargin screen 0.52
  
 ####################################################################################################
  
-set key width 0.5 box opaque spacing 1.1 samplen 1 Left reverse
+set key width 0 box opaque spacing 1.1 samplen 1 Left reverse
 set key at screen 1,0.20
  
 ####################################################################################################
@@ -107,14 +107,14 @@ set label 31 at graph 0.02,0.93 '(a)' front
 
 set format x ''
 set xlabel '' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0.9:1.6]
-set ytics 1,0.2,1.6
+set ytics 1,0.3,1.6
 set mytics 2
  
 plot \
@@ -124,7 +124,9 @@ stainless_02 using ($1-1)*1000:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 
 brass_02 using ($1-1)*1000:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
 
 ####################################################################################################
- 
+
+set tmargin screen 1
+set bmargin screen 0.52
 set lmargin screen 0.296667
 set rmargin screen 0.553333
  
@@ -132,13 +134,18 @@ set rmargin screen 0.553333
 
 set label 31 at graph 0.02,0.93 '(b)' front
 
+unset logscale xy
+
 set format x ''
 set xlabel '' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '' offset 0.5,0
+set format y '$%g$'
+set ytics 1,0.3,1.6
+set mytics 2
 
 plot \
 al_05 using ($1-1)*1000:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
@@ -146,9 +153,10 @@ alumina_05 using ($1-1)*1000:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 
 stainless_05 using ($1-1)*1000:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
 brass_05 using ($1-1)*1000:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
 
-
 ####################################################################################################
- 
+
+set tmargin screen 1
+set bmargin screen 0.52
 set lmargin screen 0.573333
 set rmargin screen 0.83
  
@@ -156,13 +164,19 @@ set rmargin screen 0.83
 
 set label 31 at graph 0.02,0.93 '(c)' front
 
+unset logscale xy
+
 set format x ''
 set xlabel '' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '' offset 0.5,0
+
+set format y '$%g$'
+set ytics 1,0.3,1.6
+set mytics 2
 
 plot \
 al_07 using ($1-1)*1000:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
@@ -182,13 +196,18 @@ set bmargin screen 0
 
 set label 31 at graph 0.02,0.93 '(d)' front
 
+unset logscale xy
+
 set format x '$%g$'
 set xlabel '{\Large $\Delta\rho$ [$\SI{}{kg/m^3}$]}' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
+set format y '$%g$'
+set ytics 1,0.3,1.6
+set mytics 2
  
 plot \
 al_10 using ($1-1)*1000:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
@@ -200,18 +219,25 @@ brass_10 using ($1-1)*1000:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 ti
  
 set lmargin screen 0.296667
 set rmargin screen 0.553333
+set tmargin screen 0.48
+set bmargin screen 0
  
 ####################################################################################################
 
 set label 31 at graph 0.02,0.93 '(e)' front
 
+unset logscale xy
+
 set format x '$%g$'
 set xlabel '{\Large $\Delta\rho$ [$\SI{}{kg/m^3}$]}' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '' offset 0.5,0
+set format y '$%g$'
+set ytics 1,0.3,1.6
+set mytics 2
  
 plot \
 al_13 using ($1-1)*1000:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
@@ -236,8 +262,8 @@ set label 31 at graph 0.02,0.93 '(f)' front
 
 set format x '$%g$'
 set xlabel '{\Large $\Delta\rho$ [$\SI{}{kg/m^3}$]}' offset 0,0.4
-set xrange [0:9000]
-set xtics 4500
+set xrange [0:8000]
+set xtics 4000
 set mxtics 2
  
 set ylabel '' offset 0.5,0

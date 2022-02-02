@@ -35,6 +35,7 @@ d5_02 = sprintf('../diameter-0.2-1.3/data/0.2-5.csv')
 d8_02 = sprintf('../diameter-0.2-1.3/data/0.2-8.csv')
 d10_02 = sprintf('../diameter-0.2-1.3/data/0.2-10.csv')
 
+d8_13 = sprintf('../diameter-0.2-1.3/data/1.3-8.csv')
 d10_13 = sprintf('../diameter-0.2-1.3/data/1.3-10.csv')
 d15_13 = sprintf('../diameter-0.2-1.3/data/1.3-15.csv')
 d20_13 = sprintf('../diameter-0.2-1.3/data/1.3-20.csv')
@@ -72,8 +73,7 @@ lx = 40.0
 ly = 200.0
  
 set multiplot
- 
- 
+
 set style line 101 lt 1 lw 4 ps 2 lc rgb '#d62728' # red
 set style line 102 lt 1 lw 4 ps 2 lc rgb '#1f77b4' # blue
 set style line 103 lt 1 lw 4 ps 2 lc rgb '#2ca02c' # green
@@ -104,6 +104,8 @@ set style line 305 lt 1 lw 4 ps 2 lc rgb '#a305ff'
 set style line 306 lt 1 lw 4 ps 2 lc rgb '#8e00e0'
 set style line 307 lt 1 lw 4 ps 2 lc rgb '#7800bd'
 set style line 308 lt 1 lw 4 ps 2 lc rgb '#610099'
+
+set style arrow  1 size graph 0.02,20  filled linewidth 8
 
 set palette defined (0 '#999999',\
                      1 '#00008b',\
@@ -150,7 +152,12 @@ set mytics 10
 set pm3d interpolate 100,100
 set cbrange[1:1.2]
 set cbtics 0.1
-set cblabel '$U_{on}/U_{off}$'
+set cblabel '$U_\text{on}/U_\text{off}$'
+
+set arrow 1 as 1 from 8,2 to 8,0.2
+set arrow 2 as 1 from 8,5 to 8,50
+set label 14 center at screen 0.95,0.68 'viscous' rotate by 90
+set label 15 center at screen 0.95,0.26 'elastic' rotate by 90
 
 set isosamples 2,2
 
@@ -191,6 +198,7 @@ d5_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
 d10_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
 d15_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
 d20_05 using 3:2:7 with p lc palette pt 1 ps 2 lw 6 title '',\
+d8_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d10_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d15_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\
 d20_13 using 3:2:5 with p lc palette pt 1 ps 2 lw 6 title '',\

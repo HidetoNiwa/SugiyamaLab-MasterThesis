@@ -10,6 +10,10 @@
 \usepackage{bm}
 \usepackage{amssymb}
 \usepackage{tocloft}
+\usepackage{tikz} % 参考：https://molina.jp/blog/tikz%E3%81%A6%E3%83%95%E3%83%AD%E3%83%BC%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88%E3%82%92%E6%9B%B8%E3%81%8F/
+\usepackage{siunitx} % SI単位系を使用するため 参考：https://medemanabu.net/latex/siunitx-package/
+%wsl等Ubuntu環境で存在しないと言われる場合は，下記コマンドを実行してください 参考：https://techoverflow.net/2019/07/30/how-to-fix-latex-error-file-siunitx-sty-not-found-on-ubuntu/
+% sudo apt -y install texlive-science
 
 \makeatletter
 	\renewcommand{\theequation}{% 式番号の付け方
@@ -47,7 +51,12 @@
 \renewcommand{\refname}{参考文献}
 \renewcommand{\abstractname}{Abstract}
 
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary {shapes.misc}
+\usetikzlibrary{positioning}
+
 \begin{document}
+\tikzset{auto}
 \input{0-Cover/cover.tex}
 \newpage
 \input{1-Background/abstract.tex}
@@ -58,7 +67,7 @@
 \newpage
 \pagestyle{fancy}
 \rhead{}
-\lhead{\rightmark}
+\lhead{\leftmark}
 \cfoot{\thepage}
 \rfoot{}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -89,13 +98,9 @@
 \newpage
 \begin{appendices}
 	\input{X-Appendix/A-exp_data.tex}
-	\clearpage
 	\input{X-Appendix/B-vaccum_magnet.tex}
-	\clearpage
 	\input{X-Appendix/C-change_over_time.tex}
-	\clearpage
 	\input{X-Appendix/D-solution_accuracy.tex}
-	\clearpage
 	\input{X-Appendix/E-change_time.tex}
 	%    \clearpage
 	%    \input{X-Appendix/A-method_change.tex}

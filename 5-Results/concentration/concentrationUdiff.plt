@@ -103,10 +103,8 @@ set key at screen 0.195,1
  
 ####################################################################################################
 
-set logscale y
-
-set format x '$%g$'
-set xlabel '{\small PAA concentration $[$wt.\%\SI{}{}$]$}' offset 0,0.4
+set format x '$%2.1f$'
+set xlabel '{\footnotesize PAA concentration $[$wt.\%\SI{}{}$]$}' offset 0,0.4
 set xrange [0:1.6]
 set xtics 0.2,0.4,1.5
 set mxtics 2
@@ -114,7 +112,7 @@ set mxtics 2
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0.9:1.6]
-set ytics 1.0,0.01,1.5
+set ytics 1.0,0.2,1.6
 set mytics 2
 
 set label 31 at graph 0.02,0.93 '(a)' front
@@ -133,6 +131,7 @@ set key at screen 0.44,1
 set label 31 at graph 0.02,0.93 '(b)' front
 
 set ylabel ''
+set format y ''
 
 plot \
 alumina_02 using 8:6:7 with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'Alumina',\

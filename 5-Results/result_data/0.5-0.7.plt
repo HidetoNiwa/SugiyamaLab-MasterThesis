@@ -105,14 +105,14 @@ set label 31 at graph 0.01,0.93 '(a)' front
 
 set format x '$%g$'
 set xlabel '' offset 0,0.4
-set xrange [0:5]
-set xtics 2.5
+set xrange [0:14]
+set xtics 7
 set mxtics 2
  
-set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $U\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
-set yrange [0:200]
-set ytics 100 offset 0,0
+set yrange [0:50]
+set ytics 25 offset 0,0
 set mytics 2
  
 plot \
@@ -156,7 +156,7 @@ set xlabel '' offset 0,0.4
 set xrange [0:2]
 set xtics 1
 
-set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $U\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0:400]
 set ytics 200 offset 0,0
@@ -201,7 +201,7 @@ set xrange [0:14]
 set xtics 7
 set mxtics 2
 
-set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
+set ylabel '{\Large $U\displaystyle [$\SI{}{mm/s}$]$}' offset -0.5,0
 set format y '$%g$'
 set yrange [0:40]
 set ytics 20 offset 0,0
@@ -247,7 +247,7 @@ set xrange [0:2.4]
 set xtics 1.2
 set mxtics 2
 
-set ylabel '{\Large U $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
+set ylabel '{\Large $U\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
 set yrange [0:300]
 set ytics 100 offset 0,0

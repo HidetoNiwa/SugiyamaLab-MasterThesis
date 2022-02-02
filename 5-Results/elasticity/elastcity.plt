@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 5, 3.4 standalone color solid 9
+set terminal epslatex size 5, 6 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -36,6 +36,7 @@ d05_02 = sprintf('../diameter-0.2-1.3/data/0.2-5.csv')
 d08_02 = sprintf('../diameter-0.2-1.3/data/0.2-8.csv')
 d10_02 = sprintf('../diameter-0.2-1.3/data/0.2-10.csv')
 
+d8_13 = sprintf('../diameter-0.2-1.3/data/1.3-8.csv')
 d10_13 = sprintf('../diameter-0.2-1.3/data/1.3-10.csv')
 d15_13 = sprintf('../diameter-0.2-1.3/data/1.3-15.csv')
 d20_13 = sprintf('../diameter-0.2-1.3/data/1.3-20.csv')
@@ -118,110 +119,109 @@ set format '$%g$'
 set size ratio 1
 set style fill solid 10
 
-set label 991 center at screen 0.65,0.04 point ls 111 pt 6 ps 1.5
-set label 902 center at screen 0.75,0.04 '\footnotesize{Iwamuro(2020)[8]}'
+set label 991 center at screen 0.75,0.0 point ls 111 pt 6 ps 1.5
+set label 902 center at screen 0.85,0.0 '\footnotesize{Iwamuro(2020)[8]}'
 
-set label 12 center at screen 0,0.20 '\footnotesize{0.2 wt.\%}'
-set label 13 center at screen 0,0.16 '\footnotesize{0.5 wt.\%}'
-set label 14 center at screen 0,0.12 '\footnotesize{0.7 wt.\%}'
-set label 15 center at screen 0,0.08 '\footnotesize{1.0 wt.\%}'
-set label 16 center at screen 0,0.04 '\footnotesize{1.3 wt.\%}'
+set label 12 center at screen 0,0.125 '\footnotesize{0.2 wt.\%}'
+set label 13 center at screen 0,0.1 '\footnotesize{0.5 wt.\%}'
+set label 14 center at screen 0,0.075 '\footnotesize{0.7 wt.\%}'
+set label 15 center at screen 0,0.05 '\footnotesize{1.0 wt.\%}'
+set label 16 center at screen 0,0.025 '\footnotesize{1.3 wt.\%}'
 set label 17 center at screen 0,0 '\footnotesize{1.5 wt.\%}'
 
-set label 22 center at screen 0.11,0.27 '\footnotesize{Aluminum}'
-set label 26 center at screen 0.22,0.27 '\footnotesize{Alumina}'
-set label 23 center at screen 0.33,0.30 '\footnotesize{Steel/}'
-set label 24 center at screen 0.33,0.27 '\footnotesize{Stainless}'
-set label 25 center at screen 0.44,0.27 '\footnotesize{Brass}'
+set label 22 center at screen 0.11,0.175 '\footnotesize{Aluminum}'
+set label 26 center at screen 0.22,0.175 '\footnotesize{Alumina}'
+set label 23 center at screen 0.33,0.195 '\footnotesize{Steel/}'
+set label 24 center at screen 0.33,0.175 '\footnotesize{Stainless}'
+set label 25 center at screen 0.44,0.175 '\footnotesize{Brass}'
 
-set label 32 center at screen 0.11,0.24 '\footnotesize{2700}'
-set label 36 center at screen 0.22,0.24 '\footnotesize{3800}'
-set label 33 center at screen 0.33,0.24 '\footnotesize{7900}'
-set label 34 center at screen 0.44,0.24 '\footnotesize{8700}'
+set label 32 center at screen 0.11,0.15 '\footnotesize{2700}'
+set label 36 center at screen 0.22,0.15 '\footnotesize{3800}'
+set label 33 center at screen 0.33,0.15 '\footnotesize{7900}'
+set label 34 center at screen 0.44,0.15 '\footnotesize{8700}'
 
-set label 39 center at screen 0,0.24 '\footnotesize{$\rho$[kg/m$^3$]}'
+set label 39 center at screen 0,0.15 '\footnotesize{$\rho$[kg/m$^3$]}'
 
 #0.2
-set label 52 center at screen 0.11,0.20 point ls 101 pt 2 ps 1.5
-set label 53 center at screen 0.33,0.20 point ls 103 pt 2 ps 1.5
-set label 54 center at screen 0.44,0.20 point ls 104 pt 2 ps 1.5
-set label 55 center at screen 0.22,0.20 point ls 102 pt 2 ps 1.5
+set label 52 center at screen 0.11,0.125 point ls 101 pt 2 ps 1.5
+set label 53 center at screen 0.33,0.125 point ls 103 pt 2 ps 1.5
+set label 54 center at screen 0.44,0.125 point ls 104 pt 2 ps 1.5
+set label 55 center at screen 0.22,0.125 point ls 102 pt 2 ps 1.5
 
 #0.5
-set label 62 center at screen 0.11,0.16 point ls 101 pt 6 ps 1.5
-set label 63 center at screen 0.33,0.16 point ls 103 pt 6 ps 1.5
-set label 64 center at screen 0.44,0.16 point ls 104 pt 6 ps 1.5
-set label 65 center at screen 0.22,0.16 point ls 102 pt 6 ps 1.5
+set label 62 center at screen 0.11,0.1 point ls 101 pt 6 ps 1.5
+set label 63 center at screen 0.33,0.1 point ls 103 pt 6 ps 1.5
+set label 64 center at screen 0.44,0.1 point ls 104 pt 6 ps 1.5
+set label 65 center at screen 0.22,0.1 point ls 102 pt 6 ps 1.5
 
 #0.7
-set label 72 center at screen 0.11,0.12 point ls 101 pt 4 ps 1.5
-set label 73 center at screen 0.33,0.12 point ls 103 pt 4 ps 1.5
-set label 74 center at screen 0.44,0.12 point ls 104 pt 4 ps 1.5
-set label 75 center at screen 0.22,0.12 point ls 102 pt 4 ps 1.5
+set label 72 center at screen 0.11,0.075 point ls 101 pt 4 ps 1.5
+set label 73 center at screen 0.33,0.075 point ls 103 pt 4 ps 1.5
+set label 74 center at screen 0.44,0.075 point ls 104 pt 4 ps 1.5
+set label 75 center at screen 0.22,0.075 point ls 102 pt 4 ps 1.5
 
 #1.0
-set label 82 center at screen 0.11,0.08 point ls 101 pt 8 ps 1.5
-set label 83 center at screen 0.33,0.08 point ls 103 pt 8 ps 1.5
-set label 84 center at screen 0.44,0.08 point ls 104 pt 8 ps 1.5
-set label 85 center at screen 0.22,0.08 point ls 102 pt 8 ps 1.5
+set label 82 center at screen 0.11,0.05 point ls 101 pt 8 ps 1.5
+set label 83 center at screen 0.33,0.05 point ls 103 pt 8 ps 1.5
+set label 84 center at screen 0.44,0.05 point ls 104 pt 8 ps 1.5
+set label 85 center at screen 0.22,0.05 point ls 102 pt 8 ps 1.5
 
 #1.3
-set label 102 center at screen 0.11,0.04 point ls 101 pt 10 ps 1.5
-set label 103 center at screen 0.33,0.04 point ls 103 pt 10 ps 1.5
-set label 104 center at screen 0.44,0.04 point ls 104 pt 10 ps 1.5
-set label 105 center at screen 0.22,0.04 point ls 102 pt 10 ps 1.5
+set label 102 center at screen 0.11,0.025 point ls 101 pt 10 ps 1.5
+set label 103 center at screen 0.33,0.025 point ls 103 pt 10 ps 1.5
+set label 104 center at screen 0.44,0.025 point ls 104 pt 10 ps 1.5
+set label 105 center at screen 0.22,0.025 point ls 102 pt 10 ps 1.5
 
 set label 113 center at screen 0.33,0 point ls 103 pt 12 ps 1.5
 set label 114 center at screen 0.44,0 point ls 104 pt 12 ps 1.5
 set label 115 center at screen 0.22,0 point ls 102 pt 12 ps 1.5
 
-set label 110 center at screen 0.56,0.25 '\footnotesize{Steel}'
-set label 111 center at screen 0.56,0.14 '\footnotesize{1.0 wt.\%}'
-set label 999 center at screen 0.56,0.18 '\footnotesize{0.5 wt.\%}'
-set label 998 center at screen 0.56,0.22 '\footnotesize{0.2 wt.\%}'
-set label 997 center at screen 0.56,0.10 '\footnotesize{1.3 wt.\%}'
-set label 112 center at screen 0.56,0.28 '\footnotesize{$D$[mm]}'
+set label 110 center at screen 0.56,0.15 '\footnotesize{Steel}'
+set label 111 center at screen 0.56,0.05 '\footnotesize{1.0 wt.\%}'
+set label 999 center at screen 0.56,0.1 '\footnotesize{0.5 wt.\%}'
+set label 998 center at screen 0.56,0.125 '\footnotesize{0.2 wt.\%}'
+set label 997 center at screen 0.56,0.025 '\footnotesize{1.3 wt.\%}'
+set label 112 center at screen 0.56,0.175 '\footnotesize{$D$[mm]}'
 
-set label 121 center at screen 0.65,0.265 '\small{5}'
-set label 122 center at screen 0.696,0.265 '\small{8}'
-set label 123 center at screen 0.742,0.265 '\small{10}'
-set label 124 center at screen 0.788,0.265 '\small{11}'
-set label 125 center at screen 0.834,0.265 '\small{12}'
-set label 126 center at screen 0.88,0.265 '\small{13}'
-set label 127 center at screen 0.926,0.265 '\small{14}'
-set label 128 center at screen 0.972,0.265 '\small{15}'
-set label 129 center at screen 1.018,0.265 '\small{20}'
+set label 121 center at screen 0.65,0.1625 '\small{5}'
+set label 122 center at screen 0.696,0.1625 '\small{8}'
+set label 123 center at screen 0.742,0.1625 '\small{10}'
+set label 124 center at screen 0.788,0.1625 '\small{11}'
+set label 125 center at screen 0.834,0.1625 '\small{12}'
+set label 126 center at screen 0.88,0.1625 '\small{13}'
+set label 127 center at screen 0.926,0.1625 '\small{14}'
+set label 128 center at screen 0.972,0.1625 '\small{15}'
+set label 129 center at screen 1.018,0.1625 '\small{20}'
 
-set label 132 center at screen 0.696,0.14 point ls 301 pt 14 ps 1.5
-set label 133 center at screen 0.742,0.14 point ls 302 pt 14 ps 1.5
-set label 134 center at screen 0.788,0.14 point ls 303 pt 14 ps 1.5
-set label 135 center at screen 0.834,0.14 point ls 304 pt 14 ps 1.5
-set label 136 center at screen 0.88,0.14 point ls 305 pt 14 ps 1.5
-set label 137 center at screen 0.926,0.14 point ls 306 pt 14 ps 1.5
-set label 138 center at screen 0.972,0.14 point ls 307 pt 14 ps 1.5
-set label 131 center at screen 1.018,0.14 point ls 308 pt 14 ps 1.5
+set label 132 center at screen 0.696,0.05 point ls 301 pt 14 ps 1.5
+set label 133 center at screen 0.742,0.05 point ls 302 pt 14 ps 1.5
+set label 134 center at screen 0.788,0.05 point ls 303 pt 14 ps 1.5
+set label 135 center at screen 0.834,0.05 point ls 304 pt 14 ps 1.5
+set label 136 center at screen 0.88,0.05 point ls 305 pt 14 ps 1.5
+set label 137 center at screen 0.926,0.05 point ls 306 pt 14 ps 1.5
+set label 138 center at screen 0.972,0.05 point ls 307 pt 14 ps 1.5
+set label 131 center at screen 1.018,0.05 point ls 308 pt 14 ps 1.5
  
-set label 181 center at screen 1.018,0.18 point ls 308 pt 6 ps 1.5
-set label 182 center at screen 0.972,0.18 point ls 307 pt 6 ps 1.5
-set label 183 center at screen 0.742,0.18 point ls 302 pt 6 ps 1.5
-set label 184 center at screen 0.65,0.18 point ls 301 pt 6 ps 1.5
+set label 181 center at screen 1.018,0.1 point ls 308 pt 6 ps 1.5
+set label 182 center at screen 0.972,0.1 point ls 307 pt 6 ps 1.5
+set label 183 center at screen 0.742,0.1 point ls 302 pt 6 ps 1.5
+set label 184 center at screen 0.65,0.1 point ls 301 pt 6 ps 1.5
 
-set label 152 center at screen 0.65,0.22 point ls 301 pt 2 ps 1.5
-set label 153 center at screen 0.696,0.22 point ls 302 pt 2 ps 1.5
-set label 154 center at screen 0.742,0.22 point ls 303 pt 2 ps 1.5
+set label 152 center at screen 0.65,0.125 point ls 301 pt 2 ps 1.5
+set label 153 center at screen 0.696,0.125 point ls 302 pt 2 ps 1.5
+set label 154 center at screen 0.742,0.125 point ls 303 pt 2 ps 1.5
 
-set label 161 center at screen 0.742,0.10 point ls 302 pt 10 ps 1.5
-set label 162 center at screen 0.972,0.10 point ls 307 pt 10 ps 1.5
-set label 163 center at screen 1.018,0.10 point ls 308 pt 10 ps 1.5
+set label 161 center at screen 0.696,0.025 point ls 301 pt 10 ps 1.5
+set label 162 center at screen 0.742,0.025 point ls 302 pt 10 ps 1.5
+set label 163 center at screen 0.972,0.025 point ls 307 pt 10 ps 1.5
+set label 164 center at screen 1.018,0.025 point ls 308 pt 10 ps 1.5
 
 ####################################################################################################
- 
-set lmargin screen 0.26
-set rmargin screen 0.62
+set lmargin screen 0
+set rmargin screen 0.49
 
-set tmargin screen 1
-set bmargin screen 0.5
- 
+set tmargin screen 0.59
+set bmargin screen 0.25
 ####################################################################################################
  
 set key width 0.5 box opaque spacing 1.1 samplen 1 Left reverse
@@ -229,12 +229,12 @@ set key at screen 1,0.13
 unset key
  
 ####################################################################################################
-set label 31 at graph 0.02,0.95 '(b)' front
+set label 31 at graph 0.02,0.95 '(c)' front
 
 set logscale x
 
 set format x '$%g$'
-set xlabel '{\Large $\displaystyle \frac{\tau_{U}}{\tau_{0}} $ [$\SI{}{-}$]}' offset 0,-0.5
+set xlabel '{\Large $\displaystyle \frac{\tau_{U}}{\tau_{0}} $ [$\SI{}{-}$]}' offset 0,0.5
 set xrange [0.1:70]
 set xtics 10
 set mxtics 10
@@ -285,19 +285,20 @@ d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
 d08_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
 d10_02 using 2:5:6 with yerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
+d8_13 using 2:5:6 with yerrorbars ls 301 pt 10 ps 1.6 lw 4 title '',\
 d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
 d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
 d20_13 using 2:5:6 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
 
-set lmargin screen 0.62
+set lmargin screen 0.51
 set rmargin screen 1.0
 
-set label 31 at graph 0.02,0.95 '(c)' front
+set label 31 at graph 0.02,0.95 '(d)' front
 
 set xrange [0.1:3]
 
-set ylabel '' offset 0,0
-set format y ''
+set ylabel '{\Large $\displaystyle U_\text{on}/U_\text{off}[$\SI{}{-}$]$}' offset 1,0
+set format y '$%g$'
 set yrange [0.8:1.6]
 set ytics 0.2 offset 0,0
 set mytics 2
@@ -341,70 +342,142 @@ d20_05 using 2:7:8 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
 d05_02 using 2:5:6 with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
 d08_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
 d10_02 using 2:5:6 with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d8_13 using 2:5:6 with yerrorbars ls 301 pt 10 ps 1.6 lw 4 title '',\
 d10_13 using 2:5:6 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
 d15_13 using 2:5:6 with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
 d20_13 using 2:5:6 with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
 
 set lmargin screen 0
-set rmargin screen 0.18
+set rmargin screen 0.49
+
+set tmargin screen 1
+set bmargin screen 0.66
 
 set label 31 at graph 0.02,0.95 '(a)' front
 
-set xrange [0.1:100]
+set xrange [1:2000]
 
 set logscale y
 
-set size ratio 2.25
-
-set ylabel '{\Large $\displaystyle U_\text{T}[$\SI{}{mm/s}$]$}' offset 1,0
+set xlabel '{\Large $\displaystyle U_\text{off}[$\SI{}{mm/s}$]$}' offset 0,0.5
+set ylabel '{\Large $\displaystyle \frac{\tau_{U}}{\tau_{0}} $ [$\SI{}{-}$]}' offset 0,0
 set format y '$%g$'
-set yrange [1:2000]
+set format x '$10^{%L}$'
+set yrange [0.1:100]
 set ytics 10 offset 0,0
 set mytics 10
 
+set xtics 10 offset 0,0
+
 plot \
-iwamuro using 1:($6)*1000 with points  ls 111 pt  6 ps 1.6 lw 4 title 'iwamuro',\
-al_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 2 ps 1.6 lw 4 title '',\
-al_05 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 6 ps 1.6 lw 4 title '',\
-al_07 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 4 ps 1.6 lw 4 title '',\
-al_10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 8 ps 1.6 lw 4 title '',\
-al_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 101 pt 10 ps 1.6 lw 4 title '',\
-alumina_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 2 ps 1.6 lw 4 title '',\
-alumina_05 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 6 ps 1.6 lw 4 title '',\
-alumina_07 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 4 ps 1.6 lw 4 title '',\
-alumina_10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 8 ps 1.6 lw 4 title '',\
-alumina_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 10 ps 1.6 lw 4 title '',\
-alumina_15 using 2:($7)*1000:($8)*1000 with yerrorbars ls 102 pt 12 ps 1.6 lw 4 title '',\
-stainless_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 2 ps 1.6 lw 4 title '',\
-stainless_05 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 6 ps 1.6 lw 4 title '',\
-stainless_07 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 4 ps 1.6 lw 4 title '',\
-stainless_10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 8 ps 1.6 lw 4 title '',\
-stainless_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 10 ps 1.6 lw 4 title '',\
-stainless_15 using 2:($7)*1000:($8)*1000 with yerrorbars ls 103 pt 12 ps 1.6 lw 4 title '',\
-brass_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 2 ps 1.6 lw 4 title '',\
-brass_05 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 6 ps 1.6 lw 4 title '',\
-brass_07 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 4 ps 1.6 lw 4 title '',\
-brass_10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 8 ps 1.6 lw 4 title '',\
-brass_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 10 ps 1.6 lw 4 title '',\
-brass_15 using 2:($7)*1000:($8)*1000 with yerrorbars ls 104 pt 12 ps 1.6 lw 4 title '',\
-d8 using 2:($7)*1000:($8)*1000 with yerrorbars ls 301 pt 14 ps 1.6 lw 4 title '',\
-d10 using 2:($7)*1000:($8)*1000 with yerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
-d11 using 2:($7)*1000:($8)*1000 with yerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
-d12 using 2:($7)*1000:($8)*1000 with yerrorbars ls 304 pt  14 ps 1.6 lw 4 title '',\
-d13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 305 pt 14 ps 1.6 lw 4 title '',\
-d14 using 2:($7)*1000:($8)*1000 with yerrorbars ls 306 pt 14 ps 1.6 lw 4 title '',\
-d15 using 2:($7)*1000:($8)*1000 with yerrorbars ls 307 pt 14 ps 1.6 lw 4 title '',\
-d20 using 2:($7)*1000:($8)*1000 with yerrorbars ls 308 pt 14 ps 1.6 lw 4 title '',\
-d05_05 using 2:5:6 with yerrorbars ls 301 pt 6 ps 1.6 lw 4 title '',\
-d10_05 using 2:5:6 with yerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
-d15_05 using 2:5:6 with yerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
-d20_05 using 2:5:6 with yerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
-d05_02 using 2:($7):($8) with yerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
-d08_02 using 2:($7):($8) with yerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
-d10_02 using 2:($7)*1000:($8)*1000 with yerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
-d10_13 using 2:($7)*1000:($8)*1000 with yerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
-d15_13 using 2:($7):($8) with yerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
-d20_13 using 2:($7):($8) with yerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
+iwamuro using ($6)*1000:1 with points ls 111 pt  6 ps 1.6 lw 4 title 'iwamuro',\
+al_02 using ($7)*1000:2:($8)*1000 with xerrorbars ls 101 pt 2 ps 1.6 lw 4 title '',\
+al_05 using ($7)*1000:2:($8)*1000 with xerrorbars ls 101 pt 6 ps 1.6 lw 4 title '',\
+al_07 using ($7)*1000:2:($8)*1000 with xerrorbars ls 101 pt 4 ps 1.6 lw 4 title '',\
+al_10 using ($7)*1000:2:($8)*1000 with xerrorbars ls 101 pt 8 ps 1.6 lw 4 title '',\
+al_13 using ($7)*1000:2:($8)*1000 with xerrorbars ls 101 pt 10 ps 1.6 lw 4 title '',\
+alumina_02 using ($7)*1000:2:($8)*1000 with xerrorbars ls 102 pt 2 ps 1.6 lw 4 title '',\
+alumina_05 using ($7)*1000:2:($8)*1000 with xerrorbars ls 102 pt 6 ps 1.6 lw 4 title '',\
+alumina_07 using ($7)*1000:2:($8)*1000 with xerrorbars ls 102 pt 4 ps 1.6 lw 4 title '',\
+alumina_10 using ($7)*1000:2:($8)*1000 with xerrorbars ls 102 pt 8 ps 1.6 lw 4 title '',\
+alumina_13 using ($7)*1000:2:($8)*1000 with xerrorbars ls 102 pt 10 ps 1.6 lw 4 title '',\
+alumina_15 using ($7)*1000:2:($8)*1000 with xerrorbars ls 102 pt 12 ps 1.6 lw 4 title '',\
+stainless_02 using ($7)*1000:2:($8)*1000 with xerrorbars ls 103 pt 2 ps 1.6 lw 4 title '',\
+stainless_05 using ($7)*1000:2:($8)*1000 with xerrorbars ls 103 pt 6 ps 1.6 lw 4 title '',\
+stainless_07 using ($7)*1000:2:($8)*1000 with xerrorbars ls 103 pt 4 ps 1.6 lw 4 title '',\
+stainless_10 using ($7)*1000:2:($8)*1000 with xerrorbars ls 103 pt 8 ps 1.6 lw 4 title '',\
+stainless_13 using ($7)*1000:2:($8)*1000 with xerrorbars ls 103 pt 10 ps 1.6 lw 4 title '',\
+stainless_15 using ($7)*1000:2:($8)*1000 with xerrorbars ls 103 pt 12 ps 1.6 lw 4 title '',\
+brass_02 using ($7)*1000:2:($8)*1000 with xerrorbars ls 104 pt 2 ps 1.6 lw 4 title '',\
+brass_05 using ($7)*1000:2:($8)*1000 with xerrorbars ls 104 pt 6 ps 1.6 lw 4 title '',\
+brass_07 using ($7)*1000:2:($8)*1000 with xerrorbars ls 104 pt 4 ps 1.6 lw 4 title '',\
+brass_10 using ($7)*1000:2:($8)*1000 with xerrorbars ls 104 pt 8 ps 1.6 lw 4 title '',\
+brass_13 using ($7)*1000:2:($8)*1000 with xerrorbars ls 104 pt 10 ps 1.6 lw 4 title '',\
+brass_15 using ($7)*1000:2:($8)*1000 with xerrorbars ls 104 pt 12 ps 1.6 lw 4 title '',\
+d8 using ($7)*1000:2:($8)*1000 with xerrorbars ls 301 pt 14 ps 1.6 lw 4 title '',\
+d10 using ($7)*1000:2:($8)*1000 with xerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
+d11 using ($7)*1000:2:($8)*1000 with xerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
+d12 using ($7)*1000:2:($8)*1000 with xerrorbars ls 304 pt  14 ps 1.6 lw 4 title '',\
+d13 using ($7)*1000:2:($8)*1000 with xerrorbars ls 305 pt 14 ps 1.6 lw 4 title '',\
+d14 using ($7)*1000:2:($8)*1000 with xerrorbars ls 306 pt 14 ps 1.6 lw 4 title '',\
+d15 using ($7)*1000:2:($8)*1000 with xerrorbars ls 307 pt 14 ps 1.6 lw 4 title '',\
+d20 using ($7)*1000:2:($8)*1000 with xerrorbars ls 308 pt 14 ps 1.6 lw 4 title '',\
+d05_05 using 5:2:6 with xerrorbars ls 301 pt 6 ps 1.6 lw 4 title '',\
+d10_05 using 5:2:6 with xerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
+d15_05 using 5:2:6 with xerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
+d20_05 using 5:2:6 with xerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
+d05_02 using ($7):2:($8) with xerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
+d08_02 using ($7):2:($8) with xerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d10_02 using ($7)*1000:2:($8)*1000 with xerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
+d8_13 using ($7):2:($8) with xerrorbars ls 301 pt 10 ps 1.6 lw 4 title '',\
+d10_13 using ($7)*1000:2:($8)*1000 with xerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
+d15_13 using ($7):2:($8) with xerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
+d20_13 using ($7):2:($8) with xerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
+
+set lmargin screen 0.51
+set rmargin screen 1
+
+set label 31 at graph 0.02,0.95 '(b)' front
+
+set xrange [1:2000]
+
+unset logscale y
+
+set xlabel '{\Large $\displaystyle U_\text{off}[$\SI{}{mm/s}$]$}' offset 0,0.5
+set format x '$10^{%L}$'
+set mytics 10
+set xtics 10 offset 0,0
+
+set ylabel '{\Large $\displaystyle U_\text{on}/U_\text{off}[$\SI{}{-}$]$}' offset 1,0
+set format y '$%g$'
+set yrange [0.8:1.6]
+set ytics 0.2 offset 0,0
+set mytics 2
+
+plot \
+iwamuro using ($6)*1000:4:5 with yerrorbars ls 111 pt  6 ps 1.6 lw 4 title 'iwamuro',\
+al_02 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 101 pt 2 ps 1.6 lw 4 title '',\
+al_05 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 101 pt 6 ps 1.6 lw 4 title '',\
+al_07 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 101 pt 4 ps 1.6 lw 4 title '',\
+al_10 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 101 pt 8 ps 1.6 lw 4 title '',\
+al_13 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 101 pt 10 ps 1.6 lw 4 title '',\
+alumina_02 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 102 pt 2 ps 1.6 lw 4 title '',\
+alumina_05 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 102 pt 6 ps 1.6 lw 4 title '',\
+alumina_07 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 102 pt 4 ps 1.6 lw 4 title '',\
+alumina_10 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 102 pt 8 ps 1.6 lw 4 title '',\
+alumina_13 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 102 pt 10 ps 1.6 lw 4 title '',\
+alumina_15 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 102 pt 12 ps 1.6 lw 4 title '',\
+stainless_02 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 103 pt 2 ps 1.6 lw 4 title '',\
+stainless_05 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 103 pt 6 ps 1.6 lw 4 title '',\
+stainless_07 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 103 pt 4 ps 1.6 lw 4 title '',\
+stainless_10 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 103 pt 8 ps 1.6 lw 4 title '',\
+stainless_13 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 103 pt 10 ps 1.6 lw 4 title '',\
+stainless_15 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 103 pt 12 ps 1.6 lw 4 title '',\
+brass_02 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 104 pt 2 ps 1.6 lw 4 title '',\
+brass_05 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 104 pt 6 ps 1.6 lw 4 title '',\
+brass_07 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 104 pt 4 ps 1.6 lw 4 title '',\
+brass_10 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 104 pt 8 ps 1.6 lw 4 title '',\
+brass_13 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 104 pt 10 ps 1.6 lw 4 title '',\
+brass_15 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 104 pt 12 ps 1.6 lw 4 title '',\
+d8 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 301 pt 14 ps 1.6 lw 4 title '',\
+d10 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
+d11 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 302 pt 14 ps 1.6 lw 4 title '',\
+d12 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 304 pt  14 ps 1.6 lw 4 title '',\
+d13 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 305 pt 14 ps 1.6 lw 4 title '',\
+d14 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 306 pt 14 ps 1.6 lw 4 title '',\
+d15 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 307 pt 14 ps 1.6 lw 4 title '',\
+d20 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 308 pt 14 ps 1.6 lw 4 title '',\
+d05_05 using 5:7:6:8 with xyerrorbars ls 301 pt 6 ps 1.6 lw 4 title '',\
+d10_05 using 5:7:6:8 with xyerrorbars ls 302 pt 6 ps 1.6 lw 4 title '',\
+d15_05 using 5:7:6:8 with xyerrorbars ls 307 pt 6 ps 1.6 lw 4 title '',\
+d20_05 using 5:7:6:8 with xyerrorbars ls 308 pt 6 ps 1.6 lw 4 title '',\
+d05_02 using ($7):5:($8):6 with xyerrorbars ls 301 pt 2 ps 1.6 lw 4 title '',\
+d08_02 using ($7):5:($8):6 with xyerrorbars ls 302 pt 2 ps 1.6 lw 4 title '',\
+d10_02 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 303 pt 2 ps 1.6 lw 4 title '',\
+d8_13 using ($7):5:($8):6 with xyerrorbars ls 301 pt 10 ps 1.6 lw 4 title '',\
+d10_13 using ($7)*1000:5:($8)*1000:6 with xyerrorbars ls 302 pt 10 ps 1.6 lw 4 title '',\
+d15_13 using ($7):5:($8):6 with xyerrorbars ls 307 pt 10 ps 1.6 lw 4 title '',\
+d20_13 using ($7):5:($8):6 with xyerrorbars ls 308 pt 10 ps 1.6 lw 4 title '',\
 
 unset multiplot
 reset

@@ -119,14 +119,14 @@ set rmargin screen 0.98
  
 set format x '$%g$'
 set xlabel '' offset 0,0.4
-set xrange [0:1.8]
-set xtics 0.6
+set xrange [0:0.6]
+set xtics 0.2
 set mxtics 2
 
 set ylabel '' offset -1.0,0
 set format y '$%g$'
-set yrange [0:300]
-set ytics 100 offset 0,0
+set yrange [0:1400]
+set ytics 700 offset 0,0
 set mytics 2
  
 plot \
@@ -142,13 +142,13 @@ set tmargin screen 0.66
 set bmargin screen 0.34
 
 set format x '$%g$'
-set xrange [0:1.8]
-set xtics 0.6
+set xrange [0:8]
+set xtics 4
 
 set ylabel '{\Large $U$ $\displaystyle [$\SI{}{mm/s}$]$}' offset 0.5,0
 set format y '$%g$'
-set yrange [0:300]
-set ytics 100 offset 0,0
+set yrange [0:90]
+set ytics 30 offset 0,0
 
 plot \
 D08_13_00 using 1:2:3 with yerrorlines ls 101 pt  3 ps 1.5 lw 3 title '',\

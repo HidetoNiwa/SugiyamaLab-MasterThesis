@@ -93,15 +93,15 @@ set xrange [0:300]
 set xtics 100
 set mxtics 2
  
-set ylabel '{\Large Height $\displaystyle H [$\SI{}{mm}$]$}' offset 1.0,0
+set ylabel '{\Large Depth $\displaystyle y [$\SI{}{mm}$]$}' offset 0,0
 set format y '$%g$'
-set yrange [0:400]
+set yrange [400:0]
 set ytics 200 offset 0,0
 set mytics 5
  
 plot \
-file_005 using 4:1 with lines ls 107 lw 2.1 title '0.05wt.\%',\
-file_020 using 4:1 with lines ls 101 lw 2.1 title '0.2wt.\%'
+file_005 using 4:(400-($1)) with lines ls 107 lw 2.1 title '0.05wt.\%',\
+file_020 using 4:(400-($1)) with lines ls 101 lw 2.1 title '0.2wt.\%'
 
 set lmargin screen 0.5
 set rmargin screen 0.840
@@ -112,8 +112,8 @@ set key at screen 0.985,0.97
 set ylabel '' offset 1.0,0
 
 plot \
-file_050 using 4:1 with lines ls 102 lw 2.1 title '0.5wt.\%',\
-file_070 using 4:1 with lines ls 103 lw 2.1 title '0.7wt.\%'
+file_050 using 4:(400-($1)) with lines ls 102 lw 2.1 title '0.5wt.\%',\
+file_070 using 4:(400-($1)) with lines ls 103 lw 2.1 title '0.7wt.\%'
 
 set lmargin screen 0
 set rmargin screen 0.34
@@ -125,11 +125,11 @@ set label 1 at graph 0.03,0.93 '(c)'
 set key at screen 0.485,0.47
 
 set xlabel '{\Large Pressure $\Delta{}P$ [$\SI{}{kPa}$]}' offset 0,0.4
-set ylabel '{\Large Height $\displaystyle H [$\SI{}{mm}$]$}' offset 1.0,0
+set ylabel '{\Large Depth $\displaystyle y [$\SI{}{mm}$]$}' offset 0,0
 
 plot \
-file_100 using 2:1 with lines ls 104 lw 2.1 title '1.0wt.\%',\
-file_130 using 4:1 with lines ls 105 lw 2.1 title '1.3wt.\%'
+file_100 using 2:(400-($1)) with lines ls 104 lw 2.1 title '1.0wt.\%',\
+file_130 using 4:(400-($1)) with lines ls 105 lw 2.1 title '1.3wt.\%'
 
 set lmargin screen 0.5
 set rmargin screen 0.84
@@ -140,7 +140,7 @@ set key at screen 0.99,0.47
 set ylabel '' offset 1.0,0
 
 plot \
-file_150 using 4:1 with lines ls 106 lw 2.1 title '1.5wt.\%'
+file_150 using 4:(400-($1)) with lines ls 106 lw 2.1 title '1.5wt.\%'
 
 unset multiplot
 reset

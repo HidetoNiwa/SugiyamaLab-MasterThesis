@@ -6,11 +6,113 @@ R.P.Chhabra.
   14--22, 61--72.
 \newblock CRC press, 2006.
 
-\bibitem{viscoelasticity}
-David Roylance.
-\newblock Engineering viscoelasticity.
-\newblock {\em Department of Materials Science and Engineering--Massachusetts
-  Institute of Technology, Cambridge MA}, Vol. 2139, pp. 1--37, 2001.
+\bibitem{mendes2004viscosity}
+P.R.S.Mendes and E.S.Dutra.
+\newblock A viscosity function for viscoplastic liquids.
+\newblock {\em Annual transactions of the nordic rheology society}, Vol.~12,
+  pp. 183--188, 2004.
+
+\bibitem{balmforth2000visco}
+N.J.Balmforth, A.S.Burbidge, R.V.Craster, J.Salzig, and A.Shen.
+\newblock Visco-plastic models of isothermal lava domes.
+\newblock {\em Journal of Fluid Mechanics}, Vol. 403, pp. 37--65, 2000.
+
+\bibitem{liu2007rheological}
+H.Liu, X.M.Xu, and S.D.Guo.
+\newblock Rheological, texture and sensory properties of low-fat mayonnaise
+  with different fat mimetics.
+\newblock {\em LWT-Food Science and Technology}, Vol.~40, No.~6, pp. 946--954,
+  2007.
+
+\bibitem{bodnar2011shear}
+T.Bodn{\'a}r, A.Sequeira, and M.Prosi.
+\newblock On the shear-thinning and viscoelastic effects of blood flow under
+  various flow rates.
+\newblock {\em Applied Mathematics and Computation}, Vol. 217, No.~11, pp.
+  5055--5067, 2011.
+
+\bibitem{hu2017shear}
+W.Hu, Q.Xu, G.Wang, G.Scaringi, M.Mcsaveney, and P.Hicher.
+\newblock Shear resistance variations in experimentally sheared mudstone
+  granules: A possible shear-thinning and thixotropic mechanism.
+\newblock {\em Geophysical Research Letters}, Vol.~44, No.~21, pp. 11--040,
+  2017.
+
+\bibitem{ryder2006shear}
+J.F.Ryder and J.M.Yeomans.
+\newblock Shear thinning in dilute polymer solutions.
+\newblock {\em The Journal of chemical physics}, Vol. 125, No.~19, p. 194906,
+  2006.
+
+\bibitem{crawford2013shear}
+N.C.Crawford, L.B.Popp, K.E.Johns, L.M.Caire, B.N.Peterson, and M.W.Liberatore.
+\newblock Shear thickening of corn starch suspensions: Does concentration
+  matter?
+\newblock {\em Journal of colloid and interface science}, Vol. 396, pp. 83--89,
+  2013.
+
+\bibitem{haris2017effectiveness}
+A.Haris, B.W.Y.Goh, T.E.Tay, H.P.Lee, A.V.Rammohan, and V.B.C.Tan.
+\newblock On the effectiveness of incorporating shear thickening fluid with
+  fumed silica particles in hip protectors.
+\newblock {\em Smart Materials and Structures}, Vol.~27, No.~1, p. 015021,
+  2017.
+
+\bibitem{zarei2020application}
+M.Zarei and J.Aalaie.
+\newblock Application of shear thickening fluids in material development.
+\newblock {\em Journal of Materials Research and Technology}, Vol.~9, No.~5,
+  pp. 10411--10433, 2020.
+
+\bibitem{stieger2021influence}
+S.Stieger, E.Mitsoulis, M.Walluch, C.Ebner, R.C.Kerschbaumer, M.Haselmann,
+  M.Mostafaiyan, M.K{\"a}mpfe, I.K{\"u}hnert, S.Wie{\ss}ner, et~al.
+\newblock On the influence of viscoelastic modeling in fluid flow simulations
+  of gum acrylonitrile butadiene rubber.
+\newblock {\em Polymers}, Vol.~13, No.~14, p. 2323, 2021.
+
+\bibitem{boger1987viscoelastic}
+D.V.Boger.
+\newblock Viscoelastic flows through contractions.
+\newblock {\em Annual review of fluid mechanics}, Vol.~19, No.~1, pp. 157--182,
+  1987.
+
+\bibitem{Ostwald1929}
+V.W.Ostwald.
+\newblock Ueber die rechnerische darstellung des strukturgebietes der
+  viskosit{\"a}t.
+\newblock {\em Kolloid-Zeitschrift}, Vol.~47, No.~2, pp. 176--187, 1929.
+
+\bibitem{cross1965rheology}
+Malcolm~M M.M.Cross.
+\newblock Rheology of non-newtonian fluids: a new flow equation for
+  pseudoplastic systems.
+\newblock {\em Journal of colloid science}, Vol.~20, No.~5, pp. 417--437, 1965.
+
+\bibitem{carreau1972rheological}
+P.J.Carreau.
+\newblock Rheological equations from molecular network theories.
+\newblock {\em Transactions of the Society of Rheology}, Vol.~16, No.~1, pp.
+  99--127, 1972.
+
+\bibitem{yasuda1979investigation}
+K.Yasuda.
+\newblock {\em Investigation of the analogies between viscometric and linear
+  viscoelastic properties of polystyrene fluids}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 1979.
+
+\bibitem{briscoe1994properties}
+B.J.Briscoe, F.P.Luckham, and S.R.Ren.
+\newblock The properties of drilling muds at high pressures and high
+  temperatures.
+\newblock {\em Philosophical Transactions of the Royal Society of London.
+  Series A: Physical and Engineering Sciences}, Vol. 348, No. 1687, pp.
+  179--207, 1994.
+
+\bibitem{de1998fresh}
+F.deLarrard, C.F.Ferraris, and T.Sedran.
+\newblock Fresh concrete: a herschel-bulkley material.
+\newblock {\em Materials and structures}, Vol.~31, No.~7, pp. 494--498, 1998.
 
 \bibitem{ref:2}
 E.Obata M.Ohta, E.Iwasaki and Y.Yoshida.
@@ -43,10 +145,31 @@ J.L{\'e}opold{\`e}s S.van~den Wildenberg, X.Jia and A.Tourin.
 \newblock 圧力振動を用いた shear-thinning 性流体からの脱泡.
 \newblock 化学工学論文集, Vol.~33, pp. 294--299, 2007.
 
+\bibitem{viscoelasticity}
+D.Roylance.
+\newblock Engineering viscoelasticity.
+\newblock {\em Department of Materials Science and Engineering--Massachusetts
+  Institute of Technology, Cambridge MA}, Vol. 2139, pp. 1--37, 2001.
+
+\bibitem{田中勝敏1993ポリアミド}
+田中勝敏, 中山和郎.
+\newblock ポリアミド/ポリプロピレン系ポリマーブレンドの動的粘弾性.
+\newblock 高分子論文集, Vol.~50, No.~6, pp. 497--505, 1993.
+
 \bibitem{ref:8}
 岩室秀.
 \newblock 超音波照射された擬塑性流体中における物体の高速化.
 \newblock Master's thesis, 大阪大学, 2020.
+
+\bibitem{生物レオロジー}
+岡小天著.
+\newblock レオロジー : 生物レオロジー, pp. 96--98.
+\newblock 物理科学選書 ; 7. 裳華房, 1974.
+
+\bibitem{化学者のためのレオロジー}
+小野木重治著.
+\newblock 化学者のためのレオロジー, pp. 84--86.
+\newblock 化学モノグラフ ; 32. 化学同人, 1982.
 
 \bibitem{ref:8-5}
 I.A.Frigaard A.M.V.Putz, T.I.Burghelea and D.M.Martinez.
@@ -75,36 +198,11 @@ R.Green M.Wiklund and M.Ohlin.
 \newblock 擬塑性流体中の落下球に及ぼす超音波照射の影響.
 \newblock 混相流, Vol.~33, pp. 87--95, 2019.
 
-\bibitem{ref:12}
-M.T.Arigo and G.H.McKinley.
-\newblock The effects of viscoelasticity on the transient motion of a sphere in
-  a shear-thinning fluid.
-\newblock {\em Journal of Rheology}, Vol.~41, pp. 103--128, 1997.
-
-\bibitem{ref:sakanishi}
-坂西明郎.
-\newblock 〈緩和時間〉.
-\newblock 日本バイオレオロジー学会誌, Vol.~3, pp. 50--50, 1989.
-
 \bibitem{ref:10}
-Y.Tasaka T.Shiratori and Y.Murai.
+T.Shiratori Y.Tasaka and Y.Murai.
 \newblock Rapid rheological characterization of a viscoelastic fluid based on
   spatiotemporal flow velocimetry.
 \newblock {\em Experimental Thermal and Fluid Science}, Vol.~71, pp. 1--13,
   2016.
-
-\bibitem{ref:Rahimi2007}
-A.Peretz S.Rahimi and B.Natan.
-\newblock On shear rheology of gel propellants.
-\newblock {\em Propellants, Explosives, Pyrotechnics: An International Journal
-  Dealing with Scientific and Technological Aspects of Energetic Materials},
-  Vol.~32, pp. 165--174, 2007.
-
-\bibitem{ref:Agi2018}
-J.Gbonhinbor A.Agi, R.Junin and M.Onyekonwu.
-\newblock Natural polymer flow behaviour in porous media for enhanced oil
-  recovery applications: a review.
-\newblock {\em Journal of Petroleum Exploration and Production Technology},
-  Vol.~8, pp. 1349--1362, 2018.
 
 \end{thebibliography}

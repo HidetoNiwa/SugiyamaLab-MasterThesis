@@ -164,8 +164,8 @@ set logscale x
 set label 11 center at graph 0.04,0.95 '(a)'
 
 set format x '$10^{%L}$'
-set xlabel '{\Large $ \Delta\rho{}^\frac{n-1}{n} \times 10^{3}\displaystyle [$\SI{}{(kg/m^3)^{(n-1/n)}}$]$}' offset 0,0.4
-set xrange [10E-9:1]
+set xlabel '{\Large $ \Delta\rho{}^\frac{n-1}{n}\displaystyle [$\SI{}{(kg/m^3)^{(n-1/n)}}$]$}' offset 0,0.4
+set xrange [1.5E-11:1E-3]
 set xtics 100
 set mxtics 10
  
@@ -205,12 +205,59 @@ set rmargin screen 1
 
 set label 11 center at graph 0.04,0.95 '(b)'
 
-set xrange [10E-9:0.00005]
-set xtics 1E-7,10,1E-5
+set xrange [1.5E-11:3E-8]
+set xtics 1E-11,10,1E-8
 set mxtics 10 
 
 set ylabel '' offset 0.5,0
 set format y ''
+
+plot \
+al_02 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_02 using 3:($6):($7) with yerrorlines ls 101 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_02 using 3:($6):($7) with yerrorlines ls 101 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_02 using 3:($6):($7) with yerrorlines ls 101 pt 8 ps 1.5 lw 3 title 'brass',\
+al_05 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_05 using 3:($6):($7) with yerrorlines ls 102 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_05 using 3:($6):($7) with yerrorlines ls 102 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_05 using 3:($6):($7) with yerrorlines ls 102 pt 8 ps 1.5 lw 3 title 'brass',\
+al_07 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_07 using 3:($6):($7) with yerrorlines ls 103 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_07 using 3:($6):($7) with yerrorlines ls 103 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_07 using 3:($6):($7) with yerrorlines ls 103 pt 8 ps 1.5 lw 3 title 'brass',\
+al_10 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_10 using 3:($6):($7) with yerrorlines ls 104 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_10 using 3:($6):($7) with yerrorlines ls 104 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_10 using 3:($6):($7) with yerrorlines ls 104 pt 8 ps 1.5 lw 3 title 'brass',\
+al_13 using 3:($6):($7) with yerrorlines ls 105 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_13 using 3:($6):($7) with yerrorlines ls 105 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_13 using 3:($6):($7) with yerrorlines ls 105 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_13 using 3:($6):($7) with yerrorlines ls 105 pt 8 ps 1.5 lw 3 title 'brass',\
+alumina_15 using 3:($6):($7) with yerrorlines ls 106 pt 4 ps 1.5 lw 3 title 'alumina',\
+stainless_15 using 3:($6):($7) with yerrorlines ls 106 pt 6 ps 1.5 lw 3 title 'stainless',\
+brass_15 using 3:($6):($7) with yerrorlines ls 106 pt 8 ps 1.5 lw 3 title 'brass'
+
+set tmargin 0
+set bmargin 0
+set lmargin 0
+set rmargin 0
+set size ratio 0.55
+set size 0.28,0.22
+set origin 0.55,0.77
+
+set label 11 center at graph 0.04,0.95 ''
+
+unset logscale xy
+
+set xlabel '{\scriptsize $\Delta\rho{}^\frac{n-1}{n}$}' offset 0,1.32
+set format x '{\scriptsize $%2.0l\times10^{%L}$}'
+set xrange [0:4E-8]
+set xtics 2E-8 offset 0,0.6
+set mxtics 2
+
+set ylabel '{\scriptsize $U_\text{on}/U_\text{off}$}' offset 4.3,0
+set ytics 1,0.2,1.6 offset -0.5,0
+set format y '{\scriptsize $%2.1f$}'
 
 plot \
 al_02 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
