@@ -209,13 +209,13 @@ file_020 using 1:2:3 with yerror ls 108 pt  3 ps 1.5 lw 4 title 'PAA 0.2wt.\%',\
 h(x) ls 108 lw 4 title '',\
 file_050 using 1:2:3 with yerror ls 103 pt  4 ps 1.5 lw 4 title 'PAA 0.5wt.\%',\
 i(x) ls 104 lw 4 title '',\
-file_070 using 1:2:3 with yerror ls 104 pt  6 ps 1.5 lw 4 title 'PAA 0.5wt.\%',\
+file_070 using 1:2:3 with yerror ls 104 pt  6 ps 1.5 lw 4 title 'PAA 0.7wt.\%',\
 p(x) ls 103 lw 4 title '',\
 file_100 using 1:2:3 with yerror ls 105 pt  8 ps 1.5 lw 4 title 'PAA 1.0wt.\%',\
 f(x) ls 105 lw 4 title '',\
 file_130 using 1:2:3 with yerror ls 106 pt  10 ps 1.5 lw 4 title 'PAA 1.3wt.\%',\
 j(x) ls 106 lw 4 title '',\
-file_150 using 1:2:3 with yerror ls 107 pt  13 ps 1.5 lw 4 title 'PAA 1.3wt.\%',\
+file_150 using 1:2:3 with yerror ls 107 pt  13 ps 1.5 lw 4 title 'PAA 1.5wt.\%',\
 q(x) ls 107 lw 4 title ''
 
 unset multiplot

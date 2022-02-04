@@ -115,9 +115,9 @@ set mytics 5
 #fit h(x) shiratori using 1:2 via n2
  
 plot \
-shiratori using 1:2 with points ls 114 pt  3 ps 1.5 lw 4 title 'Shiratori \textit{et al}.[12]',\
+shiratori using 1:2 with points ls 114 pt  3 ps 1.5 lw 4 title 'Shiratori \textit{et al}.[33]',\
 h(x) ls 114 lw 4 title '',\
-iwamuro using 1:2 with points ls 115 pt  3 ps 1.5 lw 4 title 'Iwamuro(2020) [8]',\
+iwamuro using 1:2 with points ls 115 pt  3 ps 1.5 lw 4 title 'Iwamuro(2020) [25]',\
 g(x) ls 115 lw 4 title '',\
 file_105 using 1:2:3 with yerror ls 103 pt  3 ps 1.5 lw 4 title 'PAA 1.05wt.\%',\
 q(x) ls 103 lw 4 title '',\
