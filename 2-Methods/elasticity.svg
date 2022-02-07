@@ -2,13 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="125.91578mm"
-   height="59.550545mm"
-   viewBox="0 0 125.91578 59.550544"
+   width="122.11578mm"
+   height="55.750546mm"
+   viewBox="0 0 122.11578 55.750545"
    version="1.1"
    id="svg5"
    sodipodi:docname="elasticity.svg"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:export-filename="C:\Users\SugiyamaLab\Desktop\MasterThesis\2-Methods\elasticity.png"
+   inkscape:export-xdpi="256"
+   inkscape:export-ydpi="256"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,19 +27,19 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.060799"
-     inkscape:cx="113.12227"
-     inkscape:cy="-42.892195"
+     inkscape:cx="105.58079"
+     inkscape:cy="-50.433683"
      inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     inkscape:window-x="-8"
+     inkscape:window-height="1057"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
-     fit-margin-top="3.9"
+     fit-margin-top="2"
      lock-margins="true"
-     fit-margin-left="3.9"
-     fit-margin-right="3.9"
-     fit-margin-bottom="3.9" />
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="2" />
   <defs
      id="defs2">
     <marker
@@ -220,7 +223,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(40.233247,-8.6363391)">
+     transform="translate(38.333247,-10.536339)">
     <path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.362568;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 10.938706,39.999561 c 1.056773,-4.370029 2.113557,-8.725915 3.170331,-12.17539 1.056742,-3.449467 2.113516,-5.966562 3.170298,-7.040774 1.056774,-1.074213 2.113515,-0.691125 3.170289,1.063045 1.056782,1.754145 2.113556,4.875885 3.17033,8.718747 1.056741,3.842494 2.113515,8.386186 3.170297,12.697121 1.056774,4.31094 2.113515,8.36045 3.170289,11.32155 1.056782,2.96072 2.113556,4.80873 3.170298,5.17094 1.056776,0.36221 2.11355,-0.77118 3.170332,-3.16014 1.056774,-2.38896 2.113515,-6.02552 3.17029,-10.15843 1.05678,-4.13291 2.11356,-8.739337 3.17037,-12.872966 1.05688,-4.134001 2.11341,-7.767291 3.17029,-10.158609 1.05689,-2.391497 2.11341,-3.519556 3.1703,-3.160104 1.05688,0.359443 2.11341,2.212201 3.17029,5.171085 1.05688,2.958556 2.1134,7.010973 3.17029,11.32118 1.05689,4.310574 2.11341,8.853174 3.17029,12.697494 1.05689,3.84394 2.11341,6.96166 3.1703,8.71866 1.05689,1.75664 2.11341,2.13444 3.1703,1.06305 1.05688,-1.07138 2.1134,-3.59305 3.17029,-7.04106 1.05688,-3.44766 2.1134,-7.80501 3.17029,-12.175399"
