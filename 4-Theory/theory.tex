@@ -1,78 +1,78 @@
 \section{理論}
-\ref{sec:exp-system}節に示した通り，本研究の系は超音波照射された擬塑性流体中を球が落下する系である．はじめに，擬塑性流体中を球が落下する理論を示すことで，球の終端速度の理論式を得る．続いて，球の落下によるせん断速度より，球の落下による応力を見積もる．最後に，超音波照射された擬塑性流体中を落下する球の高速化のメカニズムより，高速化の理論式を見積もる．
+第\ref{sec:exp-system}節で示した通り，本研究の系では超音波照射された擬塑性流体中を球が落下する．はじめに，擬塑性流体中を球が落下する理論を示すことで，球の終端速度の理論式を得る．続いて，球の落下によるせん断速度より，球の落下による応力を見積もる．最後に，超音波照射された擬塑性流体中を落下する球の高速化のメカニズムを考察し，高速化の理論式を見積もる．
 
 \subsection{擬塑性流体中における球の落下}
-本研究の系において，代表速度，代表長さとして，落下球の終端速度$U_\text{T}$，球直径$D=2a$を選ぶ．Power-law model (式(\ref{eq:power-low}))が適用できる流体中おける粒子のレイノルズ数は次式で表される\cite{ref:1,ref:8-5}．
+本研究の系において，代表速度，代表長さとして，落下球の終端速度$U_\text{T}$，球直径$D=2a$を選ぶ．Power-law model (式(\ref{eq:power-low}))が適用できる流体中おける粒子レイノルズ数は次式で表される\cite{ref:1,ref:8-5}．
 \begin{eqnarray}
     Re = \frac{\rho_1 \left(2a\right)^n U_T^{2-n}}{k} .
     \label{eq:re}
 \end{eqnarray}
-ここで，$\rho_1$は溶液密度である．今回の実験結果の代表例（鋼球，直径10mm，PAA1.0wt.\%）において，溶液密度$\rho_1\approx$1000kg/m$^3$，$2a=$0.01m，$U_T \approx$0.2m/s，$k=$8.8Pa$\cdot \text{s}^n$，$n=$0.23である．この条件より，式(\ref{eq:re})より$Re\approx$2.3と概算でき，粒子付近ではストークス流れに従うと考えられる．ゆえに，慣性に比べて粘性が支配的であると考えられる．
+ここで，$\rho_1$は溶液密度である．今回の実験結果の代表例（鋼球，直径10mm，PAA1.0wt.\%）において，溶液密度$\rho_1\approx$1000kg/m$^3$，$2a=$0.01m，$U_T \approx$0.2m/s，$k=$8.8Pa$\cdot \text{s}^n$，$n=$0.23である．この条件を，式(\ref{eq:re})に代入すると$Re\approx$2.3と概算できる．粒子周囲の流れは慣性に比べて粘性が支配的であり，ストークス方程式に概ね従うものと考える．
 
-超音波の伝播に関して，音波の圧力変動の時間スケールは$O\left(10^{-5}\right)$sである．一方で，球の落下現象は$O\left(10^{-2}\right)$m,$O\left(10^{0}\right)$sとなり，圧力変動の時間スケールは非常に短い．球の落下に関しては，落下時間スケールで粗視化した平均的な挙動に着目する．球周囲に存在する非圧縮性流体の単位体積の運動方程式について考える．球によって誘起される応力テンソルを$\bm{\sigma}$，流体の密度を$\rho$，s周囲流体の速度ベクトルを$\bm{v}$，体積力を$\bm{X}$とすると，
+超音波の伝播に関して，音波の圧力変動の時間スケールは$O\left(10^{-5}\right)$sである．これは，球の落下現象の時間スケール $O\left(10^{0}\right)$sと比べて非常に短い．球の落下に関しては，落下時間スケールで粗視化した平均的な挙動に着目する．球周囲に存在する非圧縮性流体の運動量輸送を考える．球によって誘起される応力テンソルを$\bm{\sigma}$，流体の密度を$\rho$，周囲流体の速度ベクトルを$\bm{v}$，体積力を$\bm{X}$とすると，
 \begin{eqnarray}
     \rho \frac{D\bm{v}}{Dt} = \bm{X} + \nabla \cdot \bm{\sigma} ,
     \label{eq:undou}
 \end{eqnarray}
-となる．また，非圧縮性流体を仮定しているため連続の式が成り立つ．
+となる．また，非圧縮性流体を仮定しているため，以下の連続の式が成り立つ．
 \begin{eqnarray}
     \nabla \cdot \bm{v} = 0 .
     \label{eq:renzoku}
 \end{eqnarray}
-粒子重心位置から見た移動座標系では，式(\ref{eq:undou})の左辺が，
+粒子重心位置から見た移動座標系では，式(\ref{eq:undou})の左辺は，以下のように書ける．
 \begin{eqnarray}
-    \frac{D\bm{v}}{Dt} = \frac{\partial \bm{v}}{\partial t} + \left(\bm{v} - \bm{U}_T \cdot \nabla \right) \bm{v} ,
+    \frac{D\bm{v}}{Dt} = \frac{\partial \bm{v}}{\partial t} + \left(\bm{v} - \bm{U}_T \cdot \nabla \right) \bm{v} .
     \label{eq:nabie}
 \end{eqnarray}
-と展開できる．流れは十分に発達し，定常状態であると仮定することで，式(\ref{eq:nabie})の右辺第1項の時間微分項は0となる．低レイノルズ数かつStokes近似を用いることにより，慣性項は粘性項より十分に小さいと仮定することができる．これにより，式(\ref{eq:nabie})の右辺第2項の慣性項は無視することができる．加えて，粒子周囲流体には密度差がないため，静水圧分を除いた圧力を使って応力${\bm \sigma}$と書くと，体積力${\bm X}$は0となる．これらより，式(\ref{eq:undou}), (\ref{eq:nabie})を用いると，
+流れは十分に発達し，定常状態であると仮定すると，式(\ref{eq:nabie})の右辺第1項の時間微分項は0となる．低レイノルズ数であることからStokes近似を用いると，式(\ref{eq:nabie})の右辺第2項の慣性項は無視できる．加えて，粒子周囲流体には密度差がないため，静水圧分を除いた圧力を使って応力${\bm \sigma}$と書くと，体積力${\bm X}$は0と書ける．これらの仮定より，式(\ref{eq:undou})を以下のように簡略化する．
 \begin{eqnarray}
-    \nabla \cdot \bm{\sigma} = 0 ,
+    \nabla \cdot \bm{\sigma} = 0 .
     \label{eq:sigma-}
 \end{eqnarray}
-といった関係が導かれる．
 
-ある球体領域において，ガウスの発散定理より，
+粒子重心周りの球形領域において，ガウスの発散定理を適用すると以下の関係が成り立つ．
 \begin{eqnarray}
     \int_S{\bm{\sigma \cdot \bm{n}}}dS = \int_V{\nabla \cdot \bm{\sigma}}dV ,
     \label{eq:gaussian}
 \end{eqnarray}
-といった関係が成り立つ．ここで，$\bm{n}$は球領域表面に対する法線ベクトル，$S$は球の表面積，$V$は球の体積を表す．式(\ref{eq:sigma-})より，式(\ref{eq:gaussian})の右辺は0である．式(\ref{eq:sigma-}),(\ref{eq:gaussian})は任意の流体体積に関して成り立つため，球の表面（$r = a$）と球外部の任意の領域（$r > a$）において，以下の関係が成り立つ．
+ここで，$\bm{n}$は球領域および粒子の表面での外向き単位法線ベクトル，$S$はそれぞれの球の表面積，$V$は2つの球の間の体積を表す．式(\ref{eq:sigma-})より，式(\ref{eq:gaussian})の右辺は0とする．式(\ref{eq:sigma-}),(\ref{eq:gaussian})は任意の流体体積に関して成り立つため，球の表面（$r = a$）と球外部の任意の領域（$r > a$）において，以下の関係が成り立つ．
 \begin{eqnarray}
     \int_{r=a}\bm{\sigma}\cdot\bm{e}_r dS=\int_r\bm{\sigma}\cdot\bm{e}_r dS .
     \label{eq:inte}
 \end{eqnarray}
-ここで，$\bm{n} = \bm{e}_r$とする．この式は，任意の領域において，面積力が釣り合うことを示す．$r = a$における時間平均応力を$\langle\sigma\rangle_a$，$r$における時間平均応力を$\langle\sigma\rangle_r$とそれぞれする．球の表面積$S=4\pi r^2$であるので，式(\ref{eq:inte})は，
+ここで，球領域表面では$\bm{n} = \bm{e}_r$，粒子表面では$\bm{n}=-\bm{e}_r$である．式(\ref{eq:inte})は，任意の領域での，面積力の釣り合いを表す．$r = a$における時間平均応力のオーダーを$\langle\sigma\rangle_a$，$r$における時間平均応力のオーダーを$\langle\sigma\rangle_r$とそれぞれする．球の表面積は$S=4\pi r^2$であるので，式(\ref{eq:inte})より，以下の関係が成り立つとみなす．
 \begin{eqnarray}
-    4\pi a^2\langle\sigma\rangle_a = 4\pi r^2\langle\sigma\rangle_r ,
+    4\pi a^2\langle\sigma\rangle_a \sim 4\pi r^2\langle\sigma\rangle_r .
     \label{eq:sigma1}
 \end{eqnarray}
-となる．球表面において，球の体積力と表面力は釣り合うので，
+粒子表面での表面力と体積力の釣り合いより，以下の関係を考える．
 \begin{eqnarray}
-    4\pi a^2\langle\sigma\rangle_a = \frac{4}{3} \pi a^3 \Delta \rho g ,
+    4\pi a^2\langle\sigma\rangle_a = \frac{4}{3} \pi a^3 \Delta \rho g .
     \label{eq:sigma2}
 \end{eqnarray}
-となる．ここで，球と流体の密度差$\Delta \rho$，重力加速度$g$である．式(\ref{eq:sigma1}),(\ref{eq:sigma2})より，
+となる．ここで，$\Delta \rho$は球と流体の密度差，$g$は重力加速度である．式(\ref{eq:sigma1}),(\ref{eq:sigma2})より，以下のようにオーダー評価できる．
 \begin{eqnarray}
-    \langle\sigma\rangle_r = \frac{a^3\Delta\rho g}{3r^2} ,
+    \langle\sigma\rangle_r \sim \frac{a^3\Delta\rho g}{3r^2} .
 \end{eqnarray}
-となる．低レイノルズ数で粘性項が支配的であるため，
+低レイノルズ数で粘性項が支配的であることから，応力を以下のように概算する．
 \begin{eqnarray}
-    \langle\sigma\rangle_r \sim \mu \dot{\gamma} ,
+    \langle\sigma\rangle_r \sim \mu \dot{\gamma} .
     \label{eq:sigma3}
 \end{eqnarray}
-と概算することができる．Power-law modelが適用できる領域での議論を行っているため，式(\ref{eq:power-low}),(\ref{eq:sigma3})より，
+Power-law model(式(\ref{eq:power-low}))の粘度を式(\ref{eq:sigma3})に代入して整理すると以下の関係を得る．
 \begin{eqnarray}
     \dot{\gamma} \sim \left(\frac{a^3\Delta\rho g}{3r^2 k}\right)^{\frac{1}{n}} ,
     \label{eq:gamma_abs}
 \end{eqnarray}
-と概算される．この系において，エネルギー散逸に関して考える．位置エネルギーと粘性によるエネルギー散逸が釣り合うため，単位時間あたりに系全体が失うエネルギーバランスより，以下の式が成立する．
+次に，エネルギー散逸に関して考える．単位時間あたりのエネルギーバランスは，位置エネルギーと粘性によるエネルギー散逸の時間変化の釣り合いとして書ける．すなわち，
+釣り合うため，より，以下の式が成立する．
 \begin{eqnarray}
     \int_{r>a}\bar{\epsilon}dV = 4 \pi \int^\infty_a \bar{\epsilon}r^2 dr = \frac{4}{3}\pi a^3\Delta\rho g U_T ,
     \label{eq:eg}
 \end{eqnarray}
-ここで，$U_T$は球の終端速度，$\bar{\epsilon}$は時間平均された単位体積当たりのエネルギー散逸である．また，粘性散逸$\bar{\epsilon}$は，以下の様に概算される．
+と表される．ここで，$U_T$は球の終端速度，$\bar{\epsilon}$は時間平均された単位体積当たりのエネルギー散逸率である．また，エネルギー散逸率$\bar{\epsilon}$は，以下の様に概算される．
 \begin{eqnarray}
-    \bar{\epsilon} \sim \langle\sigma\rangle_r\dot{\gamma} \sim \mu \dot{\gamma}^2 \sim \frac{\langle\sigma\rangle_r^2}{\mu} ,
+    \bar{\epsilon} \sim \langle\sigma\rangle_r\dot{\gamma} \sim \mu \dot{\gamma}^2 \sim \frac{\langle\sigma\rangle_r^2}{\mu} .
     \label{eq:eps}
 \end{eqnarray}
 式(\ref{eq:sigma3}),(\ref{eq:eg}),(\ref{eq:eps})より，超音波照射されていないときの終端速度$U_\text{off}$は
@@ -87,7 +87,9 @@
 \end{eqnarray}
 
 \subsection{擬塑性流体中における球の落下による応力}
-擬塑性流体中を落下する球の終端速度を$U_\text{T}$とする．，球の終端速度$U_\text{T}$と半径$a$を用いて，
+超音波照射された擬塑性流体中を落下する球の周囲流体をFig\ref{fig:layer}に示す．球の周囲より音響境界層，落下球による領域，バルク領域と分類される．
+
+球の落下が影響を及ぼす領域において，$\dot{\gamma}$は，球の終端速度$U_\text{T}$と半径$a$を用いて，
 \begin{eqnarray}
     \dot{\gamma} \sim \frac{U_\text{T}}{a},
     \label{eq:UTgamma}
@@ -103,6 +105,13 @@
     \label{eq:tauU}
 \end{eqnarray}
 と見積もられる．
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{4-Theory/boundary_layer.eps}
+    \caption{Layers of the effect of a falling sphere on the fluid.}
+    \label{fig:layer}
+\end{figure}
 
 \subsection{超音波照射に伴う球の高速化}
 \label{sec:UTdiff}
@@ -122,13 +131,13 @@
 \begin{eqnarray}
     \frac{\partial u}{\partial z} + \frac{1}{\rho_1 c^2}\frac{\partial P}{\partial t} = 0 .
 \end{eqnarray}
-音波の周波数は一定であり，容器内の圧力変化は音波に依存するので，以下の式の近似を用いる．
+音波の周波数は一定であり，容器内の圧力変化は音波に依存するので，以下の近似を用いる．
 \begin{eqnarray}
     \frac{\partial u}{\partial t} &\sim& uf ,\label{eq:1-1}\\
     \partial P &\sim& \Delta P ,\label{eq:1-2}\\
     \partial z &\sim& \lambda .\label{eq:1-3}
 \end{eqnarray}
-ここで，$\Delta P$は音響圧，$\lambda$は超音波の波長である．式(\ref{eq:1-1}),(\ref{eq:1-2}),(\ref{eq:1-3})を用いて，式(\ref{eq:newton-1})の近似を行うと次式のようになる．
+ここで，$\Delta P$は音響圧振動，$\lambda$は超音波の波長である．式(\ref{eq:1-1}),(\ref{eq:1-2}),(\ref{eq:1-3})を用いて，式(\ref{eq:newton-1})の近似を行うと次式のようになる．
 \begin{eqnarray}
     uf \sim \frac{\Delta P}{\rho_1 \lambda} .
     \label{eq:u-1}
@@ -138,9 +147,9 @@
     u \sim \frac{\Delta P}{\rho_1 c} .
 \end{eqnarray}
 
-式(\ref{eq:abl-delta})より，Power-law model(式(\ref{eq:power-low}))を適用すると，音響境界層粘度$\mu_{ABL}$は次式の様に見積もられる．
+式(\ref{eq:abl-delta})より，Power-law model(式(\ref{eq:power-low}))を適用すると，音響境界層における粘度$\mu_\text{ABL}$は次式の様に見積もられる．
 \begin{eqnarray}
-    \mu_{ABL} \sim k\left(\frac{u}{\delta}\right)^{n-1} ,
+    \mu_\text{ABL} \sim k\left(\frac{u}{\delta}\right)^{n-1} ,
     \label{eq:muABL}
 \end{eqnarray}
 よって，音響境界層厚さ$\delta$は，

@@ -252,14 +252,14 @@ unset key
 set logscale x
 
 set format x '$%g$'
-set xlabel '{\Large $\displaystyle \frac{\mu_{U}}{\mu_{ABL}}\cdot \frac{\delta}{a}$ [$\SI{}{-}$]}' offset 0,-0.5
+set xlabel '{\Large $\displaystyle \frac{\mu_\text{U}}{\mu_\text{ABL}}\cdot \frac{\delta}{a}$ [$\SI{}{-}$]}' offset 0,-0.5
 set xrange [0.005:10]
 set xtics 10
-set mxtics 5
+set mxtics 10
  
 set ylabel '{\Large $\displaystyle U_\text{on}/U_\text{off}[$\SI{}{-}$]$}' offset 0,0
-set format y '$%g$'
-set yrange [0.8:1.6]
+set format y '$%.1f$'
+set yrange [0.9:1.5]
 set ytics 0.2 offset 0,0
 set mytics 2
  
