@@ -82,11 +82,11 @@ PAA粉末と水道水を混合することで，全7種類の濃度（0.05,0.2,0
 \end{eqnarray}
 となる．ここで，$G^*$は複素弾性率，$G'$は貯蔵弾性率，$G''$は損失弾性率と呼ばれる\cite{生物レオロジー}\cite{化学者のためのレオロジー}．貯蔵弾性率と損失弾性率に関して，位相差$\eta$を用いて，
 \begin{alignat}{3}
-    G' & = 0 ,           & \quad G'' & = |G| ,         & \quad & \left(\text{at } \eta=0\right)               \label{eq:G_case1} \\
+    G' & = |G| ,         & \quad G'' & = 0 ,           & \quad & \left(\text{at } \eta=0\right)               \label{eq:G_case1} \\
     G' & = |G|\cos\eta , & G''       & = |G|\sin\eta , &       & \left(\text{at } 0<\eta<\frac{\pi}{2}\right) \label{eq:G_case2} \\
-    G' & = |G| ,         & G''       & = 0 ,           &       & \left(\text{at } \eta=\frac{\pi}{2}\right)   \label{eq:G_case3}
+    G' & = 0 ,           & G''       & = |G| ,         &       & \left(\text{at } \eta=\frac{\pi}{2}\right)   \label{eq:G_case3}
 \end{alignat}
-と場合分けできる．式(\ref{eq:G_case1})の場合は，応力とひずみの位相差が存在せず，粘性による影響がなく，弾性による影響のみが存在する．式(\ref{eq:G_case3})の場合は，応力とひずみの位相差が$\pi/2$で直交し，弾性による影響がなく，粘性による影響のみが存在する．式(\ref{eq:G_case2})の場合は，応力とひずみの位相差が$\pi/2$より小さいが存在し，弾性，粘性それぞれの影響があることを示している．以上より，損失弾性率$G'$は粘性影響を,貯蔵弾性率$G''$は弾性影響を表すことが分かる．式(\ref{eq:G_prime}),(\ref{eq:G_doubleprime})より，損失弾性率と貯蔵弾性率の比は，
+と場合分けできる．式(\ref{eq:G_case1})の場合は，応力とひずみの位相差が存在せず，粘性による影響がなく，弾性による影響のみが存在する．式(\ref{eq:G_case3})の場合は，応力とひずみの位相差が$\pi/2$で直交し，弾性による影響がなく，粘性による影響のみが存在する．式(\ref{eq:G_case2})の場合は，応力とひずみの位相差が$\pi/2$より小さいが存在し，弾性，粘性それぞれの影響があることを示している．以上より，貯蔵弾性率$G'$は弾性影響を,損失弾性率$G''$は粘性影響を表すことが分かる．式(\ref{eq:G_prime}),(\ref{eq:G_doubleprime})より，損失弾性率と貯蔵弾性率の比は，
 \begin{eqnarray}
     \frac{G''}{G'} &=& \tan\eta ,
     \label{eq:loss_factor}
@@ -96,7 +96,7 @@ PAA粉末と水道水を混合することで，全7種類の濃度（0.05,0.2,0
     \tan\eta & < 1, & \quad \left(\text{at } 0<\eta<\frac{\pi}{4}\right)     \label{eq:tan_eta_case1}         \\
     \tan\eta & > 1, & \quad \left(\text{at } \frac{\pi}{4}<\eta<\frac{\pi}{2}\right) \label{eq:tan_eta_case2}
 \end{alignat}
-と，場合分けできる．式(\ref{eq:tan_eta_case1})の場合は，貯蔵弾性率よりも損失弾性率の方が大きく，粘性による影響が強い．一方で，式(\ref{eq:tan_eta_case2})の場合は，損失弾性率より貯蔵弾性率の方が大きく，弾性による影響が強い．本研究では，損失正接を用いて粘性，弾性の強さを考える．
+と，場合分けできる．式(\ref{eq:tan_eta_case1})の場合は，損失弾性率よりも貯蔵弾性率の方が大きく，弾性による影響が強い．一方で，式(\ref{eq:tan_eta_case2})の場合は，貯蔵弾性率より損失弾性率の方が大きく，粘性による影響が強い．本研究では，損失正接を用いて粘性，弾性の強さを考える．
 
 \begin{figure}[ht]
     \centering

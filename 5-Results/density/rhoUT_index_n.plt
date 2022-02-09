@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 4.8, 4.5 standalone color solid 9
+set terminal epslatex size 4.8, 4.3 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','

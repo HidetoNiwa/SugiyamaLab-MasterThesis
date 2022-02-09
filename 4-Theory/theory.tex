@@ -1,5 +1,5 @@
 \section{理論}
-第\ref{sec:exp-system}節で示した通り，本研究の系では超音波照射された擬塑性流体中を球が落下する．はじめに，擬塑性流体中を球が落下する理論を示すことで，球の終端速度の理論式を得る．続いて，球の落下によるせん断速度より，球の落下による応力を見積もる．最後に，超音波照射された擬塑性流体中を落下する球の高速化のメカニズムを考察し，高速化の理論式を見積もる．
+第\ref{sec:exp-system}節で示した通り，本研究の系では超音波照射された擬塑性流体中を球が落下する．はじめに，擬塑性流体中を球が落下する理論より，球の終端速度のオーダー評価を得る．また，超音波照射による擬塑性流体中の落下球の高速化メカニズムより，落下球周囲の領域ごとの粘度のオーダー評価を得る．そして，超音波照射の有無による速度比のオーダー評価を得る．第\ref{sec:density}章以降の実験によって，これらのオーダー評価の妥当性の検証を行う．
 
 \subsection{擬塑性流体中における球の落下}
 本研究の系において，代表速度，代表長さとして，落下球の終端速度$U_\text{T}$，球直径$D=2a$を選ぶ．Power-law model (式(\ref{eq:power-low}))が適用できる流体中おける粒子レイノルズ数は次式で表される\cite{ref:1,ref:8-5}．
@@ -86,25 +86,29 @@ Power-law model(式(\ref{eq:power-low}))の粘度を式(\ref{eq:sigma3})に代�
     \label{eq:UT}
 \end{eqnarray}
 
-\subsection{擬塑性流体中における球の落下による応力}
-超音波照射された擬塑性流体中を落下する球の周囲流体をFig\ref{fig:layer}に示す．球の周囲より音響境界層，落下球による領域，バルク領域と分類される．
-
-球の落下が影響を及ぼす領域において，$\dot{\gamma}$は，球の終端速度$U_\text{T}$と半径$a$を用いて，
+\subsection{超音波照射された擬塑性流体中の球周囲流体の領域に関して}
+超音波照射された擬塑性流体中の球周囲流体の領域の概略図をFig\ref{fig:layer}に示す．球の周囲より音響境界層，球の落下による領域，バルク領域と分類される．音響境界層におけるせん断速度を$\dot{\gamma}_\text{ABL}$，球の落下による球周囲のせん断速度を$\dot{\gamma}_\text{U}$，バルク領域におけるせん断速度を$\dot{\gamma}_\text{Bulk}$とすると，それぞれ以下のように見積もられる．
 \begin{eqnarray}
-    \dot{\gamma} \sim \frac{U_\text{T}}{a},
-    \label{eq:UTgamma}
+    \dot{\gamma}_\text{ABL} \sim \frac{u}{\delta} , \label{eq:dotU}\\
+    \dot{\gamma}_\text{U} \sim \frac{U_\text{T}}{a} , \label{eq:UTgamma} \\
+    \dot{\gamma}_\text{Bulk} \sim \frac{u}{\lambda} . \label{eq:dotB}
 \end{eqnarray}
-と見積もられる．球の落下による粘度$\mu_\text{U}$は，式(\ref{eq:power-low})のPower-law modelより，
+ここで，$u$は音波によって加振される流体粒子速度，$\delta$は音響境界層厚さを表す．音響境界層厚さ$\delta$は，次式のように見積もられる\cite{deshpande2001vibrational,wiklund2012acoustofluidics}．
 \begin{eqnarray}
-    \mu_\text{U} \sim k \left(\frac{U_\text{T}}{a}\right)^{n-1} ,
-    \label{eq:muU}
+    \delta \sim \sqrt{\frac{\mu_{ABL}}{\pi \rho_h f}} ,
+    \label{eq:delta2}
 \end{eqnarray}
-と見積もることができる．これより，式(\ref{eq:sigma3})より球の落下による応力$\tau_\text{U}$は，
+ここで，周波数$f$である．それぞれの領域のせん断速度（式(\ref{eq:dotU})-(\ref{eq:dotB})）より，Power-law model(式(\ref{eq:power-low}))を適用すると，音響境界層における粘度を$\mu_\text{ABL}$球の落下による球周囲の粘度を$\mu_\text{U}$，バルクにおける粘度を$\mu_\text{Bulk}$とすると，それぞれ以下のように見積もられる．
+\begin{eqnarray}
+    \mu_\text{ABL} \sim k\left(\frac{u}{\delta}\right)^{n-1} , \label{eq:muABL} \\
+    \mu_\text{U} \sim k \left(\frac{U_\text{T}}{a}\right)^{n-1} ,\label{eq:muU} \\
+    \mu_\text{Bulk} \sim k \left(\frac{u}{\lambda}\right)^{n-1} . \label{eq:Bulk}
+\end{eqnarray}
+以上より，式(\ref{eq:sigma3})を用いて球の落下による応力$\tau_\text{U}$は，以下のように見積もられる．
 \begin{eqnarray}
     \tau_\text{U} \sim k \left(\frac{U_\text{T}}{a}\right)^n ,
     \label{eq:tauU}
 \end{eqnarray}
-と見積もられる．
 
 \begin{figure}[ht]
     \centering
@@ -115,13 +119,6 @@ Power-law model(式(\ref{eq:power-low}))の粘度を式(\ref{eq:sigma3})に代�
 
 \subsection{超音波照射に伴う球の高速化}
 \label{sec:UTdiff}
-超音波照射された本研究の系における，落下球の高速化に関して考える．音響境界層における，せん断速度の代表値は次のように概算される．
-\begin{eqnarray}
-    \dot{\gamma} \sim \frac{u}{\delta} .
-    \label{eq:abl-delta}
-\end{eqnarray}
-ここで，$u$は音波によって加振される流体粒子速度，$\delta$は音響境界層厚さを表す．
-
 流体粒子速度$u$に関して，球の落下方向を$z$とすると運動方程式は次式となる．
 \begin{eqnarray}
     \frac{\partial u}{\partial t} + \frac{1}{\rho_1}\frac{\partial P}{\partial z} = 0 .
@@ -147,27 +144,18 @@ Power-law model(式(\ref{eq:power-low}))の粘度を式(\ref{eq:sigma3})に代�
     u \sim \frac{\Delta P}{\rho_1 c} .
 \end{eqnarray}
 
-式(\ref{eq:abl-delta})より，Power-law model(式(\ref{eq:power-low}))を適用すると，音響境界層における粘度$\mu_\text{ABL}$は次式の様に見積もられる．
-\begin{eqnarray}
-    \mu_\text{ABL} \sim k\left(\frac{u}{\delta}\right)^{n-1} ,
-    \label{eq:muABL}
-\end{eqnarray}
-よって，音響境界層厚さ$\delta$は，
-\begin{eqnarray}
-    \delta \sim \sqrt{\frac{\mu_{ABL}}{\pi \rho_h f}} ,
-    \label{eq:delta2}
-\end{eqnarray}
-と見積もられる\cite{deshpande2001vibrational,wiklund2012acoustofluidics}．ここで，周波数$f$である．よって，式(\ref{eq:delta2})を式(\ref{eq:muABL})に代入すると，次のように表される．
+音響境界層厚さ$\delta$は，式(\ref{eq:delta2})に式(\ref{eq:muABL})を代入すると，次のように表される．
 \begin{eqnarray}
     \delta \sim \left(\frac{k\left(\Delta P\right)^{n-1}}{\pi \rho^n_1 c^{n-1} f}\right)^{\frac{1}{n+1}} .
     \label{eq:delta}
 \end{eqnarray}
-ここで，音速$c$である．音響境界層粘度$\mu_{ABL}$とすると超音波照射下における終端速度$U_\text{on}$は，式(\ref{eq:UT})より，
+
+よって，超音波照射下における終端速度$U_\text{on}$は，式(\ref{eq:UT})より，
 \begin{eqnarray}
     U_\text{on} \sim \frac{a^3\Delta\rho g}{3}  \int^{\infty}_{a} \frac{dr}{\mu_{ABL} r^2} \sim \frac{a\Delta \rho \delta g}{3\mu_{ABL}} ,
     \label{eq:U_ABL}
 \end{eqnarray}
-と見積もられる．終端速度$U_T$における，粘度$\mu_U$とする．式(\ref{eq:UT}),(\ref{eq:U_ABL})より，超音波照射の有無による終端速度比は，
+と見積もられる．終端速度$U_\text{off}$における，粘度$\mu_U$とする．式(\ref{eq:UT}),(\ref{eq:U_ABL})より，超音波照射の有無による終端速度比は，
 \begin{eqnarray}
     \frac{U_\text{on}}{U_\text{off}} \sim \frac{\mu_U}{\mu_{ABL}}\frac{\delta}{a} ,
     \label{eq:Udiff}

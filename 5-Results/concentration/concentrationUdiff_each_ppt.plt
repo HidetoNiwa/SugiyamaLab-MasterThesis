@@ -158,12 +158,11 @@ unset key
  
 ####################################################################################################
 
-set logscale x
 
 set format x '$10^{%L}$'
 set xlabel '{\Large $\left(\frac{\Delta\rho{}g}{3}\right)^{\frac{n-1}{n}}\cdot\frac{2-n}{n}\cdot\frac{\delta}{\mu_\text{ABL}}\cdot\left(\frac{k}{a}\right)^{\frac{1}{n}}$ $[$\SI{}{-}$]$}' offset 25,-0.25
-set xrange [3E-3:2E0]
-set xtics 1E-3,10,1E0
+set xrange [0:2E0]
+set xtics 1E0
 set mxtics 10
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0

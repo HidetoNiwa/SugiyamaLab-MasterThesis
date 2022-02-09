@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 5.5, 3.8 standalone color solid 9
+set terminal epslatex size 5, 4 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -85,33 +85,33 @@ set palette defined (0 '#999999',\
  
 set format '$%g$'
 
-set size ratio 1.3
+set size ratio 1.2
 set style fill solid 10
 
 f(x)=a*x**(n)
 
 ####################################################################################################
  
-set lmargin screen 0.02
-set rmargin screen 0.276667
+set lmargin screen 0.0
+set rmargin screen 0.3
 
-set tmargin screen 1
-set bmargin screen 0.54
+set tmargin screen 0.82
+set bmargin screen 0.45
  
 ####################################################################################################
  
 set key width 0 box opaque spacing 1.1 samplen 1 Left reverse
-set key at screen 1,0.20
+set key at screen 0.95,0.98
  
 ####################################################################################################
 
 set label 31 at graph 0.02,0.93 '(a)' front
 
-set format x '$10^{%L}$'
+set format x '{\small$%.1l\times10^{%L}$}'
 set xlabel '' offset 0,0.4
-set xrange [1E-4:1E-3]
-set xtics 10
-set mxtics 10
+set xrange [0:0.7E-3]
+set xtics 3.5E-4  offset 0,0.32
+set mxtics 2
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
@@ -127,15 +127,16 @@ brass_02 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass
 
 ####################################################################################################
 
-set lmargin screen 0.296667
-set rmargin screen 0.553333
+set lmargin screen 0.35
+set rmargin screen 0.65
  
 ####################################################################################################
 
 set label 31 at graph 0.02,0.93 '(b)' front
 
 set xlabel '' offset 0,0.4
-set xrange [6E-10:4E-8]
+set xrange [0:3.2E-8]
+set xtics 1.6E-8  offset 0,0.32
  
 set ylabel '' offset 0.5,0
 set format y ''
@@ -150,15 +151,16 @@ brass_05 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass
 
 ####################################################################################################
 
-set lmargin screen 0.573333
-set rmargin screen 0.83
+set lmargin screen 0.7
+set rmargin screen 1
  
 ####################################################################################################
 
 set label 31 at graph 0.02,0.93 '(c)' front
 
 set xlabel '' offset 0,0.4
-set xrange [1E-10:1.5E-8]
+set xrange [0:1E-8]
+set xtics 0.5E-8  offset 0,0.32
 
 set ylabel '' offset 0.5,0
 set ytics 1,0.3,1.6
@@ -172,10 +174,10 @@ brass_07 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass
 
 ####################################################################################################
  
-set lmargin screen 0.02
-set rmargin screen 0.276667
+set lmargin screen 0.0
+set rmargin screen 0.3
 
-set tmargin screen 0.46
+set tmargin screen 0.37
 set bmargin screen 0
 
 ####################################################################################################
@@ -183,7 +185,8 @@ set bmargin screen 0
 set label 31 at graph 0.02,0.93 '(d)' front
 
 set xlabel '{\Large $\left(\Delta\rho\right)^{\frac{n-1}{n}}$ [$($kg/m$^3)^{\frac{n-1}{n}}$]}' offset 0,0.4
-set xrange [8E-11:1E-8]
+set xrange [0:6E-9]
+set xtics 3E-9  offset 0,0.32
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
@@ -198,14 +201,15 @@ brass_10 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass
 
 ####################################################################################################
  
-set lmargin screen 0.296667
-set rmargin screen 0.553333
+set lmargin screen 0.35
+set rmargin screen 0.65
  
 ####################################################################################################
 
 set label 31 at graph 0.02,0.93 '(e)' front
 
-set xrange [1.5E-11:1E-8]
+set xrange [0:0.36E-8]
+set xtics 0.18E-8  offset 0,0.32
 
 set ylabel '' offset 0.5,0
 set format y ''
@@ -220,8 +224,8 @@ brass_13 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass
 
 ####################################################################################################
  
-set lmargin screen 0.573333
-set rmargin screen 0.83
+set lmargin screen 0.7
+set rmargin screen 1
  
 ####################################################################################################
  
@@ -233,7 +237,8 @@ unset key
 
 set label 31 at graph 0.02,0.93 '(f)' front
 
-set xrange [1.5E-11:1E-9]
+set xrange [0:3.2E-10]
+set xtics 1.6E-10  offset 0,0.32
  
 set ylabel '' offset 0.5,0
  
