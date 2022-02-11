@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 5.4, 3.6 standalone color solid 9
+set terminal epslatex size 3, 3.5 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -85,70 +85,70 @@ set palette defined (0 '#999999',\
  
 set format '$%g$'
 
-set size ratio 1.5
+set size ratio 1.25
 set style fill solid 10
 
-set label 12 center at screen 0,0.15 '\footnotesize{0.2 wt.\%}'
-set label 13 center at screen 0,0.12 '\footnotesize{0.5 wt.\%}'
-set label 14 center at screen 0,0.09 '\footnotesize{0.7 wt.\%}'
-set label 15 center at screen 0,0.06 '\footnotesize{1.0 wt.\%}'
-set label 16 center at screen 0,0.03 '\footnotesize{1.3 wt.\%}'
-set label 17 center at screen 0,0 '\footnotesize{1.5 wt.\%}'
+# set label 12 center at screen 0,0.15 '\footnotesize{0.2 wt.\%}'
+# set label 13 center at screen 0,0.12 '\footnotesize{0.5 wt.\%}'
+# set label 14 center at screen 0,0.09 '\footnotesize{0.7 wt.\%}'
+# set label 15 center at screen 0,0.06 '\footnotesize{1.0 wt.\%}'
+# set label 16 center at screen 0,0.03 '\footnotesize{1.3 wt.\%}'
+# set label 17 center at screen 0,0 '\footnotesize{1.5 wt.\%}'
 
-set label 22 center at screen 0.12,0.21 '\footnotesize{Aluminum}'
-set label 26 center at screen 0.24,0.21 '\footnotesize{Alumina}'
-set label 23 center at screen 0.36,0.24 '\footnotesize{Steel/}'
-set label 24 center at screen 0.36,0.21 '\footnotesize{Stainless}'
-set label 25 center at screen 0.48,0.21 '\footnotesize{Brass}'
+# set label 22 center at screen 0.12,0.21 '\footnotesize{Aluminum}'
+# set label 26 center at screen 0.24,0.21 '\footnotesize{Alumina}'
+# set label 23 center at screen 0.36,0.24 '\footnotesize{Steel/}'
+# set label 24 center at screen 0.36,0.21 '\footnotesize{Stainless}'
+# set label 25 center at screen 0.48,0.21 '\footnotesize{Brass}'
 
-set label 32 center at screen 0.12,0.18 '\footnotesize{2700}'
-set label 36 center at screen 0.24,0.18 '\footnotesize{3800}'
-set label 33 center at screen 0.36,0.18 '\footnotesize{7900}'
-set label 34 center at screen 0.48,0.18 '\footnotesize{8700}'
+# set label 32 center at screen 0.12,0.18 '\footnotesize{2700}'
+# set label 36 center at screen 0.24,0.18 '\footnotesize{3800}'
+# set label 33 center at screen 0.36,0.18 '\footnotesize{7900}'
+# set label 34 center at screen 0.48,0.18 '\footnotesize{8700}'
 
-set label 39 center at screen 0,0.18 '\footnotesize{$\rho$[kg/m$^3$]}'
+# set label 39 center at screen 0,0.18 '\footnotesize{$\rho$[kg/m$^3$]}'
 
-#0.2
-set label 52 center at screen 0.12,0.15 point ls 101 pt 2 ps 1.5
-set label 53 center at screen 0.36,0.15 point ls 103 pt 2 ps 1.5
-set label 54 center at screen 0.48,0.15 point ls 104 pt 2 ps 1.5
-set label 55 center at screen 0.24,0.15 point ls 102 pt 2 ps 1.5
+# #0.2
+# set label 52 center at screen 0.12,0.15 point ls 101 pt 2 ps 1.5
+# set label 53 center at screen 0.36,0.15 point ls 103 pt 2 ps 1.5
+# set label 54 center at screen 0.48,0.15 point ls 104 pt 2 ps 1.5
+# set label 55 center at screen 0.24,0.15 point ls 102 pt 2 ps 1.5
 
-#0.5
-set label 62 center at screen 0.12,0.12 point ls 101 pt 6 ps 1.5
-set label 63 center at screen 0.36,0.12 point ls 103 pt 6 ps 1.5
-set label 64 center at screen 0.48,0.12 point ls 104 pt 6 ps 1.5
-set label 65 center at screen 0.24,0.12 point ls 102 pt 6 ps 1.5
+# #0.5
+# set label 62 center at screen 0.12,0.12 point ls 101 pt 6 ps 1.5
+# set label 63 center at screen 0.36,0.12 point ls 103 pt 6 ps 1.5
+# set label 64 center at screen 0.48,0.12 point ls 104 pt 6 ps 1.5
+# set label 65 center at screen 0.24,0.12 point ls 102 pt 6 ps 1.5
 
-#0.7
-set label 72 center at screen 0.12,0.09 point ls 101 pt 4 ps 1.5
-set label 73 center at screen 0.36,0.09 point ls 103 pt 4 ps 1.5
-set label 74 center at screen 0.48,0.09 point ls 104 pt 4 ps 1.5
-set label 75 center at screen 0.24,0.09 point ls 102 pt 4 ps 1.5
+# #0.7
+# set label 72 center at screen 0.12,0.09 point ls 101 pt 4 ps 1.5
+# set label 73 center at screen 0.36,0.09 point ls 103 pt 4 ps 1.5
+# set label 74 center at screen 0.48,0.09 point ls 104 pt 4 ps 1.5
+# set label 75 center at screen 0.24,0.09 point ls 102 pt 4 ps 1.5
 
-#1.0
-set label 82 center at screen 0.12,0.06 point ls 101 pt 8 ps 1.5
-set label 83 center at screen 0.36,0.06 point ls 103 pt 8 ps 1.5
-set label 84 center at screen 0.48,0.06 point ls 104 pt 8 ps 1.5
-set label 85 center at screen 0.24,0.06 point ls 102 pt 8 ps 1.5
+# #1.0
+# set label 82 center at screen 0.12,0.06 point ls 101 pt 8 ps 1.5
+# set label 83 center at screen 0.36,0.06 point ls 103 pt 8 ps 1.5
+# set label 84 center at screen 0.48,0.06 point ls 104 pt 8 ps 1.5
+# set label 85 center at screen 0.24,0.06 point ls 102 pt 8 ps 1.5
 
-#1.3
-set label 102 center at screen 0.12,0.03 point ls 101 pt 10 ps 1.5
-set label 103 center at screen 0.36,0.03 point ls 103 pt 10 ps 1.5
-set label 104 center at screen 0.48,0.03 point ls 104 pt 10 ps 1.5
-set label 105 center at screen 0.24,0.03 point ls 102 pt 10 ps 1.5
+# #1.3
+# set label 102 center at screen 0.12,0.03 point ls 101 pt 10 ps 1.5
+# set label 103 center at screen 0.36,0.03 point ls 103 pt 10 ps 1.5
+# set label 104 center at screen 0.48,0.03 point ls 104 pt 10 ps 1.5
+# set label 105 center at screen 0.24,0.03 point ls 102 pt 10 ps 1.5
 
-set label 113 center at screen 0.36,0 point ls 103 pt 12 ps 1.5
-set label 114 center at screen 0.48,0 point ls 104 pt 12 ps 1.5
-set label 115 center at screen 0.24,0 point ls 102 pt 12 ps 1.5
+# set label 113 center at screen 0.36,0 point ls 103 pt 12 ps 1.5
+# set label 114 center at screen 0.48,0 point ls 104 pt 12 ps 1.5
+# set label 115 center at screen 0.24,0 point ls 102 pt 12 ps 1.5
 
 ####################################################################################################
 
 set lmargin screen 0
-set rmargin screen 0.235
+set rmargin screen 0.40
 
 set tmargin screen 1
-set bmargin screen 0.42
+set bmargin screen 0.52
  
 ####################################################################################################
  
@@ -158,12 +158,11 @@ unset key
  
 ####################################################################################################
 
-
-set format x '$10^{%L}$'
-set xlabel '{\Large $\left(\frac{\Delta\rho{}g}{3}\right)^{\frac{n-1}{n}}\cdot\frac{2-n}{n}\cdot\frac{\delta}{\mu_\text{ABL}}\cdot\left(\frac{k}{a}\right)^{\frac{1}{n}}$ $[$\SI{}{-}$]$}' offset 25,-0.25
-set xrange [0:2E0]
-set xtics 1E0
-set mxtics 10
+set xlabel ''
+set format x '{\small$%.1l\times10^{%L}$}'
+set xrange [0:1E0]
+set xtics 0.5E0
+set mxtics 2
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
@@ -180,15 +179,14 @@ al_07 using 2:6:7 with yerrorlines ls 101 pt 4 ps 1.5 lw 3 title '',\
 al_10 using 2:6:7 with yerrorlines ls 101 pt 8 ps 1.5 lw 3 title '',\
 al_13 using 2:6:7 with yerrorlines ls 101 pt 10 ps 1.5 lw 3 title '',\
 
-set lmargin screen 0.255
-set rmargin screen 0.49
+set lmargin screen 0.6
+set rmargin screen 1
 
 set label 31 at graph 0.02,0.93 '(b) Alumina' front
 
-set xlabel ''
 
-set xrange [2E-3:8E-1]
-set xtics 1E-4,10,1E0
+set xrange [0:6E-1]
+set xtics 3E-1
 
 set ylabel ''
 set format y ''
@@ -201,13 +199,18 @@ alumina_10 using 2:6:7 with yerrorlines ls 102 pt 8 ps 1.5 lw 3 title '',\
 alumina_13 using 2:6:7 with yerrorlines ls 102 pt 10 ps 1.5 lw 3 title '',\
 alumina_15 using 2:6:7 with yerrorlines ls 102 pt 12 ps 1.5 lw 3 title '',\
 
-set lmargin screen 0.51
-set rmargin screen 0.745
+set lmargin screen 0
+set rmargin screen 0.40
+set tmargin screen 0.48
+set bmargin screen 0
+ 
 
 set label 31 at graph 0.02,0.93 '(c) Stainless' front
-
-set xrange [7E-4:1.5E-2]
-set xtics 1E-4,10,1E0
+set xlabel '{\Large $\left(\frac{\Delta\rho{}g}{3}\right)^{\frac{n-1}{n}}\cdot\frac{2-n}{n}\cdot\frac{\delta}{\mu_\text{ABL}}\cdot\left(\frac{k}{a}\right)^{\frac{1}{n}}$ $[$\SI{}{-}$]$}' offset 12,-0.25
+set xrange [0:8E-3]
+set xtics 4E-3
+set format y '$%g$'
+set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 
 plot \
 stainless_02 using 2:6:7 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'Stainless',\
@@ -217,13 +220,16 @@ stainless_10 using 2:6:7 with yerrorlines ls 103 pt 8 ps 1.5 lw 3 title '',\
 stainless_13 using 2:6:7 with yerrorlines ls 103 pt 10 ps 1.5 lw 3 title '',\
 stainless_15 using 2:6:7 with yerrorlines ls 103 pt 12 ps 1.5 lw 3 title '',\
 
-set lmargin screen 0.765
+set lmargin screen 0.6
 set rmargin screen 1
+set xlabel ''
 
 set label 31 at graph 0.02,0.93 '(d) Brass' front
 
-set xrange [7E-4:1E-2]
-set xtics 1E-4,10,1E0
+set xrange [0:8E-3]
+set xtics 4E-3
+set format y ''
+set ylabel ''
 
 plot \
 brass_02 using 2:6:7 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'Brass',\
