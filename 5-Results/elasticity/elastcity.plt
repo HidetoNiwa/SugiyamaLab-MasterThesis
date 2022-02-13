@@ -120,7 +120,7 @@ set size ratio 1
 set style fill solid 10
 
 set label 991 center at screen 0.75,0.0 point ls 111 pt 6 ps 1.5
-set label 902 center at screen 0.85,0.0 '\footnotesize{Iwamuro(2020)[8]}'
+set label 902 center at screen 0.85,0.0 '\footnotesize{Iwamuro(2020)}'
 
 set label 12 center at screen 0,0.125 '\footnotesize{0.2 wt.\%}'
 set label 13 center at screen 0,0.1 '\footnotesize{0.5 wt.\%}'

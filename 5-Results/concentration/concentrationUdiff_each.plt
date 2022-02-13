@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 5.4, 3.6 standalone color solid 9
+set terminal epslatex size 7, 3.6 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -85,7 +85,7 @@ set palette defined (0 '#999999',\
  
 set format '$%g$'
 
-set size ratio 1.5
+set size ratio 1.7
 set style fill solid 10
 
 set label 12 center at screen 0,0.15 '\footnotesize{0.2 wt.\%}'
@@ -158,13 +158,11 @@ unset key
  
 ####################################################################################################
 
-set logscale x
-
-set format x '$10^{%L}$'
-set xlabel '{\Large $\left(\frac{\Delta\rho{}g}{3}\right)^{\frac{n-1}{n}}\cdot\frac{2-n}{n}\cdot\frac{\delta}{\mu_\text{ABL}}\cdot\left(\frac{k}{a}\right)^{\frac{1}{n}}$ $[$\SI{}{-}$]$}' offset 25,-0.25
-set xrange [3E-3:2E0]
-set xtics 1E-3,10,1E0
-set mxtics 10
+set format x '{\small$%.1l\times10^{%L}$}'
+set xlabel '{\Large $\left(\frac{\Delta\rho{}g}{3}\right)^{\frac{n-1}{n}}\cdot\frac{2-n}{n}\cdot\frac{\delta}{\mu_\text{ABL}}\cdot\left(\frac{k}{a}\right)^{\frac{1}{n}}$ $[$\SI{}{-}$]$}' offset 35,-0.25
+set xrange [0:1E0]
+set xtics 0.5E0
+set mxtics 2
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
 set format y '$%g$'
@@ -188,8 +186,8 @@ set label 31 at graph 0.02,0.93 '(b)' front
 
 set xlabel ''
 
-set xrange [2E-3:8E-1]
-set xtics 1E-4,10,1E0
+set xrange [0:6E-1]
+set xtics 3E-1
 
 set ylabel ''
 set format y ''
@@ -207,8 +205,8 @@ set rmargin screen 0.745
 
 set label 31 at graph 0.02,0.93 '(c)' front
 
-set xrange [7E-4:1.5E-2]
-set xtics 1E-4,10,1E0
+set xrange [0:8E-3]
+set xtics 4E-3
 
 plot \
 stainless_02 using 2:6:7 with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'Stainless',\
@@ -223,8 +221,8 @@ set rmargin screen 1
 
 set label 31 at graph 0.02,0.93 '(d)' front
 
-set xrange [7E-4:1E-2]
-set xtics 1E-4,10,1E0
+set xrange [0:8E-3]
+set xtics 4E-3
 
 plot \
 brass_02 using 2:6:7 with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'Brass',\

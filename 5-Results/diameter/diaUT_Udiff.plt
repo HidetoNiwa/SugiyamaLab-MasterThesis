@@ -78,7 +78,7 @@ set bmargin screen 0
 
 ####################################################################################################
  
-set key width 0.5 spacing 1.1 samplen 1 Left reverse
+set key width 0.5 spacing 1.1 samplen 1 Left reverse invert
 set key at screen 0.3,0.94
  
 ####################################################################################################
@@ -96,8 +96,11 @@ set format y '$%g$'
 set yrange [0:600]
 set ytics 200
 set mytics 2
+
+f(x)=((x/2)**5.347)/100
  
 plot \
+iwamuro using ($1):2 with points ls 111 pt 2 ps 1.5 lw 3 title 'iwamuro(2020)',\
 D8 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '$ U_\text{off}$',\
 D10 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
 D11 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
@@ -105,8 +108,8 @@ D12 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3
 D13 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
 D14 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
 D15 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
-D20 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title '',\
-iwamuro using ($1):2 with points ls 111 pt 2 ps 1.5 lw 3 title 'iwamuro(2020)'
+D20 using ($1)*2000:($7)*1000:($8)*1000 with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title ''
+
 
 ####################################################################################################
 
@@ -132,6 +135,7 @@ set ytics 1,0.2,1.6
 set mytics 2
  
 plot \
+iwamuro using ($1):4 with points ls 112 pt 2 ps 1.5 lw 3 title 'iwamuro(2020)',\
 D8 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '$ U_\text{on}/U_\text{off}$',\
 D10 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
 D11 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
@@ -139,8 +143,7 @@ D12 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',
 D13 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
 D14 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
 D15 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
-D20 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title '',\
-iwamuro using ($1):4 with points ls 112 pt 2 ps 1.5 lw 3 title 'iwamuro(2020)'
+D20 using ($1)*2000:($5):($6) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title ''
 
 unset multiplot
 reset
