@@ -3,7 +3,7 @@ set terminal epslatex standalone header \
 \\usepackage{amssymb, amsmath, bm}\n\
 \\usepackage{siunitx}\n \
 "
-set terminal epslatex size 5.5, 3.8 standalone color solid 9
+set terminal epslatex size 5, 4 standalone color solid 9
  
 set encoding utf8
 set datafile separator ','
@@ -85,69 +85,62 @@ set palette defined (0 '#999999',\
  
 set format '$%g$'
 
-set size ratio 1.3
+set size ratio 1.2
 set style fill solid 10
-
-set label 11 center at screen 1.09,0.18 '$\rho =\SI{2700}{kg/m^3}$'
-set label 12 center at screen 1.09,0.145 '$\rho =\SI{3800}{kg/m^3}$'
-set label 13 center at screen 1.09,0.11 '$\rho =\SI{7900}{kg/m^3}$'
-set label 14 center at screen 1.09,0.075 '$\rho =\SI{8700}{kg/m^3}$'
-
-
-set logscale x
 
 f(x)=a*x**(n)
 
 ####################################################################################################
  
-set lmargin screen 0.02
-set rmargin screen 0.276667
+set lmargin screen 0.0
+set rmargin screen 0.3
 
-set tmargin screen 1
-set bmargin screen 0.54
+set tmargin screen 0.82
+set bmargin screen 0.45
  
 ####################################################################################################
  
-set key width 0 opaque spacing 1.1 samplen 1 Left reverse
-set key at screen 1.01,0.20
+set key width 0 box opaque spacing 1.1 samplen 1 Left reverse
+set key at screen 0.95,0.98
  
 ####################################################################################################
 
-set label 31 at graph 0.02,0.915 '(a) 0.2wt.\%' front
+set label 31 left at graph 0.35,0.9 '{\Large(a)\,0.2wt.\%}' front
 
-set format x '$10^{%L}$'
+set format x '{\small$%.1l\times10^{%L}$}'
 set xlabel '' offset 0,0.4
-set xrange [1E-4:1E-3]
-set xtics 10
-set mxtics 10
+set xrange [0:0.7E-3]
+set xtics 3.5E-4  offset 0,0.32
+set mxtics 2
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
-set format y '$%.1f$'
-set yrange [0.9:1.475]
-set ytics 1,0.2,1.6
+set format y '$%g$'
+set yrange [0.9:1.6]
+set ytics 1,0.3,1.6
 set mytics 2
  
 plot \
-al_02 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'Aluminum',\
-alumina_02 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'Alumina',\
-stainless_02 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'Stainless',\
-brass_02 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'Brass'
+al_02 using 3:($6):($7) with yerrorlines ls 101 pt 2 ps 1.5 lw 3 title 'aluminum',\
+alumina_02 using 3:($6):($7) with yerrorlines ls 102 pt 2 ps 1.5 lw 3 title 'alumina',\
+stainless_02 using 3:($6):($7) with yerrorlines ls 103 pt 2 ps 1.5 lw 3 title 'stainless',\
+brass_02 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass'
 
 ####################################################################################################
 
-set lmargin screen 0.296667
-set rmargin screen 0.553333
-unset key
+set lmargin screen 0.35
+set rmargin screen 0.65
  
 ####################################################################################################
 
-set label 31 at graph 0.02,0.915 '(b) 0.5wt.\%' front
+set label 31 left at graph 0.35,0.9 '{\Large(b)\,0.5wt.\%}' front
 
 set xlabel '' offset 0,0.4
-set xrange [6E-10:4E-8]
+set xrange [0:3.2E-8]
+set xtics 1.6E-8  offset 0,0.32
  
 set ylabel '' offset 0.5,0
 set format y ''
+set ytics 1,0.3,1.6
 set mytics 2
 
 plot \
@@ -158,17 +151,19 @@ brass_05 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass
 
 ####################################################################################################
 
-set lmargin screen 0.573333
-set rmargin screen 0.83
+set lmargin screen 0.7
+set rmargin screen 1
  
 ####################################################################################################
 
-set label 31 at graph 0.02,0.915 '(c) 0.7wt.\%' front
+set label 31 left at graph 0.35,0.9 '{\Large(c)\,0.7wt.\%}' front
 
 set xlabel '' offset 0,0.4
-set xrange [1E-10:1.5E-8]
+set xrange [0:1E-8]
+set xtics 0.5E-8  offset 0,0.32
 
 set ylabel '' offset 0.5,0
+set ytics 1,0.3,1.6
 set mytics 2
 
 plot \
@@ -179,20 +174,23 @@ brass_07 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass
 
 ####################################################################################################
  
-set lmargin screen 0.02
-set rmargin screen 0.276667
+set lmargin screen 0.0
+set rmargin screen 0.3
 
-set tmargin screen 0.46
+set tmargin screen 0.37
 set bmargin screen 0
 
 ####################################################################################################
 
-set label 31 at graph 0.02,0.915 '(d) 1.0wt.\%' front
+set label 31 left at graph 0.35,0.9 '{\Large(d)\,1.0wt.\%}' front
 
-set xrange [8E-11:1E-8]
+set xlabel '{\Large $\left(\Delta\rho\right)^{\frac{n-1}{n}}$ [$($kg/m$^3)^{\frac{n-1}{n}}$]}' offset 0,0.4
+set xrange [0:6E-9]
+set xtics 3E-9  offset 0,0.32
  
 set ylabel '{\Large $ U_\text{on}/U_\text{off} \displaystyle [$\SI{}{-}$]$}' offset 0.5,0
-set format y '$%.1f$'
+set format y '$%g$'
+set ytics 1,0.3,1.6
 set mytics 2
  
 plot \
@@ -203,18 +201,19 @@ brass_10 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass
 
 ####################################################################################################
  
-set lmargin screen 0.296667
-set rmargin screen 0.553333
+set lmargin screen 0.35
+set rmargin screen 0.65
  
 ####################################################################################################
 
-set label 31 at graph 0.02,0.915 '(e) 1.3wt.\%' front
+set label 31 left at graph 0.35,0.9 '{\Large(e)\,1.3wt.\%}' front
 
-set xlabel '{\Large $\left(\Delta\rho\right)^{\frac{n-1}{n}}$ [$($kg/m$^3)^{\frac{n-1}{n}}$]}' offset 0,0
-set xrange [1.5E-11:1E-8]
+set xrange [0:0.36E-8]
+set xtics 0.18E-8  offset 0,0.32
 
 set ylabel '' offset 0.5,0
 set format y ''
+set ytics 1,0.3,1.6
 set mytics 2
  
 plot \
@@ -225,8 +224,8 @@ brass_13 using 3:($6):($7) with yerrorlines ls 104 pt 2 ps 1.5 lw 3 title 'brass
 
 ####################################################################################################
  
-set lmargin screen 0.573333
-set rmargin screen 0.83
+set lmargin screen 0.7
+set rmargin screen 1
  
 ####################################################################################################
  
@@ -236,11 +235,10 @@ unset key
  
 ####################################################################################################
 
-set label 31 at graph 0.02,0.915 '(f) 1.5wt.\%' front
+set label 31 left at graph 0.35,0.9 '{\Large(f)\,1.5wt.\%}' front
 
-set xrange [1.5E-11:1E-9]
-set xlabel '' offset 0,0.4
-
+set xrange [0:3.2E-10]
+set xtics 1.6E-10  offset 0,0.32
  
 set ylabel '' offset 0.5,0
  
